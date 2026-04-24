@@ -23,7 +23,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 const WA = "https://wa.me/923009130211";
 const PHONE_DISPLAY = "0300-9130211";
-const CONTACT_EMAIL = "saqibharoonharoon@gmail.com";
+const CONTACT_EMAIL = "info@bestintlmovers.com";
 const PATH = "/packers-and-movers-islamabad/";
 const SITE_PAGE = "https://bestintlmovers.com/packers-and-movers-islamabad/";
 
@@ -248,61 +248,214 @@ const testimonials = [
   },
 ];
 
-const relatedLinks: { to: string; label: string }[] = [
-  { to: "/services/international-moving", label: "International Moving from Islamabad" },
-  { to: "/international-movers-and-packers-pakistan", label: "International Movers & Packers Pakistan" },
-  { to: "/cargo-service-islamabad", label: "Cargo Service Islamabad" },
-  { to: "/air-freight-islamabad", label: "Air Freight Islamabad" },
-  { to: "/pakistan-to-dubai-movers", label: "Pakistan to Dubai Movers" },
-  { to: "/home-shifting-islamabad", label: "Home Shifting Islamabad" },
-  { to: "/services/secure-storage", label: "Storage Services Islamabad" },
-  { to: "/movers-rawalpindi", label: "Movers Rawalpindi" },
-  { to: "/packers-and-movers-lahore", label: "Packers Movers Lahore" },
-];
+// ✅ FIXED: Long Guide Content with NO self-referencing links
+// Only 2 links to /home-shifting-islamabad (max limit)
+const LongGuideContent = () => {
+  return (
+    <>
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        If you are comparing professional moving services for the first time, start with scope—not slogans. 
+        A professional move should define what is packed, what is dismantled, how many crew members attend, 
+        which truck size is used, and whether unpacking and debris removal are included. When those items are vague, 
+        you will almost always see last-minute add-ons or rushed packing that increases damage risk. Our survey-first 
+        approach exists specifically to prevent that outcome: we look at corridors, elevator timing, parking distance, 
+        and fragile inventory before we commit a crew count and a price band that we can honour.
+      </p>
 
-/** Long-form guide blocks for 2500+ total on-page word count (all rendered as visible <p> for crawlers). */
-const longGuideParagraphs: string[] = [
-  "If you are comparing packers and movers in Islamabad for the first time, start with scope—not slogans. A professional move should define what is packed, what is dismantled, how many crew members attend, which truck size is used, and whether unpacking and debris removal are included. When those items are vague, you will almost always see last-minute add-ons or rushed packing that increases damage risk. Our survey-first approach exists specifically to prevent that outcome: we look at corridors, elevator timing, parking distance, and fragile inventory before we commit a crew count and a price band that we can honour.",
-  "Movers in Islamabad often compete on the lowest headline number, but the lowest headline rarely includes the same service depth. Ask whether wardrobe cartons are included, whether mattress bags are used, whether bubble wrap is unlimited or capped, and whether night shifts carry a surcharge. Transparent relocation services Islamabad clients deserve should list assumptions explicitly—especially for premium zones like DHA Islamabad and Bahria Enclave where society rules can change truck access and extend ground time.",
-  "House shifting Islamabad projects differ materially by building type. A ground-floor villa with driveway access is not the same as a twelfth-floor apartment with a single service lift and a narrow service staircase. The second scenario needs more labour minutes, better sequencing of heavy items, and sometimes a smaller first-load shuttle if the main truck cannot sit at the gate. We plan those details in writing so your move day does not become an improvised experiment with your dining table on a tight landing.",
-  "Home shifting Islamabad families with children or elderly members benefit from calmer pacing: earlier start times, clearer room priorities, and labelled “open first” boxes that stay outside the sealed moving inventory. We coach clients on what to keep personally (medicines, chargers, cash, jewellery) so those items never disappear into a generic carton. Small operational habits like that are what separate an average moving day from a genuinely controlled relocation experience.",
-  "Office relocation Islamabad programmes should protect revenue. That means labelled IT lanes, padded monitor handling, secure file cartons, and optional after-hours execution so Monday morning does not begin with missing power cables. We coordinate with your admin or IT focal person so dismantling and reassembly follow your internal policies, not ours alone. If you are also shipping assets abroad after the local move, we align packing standards early so you do not repack twice for export compliance.",
-  "International segments layered onto a local Islamabad move require inventory discipline: item descriptions, values, and commodity classifications must stay consistent across domestic packing lists and export documentation. Our international moving module integrates with cargo workflows so timelines do not fight each other—air uplift for urgent documents, sea freight for bulky household goods, and domestic crews staged for the right pickup windows. That integration is how a moving company Islamabad should behave when clients have both local and overseas legs.",
-  "Insurance and liability conversations matter. “Fully insured” should never be a buzzword—it should point to a written option with clear limits, exclusions, and claim steps. We explain coverage in plain language during quotation so you can decide whether to upgrade protection for high-value art, glass walls, or imported appliances. For most households, the biggest win is not the policy paper itself but disciplined packing that prevents claims from being necessary in the first place.",
-  "Packing materials quality is not cosmetic. Double-wall corrugated cartons resist edge crush during stacking; stretch film stabilizes drawers without tape residue; foam corners reduce point pressure on glass; wardrobe boxes cut down on wrinkled formal wear when you need suits ready for work the next week. When clients ask why premium movers cost more, the honest answer is often material volume plus trained labour hours—not a mysterious brand tax. We would rather explain that once than apologise after damage.",
-  "Same-day shifting in Islamabad is achievable when inventory is modest, access is confirmed, and booking happens early. It fails when clients add “just a few more items” on the morning of the move without telling the crew lead, or when society gate passes are not ready and the truck idles outside for an hour. If you need urgent service, send photos and a room-by-room list before 10 AM so we can confirm truck and crew availability realistically—your honesty on volume protects your timeline.",
-  "High-rise moves demand elevator discipline: reserved windows, padded lift interiors where allowed, and floor protection in corridors. Our teams carry runner mats and corner guards when buildings require them. Movers and packers Islamabad clients should expect supervisors who speak calmly under pressure—because panic on a landing is how scuffs and dents happen. We train for steady movement, not rushed heroics that look fast on camera but cost you at delivery.",
-  "Diplomatic and sensitive moves require discretion: minimal noise, predictable crew rotation, and clear communication with security posts. We respect protocol timelines and keep documentation ready for checks. If you represent an embassy household or an international organisation, mention it during booking so we assign crews experienced with gate procedures and privacy expectations—not a random pickup team learning on the job.",
-  "Intercity relocation from Islamabad adds route risk: overnight fog on northern routes, weighbridge delays, and seasonal traffic around toll plazas. Long-distance moves should include secure loading patterns, tarp discipline where needed, and driver rest compliance. We structure handoffs so you always know where the truck is and who the responsible coordinator is at each milestone. That visibility is part of what clients mean when they ask for GPS tracked transport with human updates—not just a dot on a map.",
-  "Storage bridges solve real life: your new flat is not ready, your overseas shipment arrived early, or your office lease overlap is messy. Secure storage Islamabad options should be climate-conscious for documents and electronics, CCTV monitored, and access-scheduled so you are not hunting keys at midnight. We connect storage timelines with your move plan so you are not paying for warehousing you do not need—or scrambling when possession slips by a week.",
-  "Before you sign any contract, verify crew identity, supervisor name, and written scope. Reputable packers and movers in Islamabad will not hesitate to document high-value items separately, photograph pre-existing scratches on large furniture when relevant, and confirm payment milestones. If a vendor refuses written scope, treat that as a red flag regardless of price. Your belongings are worth more than a verbal promise shouted across a parking lot.",
-  "After delivery, run inventory checks room by room while the crew lead is still present. Open priority cartons first, test major appliances if power is available, and note any concerns immediately so remedies can be discussed on-site. A professional relocation services Islamabad partner wants closure as much as you do: clean debris removal, hardware bags reunited with the correct beds, and a quick follow-up call the next day to confirm satisfaction.",
-  "Finally, remember that the best move is the one you never have to redo. That comes from planning, honest disclosure of inventory, and choosing a moving company Islamabad residents recommend because outcomes—not ads—built the reputation. Call 0300-9130211 or email saqibharoonharoon@gmail.com when you are ready for a free survey; we will translate your requirements into a written plan you can compare confidently against any competitor quote.",
-  "Weekend and month-end demand spikes are predictable in Islamabad, especially when school terms change and families try to align possession dates. If your date is flexible, mid-week moves can sometimes unlock better crew availability and calmer traffic around Blue Area and major inter-sector connectors. Tell us your flexibility window during the survey—we will suggest realistic options that protect quality instead of forcing an undersized team onto an oversized job.",
-  "Kitchen packing is where many DIY attempts fail: glassware nested incorrectly, spice jars left loose, and knives wrapped without rigid guards. Professional packers and movers in Islamabad should pack kitchens with vertical glass orientation, segmented dividers, and clear “fragile / this side up” labelling. That discipline matters because kitchen cartons are often the first boxes opened at the new home—and the first place families feel stress if breakage appears.",
-  "When you evaluate a moving company Islamabad shortlist, use a simple scorecard: written scope (yes/no), supervisor presence (yes/no), material list attached (yes/no), insurance explanation (yes/no), and complaint handling process (yes/no). If you score more than one “no,” pause—even an attractive price cannot compensate for missing accountability structures. The best movers in Islamabad earn trust by documentation and behaviour on survey day, not by loud promises at the gate.",
-];
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Moving companies often compete on the lowest headline number, but the lowest headline rarely includes the same 
+        service depth. Ask whether wardrobe cartons are included, whether mattress bags are used, whether bubble wrap 
+        is unlimited or capped, and whether night shifts carry a surcharge.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Residential moves differ materially by building type. A ground-floor villa with driveway access is not the same 
+        as a twelfth-floor apartment with a single service lift. The second scenario needs more labour minutes, better 
+        sequencing of heavy items, and sometimes a smaller first-load shuttle. We plan those details in writing so your 
+        move day does not become an improvised experiment with your dining table on a tight landing.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Families with children or elderly members benefit from calmer pacing: earlier start times, clearer room priorities, 
+        and labelled 'open first' boxes that stay outside the sealed moving inventory. We coach clients on what to keep 
+        personally so those items never disappear into a generic carton.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Corporate moves should protect revenue. That means labelled IT lanes, padded monitor handling, secure file cartons, 
+        and optional after-hours execution. We coordinate with your IT focal person so dismantling and reassembly follow 
+        your internal policies. If you are also shipping assets abroad, we align packing standards early so you do not 
+        repack twice for export compliance.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        International segments layered onto a local move require inventory discipline. Our{" "}
+        <Link to="/international-moving" className="text-gold font-semibold hover:underline">
+          international moving services
+        </Link>{" "}
+        integrate with cargo workflows so timelines do not fight each other.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Insurance and liability conversations matter. 'Fully insured' should point to a written option with clear limits. 
+        We explain coverage in plain language during quotation so you can decide whether to upgrade protection for 
+        high-value art or imported appliances.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Packing materials quality is not cosmetic. Double-wall cartons resist edge crush; stretch film stabilizes drawers; 
+        foam corners reduce pressure on glass. When clients ask why premium movers cost more, the answer is material volume 
+        plus trained labour hours—not a mysterious brand tax.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Same-day shifting is achievable when inventory is modest and booking happens early. If you need urgent service, 
+        send photos and a room-by-room list before 10 AM so we can confirm truck and crew availability realistically.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        High-rise moves demand elevator discipline and floor protection in corridors. Our teams carry runner mats and 
+        corner guards. Clients should expect supervisors who speak calmly under pressure—because panic on a landing is 
+        how scuffs happen. We train for steady movement, not rushed heroics that cost you at{" "}
+        <Link to="/home-shifting-islamabad" className="text-gold font-semibold hover:underline">
+          delivery time
+        </Link>.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Diplomatic moves require discretion and clear communication with security posts. If you represent an embassy, 
+        mention it during booking so we assign experienced crews.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Intercity relocation adds route risk: overnight fog, weighbridge delays, and seasonal traffic. Long-distance 
+        moves include secure loading patterns and driver rest compliance. We structure handoffs so you always know 
+        where the truck is.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Storage bridges solve real life: your new flat is not ready or your shipment arrived early. Our{" "}
+        <Link to="/secure-storage-islamabad" className="text-gold font-semibold hover:underline">
+          secure storage facilities
+        </Link>{" "}
+        are climate-controlled and CCTV monitored. We connect storage timelines with your move plan.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        Before signing any contract, verify crew identity and written scope. Professional movers will document 
+        high-value items separately. If a vendor refuses written scope, treat that as a red flag regardless of price.
+      </p>
+
+      <p className="text-sm md:text-base leading-relaxed mb-4">
+        After delivery, run inventory checks while the crew lead is present. A professional relocation partner wants 
+        closure as much as you do: clean debris removal and a follow-up call the next day.
+      </p>
+    </>
+  );
+};
+
+// ✅ FIXED: Schema using @graph structure with CORRECT email
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MovingCompany",
+      "@id": `${SITE_PAGE}#movingcompany`,
+      name: "Best International Movers & Logistics - Islamabad",
+      url: SITE_PAGE,
+      telephone: "+923009130211",
+      email: CONTACT_EMAIL,
+      description: SEO_DESCRIPTION,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Blue Area, Jinnah Avenue",
+        addressLocality: "Islamabad",
+        addressRegion: "Islamabad Capital Territory",
+        addressCountry: "PK",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "08:00",
+          closes: "20:00",
+        },
+      ],
+      areaServed: [
+        "F-6 Islamabad",
+        "F-7 Islamabad",
+        "F-8 Islamabad",
+        "F-10 Islamabad",
+        "G-11 Islamabad",
+        "DHA Islamabad",
+        "Bahria Town Islamabad",
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+        ratingCount: "247",
+        reviewCount: "247",
+      },
+      priceRange: "$$",
+      paymentAccepted: "Cash, Bank Transfer, Credit Card",
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_PAGE}#localbusiness`,
+      name: "Best International Movers & Logistics - Islamabad",
+      url: SITE_PAGE,
+      telephone: "+923009130211",
+      email: CONTACT_EMAIL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Blue Area, Jinnah Avenue",
+        addressLocality: "Islamabad",
+        addressRegion: "Islamabad Capital Territory",
+        addressCountry: "PK",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "08:00",
+          closes: "20:00",
+        },
+      ],
+      priceRange: "$$",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+        ratingCount: "247",
+        reviewCount: "247",
+      },
+    },
+  ],
+};
 
 const faqs: { q: string; a: string }[] = [
   {
     q: "What are the charges for packers and movers in Islamabad?",
-    a: "Packers and movers charges in Islamabad start from PKR 15,000 for a studio or 1-bedroom home and go up to PKR 80,000+ for large homes or offices. The exact cost depends on number of items, distance, floors and packing requirements. We provide a free detailed quote after home survey with no hidden charges.",
+    a: "Charges start from PKR 15,000 for a studio or 1-bedroom home and go up to PKR 80,000+ for large homes or offices. The exact cost depends on number of items, distance, floors and packing requirements. We provide a free detailed quote after home survey with no hidden charges.",
   },
   {
     q: "Do you cover all sectors of Islamabad?",
-    a: "Yes, we provide packers and movers services in all sectors of Islamabad including F-6, F-7, F-8, F-10, F-11, G-9, G-10, G-11, G-13, DHA Islamabad, Bahria Enclave, Blue Area, Diplomatic Enclave, E-7, E-11, I-8, I-10, Park Enclave and all other areas. Call 0300-9130211 for your specific area.",
+    a: "Yes, we provide services in all sectors including F-6, F-7, F-8, F-10, F-11, G-9, G-10, G-11, G-13, DHA, Bahria Enclave, Blue Area, Diplomatic Enclave, E-7, E-11, I-8, I-10, Park Enclave and all other areas.",
   },
   {
     q: "How long does house shifting take in Islamabad?",
-    a: "A standard 2-3 bedroom house shift in Islamabad takes 6-10 hours with our professional team of 4-6 packers and movers. Larger homes may require 1-2 days. We work efficiently to minimize disruption to your daily routine.",
+    a: "A standard 2-3 bedroom house shift takes 6-10 hours with our professional team of 4-6 packers and movers. Larger homes may require 1-2 days.",
   },
   {
     q: "Do you offer same day shifting in Islamabad?",
-    a: "Yes, we offer same-day shifting in Islamabad with advance notice before 10 AM. Our team is always on standby for urgent moves. Call 0300-9130211 for availability.",
+    a: "Yes, we offer same-day shifting with advance notice before 10 AM. Our team is always on standby for urgent moves.",
   },
   {
     q: "Is my furniture insured during shifting?",
-    a: "Yes, all home shifts and office moves are fully insured against damage or loss during transit. In the rare case of any damage, we cover it completely at no extra cost to you.",
+    a: "Yes, all home shifts and office moves are fully insured against damage or loss during transit. In the rare case of any damage, we cover it completely at no extra cost.",
   },
   {
     q: "Do you dismantle and reassemble furniture?",
@@ -310,7 +463,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Do you provide packing boxes and materials?",
-    a: "Yes, we bring all packing materials to your home — double-wall boxes, bubble wrap, foam padding, packing tape, stretch wrap, wardrobe boxes and furniture covers. No need to arrange anything yourself.",
+    a: "Yes, we bring all packing materials to your home — double-wall boxes, bubble wrap, foam padding, packing tape, stretch wrap, wardrobe boxes and furniture covers.",
   },
   {
     q: "Can you move to another city from Islamabad?",
@@ -322,76 +475,19 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Do you work on weekends in Islamabad?",
-    a: "Yes, we operate Monday through Saturday 8 AM to 8 PM. Sunday emergency service is also available. We accommodate your schedule for maximum convenience.",
+    a: "Yes, we operate Monday through Saturday 8 AM to 8 PM. Sunday emergency service is also available.",
   },
   {
     q: "Can you handle high-rise apartment moves in Islamabad?",
-    a: "Yes, we specialize in high-rise apartment shifts in Islamabad. Our team is experienced with elevator coordination, narrow corridors and multi-floor moves in all major apartment complexes.",
+    a: "Yes, we specialize in high-rise apartment shifts. Our team is experienced with elevator coordination, narrow corridors and multi-floor moves in all major apartment complexes.",
   },
   {
     q: "Do you offer international moving from Islamabad?",
-    a: "Yes, we provide complete international moving services from Islamabad to UAE, UK, USA, Canada, Saudi Arabia, Australia and 100+ countries via sea freight and air freight with door-to-door delivery and customs clearance.",
+    a: "Yes, we provide complete international moving services to UAE, UK, USA, Canada, Saudi Arabia, Australia and 100+ countries via sea freight and air freight with door-to-door delivery and customs clearance.",
   },
 ];
 
-const movingCompanyJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  name: "Best International Movers & Logistics - Islamabad",
-  url: SITE_PAGE,
-  telephone: "+923009130211",
-  email: CONTACT_EMAIL,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Blue Area, Jinnah Avenue",
-    addressLocality: "Islamabad",
-    addressRegion: "Islamabad Capital Territory",
-    addressCountry: "PK",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "08:00",
-      closes: "20:00",
-    },
-  ],
-  areaServed: [
-    "F-6 Islamabad",
-    "F-7 Islamabad",
-    "F-8 Islamabad",
-    "F-10 Islamabad",
-    "G-11 Islamabad",
-    "DHA Islamabad",
-    "Bahria Town Islamabad",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "247",
-  },
-};
-
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE_PAGE}#localbusiness`,
-  name: "Best International Movers & Logistics - Islamabad",
-  url: SITE_PAGE,
-  telephone: "+923009130211",
-  email: CONTACT_EMAIL,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Blue Area, Jinnah Avenue",
-    addressLocality: "Islamabad",
-    addressRegion: "Islamabad Capital Territory",
-    addressCountry: "PK",
-  },
-  openingHoursSpecification: movingCompanyJsonLd.openingHoursSpecification,
-  priceRange: "$$",
-};
-
-const faqJsonLd = {
+const faqSchemaMarkup = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({
@@ -410,7 +506,7 @@ const PackersMoversIslamabadSeo = () => {
     description: SEO_DESCRIPTION,
     keywords: SEO_KEYWORDS,
     urlPath: PATH,
-    schema: [movingCompanyJsonLd, localBusinessJsonLd, faqJsonLd],
+    schema: [schemaMarkup, faqSchemaMarkup],
   });
 
   return (
@@ -428,15 +524,23 @@ const PackersMoversIslamabadSeo = () => {
               Packers and Movers in Islamabad
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              Professional <strong className="text-foreground">packers and movers in Islamabad</strong> offering safe{" "}
-              <strong className="text-foreground">home shifting Islamabad</strong>,{" "}
-              <strong className="text-foreground">office relocation Islamabad</strong> and international moving. All
-              sectors covered — F-6, F-7, F-10, G-11, DHA, Bahria Town. Call{" "}
+              Professional relocation specialists offering safe{" "}
+              <Link to="/home-shifting-islamabad" className="text-gold font-semibold hover:underline">
+                residential moving services
+              </Link>
+              ,{" "}
+              <Link to="/office-relocation-islamabad" className="text-gold font-semibold hover:underline">
+                corporate relocation solutions
+              </Link>
+              {" "}and{" "}
+              <Link to="/international-moving" className="text-gold font-semibold hover:underline">
+                worldwide shipping
+              </Link>
+              . All Islamabad sectors covered. Call{" "}
               <a className="text-gold font-semibold hover:underline" href="tel:03009130211">
                 {PHONE_DISPLAY}
               </a>{" "}
-              for a free survey. Mention if you need same-day crew dispatch, elevator-only access, or a split move across
-              two dates—we route resources accordingly. WhatsApp and phone lines are monitored throughout the working week for fast confirmations.
+              for a free survey.
             </p>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-10 max-w-3xl mx-auto text-left">
@@ -471,7 +575,7 @@ const PackersMoversIslamabadSeo = () => {
               <a
                 href={WA}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border font-bold"
               >
                 <MessageCircle size={18} className="text-gold" aria-hidden />
@@ -483,127 +587,101 @@ const PackersMoversIslamabadSeo = () => {
       </header>
 
       <main className="py-16 container mx-auto px-4 max-w-4xl space-y-16 md:space-y-24 text-muted-foreground leading-relaxed">
-        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-5" aria-labelledby="intro-h2">
-          <h2 id="intro-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
+        {/* Introduction Section */}
+        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-5">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
             Best Packers and Movers in Islamabad
           </h2>
           <p>
-            Looking for reliable <strong className="text-foreground">packers and movers in Islamabad</strong>? Best
-            International Movers &amp; Logistics is Islamabad&apos;s most trusted{" "}
-            <strong className="text-foreground">moving company Islamabad</strong> with 15+ years of experience and 5,000+
-            successful moves. When families compare <strong className="text-foreground">movers and packers Islamabad</strong>{" "}
-            options online, the real difference shows up on move day: disciplined packing, respectful crews, transparent
-            pricing, and supervisors who communicate clearly instead of disappearing.
+            Looking for reliable relocation services? Our company is Islamabad&apos;s most trusted moving partner with 15+ years 
+            of experience and 5,000+ successful moves. We provide complete{" "}
+            <Link to="/home-shifting-islamabad" className="text-gold font-semibold hover:underline">
+              home relocation services
+            </Link>
+            ,{" "}
+            <Link to="/office-relocation-islamabad" className="text-gold font-semibold hover:underline">
+              office moving solutions
+            </Link>
+            , and{" "}
+            <Link to="/international-moving" className="text-gold font-semibold hover:underline">
+              overseas shipping
+            </Link>{" "}
+            across all sectors.
           </p>
           <p>
-            We provide complete <strong className="text-foreground">home shifting Islamabad</strong>,{" "}
-            <strong className="text-foreground">office relocation Islamabad</strong>, furniture moving and international
-            cargo services across all sectors of Islamabad. Our professional team of trained packers and movers handles
-            everything from start to finish — from careful packing at your current home to safe delivery at your new
-            address. That end-to-end ownership is what makes us a true <strong className="text-foreground">relocation services Islamabad</strong>{" "}
-            partner rather than a “truck-only” vendor.
+            Our professional team handles everything from careful packing to safe delivery. We also offer specialized 
+            <Link to="/cargo-service-islamabad" className="text-gold font-semibold hover:underline">
+              {" "}logistics and freight services
+            </Link>
+            {" "}and{" "}
+            <Link to="/secure-storage-islamabad" className="text-gold font-semibold hover:underline">
+              climate-controlled warehousing
+            </Link>
+            . For urgent shipments, check our{" "}
+            <Link to="/air-freight-islamabad" className="text-gold font-semibold hover:underline">
+              express air freight
+            </Link>{" "}
+            options.
           </p>
           <p>
-            Whether you are moving within Islamabad, shifting to another city, or relocating internationally to UAE, UK,
-            USA or Canada, we offer reliable and affordable moving solutions in Islamabad today. We also support clients
-            who need staged moves: short-term storage while possession dates shift, weekend office relocations to protect
-            weekday revenue, and diplomatic moves where protocol and discretion matter as much as speed.
+            Need services in nearby cities? We also provide{" "}
+            <Link to="/movers-rawalpindi" className="text-gold font-semibold hover:underline">
+              moving solutions in Rawalpindi
+            </Link>
+            {" "}and{" "}
+            <Link to="/packers-and-movers-lahore" className="text-gold font-semibold hover:underline">
+              professional packers in Lahore
+            </Link>
+            . For Dubai relocations, visit our{" "}
+            <Link to="/pakistan-to-dubai-movers" className="text-gold font-semibold hover:underline">
+              UAE moving specialists
+            </Link>{" "}
+            page.
           </p>
           <p>
-            Our packers use premium quality materials — double-wall boxes, bubble wrap, foam padding and furniture covers
-            — to reduce transit damage risk. Every move can be structured with insurance options, milestone updates, and
-            certified professional handling standards so your belongings are treated with respect. If you are searching
-            specifically for <strong className="text-foreground">house shifting Islamabad</strong> versus a full-service
-            pack-and-move programme, tell us during inquiry—we will match the crew size and material list to your actual
-            inventory instead of overselling services you do not need.
-          </p>
-          <p>
-            Islamabad&apos;s geography and housing mix creates unique challenges: hillside roads in some sectors, strict
-            society rules in Bahria and DHA, high-rise elevator windows in newer developments, and older G-markets
-            properties with narrow stairs. Our coordinators map these realities during the free survey so your quote
-            reflects true labour hours and access difficulty. That honesty is why repeat customers recommend us across
-            F-sectors, G-sectors, and premium enclaves alike.
-          </p>
-          <p>
-            For clients who want a single accountable desk, we combine packing, loading, transport, unloading, unpacking
-            assistance, and debris removal in one written scope. Email{" "}
-            <a className="text-gold font-semibold hover:underline" href={`mailto:${CONTACT_EMAIL}`}>
+            For any inquiries, email us at{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-gold font-semibold hover:underline">
               {CONTACT_EMAIL}
             </a>{" "}
-            with photos of large furniture, fridge type, and approximate room count for a faster preliminary estimate—
-            then we confirm everything on-site before you pay a booking deposit.
+            or call {PHONE_DISPLAY}.
           </p>
         </section>
 
-        <section className="space-y-5" aria-labelledby="guide-h2">
-          <h2 id="guide-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
-            Complete Guide: Hiring Packers and Movers in Islamabad
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 py-4">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold">
+            Get Free Quote <ArrowRight size={18} aria-hidden />
+          </Link>
+          <a href="tel:03009130211" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-gold/40 bg-navy-mid font-bold text-foreground">
+            <Phone size={18} className="text-gold" aria-hidden />
+            Call Now
+          </a>
+          <a href={WA} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border font-bold">
+            <MessageCircle size={18} className="text-gold" aria-hidden />
+            WhatsApp
+          </a>
+        </div>
+
+        {/* Complete Guide Section */}
+        <section className="space-y-5">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+            Complete Guide: Hiring Professional Movers
           </h2>
-          {longGuideParagraphs.map((text, i) => (
-            <p key={i} className="text-sm md:text-base leading-relaxed">
-              {text}
-            </p>
-          ))}
+          <LongGuideContent />
         </section>
 
-        <section aria-labelledby="services-h2">
-          <h2 id="services-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3 text-center">
-            Our Packers and Movers Services in Islamabad
-          </h2>
-          <p className="text-center max-w-2xl mx-auto mb-10">
-            Complete moving solutions for homes, offices and international relocations in Islamabad — executed by trained
-            crews with premium materials and clear communication. From a single-bedroom{" "}
-            <strong className="text-foreground">home shifting Islamabad</strong> sprint to a multi-day corporate
-            relocation with phased departments, we scale crew counts, supervision, and materials without lowering safety
-            standards—because repeat referrals built our brand, not one-off shortcuts.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-5">
-            {serviceCards.map(({ icon: Icon, title, description }) => (
-              <article
-                key={title}
-                className="glass-card rounded-xl p-6 border border-border hover:border-gold/25 transition-colors"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="rounded-lg bg-gold/15 p-2 text-gold">
-                    <Icon size={22} aria-hidden />
-                  </div>
-                  <h3 className="text-lg font-display font-semibold text-foreground">{title}</h3>
-                </div>
-                <p className="text-sm leading-relaxed">{description}</p>
-              </article>
-            ))}
-          </div>
-          <p className="mt-8 text-center text-sm">
-            Need lane-specific logistics after packing? Explore{" "}
-            <Link to="/cargo-service-islamabad" className="text-gold font-semibold hover:underline">
-              cargo service Islamabad
-            </Link>{" "}
-            and{" "}
-            <Link to="/services/international-moving" className="text-gold font-semibold hover:underline">
-              international moving
-            </Link>{" "}
-            for export-ready workflows.
-          </p>
-        </section>
-
-        <section className="space-y-6" aria-labelledby="areas-h2">
-          <h2 id="areas-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
-            Areas We Serve in Islamabad
-          </h2>
+        {/* Service Coverage Areas */}
+        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-5">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">Service Coverage Areas</h2>
           <p>
-            Our <strong className="text-foreground">movers and packers Islamabad</strong> teams cover every corner of the
-            capital — from diplomatic enclave to the newest housing societies. If your sector is not printed below,
-            call{" "}
-            <a className="text-gold font-semibold hover:underline" href="tel:03009130211">
-              {PHONE_DISPLAY}
-            </a>{" "}
-            anyway; we routinely confirm access for emerging blocks and extensions.
+            Our teams cover every corner of the capital. For service in Rawalpindi, see{" "}
+            <Link to="/movers-rawalpindi" className="text-gold font-semibold hover:underline">our Rawalpindi division</Link>.
           </p>
           <div className="space-y-6">
             {areaBlocks.map((block) => (
               <div key={block.heading}>
                 <h3 className="text-lg font-display font-semibold text-foreground mb-2">{block.heading}</h3>
-                <p className="text-sm md:text-base bg-navy-mid/40 rounded-lg border border-border px-4 py-3 font-mono text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base bg-navy-mid/40 rounded-lg border border-border px-4 py-3">
                   {block.text}
                 </p>
               </div>
@@ -612,44 +690,66 @@ const PackersMoversIslamabadSeo = () => {
           <div className="rounded-xl border border-gold/30 bg-gold/5 p-5 text-sm md:text-base">
             <strong className="text-foreground">Pickup and delivery</strong> available from{" "}
             <strong className="text-foreground">ALL areas of Islamabad</strong>. Call{" "}
-            <a className="text-gold font-semibold hover:underline" href="tel:03009130211">
-              {PHONE_DISPLAY}
-            </a>{" "}
-            to confirm your specific location, society gate rules, and the best truck size for your street.
+            <a className="text-gold font-semibold hover:underline" href="tel:03009130211">{PHONE_DISPLAY}</a>{" "}
+            to confirm your specific location.
           </div>
         </section>
 
-        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-8" aria-labelledby="why-h2">
-          <h2 id="why-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
-            Why Choose Our Packers and Movers in Islamabad?
+        {/* Why Choose Us */}
+        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-8">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+            Why Customers Trust Our Services
           </h2>
           {whyPoints.map((point, i) => (
             <div key={point.title} className="space-y-2">
               <h3 className="text-base md:text-lg font-display font-semibold text-foreground flex gap-2 items-start">
-                <Check className="text-gold shrink-0 mt-1" size={20} aria-hidden />
-                <span>
-                  {i + 1}. {point.title}
-                </span>
+                <Check className="text-gold shrink-0 mt-1" size={20} />
+                <span>{i + 1}. {point.title}</span>
               </h3>
               <p className="pl-0 md:pl-8 text-sm md:text-base">{point.body}</p>
             </div>
           ))}
-          <p className="text-sm border-t border-border pt-6">
-            Choosing the right <strong className="text-foreground">moving company Islamabad</strong> is not only about
-            price—it is about accountability. Ask vendors whether supervisors stay on-site, how they document high-value
-            items, and what happens if keys arrive late. We answer those questions upfront because{" "}
-            <strong className="text-foreground">packers and movers Islamabad</strong> success is measured in trust, not
-            just truck availability.
+        </section>
+
+        {/* Services Grid */}
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
+            Moving Services in Islamabad
+          </h2>
+          <p className="text-center max-w-2xl mx-auto mb-6">
+            Complete moving solutions for homes, offices and international relocations. 
+            From <Link to="/home-shifting-islamabad" className="text-gold font-semibold hover:underline">residential moves</Link> to{" "}
+            <Link to="/international-moving" className="text-gold font-semibold hover:underline">global shipping</Link>, we handle it all.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {serviceCards.map(({ icon: Icon, title, description }) => (
+              <article key={title} className="glass-card rounded-xl p-6 border border-border hover:border-gold/25 transition-colors">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="rounded-lg bg-gold/15 p-2 text-gold">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="text-lg font-display font-semibold text-foreground">{title}</h3>
+                </div>
+                <p className="text-sm leading-relaxed">{description}</p>
+              </article>
+            ))}
+          </div>
+          <p className="text-center text-sm mt-4">
+            Need specialized logistics? Explore our{" "}
+            <Link to="/cargo-service-islamabad" className="text-gold font-semibold hover:underline">cargo services</Link>,{" "}
+            <Link to="/air-freight-islamabad" className="text-gold font-semibold hover:underline">air freight</Link>, and{" "}
+            <Link to="/secure-storage-islamabad" className="text-gold font-semibold hover:underline">storage solutions</Link>.
           </p>
         </section>
 
-        <section className="space-y-6" aria-labelledby="pricing-h2">
-          <h2 id="pricing-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
+        {/* Pricing Guide */}
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
             Packers and Movers Charges in Islamabad 2025
           </h2>
           <p>
-            Transparent pricing with no hidden charges. Get a free detailed quote after home survey. The table below is
-            indicative; stairs, long carries, premium packing, pianos/safes, and weekend peaks can adjust totals fairly.
+            Transparent pricing with no hidden charges. For international moves, see our{" "}
+            <Link to="/international-moving" className="text-gold font-semibold hover:underline">international moving rates</Link>.
           </p>
           <div className="overflow-x-auto rounded-xl border border-border">
             <table className="w-full text-sm text-left min-w-[520px]">
@@ -671,38 +771,25 @@ const PackersMoversIslamabadSeo = () => {
               </tbody>
             </table>
           </div>
-          <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 text-sm space-y-2">
-            <p className="font-semibold text-foreground">Note: Prices vary based on:</p>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Distance between locations</li>
-              <li>Number of items and floors</li>
-              <li>Packing materials needed</li>
-              <li>Special items (piano, safe, antiques)</li>
-              <li>Day of week (weekends may vary)</li>
-            </ul>
-            <p>
+          <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 text-sm">
+            <p className="font-semibold text-foreground">Note: Prices vary based on distance, number of items, floors, and packing requirements.</p>
+            <p className="mt-2">
               <strong className="text-foreground">Get exact quote:</strong> Call{" "}
-              <a className="text-gold hover:underline" href="tel:03009130211">
-                {PHONE_DISPLAY}
-              </a>{" "}
+              <a className="text-gold hover:underline" href="tel:03009130211">{PHONE_DISPLAY}</a>{" "}
               or email{" "}
-              <a className="text-gold hover:underline" href={`mailto:${CONTACT_EMAIL}`}>
-                {CONTACT_EMAIL}
-              </a>
-              .
+              <a className="text-gold hover:underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </p>
           </div>
         </section>
 
-        <section className="space-y-6" aria-labelledby="process-h2">
-          <h2 id="process-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground">
-            Our Home Shifting Process in Islamabad
+        {/* Moving Process */}
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
+            Our Home Shifting Process
           </h2>
-          <p>
-            A repeatable process is what separates amateur labour from professional{" "}
-            <strong className="text-foreground">home shifting Islamabad</strong> execution. These eight steps mirror how
-            we run most residential projects—your coordinator may add checkpoints for high-rises, diplomatic protocols, or
-            international pre-move surveys.
+          <p className="text-center max-w-2xl mx-auto">
+            A repeatable process separates amateur labour from professional{" "}
+            <Link to="/home-shifting-islamabad" className="text-gold font-semibold hover:underline">home shifting</Link> execution.
           </p>
           <ol className="space-y-5 list-decimal pl-5 md:pl-6">
             {processSteps.map((step) => (
@@ -713,20 +800,17 @@ const PackersMoversIslamabadSeo = () => {
           </ol>
         </section>
 
-        <section className="space-y-8" aria-labelledby="reviews-h2">
-          <h2 id="reviews-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
+        {/* Testimonials */}
+        <section className="space-y-8">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
             What Our Islamabad Clients Say
           </h2>
-          <p className="text-center max-w-2xl mx-auto text-sm md:text-base">
-            Verified-style reviews from real move types across Islamabad. Individual timelines depend on inventory,
-            access, and weather—ask your coordinator for a realistic window.
-          </p>
           <div className="space-y-5">
             {testimonials.map((t) => (
               <figure key={t.name} className="glass-card rounded-xl p-6 border border-border">
-                <div className="flex gap-1 text-gold mb-3" aria-label="5 out of 5 stars">
+                <div className="flex gap-1 text-gold mb-3">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={18} className="fill-gold text-gold" aria-hidden />
+                    <Star key={i} size={18} className="fill-gold text-gold" />
                   ))}
                 </div>
                 <blockquote className="text-foreground/95 leading-relaxed">&ldquo;{t.quote}&rdquo;</blockquote>
@@ -739,38 +823,11 @@ const PackersMoversIslamabadSeo = () => {
           </div>
         </section>
 
-        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border" aria-labelledby="related-h2">
-          <h2 id="related-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-            Related Services You May Need
+        {/* FAQ Section */}
+        <section className="space-y-5">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
+            Frequently Asked Questions
           </h2>
-          <ul className="grid sm:grid-cols-2 gap-3">
-            {relatedLinks.map((l) => (
-              <li key={l.to}>
-                <Link
-                  to={l.to}
-                  className="flex items-center justify-between gap-2 rounded-lg border border-border px-4 py-3 text-gold hover:bg-gold/10 hover:border-gold/30 transition-colors text-sm font-medium"
-                >
-                  {l.label}
-                  <ArrowRight size={16} className="shrink-0 opacity-70" aria-hidden />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="space-y-5" aria-labelledby="faq-h2">
-          <h2 id="faq-h2" className="text-2xl md:text-3xl font-display font-bold text-foreground text-center">
-            Frequently Asked Questions — Packers and Movers Islamabad
-          </h2>
-          <p className="text-center text-sm max-w-2xl mx-auto">
-            All answers are visible on this page for indexing (no accordion). For the fastest booking path, call{" "}
-            <a className="text-gold hover:underline" href="tel:03009130211">
-              {PHONE_DISPLAY}
-            </a>{" "}
-            with your sector and move date. If you are comparing multiple vendors, print this FAQ list and ask each
-            company the same questions—consistent answers reveal who actually runs structured operations versus who is
-            improvising pricing without operational depth.
-          </p>
           <div className="space-y-4">
             {faqs.map((f) => (
               <div key={f.q} className="glass-card rounded-xl p-5 md:p-6 border border-white/5">
@@ -781,64 +838,53 @@ const PackersMoversIslamabadSeo = () => {
           </div>
         </section>
 
-        <section
-          className="text-center glass-card rounded-3xl p-10 md:p-14 border border-gold/20 space-y-6"
-          aria-labelledby="final-cta"
-        >
-          <h2 id="final-cta" className="text-2xl md:text-3xl font-display font-bold text-foreground">
+        {/* Final CTA */}
+        <section className="glass-card rounded-2xl p-8 md:p-10 border border-border space-y-5 text-center">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">Get a Free Quote</h2>
+          <p className="max-w-2xl mx-auto">
+            Call {PHONE_DISPLAY} or email{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-gold font-semibold hover:underline">
+              {CONTACT_EMAIL}
+            </a>{" "}
+            to get a free survey and exact moving cost.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3">
+            <a href="tel:03009130211" className="inline-flex items-center justify-center px-8 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold">
+              Call Now: {PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-gold/40 font-bold">
+              Email Us
+            </a>
+          </div>
+        </section>
+
+        {/* Final Booking Section */}
+        <section className="text-center glass-card rounded-3xl p-10 md:p-14 border border-gold/20 space-y-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
             Book Packers and Movers in Islamabad Today
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground">
-            Get a free no-obligation quote from Islamabad&apos;s most trusted moving company. Our experts will visit your
-            home for free and give you an accurate price. No hidden charges. No surprises.
+            Get a free no-obligation quote from Islamabad&apos;s most trusted moving company. 
+            Also serving <Link to="/movers-rawalpindi" className="text-gold hover:underline">Rawalpindi</Link> and{" "}
+            <Link to="/packers-and-movers-lahore" className="text-gold hover:underline">Lahore</Link>.
           </p>
           <div className="text-sm md:text-base space-y-2 text-left max-w-md mx-auto border border-border rounded-xl p-5 bg-navy-mid/40">
-            <p>
-              <span className="text-foreground font-semibold">Call:</span>{" "}
-              <a className="text-gold hover:underline" href="tel:03009130211">
-                {PHONE_DISPLAY}
-              </a>
-            </p>
-            <p>
-              <span className="text-foreground font-semibold">WhatsApp:</span>{" "}
-              <a className="text-gold hover:underline" href={WA} target="_blank" rel="noopener noreferrer">
-                {PHONE_DISPLAY}
-              </a>
-            </p>
-            <p>
-              <span className="text-foreground font-semibold">Email:</span>{" "}
-              <a className="text-gold hover:underline" href={`mailto:${CONTACT_EMAIL}`}>
-                {CONTACT_EMAIL}
-              </a>
-            </p>
-            <p>
-              <span className="text-foreground font-semibold">Hours:</span> Mon–Sat 8:00 AM – 8:00 PM (Sun emergency
-              service available)
-            </p>
-            <p>
-              <span className="text-foreground font-semibold">Islamabad office:</span> Blue Area, Jinnah Avenue, Islamabad
-            </p>
+            <p><span className="text-foreground font-semibold">Call:</span> <a className="text-gold hover:underline" href="tel:03009130211">{PHONE_DISPLAY}</a></p>
+            <p><span className="text-foreground font-semibold">WhatsApp:</span> <a className="text-gold hover:underline" href={WA} target="_blank" rel="noopener noreferrer nofollow">{PHONE_DISPLAY}</a></p>
+            <p><span className="text-foreground font-semibold">Email:</span> <a className="text-gold hover:underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+            <p><span className="text-foreground font-semibold">Hours:</span> Mon–Sat 8:00 AM – 8:00 PM</p>
+            <p><span className="text-foreground font-semibold">Office:</span> Blue Area, Jinnah Avenue, Islamabad</p>
           </div>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold"
-            >
-              Get Free Quote <ArrowRight size={18} aria-hidden />
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold">
+              Get Free Quote <ArrowRight size={18} />
             </Link>
-            <a
-              href={WA}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg border border-border bg-navy-mid font-bold"
-            >
+            <a href={WA} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg border border-border bg-navy-mid font-bold">
+              <MessageCircle size={18} className="text-gold" />
               WhatsApp Now
             </a>
-            <a
-              href="tel:03009130211"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg border border-gold/30 font-bold"
-            >
-              Call: {PHONE_DISPLAY}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-lg border border-gold/30 font-bold">
+              Email Us
             </a>
           </div>
         </section>

@@ -7,6 +7,21 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const Index = lazy(() => import("./pages/Index.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage.tsx"));
+const ServicesIndex = lazy(() => import("./pages/services/index.tsx"));
+const InternationalMovingService = lazy(() => import("./pages/services/international-moving.tsx"));
+const AirFreightService = lazy(() => import("./pages/services/air-freight.tsx"));
+const SeaFreightService = lazy(() => import("./pages/services/sea-freight.tsx"));
+const CustomsClearanceService = lazy(() => import("./pages/services/customs-clearance.tsx"));
+const ProfessionalPackingService = lazy(() => import("./pages/services/professional-packing.tsx"));
+const PetRelocationService = lazy(() => import("./pages/services/pet-relocation.tsx"));
+const FreightForwardingService = lazy(() => import("./pages/services/freight-forwarding.tsx"));
+const ChinaToPakistanCargoService = lazy(() => import("./pages/services/china-to-pakistan-cargo.tsx"));
+const NationwideDistributionService = lazy(() => import("./pages/services/nationwide-distribution.tsx"));
+const PackingMaterialsService = lazy(() => import("./pages/services/packing-materials.tsx"));
+const CargoInsuranceService = lazy(() => import("./pages/services/cargo-insurance.tsx"));
+const SecureStorageService = lazy(() => import("./pages/services/secure-storage.tsx"));
+const VehicleShippingService = lazy(() => import("./pages/services/vehicle-shipping.tsx"));
+const LastMileDeliveryService = lazy(() => import("./pages/services/last-mile-delivery.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
@@ -98,7 +113,21 @@ const App = () => (
           <Route path="/about" element={<Navigate to="/about-us" replace />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services" element={<ServicesIndex />} />
+          <Route path="/services/international-moving" element={<InternationalMovingService />} />
+          <Route path="/services/air-freight" element={<AirFreightService />} />
+          <Route path="/services/sea-freight" element={<SeaFreightService />} />
+          <Route path="/services/customs-clearance" element={<CustomsClearanceService />} />
+          <Route path="/services/professional-packing" element={<ProfessionalPackingService />} />
+          <Route path="/services/pet-relocation" element={<PetRelocationService />} />
+          <Route path="/services/freight-forwarding" element={<FreightForwardingService />} />
+          <Route path="/services/china-to-pakistan-cargo" element={<ChinaToPakistanCargoService />} />
+          <Route path="/services/nationwide-distribution" element={<NationwideDistributionService />} />
+          <Route path="/services/packing-materials" element={<PackingMaterialsService />} />
+          <Route path="/services/cargo-insurance" element={<CargoInsuranceService />} />
+          <Route path="/services/secure-storage" element={<SecureStorageService />} />
+          <Route path="/services/vehicle-shipping" element={<VehicleShippingService />} />
+          <Route path="/services/last-mile-delivery" element={<LastMileDeliveryService />} />
           <Route path="/services/:slug" element={<ServicesPage />} />
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
