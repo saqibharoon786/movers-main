@@ -106,7 +106,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={null}>
+        <Suspense fallback={
+          <div className="min-h-screen bg-background flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-8 h-8 border-2 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-muted-foreground">Loading...</p>
+            </div>
+          </div>
+        }>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -114,19 +121,19 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/services" element={<ServicesIndex />} />
-          <Route path="/services/international-moving" element={<InternationalMovingService />} />
+          <Route path="/services/international-moving-services" element={<InternationalMovingService />} />
           <Route path="/services/air-freight" element={<AirFreightService />} />
-          <Route path="/services/sea-freight" element={<SeaFreightService />} />
+          <Route path="/services/sea-freight-services" element={<SeaFreightService />} />
           <Route path="/services/customs-clearance" element={<CustomsClearanceService />} />
-          <Route path="/services/professional-packing" element={<ProfessionalPackingService />} />
-          <Route path="/services/pet-relocation" element={<PetRelocationService />} />
-          <Route path="/services/freight-forwarding" element={<FreightForwardingService />} />
-          <Route path="/services/china-to-pakistan-cargo" element={<ChinaToPakistanCargoService />} />
-          <Route path="/services/nationwide-distribution" element={<NationwideDistributionService />} />
-          <Route path="/services/packing-materials" element={<PackingMaterialsService />} />
-          <Route path="/services/cargo-insurance" element={<CargoInsuranceService />} />
-          <Route path="/services/secure-storage" element={<SecureStorageService />} />
-          <Route path="/services/vehicle-shipping" element={<VehicleShippingService />} />
+          <Route path="/services/professional-packing-services" element={<ProfessionalPackingService />} />
+          <Route path="/services/pet-relocation-services" element={<PetRelocationService />} />
+          <Route path="/services/freight-forwarding-services" element={<FreightForwardingService />} />
+          <Route path="/services/china-to-pakistan-cargo-services" element={<ChinaToPakistanCargoService />} />
+          <Route path="/services/nationwide-distribution-services" element={<NationwideDistributionService />} />
+          <Route path="/services/packing-materials-services" element={<PackingMaterialsService />} />
+          <Route path="/services/cargo-insurance-services" element={<CargoInsuranceService />} />
+          <Route path="/services/secure-storage-services" element={<SecureStorageService />} />
+          <Route path="/services/vehicle-shipping-services" element={<VehicleShippingService />} />
           <Route path="/services/last-mile-delivery" element={<LastMileDeliveryService />} />
           <Route path="/services/:slug" element={<ServicesPage />} />
           <Route path="/why-us" element={<WhyUsPage />} />

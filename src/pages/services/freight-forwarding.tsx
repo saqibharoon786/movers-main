@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 
 const serviceData = {
-  slug: "freight-forwarding",
+  slug: "freight-forwarding-services",
   icon: Route,
   title: "Freight Forwarding Services in Pakistan",
   subheading: "Sea, Air & Road — FCL to Last Mile",
@@ -101,11 +101,11 @@ function buildServiceSchema() {
       },
       {
         "@type": "Service",
-        "@id": "https://bestintlmovers.com/services/freight-forwarding#service",
+        "@id": "https://bestintlmovers.com/services/freight-forwarding-services#service",
         "name": "Freight Forwarding Services in Pakistan | Best International Movers",
         "serviceType": "Freight Forwarding",
         "description": "Pakistan's trusted freight forwarding — sea, air & road freight, FCL, LCL, DG cargo, customs clearance & door-to-door delivery.",
-        "url": "https://bestintlmovers.com/services/freight-forwarding",
+        "url": "https://bestintlmovers.com/services/freight-forwarding-services",
         "provider": { "@id": "https://bestintlmovers.com/#organization" },
         "areaServed": { "@type": "Country", "name": "Pakistan" },
         "hasOfferCatalog": {
@@ -160,7 +160,7 @@ function buildBreadcrumbSchema() {
         "@type": "ListItem", 
         "position": 3,
         "name": "Freight Forwarding",
-        "item": "https://bestintlmovers.com/services/freight-forwarding" 
+        "item": "https://bestintlmovers.com/services/freight-forwarding-services" 
       }
     ]
   };
@@ -172,7 +172,7 @@ const FreightForwardingService = () => {
     title: "Freight Forwarding Services in Pakistan | Best International Movers",
     description: "Pakistan's trusted freight forwarding company — sea, air & road freight, customs clearance, warehousing & door-to-door delivery. FCL, LCL & DG cargo. Get a free quote!",
     keywords: "freight forwarding Pakistan, freight forwarding company Pakistan, international freight forwarder Pakistan, sea freight forwarding Pakistan, air freight forwarding Pakistan, FCL LCL freight Pakistan, customs clearance freight forwarder, freight forwarding Islamabad, freight forwarding Lahore, road freight Pakistan, DG cargo Pakistan, freight quotation Pakistan, Incoterms Pakistan, door to door freight Pakistan",
-    canonicalUrl: "https://bestintlmovers.com/services/freight-forwarding"
+    canonicalUrl: "https://bestintlmovers.com/services/freight-forwarding-services"
   };
 
   // Helper function to render FAQ answer with optional link
@@ -199,7 +199,7 @@ const FreightForwardingService = () => {
         title={seoConfig.title}
         description={seoConfig.description}
         keywords={seoConfig.keywords}
-        urlPath="/services/freight-forwarding"
+        urlPath="/services/freight-forwarding-services"
         schema={[buildServiceSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
       />
       
@@ -221,6 +221,12 @@ const FreightForwardingService = () => {
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
               International Freight Forwarding Services in Pakistan — Sea, Air & Road, FCL to Last Mile
             </h1>
+            
+            <img 
+              src="/images/freight-forwarding.png" 
+              alt="International Freight Forwarding Services in Pakistan" 
+              className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
+            />
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               {seoConfig.description}
@@ -260,11 +266,9 @@ const FreightForwardingService = () => {
               className="text-muted-foreground leading-relaxed space-y-4 mb-16"
             >
               <p>
-                As one of Pakistan's most experienced{" "}
-                <Link to="/logistics-services-pakistan" className="text-gold hover:underline">
-                  logistics and freight forwarding companies
-                </Link>
-                {", Best International Movers & Logistics manages the complete international logistics chain for your cargo — from origin pickup and export documentation to "}
+                As one of Pakistan's most experienced logistics and freight forwarding companies, Best
+                International Movers & Logistics manages the complete international logistics chain for
+                your cargo — from origin pickup and export documentation to{" "}
                 <Link to="/services/customs-clearance" className="text-gold hover:underline">
                   customs clearance Pakistan
                 </Link>
@@ -276,71 +280,31 @@ const FreightForwardingService = () => {
                 <Link to="/services/sea-freight" className="text-gold hover:underline">
                   sea freight services
                 </Link>
-                {" cover both FCL (Full Container Load) and LCL (Less than Container Load) shipments via Karachi and Port Qasim — working with global carriers including Maersk, MSC, and Hapag-Lloyd. For urgent consignments, our "}
-                <Link to="/services/air-freight" className="text-gold hover:underline">
-                  air freight forwarding
-                </Link>
-                {" team coordinates with Emirates SkyCargo, DHL, and other major airlines to move your cargo fast, including DG (dangerous goods) certified shipments."}
+                {" cover both FCL (Full Container Load) and LCL (Less than Container Load) shipments via Karachi and Port Qasim — working with global carriers including Maersk, MSC, and Hapag-Lloyd. For urgent consignments, our air freight forwarding team coordinates with Emirates SkyCargo, DHL, and other major airlines to move your cargo fast, including DG (dangerous goods) certified shipments."}
               </p>
 
               <p>
-                Our freight forwarding operations cover all major Pakistani cities — including{" "}
-                <Link to="/freight-forwarding-islamabad" className="text-gold hover:underline">
-                  freight forwarding Islamabad
-                </Link>
-                {", "}
-                <Link to="/cargo-service-rawalpindi" className="text-gold hover:underline">
-                  Rawalpindi
-                </Link>
-                {", "}
-                <Link to="/movers-lahore" className="text-gold hover:underline">
-                  Lahore
-                </Link>
-                {", Karachi, and "}
-                <Link to="/movers-and-packers-in-peshawar" className="text-gold hover:underline">
-                  Peshawar
-                </Link>
-                {" — as well as cross-border road freight corridors to Afghanistan, Iran, and Central Asia. We also offer "}
-                <Link to="/goods-transportation-pakistan" className="text-gold hover:underline">
-                  domestic goods transportation across Pakistan
-                </Link>
-                {" with full tracking and proof of delivery."}
+                Our freight forwarding operations cover all major Pakistani cities — including freight
+                forwarding Islamabad, Rawalpindi, Lahore, Karachi, and Peshawar — as well as
+                cross-border road freight corridors to Afghanistan, Iran, and Central Asia. We also
+                offer domestic goods transportation across Pakistan with full tracking and proof of
+                delivery.
               </p>
 
               <p>
-                Every shipment we handle includes complete documentation support — Bills of Lading, Airway Bills, Certificates of Origin, Packing Lists, and all export/import permits. We support all standard Incoterms including EXW, FOB, CIF, DAP, and DDP. Need to estimate your import costs? Use our free{" "}
-                <Link to="/custom-duty-calculator" className="text-gold hover:underline">
-                  Pakistan customs duty calculator
-                </Link>
-                {". For popular international shipping routes, we specialize in "}
-                <Link to="/pakistan-to-dubai-movers" className="text-gold hover:underline">
-                  Pakistan to Dubai freight
-                </Link>
-                {", "}
-                <Link to="/pakistan-to-uk-movers" className="text-gold hover:underline">
-                  Pakistan to UK
-                </Link>
-                {", "}
-                <Link to="/pakistan-to-canada-movers" className="text-gold hover:underline">
-                  Pakistan to Canada
-                </Link>
-                {", and "}
-                <Link to="/pakistan-to-usa-movers" className="text-gold hover:underline">
-                  Pakistan to USA
-                </Link>
-                {" — all with competitive all-in freight rates."}
+                Every shipment we handle includes complete documentation support — Bills of Lading,
+                Airway Bills, Certificates of Origin, Packing Lists, and all export/import permits. We
+                support all standard Incoterms including EXW, FOB, CIF, DAP, and DDP. Need to estimate
+                your import costs? Use our free Pakistan customs duty calculator. For popular
+                international shipping routes, we specialize in Pakistan to Dubai freight, Pakistan to
+                UK, Pakistan to Canada, and Pakistan to USA — all with competitive all-in freight rates.
               </p>
 
               <p>
-                Not sure whether to ship by sea or air? Our detailed{" "}
-                <Link to="/blog/air-freight-vs-sea-freight-pakistan" className="text-gold hover:underline">
-                  air freight vs sea freight comparison guide
-                </Link>
-                {" breaks down cost, transit time, and risk — helping you make the smartest decision for your cargo. For a full picture of international shipping costs, read our "}
-                <Link to="/blog/international-shipping-cost-pakistan" className="text-gold hover:underline">
-                  international shipping cost guide for Pakistan
-                </Link>
-                {"."}
+                Not sure whether to ship by sea or air? Our detailed air freight vs sea freight
+                comparison guide breaks down cost, transit time, and risk — helping you make the
+                smartest decision for your cargo. For a full picture of international shipping costs,
+                read our international shipping cost guide for Pakistan.
               </p>
             </motion.div>
 

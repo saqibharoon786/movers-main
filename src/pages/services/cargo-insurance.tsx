@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 
 const serviceData = {
-  slug: "cargo-insurance",
+  slug: "cargo-insurance-services",
   icon: Shield,
   title: "Cargo Insurance Services in Pakistan",
   subheading: "Complete Protection for Every Shipment",
@@ -101,11 +101,11 @@ function buildServiceSchema() {
       },
       {
         "@type": "Service",
-        "@id": "https://bestintlmovers.com/services/cargo-insurance#service",
+        "@id": "https://bestintlmovers.com/services/cargo-insurance-services#service",
         "name": "Cargo Insurance Services in Pakistan | Best International Movers",
         "serviceType": "Cargo Insurance",
         "description": "Comprehensive cargo insurance for sea, air & inland shipments from Pakistan. All-risk, named perils & marine open cover with claims support.",
-        "url": "https://bestintlmovers.com/services/cargo-insurance",
+        "url": "https://bestintlmovers.com/services/cargo-insurance-services",
         "provider": { "@id": "https://bestintlmovers.com/#organization" },
         "areaServed": { "@type": "Country", "name": "Pakistan" },
         "hasOfferCatalog": {
@@ -143,7 +143,7 @@ const CargoInsuranceService = () => {
     title: "Cargo Insurance Services in Pakistan | Best International Movers",
     description: "Protect your shipment with comprehensive cargo insurance in Pakistan. All-risk, marine, air & inland transit coverage. Claims support included. Get a free quote today!",
     keywords: "cargo insurance Pakistan, shipping insurance Pakistan, marine cargo insurance Pakistan, freight insurance Pakistan, all-risk cargo insurance, goods in transit insurance Pakistan, international cargo insurance, cargo insurance Islamabad, cargo insurance Lahore, sea freight insurance Pakistan, air cargo insurance Pakistan, inland transit insurance, cargo claims assistance Pakistan, shipping loss damage coverage",
-    canonicalUrl: "https://bestintlmovers.com/services/cargo-insurance"
+    canonicalUrl: "https://bestintlmovers.com/services/cargo-insurance-services"
   };
 
   // Helper function to render FAQ answer with optional link
@@ -170,7 +170,7 @@ const CargoInsuranceService = () => {
         title={seoConfig.title}
         description={seoConfig.description}
         keywords={seoConfig.keywords}
-        urlPath="/services/cargo-insurance"
+        urlPath="/services/cargo-insurance-services"
         schema={[buildServiceSchema(), buildFAQSchema()]}
       />
       
@@ -192,6 +192,12 @@ const CargoInsuranceService = () => {
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
               Cargo Insurance Services in Pakistan — Complete Protection for Every Shipment
             </h1>
+
+            <img 
+              src="/images/cargo-insurance.jpg" 
+              alt="Cargo Insurance Services in Pakistan" 
+              className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
+            />
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               {seoConfig.description}
@@ -236,57 +242,30 @@ const CargoInsuranceService = () => {
                 <Link to="/services/sea-freight" className="text-gold hover:underline">sea freight from Pakistan</Link>
                 {", "}
                 <Link to="/services/air-freight" className="text-gold hover:underline">air freight</Link>
-                {", or through "}
-                <Link to="/goods-transportation-pakistan" className="text-gold hover:underline">domestic goods transportation</Link>
-                {", standard carrier liability rarely covers the full value of your goods in case of loss, damage, or theft. At "}
-                <Link to="/" className="text-gold hover:underline">Best International Movers & Logistics</Link>
-                {" — Pakistan's most trusted "}
-                <Link to="/logistics-services-pakistan" className="text-gold hover:underline">logistics company in Pakistan</Link>
-                {" — we provide comprehensive cargo insurance solutions tailored to your shipment type, value, and destination."}
+                {", or through domestic goods transportation, standard carrier liability rarely covers the full value of your goods in case of loss, damage, or theft. At Best International Movers & Logistics — Pakistan's most trusted logistics company in Pakistan — we provide comprehensive cargo insurance solutions tailored to your shipment type, value, and destination."}
               </p>
 
               <p>
-                Our cargo insurance services cover{" "}
-                <Link to="/cargo-services-pakistan" className="text-gold hover:underline">all types of cargo shipments from Pakistan</Link>
-                {" — from household goods and personal effects to commercial consignments, industrial equipment, and fragile valuables. We work with leading insurance underwriters to offer all-risk policies, named perils coverage, and "}
-                <Link to="/services/sea-freight" className="text-gold hover:underline">marine open cover for regular sea freight shippers</Link>
-                {" — all at competitive premiums with full "}
-                <Link to="/services/customs-clearance" className="text-gold hover:underline">customs clearance Pakistan</Link>
-                {" claims assistance."}
+                Our cargo insurance services cover all types of cargo shipments from Pakistan — from
+                household goods and personal effects to commercial consignments, industrial equipment,
+                and fragile valuables. We work with leading insurance underwriters to offer all-risk
+                policies, named perils coverage, and marine open cover for regular sea freight
+                shippers — all at competitive premiums with full customs clearance Pakistan claims
+                assistance.
               </p>
 
               <p>
-                Whether you're moving from{" "}
-                <Link to="/cargo-service-islamabad" className="text-gold hover:underline">Islamabad</Link>
-                {", "}
-                <Link to="/cargo-service-rawalpindi" className="text-gold hover:underline">Rawalpindi</Link>
-                {", "}
-                <Link to="/movers-lahore" className="text-gold hover:underline">Lahore</Link>
-                {", or "}
-                <Link to="/movers-and-packers-in-peshawar" className="text-gold hover:underline">Peshawar</Link>
-                {" — or shipping to destinations like "}
-                <Link to="/pakistan-to-dubai-movers" className="text-gold hover:underline">Dubai</Link>
-                {", "}
-                <Link to="/pakistan-to-uk-movers" className="text-gold hover:underline">UK</Link>
-                {", "}
-                <Link to="/pakistan-to-canada-movers" className="text-gold hover:underline">Canada</Link>
-                {", or "}
-                <Link to="/pakistan-to-usa-movers" className="text-gold hover:underline">USA</Link>
-                {" — our insurance specialists ensure your cargo is fully covered at every stage of the journey. For shipment cost planning, use our "}
-                <Link to="/custom-duty-calculator" className="text-gold hover:underline">Pakistan customs duty calculator</Link>
-                {"."}
+                Whether you're moving from Islamabad, Rawalpindi, Lahore, or Peshawar — or shipping
+                to destinations like Dubai, UK, Canada, or USA — our insurance specialists ensure your
+                cargo is fully covered at every stage of the journey. For shipment cost planning, use
+                our Pakistan customs duty calculator.
               </p>
 
               <p>
-                Need help understanding customs regulations that affect your coverage? Read our complete{" "}
-                <Link to="/blog/customs-regulations-guide-pakistan" className="text-gold hover:underline">
-                  Pakistan customs import regulations guide
-                </Link>
-                {". Comparing shipping modes? Our "}
-                <Link to="/blog/air-freight-vs-sea-freight-pakistan" className="text-gold hover:underline">
-                  air freight vs sea freight comparison
-                </Link>
-                {" breaks down cost, speed, and risk — helping you choose the right insurance policy for your shipment."}
+                Need help understanding customs regulations that affect your coverage? Read our complete
+                Pakistan customs import regulations guide. Comparing shipping modes? Our air freight vs
+                sea freight comparison breaks down cost, speed, and risk — helping you choose the right
+                insurance policy for your shipment.
               </p>
             </motion.div>
 

@@ -20,7 +20,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 
 const serviceData = {
-  slug: "vehicle-shipping",
+  slug: "vehicle-shipping-services",
   icon: Car,
   title: "Vehicle Shipping Services in Pakistan",
   subheading: "Safe, Insured & Door-to-Door Delivery",
@@ -65,7 +65,7 @@ function buildServiceSchema() {
     name: `${serviceData.title} — Best International Movers & Logistics`,
     serviceType: serviceData.title,
     description: serviceData.desc,
-    url: `https://bestintlmovers.com/services/${serviceData.slug}`,
+    url: `https://bestintlmovers.com/services/vehicle-shipping-services`,
     provider: {
       "@type": "Organization",
       name: "Best International Movers & Logistics",
@@ -92,19 +92,22 @@ const VehicleShippingService = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto">
             <Link to="/services" className="text-gold text-sm mb-6 inline-flex items-center gap-1 hover:underline">← All Services</Link>
             
-            <picture>
-              <source srcSet={`${serviceData.heroImg}&fm=webp`} type="image/webp" />
-              <img src={serviceData.heroImg} alt={serviceData.title} fetchPriority="high" loading="eager" width="1280" height="600" className="w-full h-64 md:h-96 object-cover rounded-2xl mb-10 shadow-lg" />
-            </picture>
+
             
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-xl bg-gold/10 flex items-center justify-center">
                 <serviceData.icon size={32} className="text-gold" />
               </div>
               <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground">
-                {serviceData.title} Pakistan
+                Vehicle-Shipping Services
               </h1>
             </div>
+
+            <img 
+              src="/images/vehicle-shipping.jpg" 
+              alt="Vehicle-Shipping Services" 
+              className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
+            />
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData.desc}</p>
 

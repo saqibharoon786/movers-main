@@ -20,7 +20,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 
 const serviceData = {
-  slug: "pet-relocation",
+  slug: "pet-relocation-services",
   icon: PawPrint,
   title: "Pet Relocation Services in Pakistan",
   subheading: "Safe, Stress-Free & IATA-Certified",
@@ -110,11 +110,11 @@ function buildServiceSchema() {
       },
       {
         "@type": "Service",
-        "@id": "https://bestintlmovers.com/services/pet-relocation#service",
+        "@id": "https://bestintlmovers.com/services/pet-relocation-services#service",
         "name": "Pet Relocation Services in Pakistan | Best International Movers",
         "serviceType": "Pet Relocation",
         "description": "Trusted pet relocation services across Pakistan & internationally. IATA-certified crates, vet documentation, customs clearance & door-to-door delivery.",
-        "url": "https://bestintlmovers.com/services/pet-relocation",
+        "url": "https://bestintlmovers.com/services/pet-relocation-services",
         "provider": { "@id": "https://bestintlmovers.com/#organization" },
         "areaServed": { "@type": "Country", "name": "Pakistan" },
         "hasOfferCatalog": {
@@ -152,7 +152,7 @@ const PetRelocationService = () => {
     title: "Pet Relocation Services in Pakistan | Best International Movers",
     description: "Trusted pet relocation services across Pakistan & internationally. IATA-certified crates, vet documentation, customs clearance & door-to-door delivery. Get a free quote today!",
     keywords: "pet relocation services Pakistan, pet shipping Pakistan, animal transport Pakistan, international pet movers, dog cat shipping Pakistan, live animal air freight, pet customs clearance Pakistan, IATA pet crate Pakistan, pet relocation Karachi Lahore, safe pet travel Pakistan, veterinary documentation movers, pet moving company Pakistan",
-    canonicalUrl: "https://bestintlmovers.com/services/pet-relocation"
+    canonicalUrl: "https://bestintlmovers.com/services/pet-relocation-services"
   };
 
   // Helper function to render FAQ answer with optional link
@@ -179,7 +179,7 @@ const PetRelocationService = () => {
         title={seoConfig.title}
         description={seoConfig.description}
         keywords={seoConfig.keywords}
-        urlPath="/services/pet-relocation"
+        urlPath="/services/pet-relocation-services"
         schema={[buildServiceSchema(), buildFAQSchema()]}
       />
       
@@ -199,8 +199,14 @@ const PetRelocationService = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Professional Pet Relocation Services in Pakistan — Safe, Stress-Free & IATA-Certified
+              Pet Relocation Services in Pakistan — Safe, Stress-Free & IATA-Certified
             </h1>
+            
+            <img 
+              src="/images/pet-relocation.png" 
+              alt="Pet Relocation Services in Pakistan" 
+              className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
+            />
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               {seoConfig.description}
@@ -240,23 +246,17 @@ const PetRelocationService = () => {
               className="text-muted-foreground leading-relaxed space-y-4 mb-16"
             >
               <p>
-                Planning to move abroad or relocate within Pakistan with your beloved pet? At{" "}
-                <Link to="/international-movers-pakistan/" className="text-gold hover:underline">international movers in Pakistan</Link>
-                {" — Pakistan's most trusted "}
-                <Link to="/services/international-moving" className="text-gold hover:underline">international moving services</Link>
-                {" — we offer comprehensive pet relocation services designed to make every journey safe, comfortable, and fully compliant with international regulations."}
+                Planning to move abroad or relocate within Pakistan with your beloved pet? At
+                international movers in Pakistan — Pakistan's most trusted international moving
+                services — we offer comprehensive pet relocation services designed to make every journey
+                safe, comfortable, and fully compliant with international regulations.
               </p>
               
               <p>
-                Whether you're relocating from{" "}
-                <Link to="/movers-islamabad" className="text-gold hover:underline">pet relocation Islamabad</Link>
-                {", "}
-                <Link to="/movers-lahore" className="text-gold hover:underline">pet movers Lahore</Link>
-                {", "}
-                <Link to="/movers-rawalpindi" className="text-gold hover:underline">movers Rawalpindi</Link>
-                {", or "}
-                <Link to="/movers-and-packers-in-peshawar" className="text-gold hover:underline">packers and movers Peshawar</Link>
-                {", our experienced pet relocation specialists manage every detail — from IATA-compliant travel crates and veterinary health certificates to "}
+                Whether you're relocating from pet relocation Islamabad, pet movers Lahore, movers
+                Rawalpindi, or packers and movers Peshawar, our experienced pet relocation specialists
+                manage every detail — from IATA-compliant travel crates and veterinary health
+                certificates to{" "}
                 <Link to="/services/customs-clearance" className="text-gold hover:underline">customs clearance Pakistan</Link>
                 {" and post-arrival guidance."}
               </p>
@@ -264,29 +264,21 @@ const PetRelocationService = () => {
               <p>
                 Your pet can travel via{" "}
                 <Link to="/services/air-freight" className="text-gold hover:underline">air freight from Pakistan</Link>
-                {" on major international airlines, or by road for domestic moves. Our team also coordinates "}
-                <Link to="/services/professional-packing" className="text-gold hover:underline">professional packing services</Link>
-                {" and "}
-                <Link to="/services/secure-storage" className="text-gold hover:underline">secure storage facilities Pakistan</Link>
-                {" if quarantine or delays require temporary accommodation for your pet."}
+                {" on major international airlines, or by road for domestic moves. Our team also coordinates professional packing services and secure storage facilities Pakistan if quarantine or delays require temporary accommodation for your pet."}
               </p>
               
               <p>
-                We handle the most popular pet relocation routes including{" "}
-                <Link to="/pakistan-to-dubai-movers" className="text-gold hover:underline">Pakistan to Dubai pet shipping</Link>
-                {", "}
-                <Link to="/pakistan-to-uk-movers" className="text-gold hover:underline">Pakistan to UK pet relocation</Link>
-                {", "}
-                <Link to="/pakistan-to-canada-movers" className="text-gold hover:underline">Pakistan to Canada movers</Link>
-                {", and "}
-                <Link to="/pakistan-to-saudi-arabia-movers" className="text-gold hover:underline">moving to Saudi Arabia from Pakistan</Link>
-                {" — ensuring full documentation compliance for each destination country's specific regulations."}
+                We handle the most popular pet relocation routes including Pakistan to Dubai pet
+                shipping, Pakistan to UK pet relocation, Pakistan to Canada movers, and moving to Saudi
+                Arabia from Pakistan — ensuring full documentation compliance for each destination
+                country's specific regulations.
               </p>
               
               <p>
-                With 24/7 real-time tracking and 15+ years of experience, we are Pakistan's go-to choice for stress-free international and domestic pet relocation. Not sure whether air or sea is right for your shipment? Read our{" "}
-                <Link to="/blog/air-freight-vs-sea-freight-pakistan" className="text-gold hover:underline">air freight vs sea freight Pakistan</Link>
-                {" guide for full details."}
+                With 24/7 real-time tracking and 15+ years of experience, we are Pakistan's go-to choice
+                for stress-free international and domestic pet relocation. Not sure whether air or sea
+                is right for your shipment? Read our air freight vs sea freight Pakistan guide for full
+                details.
               </p>
             </motion.div>
 
