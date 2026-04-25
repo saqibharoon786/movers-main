@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 const Index = lazy(() => import("./pages/Index.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage.tsx"));
+// const ServicesPage = lazy(() => import("./pages/ServicesPage.tsx"));
 const ServicesIndex = lazy(() => import("./pages/services/index.tsx"));
 const InternationalMovingService = lazy(() => import("./pages/services/international-moving.tsx"));
 const AirFreightService = lazy(() => import("./pages/services/air-freight.tsx"));
@@ -135,7 +135,7 @@ const App = () => (
           <Route path="/services/secure-storage-services" element={<SecureStorageService />} />
           <Route path="/services/vehicle-shipping-services" element={<VehicleShippingService />} />
           <Route path="/services/last-mile-delivery" element={<LastMileDeliveryService />} />
-          <Route path="/services/:slug" element={<ServicesPage />} />
+          {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
           <Route path="/faq" element={<FAQPage />} />
