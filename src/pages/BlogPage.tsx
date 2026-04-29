@@ -7,6 +7,17 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const blogs = [
   {
+    slug: "pet-relocation-from-pakistan-complete-guide",
+    img: "/images/pet-blog.png",
+    title: "Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free",
+    date: "Apr 29, 2026",
+    category: "Pet Services",
+    author: "Best International Movers",
+    readTime: "15 min read",
+    excerpt: "Complete guide to pet relocation from Pakistan. IATA crates, vet documents, customs clearance, costs, and trusted routes to UAE, UK, USA & Canada. Free quote available.",
+    content: "",
+  },
+  {
     slug: "packers-and-movers-islamabad-guide",
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
     title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025)",
@@ -135,7 +146,7 @@ const blogs = [
 <h2>Shortlist Workflow</h2>
 <p>Compare two or three companies, ask the same compliance questions, and verify response quality. Then select the team that offers the clearest documentation plan, not just the lowest upfront number.</p>`
   },
-  {
+    {
     slug: "packing-guide-international-move",
     img: "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",

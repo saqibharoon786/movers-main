@@ -92,6 +92,7 @@ const GoodsTransportVsCargoServicesBlog = lazy(() => import("./pages/blog/GoodsT
 const PackingFragileItemsGuideBlog = lazy(() => import("./pages/blog/PackingFragileItemsGuideBlog.tsx"));
 const CheapMoversTipsPakistanBlog = lazy(() => import("./pages/blog/CheapMoversTipsPakistanBlog.tsx"));
 const PackersMoversIslamabadGuideBlog = lazy(() => import("./pages/blog/PackersMoversIslamabadGuideBlog.tsx"));
+const PetRelocationFromPakistanBlog = lazy(() => import("./pages/blog/PetRelocationFromPakistanBlog.tsx"));
 const InternationalMoversIslamabad = lazy(() => import("./pages/InternationalMoversIslamabad.tsx"));
 const InternationalMoversLahore = lazy(() => import("./pages/InternationalMoversLahore.tsx"));
 const InternationalRelocationServicesRawalpindi = lazy(() => import("./pages/InternationalRelocationServicesRawalpindi.tsx"));
@@ -171,6 +172,8 @@ const App = () => (
           <Route path="/blog/cheap-movers-tips-pakistan/" element={<CheapMoversTipsPakistanBlog />} />
           <Route path="/blog/packers-and-movers-islamabad-guide" element={<Navigate to="/blog/packers-and-movers-islamabad-guide/" replace />} />
           <Route path="/blog/packers-and-movers-islamabad-guide/" element={<PackersMoversIslamabadGuideBlog />} />
+          <Route path="/blog/pet-relocation-from-pakistan-complete-guide" element={<Navigate to="/blog/pet-relocation-from-pakistan-complete-guide/" replace />} />
+          <Route path="/blog/pet-relocation-from-pakistan-complete-guide/" element={<PetRelocationFromPakistanBlog />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
           <Route path="/pakistan-to-dubai-movers" element={<PakistanToDubaiMovers />} />
@@ -211,7 +214,7 @@ const App = () => (
           <Route path="/vehicle-import-guide-pakistan" element={<VehicleImportGuidePakistan />} />
           <Route path="/packers-and-movers-islamabad" element={<PackersMoversIslamabad />} />
           <Route path="/packers-and-movers-lahore" element={<PackersMoversLahore />} />
-          <Route path="/packers-and-movers-rawalpindi" element={<PackersMoversRawalpindi />} />
+          <Route path="/packers-and-movers-rawalpindi" element={<Navigate to="/packers-and-movers-in-rawalpindi" replace />} />
           <Route path="/home-shifting-islamabad" element={<HomeShiftingIslamabad />} />
           <Route path="/home-shifting-rawalpindi" element={<HomeShiftingRawalpindi />} />
           <Route path="/home-shifting-services-in-rawalpindi" element={<HomeShiftingServicesInRawalpindi />} />

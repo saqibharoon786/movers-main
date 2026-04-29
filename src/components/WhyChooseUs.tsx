@@ -21,17 +21,25 @@ const reasons = [
 const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
     if (!inView) return;
+    
     let start = 0;
-    const step = Math.ceil(target / 60);
+    const duration = 2000; // 2 seconds for smooth animation
+    const increment = target / (duration / 16); // 60fps
+    
     const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { setCount(target); clearInterval(timer); }
-      else setCount(start);
-    }, 30);
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    
     return () => clearInterval(timer);
   }, [inView, target]);
 
