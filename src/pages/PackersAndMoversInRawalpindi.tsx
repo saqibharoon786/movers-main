@@ -362,7 +362,7 @@ const PackersAndMoversInRawalpindi = () => {
       <p>
         Share your area, move date, and room count for faster planning. Our team responds within 2 hours during business hours.
       </p>
-      <div className="bg-gradient-to-r from-gold/20 to-gold/10 rounded-lg p-6 border border-gold/30 text-center mt-4">
+      <div className="bg-gradient-to-r from-gold/20 to-gold/10 rounded-lg p-6 border border-gold/30 text-center mt-4 w-full">
         <div className="space-y-3">
           <div className="text-2xl font-bold text-foreground">
             📞 Call / WhatsApp: <span className="text-gold">0300-9130211</span>
@@ -387,3 +387,4 @@ const PackersAndMoversInRawalpindi = () => {
 };
 
 export default PackersAndMoversInRawalpindi;
+

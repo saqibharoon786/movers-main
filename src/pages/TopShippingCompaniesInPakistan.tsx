@@ -1,255 +1,643 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Anchor, Globe2, Plane, Ship, ShieldCheck } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import ContactFooter from "@/components/ContactFooter";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
-import PageBottomQuoteCta from "@/components/marketing/PageBottomQuoteCta";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useSEO } from "@/hooks/useSEO";
-
-const PATH = "/top-shipping-companies-in-pakistan/";
-const WA = "https://wa.me/923009130211?text=Hello!%20I%20need%20international%20shipping%20from%20Pakistan.";
-
-const faqs: { q: string; a: string }[] = [
-  {
-    q: "How do I choose between air and sea freight from Pakistan?",
-    a: "Air suits urgent, smaller, or high-value parcels with predictable airport cut-offs. Sea is cost-effective for volume, furniture, or commercial pallets when transit time is flexible. We compare both on the same lane so you see landed cost and calendar impact.",
-  },
-  {
-    q: "Which documents are usually required for export?",
-    a: "Typical sets include commercial invoice, packing list, HS codes, and shipper/exporter registration where applicable. Destination-specific rules may add certificates — we flag those during booking so paperwork is not rushed at gate-out.",
-  },
-  {
-    q: "Do you consolidate less-than-container loads?",
-    a: "Yes. LCL lets you share container space when you do not need a full 20ft or 40ft box. Cargo is crated or palletised, manifested clearly, and tracked to discharge port.",
-  },
-  {
-    q: "Can businesses get recurring pickup schedules?",
-    a: "Manufacturers and e-commerce shippers often book weekly or bi-weekly pickups from Karachi, Lahore, or Islamabad corridors with standardised carton weights and labels for faster handoff to carriers.",
-  },
-  {
-    q: "How are delays or rollovers communicated?",
-    a: "Ocean schedules can shift due to port congestion. We push updates when sailing dates move and discuss storage or rerouting options if a critical deadline is at risk.",
-  },
-];
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "International shipping coordination from Pakistan",
-  description:
-    "Air and sea freight, documentation support, and logistics for exporters and relocating households shipping from Pakistan.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Best International Movers & Logistics",
-    telephone: "+923009130211",
-    email: "info@bestintlmovers.com",
-    address: { "@type": "PostalAddress", addressLocality: "Islamabad", addressCountry: "PK" },
-  },
-  areaServed: { "@type": "Country", name: "Pakistan" },
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SeoLandingPageLayout from '../components/marketing/SeoLandingPageLayout';
+import { Package, Ship, Plane, Globe2, ShieldCheck, Clock, MapPin, Users, CheckCircle, ArrowRight, Phone, MessageCircle, Anchor, Truck, Building } from 'lucide-react';
 
 const TopShippingCompaniesInPakistan = () => {
-  useSEO({
-    title: "Top Shipping Companies in Pakistan | Air & Sea Cargo | Best Intl Movers",
-    description:
-      "Compare air vs sea freight, documentation, and global lanes with one of Pakistan’s experienced logistics teams — export packing, consolidation, and transparent milestones. 0300-9130211.",
-    keywords:
-      "top shipping companies in pakistan, international shipping companies pakistan, sea freight pakistan, air cargo pakistan, logistics pakistan",
-    urlPath: PATH,
-    schema: [serviceSchema, faqSchema],
-    ogImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&q=80&w=1200&h=630",
-    ogImageAlt: "Container port and logistics — shipping from Pakistan",
-  });
+  // Schema markup for SEO
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://bestintlmovers.com/top-shipping-companies-in-pakistan",
+        "name": "Best International Movers & Logistics - Pakistan",
+        "description": "Top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions.",
+        "url": "https://bestintlmovers.com/top-shipping-companies-in-pakistan",
+        "telephone": "+92-300-9130211",
+        "email": "info@bestintlmovers.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Islamabad",
+          "addressRegion": "Punjab",
+          "addressCountry": "Pakistan"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "33.6844",
+          "longitude": "73.0479"
+        },
+        "openingHours": "Mo-Sa 08:00-20:00",
+        "priceRange": "$$",
+        "image": "https://bestintlmovers.com/images/shipping.png",
+        "serviceType": "Shipping and Logistics Services"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://bestintlmovers.com/top-shipping-companies-in-pakistan#service",
+        "name": "Top Shipping Companies in Pakistan",
+        "description": "Complete guide to shipping companies in Pakistan including air freight, sea freight, customs clearance, and logistics services.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://bestintlmovers.com/top-shipping-companies-in-pakistan"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Pakistan and International"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bestintlmovers.com/top-shipping-companies-in-pakistan#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which is the most reliable shipping company in Pakistan for international moves?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Best International Movers & Logistics is among the most trusted providers for complete door-to-door international relocation from Pakistan, with 15+ years of experience and coverage to 100+ countries."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between a shipping company and a freight forwarder in Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A shipping company operates its own vessels or aircraft. A freight forwarder acts as an intermediary — booking space with carriers, handling customs documentation, and coordinating end-to-end logistics. Most businesses in Pakistan work with freight forwarders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does sea freight from Pakistan to the UK take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sea freight from Karachi Port to the UK typically takes 20 to 28 days, depending on the shipping line, port of destination, and customs clearance time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do shipping companies in Pakistan handle customs clearance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most full-service freight forwarders and moving companies in Pakistan offer in-house customs clearance. Use our Custom Duty Calculator to estimate applicable duties before shipping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What documents are required for international shipping from Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard documents include a commercial invoice, packing list, bill of lading or airway bill, certificate of origin, and any applicable export permits. Your shipping company will guide you through the full documentation process."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://bestintlmovers.com/top-shipping-companies-in-pakistan#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://bestintlmovers.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://bestintlmovers.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Top Shipping Companies Pakistan",
+            "item": "https://bestintlmovers.com/top-shipping-companies-in-pakistan"
+          }
+        ]
+      }
+    ]
+  };
+
+  // FAQ data
+  const faqs = [
+    {
+      q: "Which is the most reliable shipping company in Pakistan for international moves?",
+      a: "Best International Movers & Logistics is among the most trusted providers for complete door-to-door international relocation from Pakistan, with 15+ years of experience and coverage to 100+ countries."
+    },
+    {
+      q: "What is the difference between a shipping company and a freight forwarder in Pakistan?",
+      a: "A shipping company operates its own vessels or aircraft. A freight forwarder acts as an intermediary — booking space with carriers, handling customs documentation, and coordinating end-to-end logistics. Most businesses in Pakistan work with freight forwarders."
+    },
+    {
+      q: "How long does sea freight from Pakistan to the UK take?",
+      a: "Sea freight from Karachi Port to the UK typically takes 20 to 28 days, depending on the shipping line, port of destination, and customs clearance time."
+    },
+    {
+      q: "Do shipping companies in Pakistan handle customs clearance?",
+      a: "Most full-service freight forwarders and moving companies in Pakistan offer in-house customs clearance. Use our Custom Duty Calculator to estimate applicable duties before shipping."
+    },
+    {
+      q: "What documents are required for international shipping from Pakistan?",
+      a: "Standard documents include a commercial invoice, packing list, bill of lading or airway bill, certificate of origin, and any applicable export permits. Your shipping company will guide you through the full documentation process."
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-foreground">
-      <Navbar />
+    <SeoLandingPageLayout
+      visualSkin="default"
+      title="Top Shipping Companies in Pakistan – 2025 Complete Guide"
+      description="Discover the top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions. Call 0300-9130211"
+      keywords="top shipping companies in pakistan, best shipping companies pakistan, freight companies pakistan, logistics companies pakistan, international shipping pakistan, cargo companies pakistan"
+      urlPath="/top-shipping-companies-in-pakistan"
+      h1="Top Shipping Companies in Pakistan – 2025 Complete Guide"
+      heroSubtext="Discover the top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions. Call 0300-9130211"
+      breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Top Shipping Companies Pakistan" }]}
+      heroImageUrl="/images/shipping.png"
+      heroImageAlt="Top shipping companies in Pakistan for international cargo and logistics services"
+      schema={serviceSchema}
+      faqs={faqs}
+      faqSectionTitle="Frequently Asked Questions – Shipping Companies in Pakistan"
+    >
 
-      <div className="pt-24 lg:pt-32 pb-0 bg-gradient-to-b from-sky-950 via-slate-950 to-slate-950 border-b border-sky-900/40">
-        <div className="container mx-auto px-4 max-w-6xl pb-16">
-          <PageBreadcrumb className="mb-6 text-sky-200/70 [&_a]:text-sky-300 [&_a:hover]:text-white" items={[{ label: "Services", to: "/services" }, { label: "Shipping in Pakistan" }]} />
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
-            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/60 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sky-200 mb-5">
-                <Globe2 className="w-3.5 h-3.5" /> Global lanes
-              </div>
-              <h1 className="text-3xl md:text-[2.65rem] font-display font-bold text-white leading-tight mb-5">
-                Top Shipping Companies in Pakistan for International Cargo &amp; Logistics Solutions
-              </h1>
-              <p className="text-lg text-sky-100/80 leading-relaxed mb-8">
-                Pakistan sits at the crossroads of Gulf, European, and North American trade lanes. The best outcomes pair carrier capacity with disciplined paperwork,
-                realistic sailing windows, and export packing that survives humidity and rough handling — not generic quotes copied from unrelated markets.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/contact" className="inline-flex px-6 py-3 rounded-lg bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 transition-colors">
-                  Request a shipping brief
-                </Link>
-                <a
-                  href={WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex px-6 py-3 rounded-lg border border-sky-400/40 text-sky-50 font-semibold hover:bg-sky-950/80"
-                >
-                  WhatsApp export desk
-                </a>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.05 }}
-              className="rounded-2xl border border-sky-800/50 bg-slate-900/70 p-6 shadow-xl shadow-sky-950/40"
-            >
-              <p className="text-xs font-bold uppercase tracking-wider text-sky-300 mb-4">Lane snapshot</p>
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between gap-4 border-b border-slate-700/80 pb-3">
-                  <span className="text-slate-400">Karachi → Jebel Ali</span>
-                  <span className="text-sky-200 font-medium">Frequent feeders</span>
-                </div>
-                <div className="flex justify-between gap-4 border-b border-slate-700/80 pb-3">
-                  <span className="text-slate-400">Lahore air hub</span>
-                  <span className="text-sky-200 font-medium">Express docs lanes</span>
-                </div>
-                <div className="flex justify-between gap-4">
-                  <span className="text-slate-400">Islamabad / RWP</span>
-                  <span className="text-sky-200 font-medium">Road feed + gateway</span>
-                </div>
-              </div>
-              <p className="mt-5 text-xs text-slate-400 leading-relaxed">
-                Final routing depends on commodity, incoterms, and carrier space at booking — we confirm cut-offs in writing.
-              </p>
-            </motion.div>
-          </div>
-        </div>
+      {/* Hero Image */}
+      <div className="my-8">
+        <img src="/images/shipping.png" alt="Top Shipping Companies in Pakistan" className="w-full rounded-xl shadow-2xl" />
       </div>
 
-      <section className="py-14 px-4 border-b border-slate-800/80">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
-            <Ship className="w-10 h-10 text-sky-400 mb-4" />
-            <h2 className="text-xl font-display font-bold text-white mb-3">Ocean freight programmes</h2>
-            <p className="text-slate-300 leading-relaxed text-sm">
-              FCL and LCL bookings through Karachi Port and QICT-style terminals with emphasis on VGM accuracy, container condition photos at stuffing, and moisture
-              protection for monsoon-adjacent storage. Ideal for household goods, machinery, and palletised SKUs.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8">
-            <Plane className="w-10 h-10 text-sky-400 mb-4" />
-            <h2 className="text-xl font-display font-bold text-white mb-3">Air cargo &amp; courier-style urgency</h2>
-            <p className="text-slate-300 leading-relaxed text-sm">
-              Airport-to-airport or door-to-air for samples, spare parts, and time-sensitive documents. We align dimensions with airline DIM factors so you are not
-              surprised by volume-weight charges at check-in.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Introduction */}
+      <div className="my-8">
+        <p className="text-foreground leading-relaxed mb-4">
+          Choosing the right shipping company in Pakistan can make or break your logistics experience. Whether you are a business exporting goods internationally, an importer clearing shipments at Karachi Port, or an individual relocating overseas, the quality and reliability of your freight partner directly affects your costs, timelines, and peace of mind.
+        </p>
+        <p className="text-foreground leading-relaxed">
+          Pakistan's logistics sector has grown significantly in recent years — driven by CPEC infrastructure development, expanding e-commerce, and increasing international trade volumes. With dozens of shipping companies operating across Islamabad, Rawalpindi, Karachi, Lahore, and Peshawar, selecting the right one requires a clear understanding of what each provider offers.
+        </p>
+        <p className="text-foreground leading-relaxed mt-4">
+          This guide covers the top shipping companies in Pakistan, the services they provide, and the key factors to consider when making your choice.
+        </p>
+      </div>
 
-      <section className="py-14 px-4 bg-slate-900/30">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-white text-center mb-10">Why exporters pair with experienced operators</h2>
-          <div className="grid sm:grid-cols-3 gap-4 text-sm">
+      {/* What Do Shipping Companies Do */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-6">What Do Shipping Companies in Pakistan Do?</h2>
+        <div className="bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl p-6 border border-blue-500">
+          <p className="text-white leading-relaxed mb-4">
+            Shipping companies in Pakistan provide a range of freight and logistics services, including:
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Carrier-neutral advice", body: "We match lane and budget instead of forcing a single line." },
-              { title: "Documentation hygiene", body: "HS consistency between invoice and packing list reduces holds." },
-              { title: "Visibility", body: "Milestone tracking so finance and warehouse teams stay aligned." },
-            ].map((c) => (
-              <div key={c.title} className="rounded-xl border border-slate-700 bg-slate-950/60 p-5">
-                <Anchor className="w-6 h-6 text-sky-500 mb-2" />
-                <h3 className="font-semibold text-white mb-2">{c.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{c.body}</p>
+              { icon: Plane, title: "Air Freight", desc: "Fast international cargo via air for time-sensitive shipments" },
+              { icon: Ship, title: "Sea Freight", desc: "Cost-effective ocean shipping via FCL and LCL" },
+              { icon: Truck, title: "Goods Transportation", desc: "Domestic road freight across Pakistan" },
+              { icon: ShieldCheck, title: "Customs Clearance", desc: "Import and export documentation and regulatory compliance" },
+              { icon: Building, title: "Warehousing & Storage", desc: "Short and long-term goods storage" },
+              { icon: Package, title: "Door-to-Door Cargo", desc: "End-to-end pickup and delivery services" }
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-3 p-4 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                <item.icon className="w-6 h-6 text-white mt-1" />
+                <div>
+                  <h3 className="text-white font-semibold mb-1">{item.title}</h3>
+                  <p className="text-blue-100 text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
+          <p className="text-white mt-4 leading-relaxed">
+            The best shipping companies in Pakistan offer a combination of these services under one roof, providing businesses and individuals with a single point of contact for all their logistics needs.
+          </p>
         </div>
       </section>
 
-      <section className="py-14 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl font-display font-bold text-white mb-6">Customs &amp; compliance mindset</h2>
-          <p className="text-slate-300 leading-relaxed mb-6">
-            Pakistan customs processes reward advance preparation: accurate valuation, restricted-item checks, and aligned certificates for textiles, electronics, or
-            food-grade cargo. Our team focuses on the pre-shipment window — when fixes are cheap — rather than crisis calls at the gate.
+      {/* Key Factors to Consider */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-6">Key Factors to Consider When Choosing a Shipping Company in Pakistan</h2>
+        <p className="text-foreground leading-relaxed mb-6">
+          Before selecting a freight or logistics provider, evaluate the following:
+        </p>
+        <div className="space-y-6">
+          {[
+            { title: "Service Range", desc: "Does the company offer air freight, sea freight, customs clearance, and domestic transportation — or only one or two services? A full-service provider eliminates the need to coordinate with multiple vendors." },
+            { title: "Experience & Track Record", desc: "Companies with 10+ years of experience in Pakistan's logistics sector have established carrier relationships, customs expertise, and problem-solving capability that newer entrants cannot match." },
+            { title: "Global Network", desc: "For international shipments, your logistics partner must have verified agents and partner networks in destination countries. Without a strong global network, your shipment may get stuck at the destination end." },
+            { title: "Customs Expertise", desc: "Pakistan's customs regulations for both import and export are complex. A shipping company with in-house customs clearance agents saves you time, reduces penalties, and ensures compliance with FBR and Pakistan Customs Authority requirements." },
+            { title: "Transparent Pricing", desc: "Hidden charges are a common problem in Pakistan's freight industry. Look for companies that provide written, itemised quotations covering all costs — freight charges, documentation fees, handling, and customs duties." },
+            { title: "Insurance Coverage", desc: "Reputable shipping companies offer transit insurance on all shipments. This protects your goods against loss or damage during transportation." },
+            { title: "Real-Time Tracking", desc: "Modern logistics providers offer GPS tracking and shipment status updates so you always know where your cargo is." }
+          ].map((item, idx) => (
+            <div key={idx} className="flex gap-4 p-6 bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-2xl border border-gray-700 hover:border-blue-500 transition-all">
+              <div className="flex-shrink-0">
+                <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                  {idx + 1}
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 p-4 bg-yellow-500/20 backdrop-blur-sm rounded-lg border border-yellow-400">
+          <p className="text-white font-medium text-lg">
+            <strong className="text-yellow-300">💡 Pro Tip:</strong> Use our{" "}
+            <Link to="/custom-duty-calculator" className="text-yellow-300 hover:text-yellow-200 underline font-semibold">
+              Custom Duty Calculator
+            </Link>
+            {" "}to estimate import duties before shipping.
           </p>
-          <div className="flex items-start gap-3 rounded-xl border border-sky-900/40 bg-sky-950/20 p-5">
-            <ShieldCheck className="w-6 h-6 text-sky-400 shrink-0" />
-            <p className="text-sm text-sky-100/80 leading-relaxed">
-              For import duty estimates on personal effects, use our{" "}
-              <Link to="/custom-duty-calculator" className="text-sky-300 underline-offset-2 hover:underline">
-                customs duty calculator
-              </Link>{" "}
-              as a planning aid alongside formal customs advice.
+        </div>
+      </section>
+
+      {/* Top International Shipping Companies */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-8">Top International Shipping Companies in Pakistan</h2>
+        
+        <div className="space-y-6">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl shadow-xl p-6 border border-blue-400">
+            <div className="flex items-center mb-4">
+              <Globe2 className="w-8 h-8 text-white mr-3" />
+              <h3 className="text-xl font-semibold text-white">Best International Movers & Logistics</h3>
+            </div>
+            <p className="text-blue-50 leading-relaxed">
+              One of Pakistan's most trusted names for international relocation and cargo services, Best International Movers & Logistics provides complete door-to-door shipping to over 100 countries from Rawalpindi, Islamabad, Lahore, and Peshawar. Services include air freight, sea freight, customs clearance, vehicle shipping, and professional packing. With 15+ years of experience and a global partner network, they are a leading choice for both households and businesses moving overseas.
+            </p>
+            <div className="mt-4 p-4 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <strong className="text-white">Services:</strong>
+                  <p className="text-blue-100">International Moving, Air Freight, Sea Freight, Customs Clearance, Goods Transportation, Storage</p>
+                </div>
+                <div>
+                  <strong className="text-white">Coverage:</strong>
+                  <p className="text-blue-100">Rawalpindi, Islamabad, Lahore, Peshawar, Karachi → Worldwide</p>
+                </div>
+                <div>
+                  <strong className="text-white">Contact:</strong>
+                  <p className="text-blue-100">0300-9130211</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl shadow-xl p-6 border border-green-400">
+              <div className="flex items-center mb-4">
+                <Building className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">National Logistics Corporation (NLC)</h3>
+              </div>
+              <p className="text-green-50 leading-relaxed">
+                A government-backed logistics provider headquartered in Rawalpindi, NLC specialises in road freight transportation, warehousing, and customs facilitation. It has a large nationwide fleet and is particularly strong in bulk goods transport and government contracts.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl shadow-xl p-6 border border-purple-400">
+              <div className="flex items-center mb-4">
+                <Ship className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Pakistan National Shipping Corporation (PNSC)</h3>
+              </div>
+              <p className="text-purple-50 leading-relaxed">
+                PNSC is Pakistan's state-owned shipping line, providing ocean freight services between Pakistani ports and international destinations. It handles bulk cargo, containerised goods, and liquid cargo.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl shadow-xl p-6 border border-orange-400">
+              <div className="flex items-center mb-4">
+                <Anchor className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Maersk Pakistan</h3>
+              </div>
+              <p className="text-orange-50 leading-relaxed">
+                The local arm of global shipping giant Maersk, offering sea freight, container shipping, and supply chain solutions. Maersk Pakistan operates through Karachi Port and Port Qasim and is ideal for high-volume commercial importers and exporters.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl shadow-xl p-6 border border-teal-400">
+              <div className="flex items-center mb-4">
+                <Plane className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">DHL Pakistan</h3>
+              </div>
+              <p className="text-teal-50 leading-relaxed">
+                DHL provides express international courier, air freight, and e-commerce logistics across Pakistan. It is one of the most widely used services for urgent international document and parcel shipments.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl shadow-xl p-6 border border-indigo-400">
+              <div className="flex items-center mb-4">
+                <Package className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Pacewell Cargo</h3>
+              </div>
+              <p className="text-indigo-50 leading-relaxed">
+                Headquartered in Islamabad and Sialkot, Pacewell offers air freight, sea freight, and customs clearance services. They are known for their real-time tracking, competitive rates, and personalised solutions for small and medium-sized shipments.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl shadow-xl p-6 border border-cyan-400">
+              <div className="flex items-center mb-4">
+                <Truck className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Pakistan Cargo Services (PCS)</h3>
+              </div>
+              <p className="text-cyan-50 leading-relaxed">
+                Based in Sialkot with eight branch offices across Pakistan, PCS has over 38 years of experience in international freight. They are recognised for transparent pricing, on-time delivery, and a strong global agent network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Domestic Shipping */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-6">Domestic Shipping & Goods Transportation in Pakistan</h2>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl p-8 border border-gray-700">
+          <p className="text-white leading-relaxed mb-6">
+            For businesses and individuals requiring goods transportation within Pakistan, several providers operate nationwide truck and freight networks. Key services include:
+          </p>
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            {[
+              "Road freight via Mazda, Shehzore, Hino, and container trucks",
+              "Intercity goods transport between all major cities",
+              "Door-to-door delivery for household items, commercial goods, and industrial equipment"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-3 p-4 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                <Truck className="w-6 h-6 text-white" />
+                <span className="text-white text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="p-4 bg-blue-600/20 backdrop-blur-sm rounded-lg border border-blue-400">
+            <p className="text-white font-medium text-lg">
+              Our{" "}
+              <Link to="/goods-transportation-pakistan" className="text-yellow-300 hover:text-yellow-200 underline font-semibold">
+                goods transportation services across Pakistan
+              </Link>
+              {" "}cover all major cities including Islamabad, Rawalpindi, Lahore, Karachi, Multan, Peshawar, and Faisalabad — with professional packing and on-time delivery guaranteed.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-14 px-4 bg-slate-900/40 border-y border-slate-800">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-2xl font-display font-bold text-white text-center mb-8">Business logistics without template confusion</h2>
-          <p className="text-center text-slate-400 max-w-2xl mx-auto mb-10 text-sm leading-relaxed">
-            SMEs often outgrow ad-hoc forwarders when carton weights vary or when Amazon-style SKU labels are required. We help standardise master cartons, SSCC
-            labels where needed, and pickup cadence so your factory floor is not guessing which truck belongs to which forwarder.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
-            <div className="rounded-lg border border-dashed border-slate-600 p-5">
-              <strong className="text-white block mb-2">How to shortlist a partner</strong>
-              Ask for sailing frequency on your lane, all-in vs surcharges, and who owns tracking after handover to co-loader. Clarity beats lowest headline rate.
+      {/* International Shipping Routes */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-8">International Shipping Routes from Pakistan</h2>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl p-8 border border-gray-700">
+          <p className="text-white mb-6 font-medium text-lg">Pakistan's top shipping companies serve the following high-demand international routes:</p>
+          
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full border-collapse border border-gray-600 rounded-lg">
+              <thead>
+                <tr className="bg-blue-600">
+                  <th className="border border-gray-600 px-4 py-3 text-left font-semibold text-white">Destination</th>
+                  <th className="border border-gray-600 px-4 py-3 text-left font-semibold text-white">Preferred Method</th>
+                  <th className="border border-gray-600 px-4 py-3 text-left font-semibold text-white">Transit Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">UAE (Dubai, Sharjah, Abu Dhabi)</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 2-4 days / Sea: 12-18 days</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">United Kingdom</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 3-5 days / Sea: 20-28 days</td>
+                </tr>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Canada</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 4-6 days / Sea: 25-35 days</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">USA</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 4-7 days / Sea: 28-40 days</td>
+                </tr>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Saudi Arabia</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 2-4 days / Sea: 10-16 days</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Australia</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 5-8 days / Sea: 25-35 days</td>
+                </tr>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Qatar & Kuwait</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 2-3 days</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Germany & Europe</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air or Sea</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Air: 4-6 days / Sea: 22-30 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="p-4 bg-blue-600/20 backdrop-blur-sm rounded-lg border border-blue-400">
+            <p className="text-white font-medium text-lg">
+              For{" "}
+              <Link to="/container-shipping-pakistan" className="text-yellow-300 hover:text-yellow-200 underline font-semibold">
+                container shipping from Pakistan
+              </Link>
+              {" "}to any of these destinations, we provide FCL and LCL options with full documentation, customs clearance, and destination delivery.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Major Ports & Cargo Hubs */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-8">Pakistan's Major Ports & Cargo Hubs</h2>
+        <div className="space-y-6">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl shadow-xl p-6 border border-blue-400">
+            <div className="flex items-center mb-4">
+              <Ship className="w-8 h-8 text-white mr-3" />
+              <h3 className="text-xl font-semibold text-white">Karachi Port</h3>
             </div>
-            <div className="rounded-lg border border-dashed border-slate-600 p-5">
-              <strong className="text-white block mb-2">When to involve us early</strong>
-              Before MOQ production finishes — so packaging dimensions still allow pallet optimisation and airline-friendly heights.
+            <p className="text-blue-50 leading-relaxed">
+              Pakistan's primary seaport and the largest cargo gateway in the country. Most international sea freight — both import and export — passes through Karachi Port.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl shadow-xl p-6 border border-teal-400">
+            <div className="flex items-center mb-4">
+              <Anchor className="w-8 h-8 text-white mr-3" />
+              <h3 className="text-xl font-semibold text-white">Port Qasim</h3>
+            </div>
+            <p className="text-teal-50 leading-relaxed">
+              Pakistan's second major seaport, located near Karachi. It handles container cargo, bulk goods, and liquid cargo and is increasingly used as an alternative to Karachi Port.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl shadow-xl p-6 border border-purple-400">
+              <div className="flex items-center mb-4">
+                <Plane className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Islamabad International Airport (IIA)</h3>
+              </div>
+              <p className="text-purple-50 leading-relaxed">
+                The main hub for air freight originating from Rawalpindi and Islamabad. Connected to global carriers including Emirates SkyCargo, Turkish Cargo, and Qatar Airways Cargo.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl shadow-xl p-6 border border-orange-400">
+              <div className="flex items-center mb-4">
+                <Globe2 className="w-8 h-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Lahore Allama Iqbal International Airport</h3>
+              </div>
+              <p className="text-orange-50 leading-relaxed">
+                A key air cargo hub for Punjab-based exporters and importers, with direct connections to Gulf and European destinations.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-14 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-2xl font-display font-bold text-center text-white mb-10">Shipping FAQs</h2>
-          <Accordion type="single" collapsible className="w-full space-y-2">
-            {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`ship-${i}`} className="border border-slate-700 rounded-lg px-4 bg-slate-900/60">
-                <AccordionTrigger className="text-left text-slate-100 hover:no-underline">{f.q}</AccordionTrigger>
-                <AccordionContent className="text-slate-400 leading-relaxed pb-4">{f.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+      {/* How to Choose */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-foreground mb-8">How to Choose the Right Shipping Company for Your Needs</h2>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl p-8 border border-gray-700">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-600 rounded-lg">
+              <thead>
+                <tr className="bg-blue-600">
+                  <th className="border border-gray-600 px-4 py-3 text-left font-semibold text-white">Requirement</th>
+                  <th className="border border-gray-600 px-4 py-3 text-left font-semibold text-white">Recommended Service</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Urgent international parcel</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Express air freight (DHL, FedEx)</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Large household move overseas</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">International moving company</td>
+                </tr>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Bulk commercial export</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">FCL container sea freight</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Small international shipment</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">LCL sea freight or air freight</td>
+                </tr>
+                <tr className="bg-gray-700">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Domestic road freight</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Goods transportation service</td>
+                </tr>
+                <tr className="bg-gray-800">
+                  <td className="border border-gray-600 px-4 py-3 font-medium text-white">Import with customs clearance</td>
+                  <td className="border border-gray-600 px-4 py-3 text-gray-200">Full-service freight forwarder</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
-
-      <section className="py-10 px-4 border-t border-slate-800">
-        <div className="container mx-auto max-w-3xl text-center text-sm text-slate-500">
-          <p>
-            Local house moves in Rawalpindi stay on{" "}
-            <Link to="/home-shifting-services-in-rawalpindi" className="text-sky-400 hover:underline">
-              home shifting Rawalpindi
-            </Link>
-            . Peshawar packing crews:{" "}
-            <Link to="/movers-and-packers-in-peshawar" className="text-sky-400 hover:underline">
-              movers and packers in Peshawar
-            </Link>
-            .
+      {/* CTA Section */}
+      <section className="my-12">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Get a Free Shipping Quote Today</h2>
+          <p className="text-xl mb-8">
+            Whether you need air freight, sea freight, container shipping, or complete international relocation services from Pakistan, Best International Movers & Logistics is ready to assist.
           </p>
+          <div className="space-y-4">
+            <div className="text-2xl font-bold">
+              📞 <span className="text-yellow-300">Call / WhatsApp: 0300-9130211</span>
+            </div>
+            <div className="text-lg">
+              🕐 <span>Available: Monday to Saturday | 8:00 AM – 8:00 PM</span>
+            </div>
+            <div className="text-lg">
+              📍 <span>Offices: Rawalpindi | Islamabad | Lahore | Peshawar</span>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:0300-9130211" 
+              className="inline-flex items-center justify-center gap-2 bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all"
+            >
+              <Phone size={18} />
+              GET FREE QUOTE
+            </a>
+            <a 
+              href="https://wa.me/923009130211" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all"
+            >
+              <MessageCircle size={18} />
+              WHATSAPP US NOW
+            </a>
+          </div>
         </div>
       </section>
 
-      <PageBottomQuoteCta />
-      <ContactFooter />
-      <WhatsAppButton />
-    </div>
+      {/* Related Services */}
+      <section className="my-12">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-8 border border-purple-500">
+          <h2 className="text-2xl font-bold text-white mb-6">Related Shipping Services</h2>
+          <p className="text-white mb-8 text-lg">Explore our other professional shipping and logistics services:</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link to="/container-shipping-pakistan" className="group">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
+                <div className="flex items-center mb-2">
+                  <Ship className="w-6 h-6 text-white mr-2" />
+                  <h3 className="text-lg font-semibold text-white">Container Shipping Pakistan</h3>
+                </div>
+                <p className="text-white/90 text-sm">FCL and LCL container services</p>
+                <div className="mt-2 flex items-center text-yellow-300 font-semibold text-sm">
+                  Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/custom-duty-calculator" className="group">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
+                <div className="flex items-center mb-2">
+                  <ShieldCheck className="w-6 h-6 text-white mr-2" />
+                  <h3 className="text-lg font-semibold text-white">Custom Duty Calculator</h3>
+                </div>
+                <p className="text-white/90 text-sm">Calculate import duties online</p>
+                <div className="mt-2 flex items-center text-yellow-300 font-semibold text-sm">
+                  Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/goods-transportation-pakistan" className="group">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
+                <div className="flex items-center mb-2">
+                  <Truck className="w-6 h-6 text-white mr-2" />
+                  <h3 className="text-lg font-semibold text-white">Goods Transportation Pakistan</h3>
+                </div>
+                <p className="text-white/90 text-sm">Domestic freight services</p>
+                <div className="mt-2 flex items-center text-yellow-300 font-semibold text-sm">
+                  Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/services/international-moving" className="group">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
+                <div className="flex items-center mb-2">
+                  <Globe2 className="w-6 h-6 text-white mr-2" />
+                  <h3 className="text-lg font-semibold text-white">International Movers Pakistan</h3>
+                </div>
+                <p className="text-white/90 text-sm">Overseas relocation services</p>
+                <div className="mt-2 flex items-center text-yellow-300 font-semibold text-sm">
+                  Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </SeoLandingPageLayout>
   );
 };
 

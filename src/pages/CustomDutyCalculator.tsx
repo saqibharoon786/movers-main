@@ -1,214 +1,509 @@
-import { useState } from "react";
-import SeoLandingPageLayout from "@/components/marketing/SeoLandingPageLayout";
-import { Calculator, AlertCircle, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Route, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, Package, Globe, Heart, FileCheck, Calculator, AlertTriangle, MessageCircle, Home, Anchor, Plane, Building } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import ContactFooter from "@/components/ContactFooter";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
 
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Custom Duty Calculator Pakistan",
-  applicationCategory: "UtilityApplication",
-  operatingSystem: "Web",
-  description: "Calculate custom duty and import tax accurately for Pakistan.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Best International Movers & Logistics",
-    telephone: "0300-9130211",
-  }
+const serviceData = {
+  slug: "custom-duty-calculator",
+  icon: Calculator,
+  title: "Custom Duty Calculator Pakistan – Import Tax & Duty Guide",
+  subheading: "Calculate Import Duty & Taxes Online",
+  desc: "Calculate custom duty & import taxes in Pakistan easily. Complete guide to FBR customs duty rates, HS codes, and import charges. Free calculator – 0300-9130211",
+  featuresList: [
+    "Customs Duty (CD) calculation on CIF value — rates from 0% to 100%",
+    "Additional Customs Duty (ACD) — 1%, 2%, or 7% on selected categories",
+    "Regulatory Duty (RD) — up to 100% for luxury or restricted items",
+    "Sales Tax on Imports (ST) — 18% of CIF value plus customs duty",
+    "Income Tax on Imports (WHT) — 5.5% for NTN holders, 8% for unregistered",
+    "Additional Sales Tax — 3% for non-filers or specific categories",
+    "HS Code classification assistance for accurate duty rates",
+    "Duty-free allowances for travellers and returning overseas Pakistanis",
+    "Vehicle import duty calculation with government EV policy rates",
+    "Complete customs clearance and documentation support"
+  ],
+  heroImg: "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  countries: [
+    "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)", 
+    "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 
+    "Germany", "France", "Netherlands", "Turkey", "China", "Singapore", "Afghanistan", "Iran"
+  ],
+  faqs: [
+    {
+      q: "How do I calculate import duty in Pakistan?",
+      a: "Apply the applicable CD%, ACD%, RD%, ST (18%), and WHT (5.5% for NTN holders) on the CIF value of your goods. The total of all these charges is your import cost. Our team can calculate the exact amount for your specific shipment."
+    },
+    {
+      q: "What is CIF value in Pakistan customs?",
+      a: "CIF stands for Cost + Insurance + Freight. It is the declared value of your goods including their purchase price, insurance cost, and freight charges to the Pakistani port. Customs duty is calculated on this total CIF value."
+    },
+    {
+      q: "Can I import used household goods duty-free to Pakistan?",
+      a: "Returning overseas Pakistanis can import used household goods at concessional rates under specific conditions. Fresh imports of used goods are subject to standard duty rates."
+    },
+    {
+      q: "How much custom duty is applicable on a mobile phone in Pakistan?",
+      a: "Mobile phone duty in Pakistan ranges from Rs. 1,000 to Rs. 44,000 per device depending on the value. Phones must also be registered with PTA through the DIRBS system."
+    },
+    {
+      q: "How long does customs clearance take in Pakistan?",
+      a: "With complete and correct documentation, customs clearance at Karachi Port typically takes 2 to 5 working days. Air freight clearance at Islamabad Airport is usually completed within 1 to 3 working days."
+    },
+    {
+      q: "Do I need a customs agent to clear my shipment in Pakistan?",
+      a: "Technically no, but practically yes. Pakistan's customs process is complex and time-sensitive. A licensed customs agent prevents costly errors and delays."
+    },
+    {
+      q: "What is the difference between customs duty and sales tax on imports?",
+      a: "Customs duty is the import tariff applied by Pakistan Customs on the CIF value. Sales tax is an additional 18% levy applied on the CIF value plus customs duty — it is collected at import stage on behalf of FBR."
+    }
+  ]
 };
 
-const faqs = [
-  { q: "How is customs duty calculated?", a: "Duty is applied as a percentage on the assessed value of imported goods (CIF value - Cost, Insurance, and Freight). Further taxes like Sales Tax and Income Tax are added upon it." },
-  { q: "What items are duty free?", a: "Generally, used personal effects, old clothes, used books, and specific disabled equipment hold exemptions when relocating under Transfer of Residence rules." },
-  { q: "How much duty on electronics?", a: "Electronics heavily invite varying slabs. Laptops might incur lighter duty while imported TVs and smartphones Face heavy percentages ranging from 30% to over 60% combined." },
-  { q: "Can I import personal effects free?", a: "Yes, under the Baggage/Transfer of Residence rules, many old personal items imported for non-commercial purposes are exempt, provided requirements are met." },
-  { q: "How long customs clearance takes?", a: "Sea freight usually requires 3 to 5 working days for clearance upon vessel arrival, while Air freight generally clears within 24 to 48 hours." },
-  { q: "What documents needed?", a: "You need Bill of Lading/Airway Bill, Original Passport, CNIC, Packing List, and sometimes specific exemption certificates or NOCs." },
-  { q: "Can you handle customs for me?", a: "Absolutely. We manage complete end-to-end customs clearance efficiently using our registered brokerage." },
-  { q: "What is HS code?", a: "Harmonized System (HS) code is a 6 to 8 digit international classification code used universally by customs authorities to identify products and assign exact duty rates." },
-  { q: "How to avoid customs delays?", a: "Always assure accurate packing lists, avoid restricted items, and utilize proven clearing agents like us to actively track and manage processing." },
-  { q: "What happens if I dont pay duty?", a: "Your cargo is moved to a bonded warehouse incurring severe daily storage demurrages. Ultimately, customs can confiscate and auction goods." }
-];
+// Build complete Organization + Service schema - FIXED JSON SYNTAX
+function buildServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bestintlmovers.com/#organization",
+        "name": "Best International Movers & Logistics",
+        "url": "https://bestintlmovers.com",
+        "logo": "https://bestintlmovers.com/logo.png",
+        "telephone": "+923009130211",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+923009130211",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Urdu"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/bestintlmovers",
+          "https://www.instagram.com/bestintlmovers"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://bestintlmovers.com/custom-duty-calculator#service",
+        "name": "Custom Duty Calculator Pakistan | Best International Movers",
+        "serviceType": "Custom Duty Calculator",
+        "description": "Calculate custom duty & import taxes in Pakistan easily. Complete guide to FBR customs duty rates, HS codes, and import charges.",
+        "url": "https://bestintlmovers.com/custom-duty-calculator",
+        "provider": { "@id": "https://bestintlmovers.com/#organization" },
+        "areaServed": { "@type": "Country", "name": "Pakistan" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Custom Duty Calculator Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Customs Duty Calculation Pakistan" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Import Tax Calculator Pakistan" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HS Code Classification Pakistan" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Customs Clearance Services Pakistan" } }
+          ]
+        }
+      }
+    ]
+  };
+}
+
+// FAQ Schema for rich results
+function buildFAQSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": serviceData.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a.replace(/<[^>]*>/g, '') }
+    }))
+  };
+}
+
+// Breadcrumb Schema
+function buildBreadcrumbSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { 
+        "@type": "ListItem", 
+        "position": 1,
+        "name": "Home", 
+        "item": "https://bestintlmovers.com" 
+      },
+      { 
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Services", 
+        "item": "https://bestintlmovers.com/services" 
+      },
+      { 
+        "@type": "ListItem", 
+        "position": 3,
+        "name": "Custom Duty Calculator", 
+        "item": "https://bestintlmovers.com/custom-duty-calculator" 
+      }
+    ]
+  };
+}
 
 const CustomDutyCalculator = () => {
-  const [category, setCategory] = useState("Personal Effects/Household Goods");
-  const [origin, setOrigin] = useState("UAE");
-  const [type, setType] = useState("Personal Effects (may be exempt)");
-  const [value, setValue] = useState("");
-  const [result, setResult] = useState<{ rate: number; duty: number; tax: number; total: number } | null>(null);
-
-  const handleCalculate = () => {
-    let baseRate = 0;
-    
-    // Simple dummy logic for demonstration based on categories
-    switch (category) {
-      case "Electronics (TV/Laptop/Phone)": baseRate = 0.40; break;
-      case "Values & Auto Parts":
-      case "Vehicles & Auto Parts": baseRate = 1.0; break; // Vehicles very high
-      case "Jewelry & Watches": baseRate = 0.60; break;
-      case "Furniture & Home Decor": baseRate = 0.25; break;
-      case "Clothing & Textiles": baseRate = 0.30; break;
-      case "Food Items": baseRate = 0.20; break;
-      case "Books & Documents": baseRate = 0.05; break;
-      case "Personal Effects/Household Goods": baseRate = 0.10; break;
-      default: baseRate = 0.20;
-    }
-
-    if (type === "Personal Effects (may be exempt)") {
-      // Potentially exempt, lower the rate significantly
-      baseRate = baseRate * 0.2; 
-    }
-
-    const val = parseFloat(value) || 0;
-    const dutyAmount = val * baseRate;
-    const taxAmount = (val + dutyAmount) * 0.18; // approx 18% sales tax
-
-    setResult({
-      rate: Math.round(baseRate * 100),
-      duty: dutyAmount,
-      tax: taxAmount,
-      total: val + dutyAmount + taxAmount
-    });
+  // Primary SEO configuration
+  const seoConfig = {
+    title: "Custom Duty Calculator Pakistan – Import Tax & Duty Guide",
+    description: "Calculate custom duty & import taxes in Pakistan easily. Complete guide to FBR customs duty rates, HS codes, and import charges. Free calculator – 0300-9130211",
+    keywords: "custom duty calculator pakistan, pakistan import duty calculator, customs duty pakistan, import tax calculator pakistan, fbr custom duty, duty calculator pakistan",
+    canonicalUrl: "https://bestintlmovers.com/custom-duty-calculator"
   };
 
   return (
-    <SeoLandingPageLayout
-      title="Custom Duty Calculator Pakistan | Fast Import Tax Estimate"
-      description="Use our free custom duty calculator pakistan. Estimate import duty calculator pakistan taxes for electronics, vehicles, and personal effects easily."
-      keywords="custom duty calculator, import duty calculator pakistan, custom duty calculator pakistan"
-      urlPath="/custom-duty-calculator"
-      h1="Custom Duty Calculator Pakistan"
-      heroSubtext="Calculate estimated customs duties, regulatory taxes, and overall payable amounts for importing items securely into Pakistan."
-      breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Custom Duty Calculator" }]}
-      schema={serviceSchema}
-      faqs={faqs}
-      faqSectionTitle="FAQ - Understanding Customs In Pakistan"
-    >
-      <div className="bg-navy-mid border border-border rounded-2xl p-6 md:p-8 mb-12 shadow-2xl not-prose max-w-2xl mx-auto">
-        <div className="flex items-center gap-3 mb-6 border-b border-border pb-4 w-full">
-          <Calculator className="text-gold w-8 h-8" />
-          <h2 className="text-2xl font-display font-bold text-foreground m-0">Interactive Duty Calculator</h2>
-        </div>
-
-        <div className="space-y-5">
-          <div>
-            <label className="block text-sm font-medium text-muted-foreground mb-2">Item Category</label>
-            <select value={category} onChange={(e) => setCategory(e.target.value)} className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold outline-none">
-              <option>Personal Effects/Household Goods</option>
-              <option>Electronics (TV/Laptop/Phone)</option>
-              <option>Furniture & Home Decor</option>
-              <option>Clothing & Textiles</option>
-              <option>Vehicles & Auto Parts</option>
-              <option>Books & Documents</option>
-              <option>Jewelry & Watches</option>
-              <option>Food Items</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-muted-foreground mb-2">Country of Origin</label>
-            <select value={origin} onChange={(e) => setOrigin(e.target.value)} className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold outline-none">
-              <option>UAE</option>
-              <option>UK</option>
-              <option>USA</option>
-              <option>China</option>
-              <option>Saudi Arabia</option>
-              <option>Germany</option>
-              <option>Australia</option>
-              <option>Canada</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-muted-foreground mb-2">Shipment Type</label>
-            <select value={type} onChange={(e) => setType(e.target.value)} className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold outline-none">
-              <option>Personal Effects (may be exempt)</option>
-              <option>Commercial Goods</option>
-              <option>Gift Items</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-muted-foreground mb-2">Item Value (in PKR)</label>
-            <input type="number" min="0" placeholder="e.g. 50000" value={value} onChange={(e) => setValue(e.target.value)} className="w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:border-gold outline-none" />
-          </div>
-
-          <button onClick={handleCalculate} className="w-full py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-lg hover:opacity-90 transition-opacity">
-            Calculate Now
-          </button>
-        </div>
-
-        {result && (
-          <div className="mt-8 bg-navy-light border border-gold/30 rounded-xl p-5 overflow-hidden relative">
-            <h3 className="text-lg font-bold text-gold mb-4 border-b border-gold/20 pb-2">Calculation Results</h3>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center"><span className="text-muted-foreground">Estimated Duty Rate:</span><span className="font-bold text-foreground">{result.rate}%</span></div>
-              <div className="flex justify-between items-center"><span className="text-muted-foreground">Estimated Duty Amount:</span><span className="font-bold text-foreground">PKR {result.duty.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span></div>
-              <div className="flex justify-between items-center"><span className="text-muted-foreground">Estimated Sales Tax:</span><span className="font-bold text-foreground">PKR {result.tax.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span></div>
-              <div className="flex justify-between items-center pt-2 border-t border-border mt-2"><span className="text-foreground font-bold text-lg">Total Payable:</span><span className="font-black text-gold text-xl">PKR {result.total.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span></div>
+    <div className="min-h-screen bg-background">
+      {/* SEO Component with all schemas */}
+      <SEO 
+        title={seoConfig.title}
+        description={seoConfig.description}
+        keywords={seoConfig.keywords}
+        urlPath="/custom-duty-calculator"
+        schema={[buildServiceSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
+      />
+      
+      <Navbar />
+      
+      {/* Hero Section with H1 */}
+      <div className="pt-32 pb-12 bg-gradient-to-br from-navy-dark via-navy to-navy-light">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            className="max-w-5xl mx-auto text-center"
+          >
+            <div className="inline-flex items-center gap-2 bg-gold/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <Calculator className="text-gold" size={18} />
+              <span className="text-gold text-sm font-medium">Import Tax & Duty Guide 2025</span>
             </div>
-            <div className="mt-4 flex gap-2 items-start text-xs text-muted-foreground bg-background/50 p-3 rounded">
-               <AlertCircle className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-               <p>This is an estimate only. Actual <strong>custom duty calculator</strong> metrics may vary severely directly based on exact customs appraisal. Contact us to get exact clearance assistance.</p>
+            
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
+              Custom Duty Calculator Pakistan – Import Duty & Tax Guide 2025
+            </h1>
+            
+            <img 
+              src="/images/custom.png" 
+              alt="Custom Duty Calculator Pakistan - Import Tax & Duty Guide" 
+              className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
+            />
+            
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              {seoConfig.description}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all transform hover:scale-105"
+              >
+                <Phone size={18} />
+                Get Free Duty Calculation
+              </Link>
+              <a 
+                href="https://wa.me/923009130211" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center gap-2 border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all"
+              >
+                <MapPin size={18} />
+                WhatsApp Our Customs Team
+              </a>
             </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Long Description with Internal Links */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-muted-foreground leading-relaxed space-y-4 mb-16"
+            >
+              <p>
+                Importing goods into Pakistan involves multiple layers of duties and taxes that significantly affect the total landed cost of any shipment. Whether you are importing personal belongings, commercial goods, a vehicle, or household items from abroad, understanding the applicable customs duty in Pakistan is essential before your shipment arrives.
+              </p>
+
+              <p>
+                This page provides a complete guide to how Pakistan's custom duty system works, what charges apply to different categories of goods, and how to estimate your total import costs — so there are no surprises when your shipment reaches Karachi Port or Islamabad Airport.
+              </p>
+
+              <p>
+                Pakistan's customs duty framework is administered by the <strong className="text-gold">Federal Board of Revenue (FBR)</strong> under the Pakistan Customs Act. Every imported item is classified under a specific <strong className="text-gold">HS Code (Harmonised System Code)</strong> — an internationally standardised product classification system — and duty rates are applied based on this classification.
+              </p>
+
+              <p>
+                When goods arrive at a Pakistani port or airport, the following charges typically apply: Customs Duty (CD), Additional Customs Duty (ACD), Regulatory Duty (RD), Sales Tax on Imports (ST), Income Tax on Imports (WHT), and Additional Sales Tax. Our{" "}
+                <Link to="/services/customs-clearance" className="text-gold hover:underline">
+                  customs clearance team
+                </Link>
+                {" "}can help you navigate this complex system.
+              </p>
+
+              <p>
+                The basic formula for calculating total import cost in Pakistan is: Total Import Cost = CIF Value + Customs Duty + Additional Customs Duty + Regulatory Duty + Sales Tax + Withholding Tax. Use our free calculator to estimate your costs, or contact our team for precise calculations.
+              </p>
+            </motion.div>
+
+            {/* H2: How Custom Duty Works */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card rounded-2xl p-8 border border-border mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                How Custom Duty Works in Pakistan
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { icon: Calculator, title: "Customs Duty (CD)", desc: "Base import tariff on CIF value. Rates vary from 0% to 100%." },
+                  { icon: AlertTriangle, title: "Additional Customs Duty (ACD)", desc: "Additional levy on top of customs duty. Rates: 1%, 2%, or 7%." },
+                  { icon: ShieldCheck, title: "Regulatory Duty (RD)", desc: "Applied to certain categories. Can be up to 100% for luxury items." },
+                  { icon: Package, title: "Sales Tax on Imports (ST)", desc: "Standard rate 18% of CIF value plus customs duty." },
+                  { icon: FileCheck, title: "Income Tax on Imports (WHT)", desc: "5.5% for NTN holders, 8% for unregistered importers." },
+                  { icon: Users, title: "Additional Sales Tax", desc: "Additional 3% for non-filers or specific categories." }
+                ].map((item, idx) => (
+                  <div key={idx} className="text-center p-4">
+                    <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="text-gold" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* H2: Custom Duty Calculation Formula */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                Custom Duty Calculation Formula – Pakistan
+              </h2>
+              <div className="glass-card rounded-2xl p-8 border border-border">
+                <p className="text-foreground leading-relaxed mb-6">
+                  The basic formula for calculating total import cost in Pakistan is:
+                </p>
+                <div className="bg-gradient-to-r from-gold/20 to-gold/10 rounded-xl p-6 border border-gold/20 mb-6">
+                  <p className="text-foreground font-bold text-xl text-center">
+                    Total Import Cost = CIF Value + Customs Duty + Additional Customs Duty + Regulatory Duty + Sales Tax + Withholding Tax
+                  </p>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-foreground mb-4">Example Calculation:</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-border rounded-lg">
+                    <thead>
+                      <tr className="bg-navy-light/30">
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Item</th>
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">CIF Value (PKR)</th>
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">CD (20%)</th>
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">ST (18%)</th>
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">WHT (5.5%)</th>
+                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="bg-navy-light/20">
+                        <td className="border border-border px-4 py-3 font-medium text-foreground">Electronics</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 100,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 20,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 21,600</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 7,590</td>
+                        <td className="border border-border px-4 py-3 font-semibold text-gold">~Rs. 149,190</td>
+                      </tr>
+                      <tr className="bg-navy-light/10">
+                        <td className="border border-border px-4 py-3 font-medium text-foreground">Clothing</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 50,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 10,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 10,800</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 3,795</td>
+                        <td className="border border-border px-4 py-3 font-semibold text-gold">~Rs. 74,595</td>
+                      </tr>
+                      <tr className="bg-navy-light/20">
+                        <td className="border border-border px-4 py-3 font-medium text-foreground">Furniture</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 200,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 40,000</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 43,200</td>
+                        <td className="border border-border px-4 py-3 text-muted-foreground">Rs. 15,180</td>
+                        <td className="border border-border px-4 py-3 font-semibold text-gold">~Rs. 298,380</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-muted-foreground text-sm mt-4">
+                  *Note: These are illustrative figures. Actual rates depend on the specific HS code and prevailing FBR notifications.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* H2: Custom Duty Calculator Services We Offer */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card rounded-2xl p-8 border border-border mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                Custom Duty Calculator Services We Offer
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {serviceData.featuresList.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-navy-light/30 transition-colors">
+                    <CheckCircle2 className="text-gold mt-1 flex-shrink-0" size={20} />
+                    <span className="text-foreground">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* H2: Duty Rates by Category */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                Custom Duty Rates by Product Category – Pakistan 2025
+              </h2>
+              <div className="space-y-4">
+                <div className="glass-card rounded-2xl p-6 border border-border">
+                  <div className="flex items-center mb-4">
+                    <Home className="text-gold mr-3" size={24} />
+                    <h3 className="text-xl font-semibold text-foreground">Household & Personal Goods</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Individuals relocating to Pakistan from abroad are entitled to duty relief on used personal and household items under <strong className="text-gold">Baggage Rules</strong>. New items are subject to full duty rates.
+                  </p>
+                  <div className="space-y-2 text-muted-foreground">
+                    <div>• Used household furniture: 35–50% CD</div>
+                    <div>• Used personal electronics (laptops, phones): 0–10% CD (subject to FBR limits)</div>
+                    <div>• New appliances: 20–35% CD + full taxes</div>
+                  </div>
+                </div>
+
+                <div className="glass-card rounded-2xl p-6 border border-border">
+                  <div className="flex items-center mb-4">
+                    <Package className="text-gold mr-3" size={24} />
+                    <h3 className="text-xl font-semibold text-foreground">Vehicles</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Vehicle import duty in Pakistan is among the highest in the region:
+                  </p>
+                  <div className="space-y-2 text-muted-foreground">
+                    <div>• Cars up to 1000cc: 50–75% CD + RD + taxes</div>
+                    <div>• Cars 1001cc to 1800cc: 75–100% CD + RD + taxes</div>
+                    <div>• Cars above 1800cc: 100%+ CD + full taxes</div>
+                    <div>• Electric vehicles: Reduced rates under Government of Pakistan EV policy</div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="glass-card rounded-2xl p-6 border border-border">
+                    <div className="flex items-center mb-4">
+                      <Calculator className="text-gold mr-3" size={24} />
+                      <h3 className="text-xl font-semibold text-foreground">Electronics & Mobile Phones</h3>
+                    </div>
+                    <div className="space-y-2 text-muted-foreground">
+                      <div>• Mobile phones (registered under PTA): Rs. 1,000 – Rs. 44,000 fixed duty</div>
+                      <div>• Laptops & tablets: 0% CD under FBR exemption (personal use, one unit)</div>
+                      <div>• Commercial electronics: 10–25% CD + full taxes</div>
+                    </div>
+                  </div>
+
+                  <div className="glass-card rounded-2xl p-6 border border-border">
+                    <div className="flex items-center mb-4">
+                      <ShieldCheck className="text-gold mr-3" size={24} />
+                      <h3 className="text-xl font-semibold text-foreground">Clothing & Textiles</h3>
+                    </div>
+                    <div className="space-y-2 text-muted-foreground">
+                      <div>• 20–35% CD on most clothing categories</div>
+                      <div>• High rates apply to items competing with domestic textile industry</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* H2: FAQ Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card rounded-2xl p-8 border border-border mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                Frequently Asked Questions – Custom Duty Calculator Pakistan
+              </h2>
+              <div className="space-y-6">
+                {serviceData.faqs.map((faq, index) => (
+                  <div key={index} className="border-b border-border pb-5 last:border-0">
+                    <h3 className="font-display font-semibold text-foreground text-lg mb-2">{faq.q}</h3>
+                    <div className="text-muted-foreground leading-relaxed">
+                      {faq.a}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* H2: CTA Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center bg-gradient-to-r from-gold/10 to-gold/5 rounded-2xl p-10 border border-gold/20"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-3">
+                Get Help with Your Import – Contact Us Today
+              </h2>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Whether you need customs duty calculation, import documentation, or complete door-to-door cargo services, our team is ready to assist.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all"
+                >
+                  <Calculator size={18} />
+                  Get Free Duty Calculation
+                </Link>
+                <a 
+                  href="https://wa.me/923009130211" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center justify-center gap-2 border border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all"
+                >
+                  <MessageCircle size={18} />
+                  WhatsApp Our Customs Team
+                </a>
+              </div>
+            </motion.div>
           </div>
-        )}
+        </div>
       </div>
 
-      <div className="glass-card rounded-xl p-8 border border-border text-center not-prose max-w-2xl mx-auto mb-16">
-        <h3 className="text-xl font-bold font-display text-foreground mb-3">Need Help with Customs Clearance?</h3>
-        <p className="text-muted-foreground mb-6">Our experts handle absolutely everything! Stop stressing over paperwork and confusing codes.</p>
-        <a href="https://wa.me/923009130211" target="_blank" rel="noopener noreferrer" className="inline-flex px-8 py-3 rounded-lg border border-gold text-gold font-bold hover:bg-gold/10 transition-colors gap-2 items-center">
-           <Phone size={18}/> WhatsApp Us: 0300-9130211
-        </a>
-      </div>
-
-      <h2>How Customs Duty Works in Pakistan</h2>
-      <p>
-        Trying to compute precisely using an <strong>import duty calculator pakistan</strong> involves applying Pakistan Customs Tariff classifications. Items are verified under specific HS Codes. Then Customs Duty (CD), Regulatory Duty (RD), Additional Customs Duty (ACD), Sales Tax (ST), and Advance Income Tax (AIT) get layered cumulatively over the C&F (Cost & Freight) value matching exactly current dollar rates.
-      </p>
-
-      <h2>Duty Rates by Category Table</h2>
-      <div className="overflow-x-auto not-prose my-6">
-        <table className="w-full text-left border-collapse min-w-max">
-          <thead>
-            <tr>
-              <th className="p-4 border-b border-border bg-navy-mid text-foreground font-bold">Category</th>
-              <th className="p-4 border-b border-border bg-navy-mid text-foreground font-bold">Base Duty %</th>
-              <th className="p-4 border-b border-border bg-navy-mid text-foreground font-bold">Regulatory Complexity</th>
-            </tr>
-          </thead>
-          <tbody className="bg-background">
-            <tr>
-              <td className="p-4 border-b border-border text-muted-foreground">Mobile Phones & Laptops</td>
-              <td className="p-4 border-b border-border text-muted-foreground">Varies heavily (approvals needed)</td>
-              <td className="p-4 border-b border-border text-muted-foreground">High</td>
-            </tr>
-            <tr>
-              <td className="p-4 border-b border-border text-muted-foreground">Automobiles / Vehicles</td>
-              <td className="p-4 border-b border-border text-muted-foreground">100% - 300%+</td>
-              <td className="p-4 border-b border-border text-muted-foreground">Very High</td>
-            </tr>
-            <tr>
-              <td className="p-4 border-b border-border text-muted-foreground">Used House Hold Goods</td>
-              <td className="p-4 border-b border-border text-muted-foreground">0% - 20% (if exempt)</td>
-              <td className="p-4 border-b border-border text-muted-foreground">Low - Medium</td>
-            </tr>
-            <tr>
-              <td className="p-4 border-b border-border text-muted-foreground">Industrial Machinery</td>
-              <td className="p-4 border-b border-border text-muted-foreground">5% - 20%</td>
-              <td className="p-4 border-b border-border text-muted-foreground">Medium</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>How We Help with Customs</h2>
-      <p>
-        We utilize officially licensed brokerage directly embedded inside the primary port terminals and airports across the nation. Therefore, when utilizing our <strong>custom duty calculator pakistan</strong>, recognize that we ensure you only pay exactly what is officially mandated. By accurately identifying HS codes and securing entitled legal exemptions transparently, we significantly condense clearance wait periods.
-      </p>
-
-    </SeoLandingPageLayout>
+      <ContactFooter />
+      <WhatsAppButton />
+    </div>
   );
 };
 
