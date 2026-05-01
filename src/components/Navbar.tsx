@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail, ChevronDown, Globe, Package, Warehouse, Car, Plane, Ship, FileCheck, Truck, MapPin, Home } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, Globe, Package, Warehouse, Car, Plane, Ship, FileCheck, Truck, MapPin, Home, Facebook } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -111,6 +111,15 @@ const Navbar = () => {
         <span className="flex items-center gap-1"><Phone size={12} className="text-gold" /> 0300-9130211</span>
         <span className="flex items-center gap-1"><Mail size={12} className="text-gold" /> info@bestintlmovers.com</span>
         <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        <a 
+          href="https://www.facebook.com/share/r/18FvZRMQ27/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-1 hover:text-gold transition-colors"
+        >
+          <Facebook size={12} className="text-gold" />
+          Facebook
+        </a>
       </div>
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link to="/" className="relative z-10 flex items-center gap-3 hover:opacity-80 transition-opacity">
