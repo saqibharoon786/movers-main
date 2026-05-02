@@ -33,18 +33,140 @@ const homepageMovingCompanyLd = {
     addressCountry: "PK",
   },
   openingHours: "Mo-Sa 08:00-20:00",
-  areaServed: ["Pakistan", "UAE", "UK", "USA", "Canada", "Saudi Arabia", "Australia"],
+  areaServed: ["Pakistan", "UAE", "UK", "USA", "Canada", "Saudi Arabia", "Australia", "Qatar", "Germany", "Malaysia"],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "5000",
   },
+  serviceType: "International Moving Services",
+  description: "Pakistan's #1 international moving company. Door-to-door service to UAE, UK, USA, Canada & 100+ countries. 5000+ families moved.",
+  priceRange: "$$$",
+  paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
+  languagesSpoken: ["English", "Urdu", "Arabic"],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Moving Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "International Moving",
+          description: "Complete international relocation services"
+        }
+      },
+      {
+        "@type": "Offer", 
+        itemOffered: {
+          "@type": "Service",
+          name: "Local Moving",
+          description: "Professional local and intercity moving services"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service", 
+          name: "Air Freight",
+          description: "Fast and reliable air freight services"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Sea Freight", 
+          description: "Cost-effective sea freight shipping"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Vehicle Shipping",
+          description: "Safe vehicle transport services"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Storage Solutions",
+          description: "Secure storage facilities"
+        }
+      }
+    ]
+  }
+};
+
+// FAQ Schema for homepage
+const homepageFAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does international moving cost from Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "International moving costs from Pakistan vary based on destination, volume, and shipping method. Air freight is faster but more expensive, while sea freight is cost-effective for larger shipments. Contact us for a free quote tailored to your specific needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries do you serve from Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve 100+ countries worldwide including UAE, UK, USA, Canada, Australia, Saudi Arabia, Qatar, Germany, Malaysia and more. Our global network ensures seamless relocations to any destination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does international moving take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Transit times vary: Air freight typically takes 3-7 days, while sea freight takes 4-8 weeks depending on destination. We provide accurate timelines and real-time tracking for all shipments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide packing services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide professional packing services using export-grade materials. Our trained packers ensure maximum protection for your belongings during international transit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my cargo insured during transit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all shipments are covered by comprehensive transit insurance. We offer different insurance options based on the value and nature of your belongings."
+      }
+    }
+  ]
+};
+
+// Review Schema
+const homepageReviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  "itemReviewed": {
+    "@type": "MovingCompany",
+    "name": "Best International Movers & Logistics",
+    "address": "Rawalpindi, Punjab, Pakistan"
+  },
+  "ratingValue": "4.9",
+  "reviewCount": "5000",
+  "bestRating": "5",
+  "worstRating": "1"
 };
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO {...seoConfig.home} urlPath="/" schema={homepageMovingCompanyLd} />
+      <SEO {...seoConfig.home} urlPath="/" schema={[homepageMovingCompanyLd, homepageFAQSchema, homepageReviewSchema]} />
       <Navbar />
       <HeroSection />
       <StatsCounterSection />
@@ -98,7 +220,6 @@ const Index = () => {
       <ServicesSection />
       <WhyChooseUs />
       <ProcessSection />
-      <HowItWorksTimeline />
       <GlobalReachSection />
       <TestimonialsSection />
       <GallerySection />

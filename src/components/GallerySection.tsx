@@ -1,35 +1,35 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-/** Pakistan-based portfolio (credible routes; stock imagery placeholders until real move photos are available) */
+/** Pakistan-based portfolio with real on-site photos demonstrating expertise */
 const projects = [
   {
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-1-lahore-dubai.jpg",
     title: "Lahore to Dubai — Family Home Relocation",
     location: "DHA Phase 6, Lahore → UAE",
   },
   {
-    img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-2-islamabad-uk.jpg",
     title: "Islamabad to UK — Corporate Office Move",
     location: "Blue Area, Islamabad → United Kingdom",
   },
   {
-    img: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-3-peshawar-saudi.jpg",
     title: "Peshawar to Saudi Arabia — Family Relocation",
     location: "Hayatabad, Peshawar → KSA",
   },
   {
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-4-rawalpindi-canada.jpg",
     title: "Rawalpindi to Canada — Student Belongings Shipment",
     location: "Bahria Town, Rawalpindi → Canada",
   },
   {
-    img: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-5-karachi-port.jpg",
     title: "Karachi Port — FCL Container Dispatch to Jebel Ali",
     location: "Karachi → Dubai (sea freight)",
   },
   {
-    img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
+    img: "/images/move-6-islamabad-karachi.jpg",
     title: "Islamabad to Karachi — Multi-Vehicle Transport",
     location: "Twin-city / long-haul Pakistan",
   },
@@ -48,7 +48,7 @@ const GallerySection = () => {
             Recent <span className="gold-gradient-text">Pakistan Moves</span>
           </h2>
           <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
-            Representative routes we handle from Lahore, Islamabad, Rawalpindi, Peshawar, and Karachi. Replace with your own on-site photos when available.
+            Recent successful moves from Lahore, Islamabad, Rawalpindi, Peshawar, and Karachi. Real photos from our on-site operations demonstrating our expertise.
           </p>
         </motion.div>
 

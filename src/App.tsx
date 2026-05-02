@@ -32,6 +32,8 @@ const LogisticsServicesPakistan = lazy(() => import("./pages/LogisticsServicesPa
 const PackersMoversPakistan = lazy(() => import("./pages/PackersMoversPakistan.tsx"));
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));
+const BlogMainPage = lazy(() => import("./pages/BlogMainPage.tsx"));
+const CargoInsuranceServicesPakistanBlog = lazy(() => import("./pages/blog/CargoInsuranceServicesPakistanBlog.tsx"));
 const LocationPage = lazy(() => import("./pages/LocationPage.tsx"));
 const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage.tsx"));
 const TermsOfServicePage = lazy(() => import("./pages/TermsOfServicePage.tsx"));
@@ -143,11 +145,15 @@ const App = () => (
           <Route path="/faqs-packers-movers-pakistan" element={<FaqHubPakistan />} />
           <Route path="/faqs-packers-movers-pakistan/" element={<FaqHubPakistan />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/tips-for-stress-free-international-move" element={<Blog1 />} />
-          <Route path="/blog/air-freight-vs-sea-freight-pakistan" element={<Blog2 />} />
-          <Route path="/blog/customs-regulations-pakistan-2025" element={<Blog3 />} />
-          <Route path="/blog/moving-from-pakistan-to-dubai-guide" element={<Blog4 />} />
+          <Route path="/blog" element={<BlogMainPage />} />
+          <Route path="/blog/tips-for-stress-free-international-move" element={<Navigate to="/blog/tips-for-stress-free-international-move/" replace />} />
+          <Route path="/blog/tips-for-stress-free-international-move/" element={<Blog1 />} />
+          <Route path="/blog/air-freight-vs-sea-freight-pakistan" element={<Navigate to="/blog/air-freight-vs-sea-freight-pakistan/" replace />} />
+          <Route path="/blog/air-freight-vs-sea-freight-pakistan/" element={<Blog2 />} />
+          <Route path="/blog/customs-regulations-pakistan-2025" element={<Navigate to="/blog/customs-regulations-pakistan-2025/" replace />} />
+          <Route path="/blog/customs-regulations-pakistan-2025/" element={<Blog3 />} />
+          <Route path="/blog/moving-from-pakistan-to-dubai-guide" element={<Navigate to="/blog/moving-from-pakistan-to-dubai-guide/" replace />} />
+          <Route path="/blog/moving-from-pakistan-to-dubai-guide/" element={<Blog4 />} />
           <Route path="/blog/moving-cost-pakistan" element={<Navigate to="/blog/moving-cost-pakistan/" replace />} />
           <Route path="/blog/moving-cost-pakistan/" element={<MovingCostPakistanBlog />} />
           <Route path="/blog/packing-tips-house-shifting" element={<Navigate to="/blog/packing-tips-house-shifting/" replace />} />
@@ -174,6 +180,8 @@ const App = () => (
           <Route path="/blog/packers-and-movers-islamabad-guide/" element={<PackersMoversIslamabadGuideBlog />} />
           <Route path="/blog/pet-relocation-from-pakistan-complete-guide" element={<Navigate to="/blog/pet-relocation-from-pakistan-complete-guide/" replace />} />
           <Route path="/blog/pet-relocation-from-pakistan-complete-guide/" element={<PetRelocationFromPakistanBlog />} />
+          <Route path="/blog/cargo-insurance-services-pakistan" element={<Navigate to="/blog/cargo-insurance-services-pakistan/" replace />} />
+          <Route path="/blog/cargo-insurance-services-pakistan/" element={<CargoInsuranceServicesPakistanBlog />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
           <Route path="/pakistan-to-dubai-movers" element={<PakistanToDubaiMovers />} />

@@ -1,6 +1,6 @@
 export const seoConfig = {
   home: {
-    title: "Pakistan to Dubai Movers | International Moving Company | Best Intl Movers",
+    title: "Best International Movers Pakistan | Rawalpindi, Islamabad, Lahore | 15+ Years",
     description:
       "Pakistan's most trusted international movers offering door-to-door relocation to UAE, UK, USA, Canada and 100+ countries. Serving Islamabad, Rawalpindi, Lahore, Peshawar. Call 0300-9130211.",
     keywords:
