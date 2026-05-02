@@ -6,7 +6,7 @@ const stats = [
   { value: 5000, suffix: "+", label: "Happy Families" },
   { value: 100, suffix: "+", label: "Countries Served" },
   { value: 15, suffix: "+", label: "Years Experience" },
-  { value: 99, suffix: "%", label: "Client Satisfaction" },
+  { value: 98, suffix: "%", label: "Client Satisfaction" },
 ];
 
 const reasons = [

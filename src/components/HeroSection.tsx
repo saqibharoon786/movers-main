@@ -7,8 +7,8 @@ const heroImage = hero1;
 
 const trustItems = [
   { icon: Users, text: "5,000+ Happy Families" },
-  { icon: Globe, text: "200+ Countries Served" },
-  { icon: Clock, text: "20+ Years Experience" },
+  { icon: Globe, text: "100+ Countries Served" },
+  { icon: Clock, text: "15+ Years Experience" },
   { icon: Award, text: "98% Client Satisfaction" },
 ];
 
