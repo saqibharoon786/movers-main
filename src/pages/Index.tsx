@@ -100,49 +100,65 @@ const homepageMovingCompanyLd = {
   }
 };
 
-// FAQ Schema for homepage
+// FAQ Schema for homepage - consolidated with FAQSection content
 const homepageFAQSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How much does international moving cost from Pakistan?",
+      "name": "How long does an international move typically take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "International moving costs from Pakistan vary based on destination, volume, and shipping method. Air freight is faster but more expensive, while sea freight is cost-effective for larger shipments. Contact us for a free quote tailored to your specific needs."
+        "text": "Depending on the destination, sea freight takes 4-8 weeks while air freight can be as fast as 5-10 days. We provide a detailed timeline during your consultation."
       }
     },
     {
       "@type": "Question",
-      "name": "Which countries do you serve from Pakistan?",
+      "name": "Is my shipment insured during transit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve 100+ countries worldwide including UAE, UK, USA, Canada, Australia, Saudi Arabia, Qatar, Germany, Malaysia and more. Our global network ensures seamless relocations to any destination."
+        "text": "Yes, all shipments are covered by comprehensive transit insurance. We offer various coverage levels to suit your needs, from basic to full replacement value."
       }
     },
     {
       "@type": "Question",
-      "name": "How long does international moving take?",
+      "name": "Do you handle customs clearance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Transit times vary: Air freight typically takes 3-7 days, while sea freight takes 4-8 weeks depending on destination. We provide accurate timelines and real-time tracking for all shipments."
+        "text": "Absolutely. Our licensed customs brokers handle all documentation, duties, and compliance requirements in both origin and destination countries."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you provide packing services?",
+      "name": "Can you move my vehicles internationally?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we provide professional packing services using export-grade materials. Our trained packers ensure maximum protection for your belongings during international transit."
+        "text": "Yes, we specialize in international vehicle shipping via RoRo or enclosed container transport with full insurance coverage."
       }
     },
     {
       "@type": "Question",
-      "name": "Is my cargo insured during transit?",
+      "name": "What packing materials do you use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, all shipments are covered by comprehensive transit insurance. We offer different insurance options based on the value and nature of your belongings."
+        "text": "We use premium, eco-friendly packing materials including acid-free tissue, custom crating for fragile items, wardrobe boxes, and climate-resistant wrapping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply fill out our contact form, call us, or request a free virtual or in-home survey. We'll provide a detailed, transparent quote within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer storage solutions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we have secure, climate-controlled storage facilities worldwide for both short-term and long-term storage needs."
       }
     }
   ]
