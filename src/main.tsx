@@ -8,8 +8,3 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </HelmetProvider>
 );
-
-// Dispatch render-event for react-snap after a short delay
-setTimeout(() => {
-  document.dispatchEvent(new Event("render-event"));
-}, 500);
