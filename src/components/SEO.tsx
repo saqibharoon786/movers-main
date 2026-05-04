@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
-import { computeSeoHead } from "@/utils/seoHead";
+import { computeSeoHead, toCanonicalUrl, normalizeSeoPath } from "@/utils/seoHead";
 import { useSEO } from "@/hooks/useSEO";
 
 interface SEOProps {
@@ -15,6 +15,10 @@ interface SEOProps {
 
 export default function SEO({ title, description, schema, keywords, urlPath, noindex }: SEOProps) {
   const location = useLocation();
+  
+  // Use explicit urlPath first, then React Router location, then browser pathname
+  const currentPath = urlPath || location.pathname || window.location.pathname || "/";
+  
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
   const head = useMemo(
     () =>
@@ -22,19 +26,25 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
         title,
         description,
         keywords: kw,
-        urlPath: urlPath || location.pathname,
+        urlPath: currentPath,
         noindex,
       }),
-    [title, description, kw, urlPath, location.pathname, noindex]
+    [title, description, kw, currentPath, noindex]
   );
+
+  // Compute canonical directly to ensure it's correct
+  const canonicalUrl = useMemo(() => {
+    const normalizedPath = normalizeSeoPath(currentPath);
+    return toCanonicalUrl(normalizedPath);
+  }, [currentPath]);
 
   useSEO({
     title,
     description,
     schema,
     keywords: kw,
-    urlPath: urlPath || location.pathname,
-    renderMetaInDom: true,
+    urlPath: currentPath,
+    renderMetaInDom: false, // Use Helmet instead of DOM manipulation to avoid conflicts
   });
 
   return (
@@ -44,9 +54,9 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
       <meta name="description" content={head.seoDescription} />
       <meta name="keywords" content={head.keywords} />
       <meta name="robots" content={head.robots} />
-      <link rel="canonical" href={head.fullUrl} />
+      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={head.fullUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={head.seoTitle} />
       <meta property="og:description" content={head.seoDescription} />
       <meta property="og:image" content={head.selectedOgImage} />
