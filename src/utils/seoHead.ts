@@ -52,7 +52,9 @@ export type ComputeSeoHeadInput = {
 };
 
 export function computeSeoHead(input: ComputeSeoHeadInput) {
-  const pathSource = input.urlPath ?? input.pathnameFallback ?? "/";
+  // Get current pathname from window if available (for dynamic fallback)
+  const currentPathname = typeof window !== "undefined" ? window.location.pathname : "";
+  const pathSource = input.urlPath ?? input.pathnameFallback ?? currentPathname ?? "/";
   const normalizedPath = normalizeSeoPath(pathSource);
   const routeLabel = pathToLabel(normalizedPath);
 
