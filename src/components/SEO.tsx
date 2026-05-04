@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { computeSeoHead } from "@/utils/seoHead";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -13,6 +14,7 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, schema, keywords, urlPath, noindex }: SEOProps) {
+  const location = useLocation();
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
   const head = useMemo(
     () =>
@@ -20,10 +22,10 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
         title,
         description,
         keywords: kw,
-        urlPath,
+        urlPath: urlPath || location.pathname,
         noindex,
       }),
-    [title, description, kw, urlPath, noindex]
+    [title, description, kw, urlPath, location.pathname, noindex]
   );
 
   useSEO({
@@ -31,7 +33,7 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
     description,
     schema,
     keywords: kw,
-    urlPath,
+    urlPath: urlPath || location.pathname,
     renderMetaInDom: true,
   });
 
