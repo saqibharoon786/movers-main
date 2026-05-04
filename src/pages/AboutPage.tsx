@@ -4,6 +4,8 @@ import { Award, Target, Eye, ShieldCheck, Users, Globe, Building } from "lucide-
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/seoConfig";
 
 const teamMembers = [
   { name: "Ahmed Raza", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400" },
@@ -26,6 +28,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO {...seoConfig.about} urlPath="/about" />
       <Navbar />
       
       {/* Hero Section */}
@@ -33,7 +36,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 z-0">
           <picture>
             <source srcSet="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920&fm=webp" type="image/webp" />
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920" alt="Team collaborating" fetchpriority="high" loading="eager" width="1920" height="1080" className="w-full h-full object-cover opacity-[0.1]" />
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920" alt="Team collaborating" fetchPriority="high" loading="eager" width="1920" height="1080" className="w-full h-full object-cover opacity-[0.1]" />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/50"></div>
         </div>
