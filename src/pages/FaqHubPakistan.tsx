@@ -51,6 +51,7 @@ export default function FaqHubPakistan() {
       <SEO
         title="Packers and Movers Pakistan FAQ | Cost, Timeline, Insurance"
         description="FAQ hub for packers and movers in Pakistan: pricing, city coverage, international moving, cargo services, and relocation process."
+        urlPath="/faqs-packers-movers-pakistan/"
       />
       <Navbar />
       <div className="pt-32 pb-20">

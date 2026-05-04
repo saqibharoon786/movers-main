@@ -9,9 +9,10 @@ interface SEOProps {
   schema?: Record<string, unknown> | Record<string, unknown>[];
   keywords?: string;
   urlPath?: string;
+  noindex?: boolean;
 }
 
-export default function SEO({ title, description, schema, keywords, urlPath }: SEOProps) {
+export default function SEO({ title, description, schema, keywords, urlPath, noindex }: SEOProps) {
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
   const head = useMemo(
     () =>
@@ -20,8 +21,9 @@ export default function SEO({ title, description, schema, keywords, urlPath }: S
         description,
         keywords: kw,
         urlPath,
+        noindex,
       }),
-    [title, description, kw, urlPath]
+    [title, description, kw, urlPath, noindex]
   );
 
   useSEO({
@@ -30,7 +32,7 @@ export default function SEO({ title, description, schema, keywords, urlPath }: S
     schema,
     keywords: kw,
     urlPath,
-    renderMetaInDom: false,
+    renderMetaInDom: true,
   });
 
   return (
