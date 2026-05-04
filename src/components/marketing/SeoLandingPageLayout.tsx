@@ -7,8 +7,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb, { type BreadcrumbItem } from "@/components/PageBreadcrumb";
-import { useSEO } from "@/hooks/useSEO";
-import { computeSeoHead } from "@/utils/seoHead";
+import SEO from "@/components/SEO";
 
 const WA = "https://wa.me/923009130211";
 const PHONE = "0300-9130211";
@@ -106,29 +105,6 @@ const SeoLandingPageLayout = ({
     }
   };
 
-  useSEO({
-    title,
-    description,
-    keywords,
-    urlPath: path,
-    schema: combinedSchema,
-    ogImage: ogImage || heroImageUrl,
-    ogImageAlt,
-    twitterImage: ogImage || heroImageUrl,
-    renderMetaInDom: false, // Use Helmet instead
-  });
-
-  const head = useMemo(
-    () =>
-      computeSeoHead({
-        title,
-        description,
-        keywords,
-        urlPath: path,
-      }),
-    [title, description, keywords, path]
-  );
-
   const heroSectionClass =
     visualSkin === "rwpHome"
       ? "pt-28 lg:pt-36 pb-14 bg-gradient-to-br from-amber-950/55 via-navy-light to-background border-b border-amber-900/35"
@@ -159,18 +135,13 @@ const SeoLandingPageLayout = ({
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet prioritizeSeoTags>
-        <html lang="en" />
-        <title>{head.seoTitle}</title>
-        <meta name="description" content={head.seoDescription} />
-        <meta name="keywords" content={head.keywords} />
-        <meta name="robots" content={head.robots} />
-        <link rel="canonical" href={head.fullUrl} />
-        <meta property="og:url" content={head.fullUrl} />
-        <meta property="og:title" content={head.seoTitle} />
-        <meta property="og:description" content={head.seoDescription} />
-        {ogImage && <meta property="og:image" content={ogImage} />}
-      </Helmet>
+      <SEO
+        title={title}
+        description={description}
+        keywords={keywords}
+        urlPath={path}
+        schema={combinedSchema}
+      />
       <Navbar />
       <section className={heroSectionClass}>
         <div className="container mx-auto px-4">

@@ -1,13 +1,12 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Package } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import { useSEO } from "@/hooks/useSEO";
-import { computeSeoHead } from "@/utils/seoHead";
+import SEO from "@/components/SEO";
 import type { CourierCityConfig } from "@/data/logisticsLocalTypes";
 
 const WA = "https://wa.me/923009130211";
@@ -17,37 +16,29 @@ type Props = { config: CourierCityConfig };
 
 const CourierCityTemplate = ({ config }: Props) => {
   const path = config.urlPath.endsWith("/") ? config.urlPath : `${config.urlPath}/`;
-  useSEO({
-    title: config.seo.title,
-    description: config.seo.description,
-    keywords: config.seo.keywords,
-    urlPath: path,
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: config.h1,
-      description: config.seo.description,
-      provider: {
-        "@type": "Organization",
-        name: "Best International Movers & Logistics",
-        telephone: "+923009130211",
-      },
-      areaServed: config.cityName,
-    },
-  });
-
   const cargoPath = config.cityName === "Islamabad" ? "/cargo-service-islamabad" : "/cargo-service-rawalpindi";
   const airPath = config.cityName === "Islamabad" ? "/air-freight-islamabad" : "/air-freight-rawalpindi";
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet prioritizeSeoTags>
-        <html lang="en" />
-        <title>{head.seoTitle}</title>
-        <meta name="description" content={head.seoDescription} />
-        <meta name="robots" content={head.robots} />
-        <link rel="canonical" href={head.fullUrl} />
-      </Helmet>
+      <SEO
+        title={config.seo.title}
+        description={config.seo.description}
+        keywords={config.seo.keywords}
+        urlPath={path}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: config.h1,
+          description: config.seo.description,
+          provider: {
+            "@type": "Organization",
+            name: "Best International Movers & Logistics",
+            telephone: "+923009130211",
+          },
+          areaServed: config.cityName,
+        }}
+      />
       <Navbar />
       <section className="pt-28 lg:pt-36 pb-14 bg-navy-light border-b border-border">
         <div className="container mx-auto px-4">
