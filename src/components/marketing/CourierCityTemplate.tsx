@@ -1,10 +1,13 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Package } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useSEO } from "@/hooks/useSEO";
+import { computeSeoHead } from "@/utils/seoHead";
 import type { CourierCityConfig } from "@/data/logisticsLocalTypes";
 
 const WA = "https://wa.me/923009130211";
@@ -38,6 +41,13 @@ const CourierCityTemplate = ({ config }: Props) => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet prioritizeSeoTags>
+        <html lang="en" />
+        <title>{head.seoTitle}</title>
+        <meta name="description" content={head.seoDescription} />
+        <meta name="robots" content={head.robots} />
+        <link rel="canonical" href={head.fullUrl} />
+      </Helmet>
       <Navbar />
       <section className="pt-28 lg:pt-36 pb-14 bg-navy-light border-b border-border">
         <div className="container mx-auto px-4">

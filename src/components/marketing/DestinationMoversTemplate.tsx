@@ -1,5 +1,7 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   CheckCircle2,
@@ -15,6 +17,7 @@ import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useSEO } from "@/hooks/useSEO";
+import { computeSeoHead } from "@/utils/seoHead";
 import type { DestinationMovingConfig } from "@/data/destinationMovingTypes";
 
 const WA = "https://wa.me/923009130211";
@@ -63,10 +66,29 @@ const DestinationMoversTemplate = ({ config }: Props) => {
     keywords: config.seo.keywords,
     urlPath: canonicalPath,
     schema: [serviceSchema, faqSchema],
+    renderMetaInDom: false,
   });
+
+  const head = useMemo(
+    () =>
+      computeSeoHead({
+        title: config.seo.title,
+        description: config.seo.description,
+        keywords: config.seo.keywords,
+        urlPath: canonicalPath,
+      }),
+    [config.seo.title, config.seo.description, config.seo.keywords, canonicalPath]
+  );
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet prioritizeSeoTags>
+        <html lang="en" />
+        <title>{head.seoTitle}</title>
+        <meta name="description" content={head.seoDescription} />
+        <meta name="robots" content={head.robots} />
+        <link rel="canonical" href={head.fullUrl} />
+      </Helmet>
       <Navbar />
 
       <section className="pt-28 lg:pt-36 pb-16 relative overflow-hidden bg-navy-light border-b border-border">
