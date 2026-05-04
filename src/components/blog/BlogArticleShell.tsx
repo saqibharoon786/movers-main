@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb, { type BreadcrumbItem } from "@/components/PageBreadcrumb";
-import { useSEO } from "@/hooks/useSEO";
-import { computeSeoHead, normalizeSeoPath } from "@/utils/seoHead";
+import SEO from "@/components/SEO";
+import { normalizeSeoPath } from "@/utils/seoHead";
 
 type Props = {
   title: string;
@@ -50,19 +50,6 @@ const BlogArticleShell = ({
   children,
 }: Props) => {
   const path = normalizeSeoPath(urlPath);
-  const head = useMemo(
-    () =>
-      computeSeoHead({
-        title,
-        description,
-        keywords,
-        urlPath: path,
-        ogImage,
-        ogImageAlt,
-      }),
-    [title, description, keywords, path, ogImage, ogImageAlt]
-  );
-
   const articleSchema = articleSchemaOverride ?? {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -78,44 +65,18 @@ const BlogArticleShell = ({
         ? [articleSchema, ...extraSchema]
         : [articleSchema, extraSchema];
 
-  useSEO({
-    title,
-    description,
-    keywords,
-    urlPath: path,
-    schema,
-    ogImage,
-    ogImageAlt,
-    renderMetaInDom: false,
-  });
-
   const crumbs: BreadcrumbItem[] = breadcrumbItems ?? [{ label: "Blog", to: "/blog" }, { label: breadcrumbCurrent ?? h1 }];
   const back = backLink ?? { to: "/blog", label: "Back to blog" };
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet prioritizeSeoTags>
-        <html lang="en" />
-        <title>{head.seoTitle}</title>
-        <meta name="description" content={head.seoDescription} />
-        <meta name="keywords" content={head.keywords} />
-        <meta name="robots" content={head.robots} />
-        <link rel="canonical" href={head.fullUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={head.fullUrl} />
-        <meta property="og:title" content={head.seoTitle} />
-        <meta property="og:description" content={head.seoDescription} />
-        <meta property="og:image" content={head.selectedOgImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        {head.ogImageAlt ? <meta property="og:image:alt" content={head.ogImageAlt} /> : null}
-        <meta property="og:site_name" content="Best International Movers & Logistics" />
-        <meta property="og:locale" content="en_PK" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={head.seoTitle} />
-        <meta name="twitter:description" content={head.seoDescription} />
-        <meta name="twitter:image" content={head.twitterImage} />
-      </Helmet>
+      <SEO
+        title={title}
+        description={description}
+        keywords={keywords}
+        urlPath={path}
+        schema={schema}
+      />
       <Navbar />
       <article className="pt-28 lg:pt-36 pb-16">
         <div className="container mx-auto px-4 max-w-3xl">

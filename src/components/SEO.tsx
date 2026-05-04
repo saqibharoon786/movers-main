@@ -17,8 +17,7 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
   const location = useLocation();
   
   // Always use the explicit urlPath if provided, otherwise use current route
-  const effectivePath = urlPath || location.pathname;
-  
+const effectivePath = urlPath ?? location.pathname ?? "/";  
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
   const head = useMemo(
     () =>
