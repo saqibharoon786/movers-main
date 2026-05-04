@@ -1,5 +1,6 @@
 import { useLayoutEffect } from "react";
 import { computeSeoHead, toCanonicalUrl, SEO_SITE_URL } from "@/utils/seoHead";
+import { notifyPrerenderReady } from "@/utils/prerender";
 
 interface SEOProps {
   title: string;
@@ -82,15 +83,19 @@ export const useSEO = ({
       for (let i = 1; i < canonicalNodes.length; i += 1) {
         canonicalNodes[i].remove();
       }
-      if (!canonical) {
-        canonical = document.createElement("link");
-        canonical.setAttribute("rel", "canonical");
-        document.head.appendChild(canonical);
+      if (fullUrl) {
+        if (!canonical) {
+          canonical = document.createElement("link");
+          canonical.setAttribute("rel", "canonical");
+          document.head.appendChild(canonical);
+        }
+        canonical.setAttribute("href", fullUrl);
+      } else if (canonical) {
+        canonical.remove();
       }
-      canonical.setAttribute("href", fullUrl);
 
       setMeta("og:type", "website", true);
-      setMeta("og:url", fullUrl, true);
+      setMeta("og:url", fullUrl || `${SEO_SITE_URL}/`, true);
       setMeta("og:title", head.seoTitle, true);
       setMeta("og:description", head.seoDescription, true);
       setMeta("og:image", head.selectedOgImage, true);
@@ -168,6 +173,8 @@ export const useSEO = ({
     script.id = "page-schema";
     script.text = JSON.stringify(combinedSchema);
     document.head.appendChild(script);
+
+    notifyPrerenderReady();
   }, [title, description, keywords, urlPath, schema, ogImage, ogImageAlt, twitterImage, noindex, renderMetaInDom]);
 };
 

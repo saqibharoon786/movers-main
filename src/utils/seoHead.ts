@@ -24,18 +24,43 @@ const clip = (value: string, max: number) => {
   return `${value.slice(0, max - 1).trimEnd()}…`;
 };
 
-/** Path with leading slash, no trailing slash except root "/". */
-export const normalizeSeoPath = (path: string) => {
-  if (!path || path === "/") return "/";
-  const withLeading = path.startsWith("/") ? path : `/${path}`;
-  return withLeading.replace(/\/+$/, "") || "/";
+const looksLikeAbsoluteUrl = (value: string) => /^https?:\/\//i.test(value);
+
+/**
+ * Path with leading slash, no trailing slash except root "/".
+ * Removes query/hash and collapses duplicate slashes.
+ * Returns undefined when input is missing/invalid.
+ */
+export const normalizeSeoPath = (path?: string | null): string | undefined => {
+  if (typeof path !== "string") return undefined;
+  const trimmed = path.trim();
+  if (!trimmed) return undefined;
+
+  let candidate = trimmed;
+
+  if (looksLikeAbsoluteUrl(trimmed)) {
+    try {
+      candidate = new URL(trimmed).pathname || "/";
+    } catch {
+      return undefined;
+    }
+  }
+
+  const withoutHash = candidate.split("#")[0];
+  const withoutQuery = withoutHash.split("?")[0];
+  const collapsed = withoutQuery.replace(/\/{2,}/g, "/");
+  const withLeading = collapsed.startsWith("/") ? collapsed : `/${collapsed}`;
+  const normalized = withLeading.replace(/\/+$/, "") || "/";
+
+  return normalized;
 };
 
 /** Canonical URL: https://bestintlmovers.com (no www), no trailing slash except homepage. */
-export const toCanonicalUrl = (path: string) => {
-  const p = normalizeSeoPath(path || "/");
-  if (p === "/") return `${SITE_URL}/`;
-  return `${SITE_URL}${p}`;
+export const toCanonicalUrl = (path?: string | null) => {
+  const normalizedPath = normalizeSeoPath(path);
+  if (!normalizedPath) return undefined;
+  if (normalizedPath === "/") return `${SITE_URL}/`;
+  return `${SITE_URL}${normalizedPath}`;
 };
 
 export type ComputeSeoHeadInput = {
@@ -52,8 +77,8 @@ export type ComputeSeoHeadInput = {
 };
 
 export function computeSeoHead(input: ComputeSeoHeadInput) {
-  const pathSource = input.urlPath ?? input.pathnameFallback ?? "/";
-  const normalizedPath = normalizeSeoPath(pathSource);
+  const canonicalPath = normalizeSeoPath(input.urlPath) ?? normalizeSeoPath(input.pathnameFallback);
+  const normalizedPath = canonicalPath ?? "/";
   const routeLabel = pathToLabel(normalizedPath);
 
   const isFullSeoTitle = input.title.includes("|");
@@ -73,7 +98,7 @@ export function computeSeoHead(input: ComputeSeoHeadInput) {
     : `${descriptionWithRoute} ${cta}`;
   const seoDescription = clip(descriptionWithCta, 160);
 
-  const fullUrl = toCanonicalUrl(pathSource);
+  const fullUrl = toCanonicalUrl(canonicalPath);
   const selectedOgImage = input.ogImage || DEFAULT_SOCIAL_IMAGE;
   const robots = input.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
 

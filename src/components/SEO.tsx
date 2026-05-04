@@ -1,8 +1,9 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { useLocation, useResolvedPath } from "react-router-dom";
 import { computeSeoHead, toCanonicalUrl, normalizeSeoPath } from "@/utils/seoHead";
 import { useSEO } from "@/hooks/useSEO";
+import { notifyPrerenderReady } from "@/utils/prerender";
 
 interface SEOProps {
   title: string;
@@ -15,9 +16,25 @@ interface SEOProps {
 
 export default function SEO({ title, description, schema, keywords, urlPath, noindex }: SEOProps) {
   const location = useLocation();
-  
-  // Always use the explicit urlPath if provided, otherwise use current route
-const effectivePath = urlPath ?? location.pathname ?? "/";  
+  const resolvedPath = useResolvedPath(".");
+
+  const effectivePath = useMemo(() => {
+    const explicitPath = normalizeSeoPath(urlPath);
+    if (explicitPath) return explicitPath;
+
+    const resolvedRoutePath = normalizeSeoPath(resolvedPath.pathname);
+    const liveLocationPath = normalizeSeoPath(location.pathname);
+
+    // Prevent transient "/" from overriding non-home routes.
+    if (resolvedRoutePath && resolvedRoutePath !== "/") return resolvedRoutePath;
+    if (liveLocationPath && liveLocationPath !== "/") return liveLocationPath;
+
+    // Only treat as homepage when router state is explicitly root.
+    if (resolvedRoutePath === "/" && liveLocationPath === "/") return "/";
+
+    return resolvedRoutePath ?? liveLocationPath;
+  }, [urlPath, resolvedPath.pathname, location.pathname]);
+
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
   const head = useMemo(
     () =>
@@ -41,6 +58,10 @@ const effectivePath = urlPath ?? location.pathname ?? "/";
     renderMetaInDom: false,
   });
 
+  useEffect(() => {
+    notifyPrerenderReady();
+  }, [head.fullUrl, head.seoTitle, head.seoDescription]);
+
   return (
     <Helmet prioritizeSeoTags>
       <html lang="en" />
@@ -48,9 +69,9 @@ const effectivePath = urlPath ?? location.pathname ?? "/";
       <meta name="description" content={head.seoDescription} />
       <meta name="keywords" content={head.keywords} />
       <meta name="robots" content={head.robots} />
-      <link rel="canonical" href={head.fullUrl} />
+      {head.fullUrl ? <link rel="canonical" href={head.fullUrl} /> : null}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={head.fullUrl} />
+      <meta property="og:url" content={head.fullUrl ?? toCanonicalUrl(effectivePath) ?? "https://bestintlmovers.com/"} />
       <meta property="og:title" content={head.seoTitle} />
       <meta property="og:description" content={head.seoDescription} />
       <meta property="og:image" content={head.selectedOgImage} />
