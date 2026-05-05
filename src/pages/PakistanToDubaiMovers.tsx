@@ -157,9 +157,9 @@ const PakistanToDubaiMovers = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Pakistan to Dubai Movers | Door-to-Door Service | Best Intl Movers"
-        description="Moving from Pakistan to Dubai? Door-to-door relocation by sea & air freight. 1,200+ moves on this route. Free quote: 0300-9130211"
-        keywords="Pakistan to Dubai movers, Dubai relocation Pakistan, sea freight Pakistan Dubai, air freight Dubai, Jebel Ali shipping"
+        title="Packers and Movers Pakistan to Dubai | Door-to-Door Service | Best Intl Movers"
+        description="Packers and movers Pakistan to Dubai by bestintlmovers - Door-to-door relocation by sea & air freight. 1,200+ moves completed. Free quote: 0300-9130211"
+        keywords="packers and movers Pakistan to Dubai, movers and packers Pakistan, Pakistan to Dubai movers, Dubai movers Pakistan, Pakistan to Dubai relocation, international movers Pakistan Dubai, sea freight Pakistan Dubai, air freight Dubai, Jebel Ali shipping, Dubai moving company"
         urlPath="/pakistan-to-dubai-movers"
         schema={[serviceLd, faqSchema]}
       />

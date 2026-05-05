@@ -9,6 +9,17 @@ import SEO from "@/components/SEO";
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
   {
+    slug: "international-relocation-services-rawalpindi",
+    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    title: "International Relocation Services in Rawalpindi: Everything You Need to Know Before Moving Abroad",
+    date: "May 5, 2026",
+    category: "Relocation Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt: "Looking for trusted international relocation services in Rawalpindi? Discover how to plan your overseas move, what services to expect, costs, and why Best International Movers is Rawalpindi's top choice for moving abroad.",
+    content: "Complete guide to international relocation services in Rawalpindi with detailed information about services, costs, and tips."
+  },
+  {
     slug: "cargo-insurance-services-pakistan",
     img: "/images/cargo-insurance.jpg",
     title: "Why Cargo Insurance Is the Most Important Thing You're Ignoring When Shipping from Pakistan",
@@ -118,7 +129,8 @@ const categories = [
   "Logistics",
   "Guides",
   "Pet Services",
-  "Insurance & Protection"
+  "Insurance & Protection",
+  "Relocation Guide"
 ];
 
 const BlogMainPage = () => {
