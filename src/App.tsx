@@ -95,6 +95,7 @@ const PackingFragileItemsGuideBlog = lazy(() => import("./pages/blog/PackingFrag
 const CheapMoversTipsPakistanBlog = lazy(() => import("./pages/blog/CheapMoversTipsPakistanBlog.tsx"));
 const PackersMoversIslamabadGuideBlog = lazy(() => import("./pages/blog/PackersMoversIslamabadGuideBlog.tsx"));
 const PetRelocationFromPakistanBlog = lazy(() => import("./pages/blog/PetRelocationFromPakistanBlog.tsx"));
+const BlogInternationalRelocationRawalpindi = lazy(() => import("./pages/BlogInternationalRelocationRawalpindi.tsx"));
 const InternationalMoversIslamabad = lazy(() => import("./pages/InternationalMoversIslamabad.tsx"));
 const InternationalMoversLahore = lazy(() => import("./pages/InternationalMoversLahore.tsx"));
 const InternationalRelocationServicesRawalpindi = lazy(() => import("./pages/InternationalRelocationServicesRawalpindi.tsx"));
@@ -182,6 +183,8 @@ const App = () => (
           <Route path="/blog/pet-relocation-from-pakistan-complete-guide/" element={<PetRelocationFromPakistanBlog />} />
           <Route path="/blog/cargo-insurance-services-pakistan" element={<Navigate to="/blog/cargo-insurance-services-pakistan/" replace />} />
           <Route path="/blog/cargo-insurance-services-pakistan/" element={<CargoInsuranceServicesPakistanBlog />} />
+          <Route path="/blog/international-relocation-services-rawalpindi" element={<Navigate to="/blog/international-relocation-services-rawalpindi/" replace />} />
+          <Route path="/blog/international-relocation-services-rawalpindi/" element={<BlogInternationalRelocationRawalpindi />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
           <Route path="/pakistan-to-dubai-movers" element={<PakistanToDubaiMovers />} />
