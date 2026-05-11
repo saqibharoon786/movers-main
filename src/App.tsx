@@ -101,6 +101,10 @@ const InternationalMoversLahore = lazy(() => import("./pages/InternationalMovers
 const InternationalRelocationServicesRawalpindi = lazy(() => import("./pages/InternationalRelocationServicesRawalpindi.tsx"));
 const InternationalMoversAndPackersPakistan = lazy(() => import("./pages/InternationalMoversAndPackersPakistan.tsx"));
 const PartLoadRemovalsPakistan = lazy(() => import("./pages/PartLoadRemovalsPakistan.tsx"));
+const CustomClearanceAgencyPakistan = lazy(() => import("./pages/CustomClearanceAgencyPakistan.tsx"));
+const ShippingCompaniesPakistanBlog = lazy(() => import("./pages/blog/ShippingCompaniesPakistanBlog.tsx"));
+const CargoServiceIslamabadCompleteGuideBlog = lazy(() => import("./pages/blog/CargoServiceIslamabadCompleteGuideBlog.tsx"));
+const InternationalRelocationRawalpindiCompleteGuideBlog = lazy(() => import("./pages/blog/InternationalRelocationRawalpindiCompleteGuideBlog.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -185,6 +189,12 @@ const App = () => (
           <Route path="/blog/cargo-insurance-services-pakistan/" element={<CargoInsuranceServicesPakistanBlog />} />
           <Route path="/blog/international-relocation-services-rawalpindi" element={<Navigate to="/blog/international-relocation-services-rawalpindi/" replace />} />
           <Route path="/blog/international-relocation-services-rawalpindi/" element={<BlogInternationalRelocationRawalpindi />} />
+          <Route path="/blog/shipping-companies-in-pakistan" element={<Navigate to="/blog/shipping-companies-in-pakistan/" replace />} />
+          <Route path="/blog/shipping-companies-in-pakistan/" element={<ShippingCompaniesPakistanBlog />} />
+          <Route path="/blog/cargo-service-islamabad-complete-guide" element={<Navigate to="/blog/cargo-service-islamabad-complete-guide/" replace />} />
+          <Route path="/blog/cargo-service-islamabad-complete-guide/" element={<CargoServiceIslamabadCompleteGuideBlog />} />
+          <Route path="/blog/international-relocation-rawalpindi-complete-guide" element={<Navigate to="/blog/international-relocation-rawalpindi-complete-guide/" replace />} />
+          <Route path="/blog/international-relocation-rawalpindi-complete-guide/" element={<InternationalRelocationRawalpindiCompleteGuideBlog />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
           <Route path="/pakistan-to-dubai-movers" element={<PakistanToDubaiMovers />} />
@@ -216,7 +226,6 @@ const App = () => (
           <Route path="/international-courier-rawalpindi" element={<CourierRawalpindi />} />
           <Route path="/freight-forwarding-islamabad" element={<FreightForwardingIslamabad />} />
           <Route path="/customs-clearance-islamabad" element={<CustomsClearanceIslamabad />} />
-
           <Route path="/container-shipping-pakistan" element={<ContainerShippingPakistan />} />
           <Route path="/goods-transportation-pakistan" element={<GoodsTransportationPakistan />} />
           <Route path="/door-to-door-cargo-pakistan" element={<DoorToDoorCargoPakistan />} />
@@ -245,6 +254,7 @@ const App = () => (
           <Route path="/logistics-services-pakistan/" element={<LogisticsServicesPakistan />} />
           <Route path="/packers-and-movers-pakistan" element={<Navigate to="/packers-and-movers-pakistan/" replace />} />
           <Route path="/packers-and-movers-pakistan/" element={<PackersMoversPakistan />} />
+          <Route path="/custom-clearance-agency-in-pakistan" element={<CustomClearanceAgencyPakistan />} />
 
           <Route path="/:citySlug" element={<LocationPage />} />
           <Route path="*" element={<NotFound />} />

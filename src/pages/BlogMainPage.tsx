@@ -9,6 +9,39 @@ import SEO from "@/components/SEO";
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
   {
+    slug: "international-relocation-rawalpindi-complete-guide",
+    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    title: "International Relocation from Rawalpindi 2025 — Complete Moving Guide | Best Intl Movers",
+    date: "May 11, 2026",
+    category: "Relocation Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "30 min read",
+    excerpt: "Planning international relocation from Rawalpindi? This complete 2025 guide covers everything — costs, packing, customs, air vs sea freight, popular destinations & expert tips from Best International Movers.",
+    content: "Complete guide to international relocation from Rawalpindi with comprehensive information about moving abroad."
+  },
+  {
+    slug: "cargo-service-islamabad-complete-guide",
+    img: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    title: "Cargo Service in Islamabad 2026 — Everything You Need to Know | Best Intl Movers",
+    date: "May 11, 2026",
+    category: "Cargo Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "25 min read",
+    excerpt: "Looking for a reliable cargo service in Islamabad? This complete 2026 guide covers air cargo, sea cargo, costs, customs, and how to choose the best cargo company in Islamabad.",
+    content: "Complete guide to cargo service in Islamabad with comprehensive information about international shipping options."
+  },
+  {
+    slug: "shipping-companies-in-pakistan",
+    img: "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    title: "Best Shipping Companies in Pakistan 2025 | International Cargo | Best Intl Movers",
+    date: "May 11, 2026",
+    category: "Shipping Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "20 min read",
+    excerpt: "Looking for trusted shipping companies in Pakistan? Complete 2025 guide to international cargo shipping from Islamabad, Rawalpindi, Lahore & Karachi to 100+ countries. Get a free quote!",
+    content: "Complete guide to shipping companies in Pakistan with rates, routes, and how to choose the best shipping service."
+  },
+  {
     slug: "international-relocation-services-rawalpindi",
     img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
     title: "International Relocation Services in Rawalpindi: Everything You Need to Know Before Moving Abroad",
@@ -130,7 +163,9 @@ const categories = [
   "Guides",
   "Pet Services",
   "Insurance & Protection",
-  "Relocation Guide"
+  "Relocation Guide",
+  "Shipping Guide",
+  "Cargo Guide"
 ];
 
 const BlogMainPage = () => {
