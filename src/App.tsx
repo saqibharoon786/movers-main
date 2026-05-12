@@ -130,8 +130,11 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/services" element={<ServicesIndex />} />
           <Route path="/services/international-moving-services" element={<InternationalMovingService />} />
+          <Route path="/services/international-moving/" element={<InternationalMovingService />} />
           <Route path="/services/air-freight" element={<AirFreightService />} />
+          <Route path="/services/air-freight/" element={<AirFreightService />} />
           <Route path="/services/sea-freight-services" element={<SeaFreightService />} />
+          <Route path="/services/sea-freight/" element={<SeaFreightService />} />
           <Route path="/services/customs-clearance" element={<CustomsClearanceService />} />
           <Route path="/services/professional-packing-services" element={<ProfessionalPackingService />} />
           <Route path="/services/pet-relocation-services" element={<PetRelocationService />} />
@@ -141,6 +144,7 @@ const App = () => (
           <Route path="/services/packing-materials-services" element={<PackingMaterialsService />} />
           <Route path="/services/cargo-insurance-services" element={<CargoInsuranceService />} />
           <Route path="/services/secure-storage-services" element={<SecureStorageService />} />
+          <Route path="/services/secure-storage/" element={<SecureStorageService />} />
           <Route path="/services/vehicle-shipping-services" element={<VehicleShippingService />} />
           <Route path="/services/last-mile-delivery" element={<LastMileDeliveryService />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
@@ -209,8 +213,10 @@ const App = () => (
 
           <Route path="/movers-islamabad" element={<MoversIslamabad />} />
           <Route path="/movers-rawalpindi" element={<MoversRawalpindi />} />
+          <Route path="/movers-rawalpindi/" element={<MoversRawalpindi />} />
           <Route path="/international-relocation-services-rawalpindi" element={<InternationalRelocationServicesRawalpindi />} />
           <Route path="/movers-lahore" element={<MoversLahore />} />
+          <Route path="/movers-lahore/" element={<MoversLahore />} />
           <Route path="/movers-and-packers-in-peshawar" element={<MoversAndPackersInPeshawar />} />
           <Route path="/movers-peshawar" element={<Navigate to="/movers-and-packers-in-peshawar" replace />} />
           <Route path="/international-movers-from-islamabad" element={<InternationalMoversIslamabad />} />
@@ -244,6 +250,7 @@ const App = () => (
           <Route path="/shipping-companies-pakistan" element={<Navigate to="/top-shipping-companies-in-pakistan" replace />} />
           <Route path="/pakistan-cargo-services" element={<PakistanCargoServices />} />
           <Route path="/custom-duty-calculator" element={<CustomDutyCalculator />} />
+          <Route path="/custom-duty-calculator/" element={<CustomDutyCalculator />} />
           <Route path="/international-movers-pakistan" element={<Navigate to="/international-movers-pakistan/" replace />} />
           <Route path="/international-movers-pakistan/" element={<InternationalMoversPakistan />} />
           <Route path="/international-movers-and-packers-pakistan" element={<InternationalMoversAndPackersPakistan />} />
