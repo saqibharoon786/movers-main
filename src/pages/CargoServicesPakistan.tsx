@@ -17,6 +17,7 @@ const CargoServicesPakistan = () => (
     description="Cargo services Pakistan for air cargo, sea cargo, and freight handling with transparent planning and city-wide operational support."
     keywords="cargo services pakistan, freight services pakistan, air cargo pakistan, sea cargo pakistan"
     urlPath="/cargo-services-pakistan/"
+    canonicalUrl="https://bestintlmovers.com/cargo-services-pakistan/"
     h1="Cargo Services Pakistan"
     heroSubtext="Reliable cargo movement with route-specific freight planning, secure handling, and practical delivery timelines."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Cargo Services Pakistan" }]}

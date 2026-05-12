@@ -16,6 +16,7 @@ export default function InternationalShippingCostPakistanBlog() {
       description="Understand international shipping cost from Pakistan with mode, route, customs, and budgeting guidance."
       keywords="international shipping cost from pakistan, overseas shipping pakistan, freight cost pakistan"
       urlPath="/blog/international-shipping-cost-pakistan/"
+      canonicalUrl="https://bestintlmovers.com/blog/international-shipping-cost-pakistan/"
       h1="International Shipping Cost from Pakistan: Complete Cost Guide"
       faqs={faqs}
     >
