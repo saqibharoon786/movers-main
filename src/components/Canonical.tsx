@@ -19,8 +19,11 @@ const Canonical: React.FC<CanonicalProps> = ({
   // Build canonical URL with proper formatting
   const buildCanonicalUrl = (path: string): string => {
     const baseUrl = 'https://bestintlmovers.com';
-    const cleanPath = path.replace(/\/+$/, '') || '/'; // Remove trailing slashes except for root
-    return `${baseUrl}${cleanPath}`;
+    const collapsed = path.replace(/\/{2,}/g, "/");
+    const noTrailing = collapsed.replace(/\/+$/, "") || "/";
+    const withLeading = noTrailing.startsWith("/") ? noTrailing : `/${noTrailing}`;
+    const finalPath = withLeading === "/" ? "/" : `${withLeading}/`;
+    return `${baseUrl}${finalPath}`;
   };
 
   const finalCanonical = canonical || buildCanonicalUrl(location.pathname);
