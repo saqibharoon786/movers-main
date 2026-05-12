@@ -22,6 +22,8 @@ type Props = {
   description: string;
   keywords: string;
   urlPath: string;
+  /** Optional canonical override (absolute URL). */
+  canonicalUrl?: string;
   h1: string;
   heroSubtext: string;
   breadcrumbItems: BreadcrumbItem[];
@@ -47,6 +49,7 @@ const SeoLandingPageLayout = ({
   description,
   keywords,
   urlPath,
+  canonicalUrl,
   h1,
   heroSubtext,
   breadcrumbItems,
@@ -140,6 +143,7 @@ const SeoLandingPageLayout = ({
         description={description}
         keywords={keywords}
         urlPath={path}
+        canonicalUrl={canonicalUrl}
         schema={combinedSchema}
       />
       <Navbar />
