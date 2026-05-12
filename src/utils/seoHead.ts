@@ -61,7 +61,30 @@ export const normalizeSeoPath = (path?: string | null): string | undefined => {
   return hasTrailingSlash ? `${noTrailing}/` : noTrailing;
 };
 
-/** Canonical URL: https://bestintlmovers.com (no www), no trailing slash except homepage. */
+/** Same path ignoring trailing slash (for comparing router vs address bar). */
+export const stripTrailingSlashForCompare = (path: string): string => {
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "") || "/";
+};
+
+/**
+ * When the SPA route matches the browser URL except for a trailing slash,
+ * prefer the browser pathname so canonical matches the live (often redirected) URL.
+ */
+export function alignSeoPathWithBrowser(computedPath: string | undefined): string | undefined {
+  if (computedPath == null || typeof window === "undefined") return computedPath;
+
+  const browserNorm = normalizeSeoPath(window.location.pathname);
+  const pathNorm = normalizeSeoPath(computedPath);
+  if (!browserNorm || !pathNorm) return computedPath;
+
+  if (stripTrailingSlashForCompare(browserNorm) === stripTrailingSlashForCompare(pathNorm)) {
+    return browserNorm;
+  }
+  return pathNorm;
+}
+
+/** Canonical URL: https://bestintlmovers.com (no www). Trailing slash follows normalized path. */
 export const toCanonicalUrl = (path?: string | null) => {
   const normalizedPath = normalizeSeoPath(path);
   if (!normalizedPath) return undefined;

@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation, useResolvedPath } from "react-router-dom";
-import { computeSeoHead, toCanonicalUrl, normalizeSeoPath } from "@/utils/seoHead";
+import { computeSeoHead, toCanonicalUrl, normalizeSeoPath, alignSeoPathWithBrowser } from "@/utils/seoHead";
 import { useSEO } from "@/hooks/useSEO";
 import { notifyPrerenderReady } from "@/utils/prerender";
 
@@ -22,19 +22,21 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
 
   const effectivePath = useMemo(() => {
     const explicitPath = normalizeSeoPath(urlPath);
-    if (explicitPath) return explicitPath;
+    let candidate: string | undefined;
+    if (explicitPath) candidate = explicitPath;
+    else {
+      const resolvedRoutePath = normalizeSeoPath(resolvedPath.pathname);
+      const liveLocationPath = normalizeSeoPath(location.pathname);
 
-    const resolvedRoutePath = normalizeSeoPath(resolvedPath.pathname);
-    const liveLocationPath = normalizeSeoPath(location.pathname);
+      // Prevent transient "/" from overriding non-home routes.
+      if (resolvedRoutePath && resolvedRoutePath !== "/") candidate = resolvedRoutePath;
+      else if (liveLocationPath && liveLocationPath !== "/") candidate = liveLocationPath;
+      else if (resolvedRoutePath === "/" && liveLocationPath === "/") candidate = "/";
+      else candidate = resolvedRoutePath ?? liveLocationPath;
+    }
 
-    // Prevent transient "/" from overriding non-home routes.
-    if (resolvedRoutePath && resolvedRoutePath !== "/") return resolvedRoutePath;
-    if (liveLocationPath && liveLocationPath !== "/") return liveLocationPath;
-
-    // Only treat as homepage when router state is explicitly root.
-    if (resolvedRoutePath === "/" && liveLocationPath === "/") return "/";
-
-    return resolvedRoutePath ?? liveLocationPath;
+    const aligned = alignSeoPathWithBrowser(candidate) ?? candidate;
+    return aligned ?? "/";
   }, [urlPath, resolvedPath.pathname, location.pathname]);
 
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
