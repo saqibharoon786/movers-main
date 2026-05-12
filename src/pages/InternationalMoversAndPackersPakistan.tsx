@@ -26,6 +26,7 @@ const InternationalMoversAndPackersPakistan = () => {
       description="Best international movers and packers in Pakistan. Professional packing, sea freight, air freight, customs clearance & door-to-door relocation to UAE, UK, USA, Canada, Australia & 100+ countries. Call 0300-9130211."
       keywords="International movers and packers Pakistan, international movers Pakistan, packers and movers Pakistan international, overseas movers Pakistan, international moving company Pakistan, movers packers Islamabad Rawalpindi Lahore, best international movers Pakistan"
       urlPath="/international-movers-and-packers-pakistan/"
+      canonicalUrl="https://bestintlmovers.com/international-movers-and-packers-pakistan/"
       h1="International Movers and Packers in Pakistan"
       heroSubtext="Pakistan's trusted international moving company — expert packing, sea and air freight, customs clearance, and complete door-to-door relocation to over 100 countries worldwide."
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "International Movers & Packers Pakistan" }]}

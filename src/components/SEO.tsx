@@ -11,10 +11,12 @@ interface SEOProps {
   schema?: Record<string, unknown> | Record<string, unknown>[];
   keywords?: string;
   urlPath?: string;
+  /** Absolute canonical URL override (use when server forces trailing-slash redirects on specific routes). */
+  canonicalUrl?: string;
   noindex?: boolean;
 }
 
-export default function SEO({ title, description, schema, keywords, urlPath, noindex }: SEOProps) {
+export default function SEO({ title, description, schema, keywords, urlPath, canonicalUrl, noindex }: SEOProps) {
   const location = useLocation();
   const resolvedPath = useResolvedPath(".");
 
@@ -48,6 +50,13 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
     [title, description, kw, effectivePath, noindex]
   );
 
+  const finalCanonicalUrl = useMemo(() => {
+    const trimmed = canonicalUrl?.trim();
+    if (!trimmed) return head.fullUrl;
+    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    return head.fullUrl;
+  }, [canonicalUrl, head.fullUrl]);
+
   // Only use useSEO for JSON-LD schema (set renderMetaInDom to false)
   useSEO({
     title,
@@ -69,9 +78,12 @@ export default function SEO({ title, description, schema, keywords, urlPath, noi
       <meta name="description" content={head.seoDescription} />
       <meta name="keywords" content={head.keywords} />
       <meta name="robots" content={head.robots} />
-      {head.fullUrl ? <link rel="canonical" href={head.fullUrl} /> : null}
+      {finalCanonicalUrl ? <link rel="canonical" href={finalCanonicalUrl} /> : null}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={head.fullUrl ?? toCanonicalUrl(effectivePath) ?? "https://bestintlmovers.com/"} />
+      <meta
+        property="og:url"
+        content={finalCanonicalUrl ?? head.fullUrl ?? toCanonicalUrl(effectivePath) ?? "https://bestintlmovers.com/"}
+      />
       <meta property="og:title" content={head.seoTitle} />
       <meta property="og:description" content={head.seoDescription} />
       <meta property="og:image" content={head.selectedOgImage} />
