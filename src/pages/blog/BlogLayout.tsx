@@ -9,6 +9,8 @@ type BlogLayoutProps = {
   description: string;
   keywords: string;
   urlPath: string;
+  /** Absolute canonical URL override (use when server forces trailing-slash redirects on specific blog routes). */
+  canonicalUrl?: string;
   h1: string;
   faqs: Faq[];
   children: ReactNode;
@@ -16,7 +18,7 @@ type BlogLayoutProps = {
   ogImageAlt?: string;
 };
 
-export default function BlogLayout({ title, description, keywords, urlPath, h1, faqs, children, ogImage, ogImageAlt }: BlogLayoutProps) {
+export default function BlogLayout({ title, description, keywords, urlPath, canonicalUrl, h1, faqs, children, ogImage, ogImageAlt }: BlogLayoutProps) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -28,7 +30,17 @@ export default function BlogLayout({ title, description, keywords, urlPath, h1, 
   };
 
   return (
-    <BlogArticleShell title={title} description={description} keywords={keywords} urlPath={urlPath} h1={h1} extraSchema={faqSchema} ogImage={ogImage} ogImageAlt={ogImageAlt}>
+    <BlogArticleShell
+      title={title}
+      description={description}
+      keywords={keywords}
+      urlPath={urlPath}
+      canonicalUrl={canonicalUrl}
+      h1={h1}
+      extraSchema={faqSchema}
+      ogImage={ogImage}
+      ogImageAlt={ogImageAlt}
+    >
       {children}
       <section>
         <h2>Pakistan Practical Execution Notes</h2>

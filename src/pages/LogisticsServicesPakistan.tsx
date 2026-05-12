@@ -17,6 +17,7 @@ const LogisticsServicesPakistan = () => (
     description="Logistics services Pakistan for supply chain planning, freight forwarding, and transport solutions with operational reliability."
     keywords="logistics services pakistan, supply chain pakistan, freight forwarding pakistan, transport solutions pakistan"
     urlPath="/logistics-services-pakistan/"
+    canonicalUrl="https://bestintlmovers.com/logistics-services-pakistan/"
     h1="Logistics Services Pakistan"
     heroSubtext="Scalable logistics execution with route planning, freight coordination, and controlled delivery performance."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Logistics Services Pakistan" }]}

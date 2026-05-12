@@ -15,6 +15,8 @@ type Props = {
   description: string;
   keywords: string;
   urlPath: string;
+  /** Absolute canonical URL override (use when server forces trailing-slash redirects on specific blog routes). */
+  canonicalUrl?: string;
   h1: string;
   dateLabel?: string;
   /** Short label for breadcrumbs (H1 can be long). */
@@ -38,6 +40,7 @@ const BlogArticleShell = ({
   description,
   keywords,
   urlPath,
+  canonicalUrl,
   h1,
   dateLabel = "April 2026",
   breadcrumbCurrent,
@@ -75,6 +78,7 @@ const BlogArticleShell = ({
         description={description}
         keywords={keywords}
         urlPath={path}
+        canonicalUrl={canonicalUrl}
         schema={schema}
       />
       <Navbar />
