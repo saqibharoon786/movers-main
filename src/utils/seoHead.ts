@@ -27,7 +27,8 @@ const clip = (value: string, max: number) => {
 const looksLikeAbsoluteUrl = (value: string) => /^https?:\/\//i.test(value);
 
 /**
- * Path with leading slash, no trailing slash except root "/".
+ * Normalized path with leading slash.
+ * Preserves a trailing slash when the input contains one (except root "/").
  * Removes query/hash and collapses duplicate slashes.
  * Returns undefined when input is missing/invalid.
  */
@@ -50,9 +51,14 @@ export const normalizeSeoPath = (path?: string | null): string | undefined => {
   const withoutQuery = withoutHash.split("?")[0];
   const collapsed = withoutQuery.replace(/\/{2,}/g, "/");
   const withLeading = collapsed.startsWith("/") ? collapsed : `/${collapsed}`;
-  const normalized = withLeading.replace(/\/+$/, "") || "/";
 
-  return normalized;
+  if (withLeading === "/") return "/";
+
+  const hasTrailingSlash = withLeading.endsWith("/");
+  const noTrailing = withLeading.replace(/\/+$/, "");
+
+  // If input had a trailing slash, keep exactly one (e.g. "/contact/").
+  return hasTrailingSlash ? `${noTrailing}/` : noTrailing;
 };
 
 /** Canonical URL: https://bestintlmovers.com (no www), no trailing slash except homepage. */
