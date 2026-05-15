@@ -9,8 +9,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const WA = "https://wa.me/923009130211";
 const PHONE = "0300-9130211";
 const PHONE_TEL = "tel:03009130211";
-const EMAIL = "saqibharoonharoon@gmail.com";
-const CANONICAL = "https://bestintlmovers.com/cargo-service-islamabad";
+const EMAIL = "info@bestintlmovers.com";
+const CANONICAL = "https://bestintlmovers.com/cargo-service-islamabad/";
 
 const TITLE =
   "Cargo Service in Islamabad | International Air & Sea Freight | Best Intl Movers";
@@ -19,11 +19,20 @@ const DESCRIPTION =
 const KEYWORDS =
   "cargo service islamabad, cargo islamabad, air cargo islamabad, sea freight islamabad, international cargo islamabad, door to door cargo islamabad, cargo company islamabad";
 
+/** One OpeningHoursSpecification per day — avoids validator issues with bundled dayOfWeek arrays. */
+const freightOpeningHours = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((dayOfWeek) => ({
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: `https://schema.org/${dayOfWeek}`,
+  opens: "08:00",
+  closes: "20:00",
+}));
+
 const freightSchema = {
   "@context": "https://schema.org",
   "@type": "FreightForwarder",
+  "@id": `${CANONICAL}#freightforwarder`,
   name: "Best International Movers & Logistics — Cargo Islamabad",
-  url: "https://bestintlmovers.com/cargo-service-islamabad",
+  url: CANONICAL,
   telephone: "+923009130211",
   email: EMAIL,
   address: {
@@ -31,22 +40,17 @@ const freightSchema = {
     streetAddress: "Blue Area, Jinnah Avenue",
     addressLocality: "Islamabad",
     addressRegion: "Islamabad Capital Territory",
-    addressCountry: "PK",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "08:00",
-      closes: "20:00",
+    addressCountry: {
+      "@type": "Country",
+      name: "Pakistan",
     },
-  ],
-  areaServed: ["Islamabad", "Rawalpindi", "Pakistan"],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "312",
   },
+  openingHoursSpecification: freightOpeningHours,
+  areaServed: [
+    { "@type": "City", name: "Islamabad" },
+    { "@type": "City", name: "Rawalpindi" },
+    { "@type": "Country", name: "Pakistan" },
+  ],
 };
 
 const services = [
