@@ -5,9 +5,36 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { PACKERS_MOVERS_RAWALPINDI_GUIDE_SLUG } from "@/data/packersMoversRawalpindiGuideBlog";
+import { PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG } from "@/data/packersMoversIslamabadCompleteGuideBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG,
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    title: "Packers and Movers in Islamabad — Complete 2026 Guide for Home, Office & Society Shifting",
+    date: "May 15, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "20 min read",
+    excerpt:
+      "Looking for reliable packers and movers in Islamabad? This 2026 guide covers sector-wise logistics, pricing, society rules, and how to choose the best moving company. Call 0300-9130211.",
+    content:
+      "Complete 2026 guide to packers and movers in Islamabad with sector logistics, costs, checklists, and society shifting tips.",
+  },
+  {
+    slug: PACKERS_MOVERS_RAWALPINDI_GUIDE_SLUG,
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    title: "Packers and Movers in Rawalpindi — Complete 2026 Guide for Stress-Free Home & Office Shifting",
+    date: "May 15, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt:
+      "Looking for trusted packers and movers in Rawalpindi? This 2026 guide covers costs, area-wise service, society rules, and how to choose the best moving company. Call 0300-9130211.",
+    content: "Complete 2026 guide to packers and movers in Rawalpindi with costs, checklists, and area-specific moving tips.",
+  },
   {
     slug: "international-relocation-rawalpindi-complete-guide",
     img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
