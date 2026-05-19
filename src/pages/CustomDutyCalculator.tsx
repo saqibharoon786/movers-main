@@ -190,7 +190,7 @@ const CustomDutyCalculator = () => {
             </h1>
             
             <img 
-              src="/images/custom.png" 
+              src={seoConfig.heroImg} 
               alt="Custom Duty Calculator Pakistan - Import Tax & Duty Guide" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

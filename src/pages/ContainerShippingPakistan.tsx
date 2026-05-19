@@ -196,7 +196,7 @@ const ContainerShippingPakistan = () => {
             </h1>
             
             <img 
-              src="/images/container.jpg" 
+              src={seoConfig.heroImg} 
               alt="Container Shipping Pakistan - FCL & LCL Sea Freight Services" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

@@ -273,7 +273,7 @@ const SecureStorageService = () => {
             </div>
 
             <img 
-              src="/images/secure-storage.png" 
+              src={serviceData.heroImg} 
               alt="Secure-Storage Services" 
               className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
             />

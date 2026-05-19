@@ -236,7 +236,7 @@ const ChinaToPakistanCargoService = () => {
             </h1>
             
             <img 
-              src="/images/china-to-pakistan-cargo.jpg" 
+              src={serviceData.heroImg} 
               alt="Door-to-Door Cargo Services from China to Pakistan" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

@@ -24,7 +24,7 @@ const serviceData = {
     "Experienced & verified team — Professional background-checked moving staff",
     "Transparent pricing — Written quotes with no hidden charges"
   ],
-  heroImg: "https://bestintlmovers.com/images/peshawar.png",
+  heroImg: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1920",
   countries: [
     "Hayatabad (All Phases)", "University Town", "Saddar", "Cantt",
     "Gulbahar", "Kohat Road", "Warsak Road", "Ring Road",
@@ -192,7 +192,7 @@ const MoversAndPackersInPeshawar = () => {
             </h1>
             
             <img 
-              src="/images/peshawar.png" 
+              src={seoConfig.heroImg} 
               alt="Professional movers and packers team in Peshawar loading furniture for house shifting" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

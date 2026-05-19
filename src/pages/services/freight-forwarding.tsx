@@ -223,7 +223,7 @@ const FreightForwardingService = () => {
             </h1>
             
             <img 
-              src="/images/freight-forwarding.png" 
+              src={serviceData.heroImg} 
               alt="International Freight Forwarding Services in Pakistan" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

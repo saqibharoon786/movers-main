@@ -24,7 +24,7 @@ const serviceData = {
     "Transit Insurance – Full coverage for all goods during transport",
     "Transparent Pricing – Written quotes with no hidden charges"
   ],
-  heroImg: "https://bestintlmovers.com/images/goods-transportation.jpg",
+  heroImg: "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1920",
   cities: [
     "Rawalpindi", "Islamabad", "Lahore", "Karachi", "Peshawar", "Multan",
     "Faisalabad", "Sialkot", "Gujranwala", "Bahawalpur", "Quetta", "Abbottabad"
@@ -195,7 +195,7 @@ const GoodsTransportationPakistan = () => {
             </h1>
             
             <img 
-              src="/images/good.png" 
+              src={seoConfig.heroImg} 
               alt="Goods Transportation Pakistan - Reliable Road Freight & Cargo Services" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />
