@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import BlogLayout from "./BlogLayout";
 
-const blogImage = "/images/pet-blog.png";
+const blogImage = "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200";
 
 const faqs = [
   {

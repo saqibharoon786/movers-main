@@ -219,7 +219,7 @@ const NationwideDistributionService = () => {
             </h1>
             
             <img 
-              src="/images/nationwide-distribution.png" 
+              src={serviceData.heroImg} 
               alt="Nationwide Distribution Services" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

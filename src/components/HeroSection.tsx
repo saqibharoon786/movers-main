@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, ArrowRight, Users, Clock, Award, Send, X, Globe } from "lucide-react";
+import { ArrowRight, Users, Clock, Award, Send, X, Globe, MessageCircle } from "lucide-react";
 import hero1 from "@/assets/hero-1.jpg";
 
 const heroImage = hero1;
@@ -55,7 +55,7 @@ const HeroSection = () => {
         </picture>
       </motion.div>
 
-      <div className="absolute insets-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/90" />
       <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-transparent to-navy/40" />
 
       {[...Array(6)].map((_, i) => (
@@ -105,7 +105,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.75 }}
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-10 leading-relaxed"
         >
-          Best International Movers & Logistics has been Pakistan&apos;s most reliable moving partner for over 15 years. We have successfully relocated 5,000+ families and businesses across 100+ countries with zero compromise on safety, speed, or service. From professional packing in Pakistan to customs clearance and final delivery at your new home — we handle everything so you don&apos;t have to.
+          Best International Movers & Logistics has been Pakistan&apos;s most reliable moving partner for over 15 years. We have successfully relocated 5,000+ families and businesses across 100+ countries with zero compromise on safety, speed, or service. From professional packing in Pakistan to customs clearance and final delivery at your new home ÔÇö we handle everything so you don&apos;t have to.
         </motion.p>
 
         <motion.div
@@ -127,7 +127,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="px-6 py-4 rounded-lg border border-foreground/20 text-foreground font-semibold flex items-center justify-center gap-2 hover:border-gold/50 hover:text-gold transition-all duration-300 bg-foreground/5 backdrop-blur-sm w-full sm:w-auto"
           >
-            <Play size={20} /> WhatsApp Us
+            <MessageCircle size={20} className="text-[#25D366]" /> WhatsApp Us
           </a>
         </motion.div>
 
@@ -231,7 +231,7 @@ const HeroSection = () => {
                   type="submit"
                   className="w-full py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_40px_-5px_hsl(var(--gold)/0.5)] transition-all duration-300"
                 >
-                  {submitted ? "Quote Requested! ✓" : (
+                  {submitted ? "Quote Requested! Ô£ô" : (
                     <>
                       <Send size={18} /> Send Request
                     </>
@@ -247,3 +247,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

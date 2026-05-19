@@ -279,7 +279,7 @@ const ProfessionalPackingService = () => {
             </div>
 
             <img 
-              src="/images/professional-packing.png" 
+              src={serviceData.heroImg} 
               alt="Professional Packing Services" 
               className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
             />

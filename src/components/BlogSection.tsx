@@ -2,7 +2,20 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD,
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
+} from "@/data/bestPackersMoversIslamabad2026Blog";
+
 const posts = [
+  {
+    img: BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
+    slug: BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
+    title: "Best Packers and Movers in Islamabad — Complete SEO Guide 2026",
+    date: "May 19, 2026",
+    category: "Moving Guides",
+  },
   { img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2025", date: "Apr 10, 2025", category: "Moving Tips" },
   { img: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1200", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2025", category: "Logistics" },
   { img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2025: Complete Guide", date: "Mar 15, 2025", category: "Guides" },
@@ -23,11 +36,22 @@ const BlogSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((p, i) => (
             <motion.article key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.1, duration: 0.5 }}>
-              <Link to={`/blog/${p.slug}`} className="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-gold/30 transition-all block">
+              <Link to={`/blog/${p.slug}/`} className="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-gold/30 transition-all block">
                 <div className="overflow-hidden">
                   <picture>
                     <source srcSet={`${p.img}&fm=webp`} type="image/webp" />
-                    <img src={p.img} alt={p.title} loading="lazy" width={640} height={360} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      loading="lazy"
+                      width={640}
+                      height={360}
+                      className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
+                        p.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
+                          ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                          : ""
+                      }`}
+                    />
                   </picture>
                 </div>
                 <div className="p-6">

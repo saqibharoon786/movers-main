@@ -104,7 +104,7 @@ const AirFreightService = () => {
             </div>
 
             <img 
-              src="/images/air-freight.jpg" 
+              src={serviceData.heroImg} 
               alt="AIR-FREIGHT" 
               className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
             />

@@ -188,7 +188,7 @@ const HomeShiftingRawalpindi = () => {
             </h1>
             
             <img 
-              src="/images/homeshifting.png" 
+              src={seoConfig.heroImg} 
               alt="Professional home shifting team in Rawalpindi packing furniture" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

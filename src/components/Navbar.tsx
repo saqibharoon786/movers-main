@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, ChevronDown, Globe, Package, Warehouse, Car, Plane, Ship, FileCheck, Truck, MapPin, Home, Facebook } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
-
 const services = [
   { icon: Car, label: "Pet Relocation Services", slug: "pet-relocation-services" },
   { icon: FileCheck, label: "Cargo Insurance Services", slug: "cargo-insurance-services" },
@@ -25,6 +24,7 @@ const locations = [
   { city: "Rawalpindi", slug: "movers-rawalpindi" },
   { city: "Islamabad", slug: "movers-islamabad" },
   { city: "Lahore", slug: "movers-lahore" },
+  { city: "Karachi", slug: "movers-karachi" },
   { city: "Peshawar", slug: "movers-and-packers-in-peshawar" },
 ];
 
@@ -35,6 +35,9 @@ const localLandingPages = [
   { label: "Home Shifting Islamabad", to: "/home-shifting-islamabad" },
   { label: "Home Shifting Rawalpindi", to: "/home-shifting-rawalpindi" },
   { label: "Movers Lahore", to: "/movers-lahore" },
+  { label: "Movers Karachi", to: "/movers-karachi" },
+  { label: "Packers & Movers Karachi", to: "/packers-and-movers-karachi" },
+  { label: "Cargo Service Karachi", to: "/cargo-service-karachi" },
   { label: "Movers & Packers Peshawar", to: "/movers-and-packers-in-peshawar" },
   { label: "Cargo Service Islamabad", to: "/international-cargo-islamabad" },
   { label: "Top Shipping Companies Pakistan", to: "/top-shipping-companies-in-pakistan" },
@@ -72,13 +75,18 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileDestOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -95,19 +103,209 @@ const Navbar = () => {
   useEffect(() => {
     setOpen(false);
     setDropdownOpen(false);
+    setMobileServicesOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (!open) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open]);
+
+  const navSolid = scrolled || dropdownOpen || open;
+  const isHome = location.pathname === "/" || location.pathname === "";
+  const navOverHero = isHome && !navSolid;
+
+  const mobileMenu =
+    mounted && open
+      ? createPortal(
+          <AnimatePresence>
+            <motion.div
+              key="mobile-menu-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[200] bg-navy/80 backdrop-blur-sm lg:hidden"
+              onClick={() => setOpen(false)}
+              aria-hidden
+            />
+            <motion.div
+              key="mobile-menu-panel"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 28, stiffness: 320 }}
+              className="fixed top-0 right-0 bottom-0 z-[210] w-full max-w-[min(100vw,24rem)] bg-navy border-l border-border shadow-2xl lg:hidden flex flex-col"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile navigation"
+            >
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                className="flex flex-col flex-1 min-h-0 overflow-y-auto overscroll-contain"
+              >
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="sticky top-0 z-10 flex items-center justify-between gap-3 px-4 py-4 bg-navy border-b border-border shrink-0"
+                >
+                  <span className="font-display font-bold text-sm text-foreground uppercase tracking-tight">
+                    Menu
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    className="p-2 rounded-lg text-foreground hover:bg-gold/10 hover:text-gold transition-colors"
+                    aria-label="Close menu"
+                  >
+                    <X size={24} />
+                  </button>
+                </motion.div>
+                <div className="flex flex-col p-4 pb-8 gap-1">
+                  <Link
+                    to="/"
+                    onClick={() => setOpen(false)}
+                    className="text-foreground hover:text-gold transition-colors py-3 font-medium border-b border-white/5"
+                  >
+                    Home
+                  </Link>
+
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="text-foreground hover:text-gold transition-colors py-3 font-medium flex items-center justify-between border-b border-white/5 w-full text-left"
+                  >
+                    Services{" "}
+                    <ChevronDown
+                      size={16}
+                      className={`shrink-0 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-3 space-y-2 overflow-hidden border-b border-white/5 pb-3"
+                      >
+                        {services.map((s) => (
+                          <Link
+                            key={s.slug}
+                            to={`/services/${s.slug}`}
+                            onClick={() => setOpen(false)}
+                            className="flex items-center gap-2 py-2 text-muted-foreground hover:text-gold text-sm"
+                          >
+                            <s.icon size={16} className="text-gold shrink-0" /> {s.label}
+                          </Link>
+                        ))}
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="border-t border-border pt-3 mt-2 space-y-2"
+                        >
+                          <p className="text-xs text-gold font-bold">Destination Services</p>
+                          {destinationServices.map((d) => (
+                            <Link
+                              key={d.to}
+                              to={d.to}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center gap-2 py-1.5 text-muted-foreground hover:text-gold text-sm"
+                            >
+                              <Globe size={14} className="text-gold shrink-0" /> {d.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="border-t border-border pt-3 mt-2"
+                        >
+                          <p className="text-xs text-gold font-bold mb-1">City Movers</p>
+                          {locations.map((loc) => (
+                            <Link
+                              key={loc.slug}
+                              to={`/${loc.slug}`}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center gap-2 py-1.5 text-muted-foreground hover:text-gold text-sm"
+                            >
+                              <MapPin size={14} className="text-gold shrink-0" /> {loc.city}
+                            </Link>
+                          ))}
+                        </motion.div>
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="border-t border-border pt-3 mt-2"
+                        >
+                          <p className="text-xs text-gold font-bold mb-1">Local &amp; Guides</p>
+                          {localLandingPages.map((p) => (
+                            <Link
+                              key={p.to}
+                              to={p.to}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center gap-2 py-1.5 text-muted-foreground hover:text-gold text-sm"
+                            >
+                              <Home size={14} className="text-gold shrink-0" /> {p.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  {navLinks
+                    .filter((l) => !l.dropdown && l.label !== "Home")
+                    .map((l) => (
+                      <Link
+                        key={l.href}
+                        to={l.href}
+                        onClick={() => setOpen(false)}
+                        className="text-foreground hover:text-gold transition-colors py-3 font-medium border-b border-white/5"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  <Link
+                    to="/contact"
+                    onClick={() => setOpen(false)}
+                    className="mt-4 px-5 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-base text-center shadow-lg w-full tracking-wide uppercase"
+                  >
+                    Get Free Quote
+                  </Link>
+                  <a
+                    href="tel:03009130211"
+                    className="mt-3 flex items-center justify-center gap-2 py-3 rounded-lg border border-gold/40 text-gold font-semibold text-sm"
+                  >
+                    <Phone size={16} /> 0300-9130211
+                  </a>
+                </div>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>,
+          document.body
+        )
+      : null;
+
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || dropdownOpen
+    <>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+        navSolid
           ? "bg-navy/95 backdrop-blur-xl shadow-2xl border-b border-border"
-          : "bg-transparent"
+          : "bg-navy/95 backdrop-blur-xl shadow-lg border-b border-white/10"
       }`}
     >
-      <div className="hidden lg:flex items-center justify-center gap-6 py-2 bg-navy-light/80 text-xs text-muted-foreground border-b border-border">
+      <div className="hidden lg:flex items-center justify-center gap-6 py-2 bg-navy-dark/95 text-xs text-foreground/80 border-b border-border">
         <span className="flex items-center gap-1"><Phone size={12} className="text-gold" /> 0300-9130211</span>
         <span className="flex items-center gap-1"><Mail size={12} className="text-gold" /> info@bestintlmovers.com</span>
         <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
@@ -145,7 +343,9 @@ const Navbar = () => {
               >
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 flex items-center gap-1 py-2"
+                  className={`text-sm font-semibold transition-colors duration-300 flex items-center gap-1 py-2 ${
+                    navOverHero ? "text-white/95 hover:text-gold" : "text-foreground/90 hover:text-gold"
+                  }`}
                 >
                   {l.label} <ChevronDown size={14} className={`transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -230,7 +430,13 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ) : (
-              <Link key={l.href} to={l.href} className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+              <Link
+                key={l.href}
+                to={l.href}
+                className={`text-sm font-semibold transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full ${
+                  navOverHero ? "text-white/95 hover:text-gold" : "text-foreground/90 hover:text-gold"
+                }`}
+              >
                 {l.label}
               </Link>
             )
@@ -245,69 +451,11 @@ const Navbar = () => {
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden fixed inset-0 bg-navy border-t border-border z-50 overflow-y-auto"
-          >
-            <div className="flex flex-col p-6 pt-20 gap-2">
-              <Link to="/" onClick={() => setOpen(false)} className="text-foreground hover:text-gold transition-colors py-3 font-medium border-b border-white/5">Home</Link>
-              
-              <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} className="text-foreground hover:text-gold transition-colors py-3 font-medium flex items-center justify-between border-b border-white/5">
-                Services <ChevronDown size={16} className={`transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {mobileServicesOpen && (
-                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="pl-4 space-y-3 overflow-hidden">
-                    {services.map((s) => (
-                      <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => setOpen(false)} className="flex items-center gap-2 py-2 text-muted-foreground hover:text-gold text-sm">
-                        <s.icon size={16} className="text-gold" /> {s.label}
-                      </Link>
-                    ))}
-                    <div className="border-t border-border pt-3 mt-2 space-y-2">
-                      <p className="text-xs text-gold font-bold">Destination Services</p>
-                      <div className="space-y-1">
-                        {destinationServices.map((d) => (
-                          <Link key={d.to} to={d.to} onClick={() => setOpen(false)} className="flex items-center gap-2 py-1 text-muted-foreground hover:text-gold text-sm">
-                            <Globe size={14} className="text-gold" /> {d.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="border-t border-border pt-3 mt-2">
-                      <p className="text-xs text-gold font-bold mb-1">City Movers</p>
-                      {locations.map((loc) => (
-                        <Link key={loc.slug} to={`/${loc.slug}`} onClick={() => setOpen(false)} className="flex items-center gap-2 py-1 text-muted-foreground hover:text-gold text-sm">
-                          <MapPin size={14} className="text-gold" /> {loc.city}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="border-t border-border pt-3 mt-2">
-                      <p className="text-xs text-gold font-bold mb-1">Local &amp; Guides</p>
-                      {localLandingPages.map((p) => (
-                        <Link key={p.to} to={p.to} onClick={() => setOpen(false)} className="flex items-center gap-2 py-1 text-muted-foreground hover:text-gold text-sm">
-                          <Home size={14} className="text-gold" /> {p.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {navLinks.filter(l => !l.dropdown && l.label !== "Home").map((l) => (
-                <Link key={l.href} to={l.href} onClick={() => setOpen(false)} className="text-foreground hover:text-gold transition-colors py-3 font-medium border-b border-white/5 last:border-0">{l.label}</Link>
-              ))}
-              <Link to="/contact" onClick={() => setOpen(false)} className="mt-4 px-5 py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-base text-center shadow-lg w-full tracking-wide uppercase">Get Free Quote</Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+    </nav>
+    {mobileMenu}
+    </>
   );
 };
 
 export default Navbar;
+

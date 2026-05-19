@@ -104,7 +104,7 @@ const SeaFreightService = () => {
             </div>
 
             <img 
-              src="/images/sea-freight.jpg" 
+              src={serviceData.heroImg} 
               alt="sea-freight services" 
               className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
             />

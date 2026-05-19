@@ -18,7 +18,7 @@ const blogData = {
   primaryKeyword: "Cargo Insurance Services Pakistan",
   secondaryKeywords: ["Transit Insurance Pakistan", "Marine Cargo Insurance Pakistan", "Shipping Insurance Pakistan", "Freight Insurance Pakistan", "Cargo Insurance International Shipping"],
   wordCount: "2,000+ words",
-  heroImg: "https://bestintlmovers.com/images/cargo-insurance.jpg"
+  heroImg: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920"
 };
 
 // Related blogs for the cards section
@@ -229,7 +229,7 @@ const CargoInsuranceServicesPakistanBlog = () => {
             </h1>
             
             <img 
-              src="/images/cargo-insurance.jpg" 
+              src={blogData.heroImg} 
               alt="Cargo Insurance Services Pakistan - Complete Guide" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

@@ -8,7 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const blogs = [
   {
     slug: "pet-relocation-from-pakistan-complete-guide",
-    img: "/images/pet-blog.png",
+    img: "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200",
     title: "Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free",
     date: "Apr 29, 2026",
     category: "Pet Services",

@@ -7,9 +7,27 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 import { PACKERS_MOVERS_RAWALPINDI_GUIDE_SLUG } from "@/data/packersMoversRawalpindiGuideBlog";
 import { PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG } from "@/data/packersMoversIslamabadCompleteGuideBlog";
+import {
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD,
+  BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
+} from "@/data/bestPackersMoversIslamabad2026Blog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
+    img: BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
+    title: "Best Packers and Movers in Islamabad — Complete SEO Guide 2026",
+    date: "May 19, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "25 min read",
+    excerpt:
+      "Complete 2026 SEO guide to best packers and movers in Islamabad: house shifting, office relocation, pricing, F-7 DHA Bahria coverage, same-day moves & international shipping. Call 0300-9130211.",
+    content:
+      "Best packers and movers in Islamabad 2026 — pricing, process, areas, FAQs and how to choose a trusted moving company.",
+  },
   {
     slug: PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG,
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
@@ -81,7 +99,7 @@ const allBlogs = [
   },
   {
     slug: "cargo-insurance-services-pakistan",
-    img: "/images/cargo-insurance.jpg",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
     title: "Why Cargo Insurance Is the Most Important Thing You're Ignoring When Shipping from Pakistan",
     date: "May 2, 2026",
     category: "Shipping Tips | Insurance & Protection",
@@ -92,7 +110,7 @@ const allBlogs = [
   },
   {
     slug: "pet-relocation-from-pakistan-complete-guide",
-    img: "/images/pet-blog.png",
+    img: "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200",
     title: "Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free",
     date: "Apr 29, 2026",
     category: "Pet Services",
@@ -297,11 +315,15 @@ const BlogMainPage = () => {
                 <Link to={`/blog/${blog.slug}/`} className="block h-full">
                   <div className="glass-card rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-all h-full">
                     <div className="overflow-hidden">
-                      <img 
-                        src={blog.img} 
-                        alt={blog.title} 
-                        loading="lazy" 
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" 
+                      <img
+                        src={blog.img}
+                        alt={blog.title}
+                        loading="lazy"
+                        className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
+                          blog.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
+                            ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                            : ""
+                        }`}
                       />
                     </div>
                     <div className="p-6">

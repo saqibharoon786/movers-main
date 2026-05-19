@@ -2,8 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
-
 const ContactFooter = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -139,6 +137,9 @@ const ContactFooter = () => {
                 <li><Link to="/movers-rawalpindi" className="hover:text-gold transition-colors">Movers Rawalpindi</Link></li>
                 <li><Link to="/movers-islamabad" className="hover:text-gold transition-colors">Movers Islamabad</Link></li>
                 <li><Link to="/movers-lahore" className="hover:text-gold transition-colors">Movers Lahore</Link></li>
+                <li><Link to="/movers-karachi" className="hover:text-gold transition-colors">Movers Karachi</Link></li>
+                <li><Link to="/packers-and-movers-karachi" className="hover:text-gold transition-colors">Packers &amp; Movers Karachi</Link></li>
+                <li><Link to="/cargo-service-karachi" className="hover:text-gold transition-colors">Cargo Service Karachi</Link></li>
                 <li><Link to="/movers-and-packers-in-peshawar" className="hover:text-gold transition-colors">Movers &amp; Packers Peshawar</Link></li>
                 <li><Link to="/packers-and-movers-islamabad" className="hover:text-gold transition-colors">Packers &amp; Movers Islamabad</Link></li>
                 <li><Link to="/packers-and-movers-lahore" className="hover:text-gold transition-colors">Packers &amp; Movers Lahore</Link></li>

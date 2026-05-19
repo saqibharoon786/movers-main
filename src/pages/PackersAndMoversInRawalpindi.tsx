@@ -129,7 +129,7 @@ const PackersAndMoversInRawalpindi = () => {
       h1="Packers and Movers in Rawalpindi — Reliable Home & Office Shifting"
       heroSubtext="Reliable Rawalpindi relocation teams with structured packing, safe transport, and clear handover standards — for homes, offices, and everything in between. Our survey-based approach eliminates hidden cost surprises and ensures the right crew and truck are assigned from day one."
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Packers & Movers Rawalpindi" }]}
-      heroImageUrl=""
+      heroImageUrl="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600"
       heroImageAlt="Best packers and movers in Rawalpindi loading a truck for home shifting"
       schema={serviceSchema}
       faqs={faqs}
@@ -137,7 +137,7 @@ const PackersAndMoversInRawalpindi = () => {
     >
       {/* Services Offered Section */}
       <div className="my-8">
-        <img src="/images/rwp.png" alt="Packers and Movers in Rawalpindi" className="w-full rounded-lg shadow-lg" />
+        <img src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Packers and Movers in Rawalpindi" className="w-full rounded-lg shadow-lg" />
       </div>
       <h1>Services Offered by Our Rawalpindi Moving Team</h1>
       <p>
