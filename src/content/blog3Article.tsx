@@ -10,7 +10,7 @@ export function Blog3ArticleBody() {
         <Link to="/freight-forwarding-islamabad">freight forwarding Islamabad</Link>.
       </p>
 
-      <h2>Introduction</h2>
+      <h2>Pakistan export customs — what every international mover should know</h2>
       <p>
         Whether you depart from Rawalpindi, Islamabad, Lahore, or Peshawar, export processes intersect with carrier requirements and your destination country import rules. Treat customs as a single chain: what you declare in Pakistan should match what arrives overseas. Inconsistencies invite inspections, storage charges, and delayed deliveries. Best International Movers & Logistics prepares inventories with disciplined numbering, supports invoice alignment for mixed commercial and personal shipments, and coordinates timing with sea and air bookings.
       </p>

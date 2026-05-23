@@ -4,11 +4,19 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const appPath = path.join(root, "src", "App.tsx");
 
+/** Canonical paths for react-snap (trailing slash on inner pages, matches vercel.json). */
 function addPath(paths, route) {
-  paths.add(route);
-  if (route !== "/" && !route.endsWith("/")) {
-    paths.add(`${route}/`);
+  if (route === "/") {
+    paths.add("/");
+    return;
   }
+  const withLeading = route.startsWith("/") ? route : `/${route}`;
+  const trimmed = withLeading.replace(/\/+$/, "") || "/";
+  if (trimmed === "/") {
+    paths.add("/");
+    return;
+  }
+  paths.add(`${trimmed}/`);
 }
 
 function extractBlogSlugsFromSource(filePath) {

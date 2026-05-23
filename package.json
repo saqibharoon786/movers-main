@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "postbuild": "node scripts/run-react-snap.cjs && node scripts/generate-sitemap.js"
+    "postbuild": "node scripts/run-react-snap.cjs && node scripts/generate-sitemap.js",
+    "snap": "node scripts/run-react-snap.cjs"
   },
   "reactSnap": {
     "sitemapHostname": "https://bestintlmovers.com",

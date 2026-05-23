@@ -1,6 +1,7 @@
 ﻿import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Users, Clock, Award, Send, X, Globe, MessageCircle } from "lucide-react";
+import { ArrowRight, Users, Clock, Award, X, Globe, MessageCircle } from "lucide-react";
+import QuoteRequestForm from "@/components/QuoteRequestForm";
 import hero1 from "@/assets/hero-1.jpg";
 
 const heroImage = hero1;
@@ -15,16 +16,6 @@ const trustItems = [
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showQuoteForm, setShowQuoteForm] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setShowQuoteForm(false);
-    }, 3000);
-  };
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -176,68 +167,13 @@ const HeroSection = () => {
                 <p className="text-muted-foreground mt-2">Fill out the details below and we will contact you immediately.</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    required
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    required
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                  />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    required
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                  />
-                  <select
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                    required
-                  >
-                    <option value="">Service Type</option>
-                    <option>International Moving</option>
-                    <option>Local / Intercity Moving</option>
-                    <option>Air / Sea Freight</option>
-                    <option>Vehicle Shipping</option>
-                    <option>Storage / Packing</option>
-                  </select>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Moving From (City)"
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Moving To (City)"
-                    className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
-                  />
-                </div>
-                <textarea
-                  rows={3}
-                  placeholder="Tell us about your move..."
-                  className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_40px_-5px_hsl(var(--gold)/0.5)] transition-all duration-300"
-                >
-                  {submitted ? "Quote Requested! Ô£ô" : (
-                    <>
-                      <Send size={18} /> Send Request
-                    </>
-                  )}
-                </button>
-              </form>
+              <QuoteRequestForm
+                source="Homepage Hero Quote Form"
+                variant="hero"
+                submitLabel="Send Request"
+                className="space-y-4"
+                onSuccess={() => setTimeout(() => setShowQuoteForm(false), 2500)}
+              />
             </motion.div>
           </motion.div>
         )}

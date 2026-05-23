@@ -25,4 +25,5 @@ export const pageTitles = {
   officeRelocationIslamabad: "Office Relocation Islamabad | Packers",
   secureStorageIslamabad: "Secure Storage Islamabad | Warehouse",
   secureStoragePakistan: "Secure Storage Pakistan | Climate Control",
+  packersMultan: "Packers and Movers Multan | Local & Intl Shifting",
 } as const;

@@ -394,9 +394,9 @@ const BlogMainPage = () => {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-display font-bold text-foreground mb-4">
-              Stay Updated with Moving Tips
-            </h2>
+            <h3 className="text-3xl font-display font-bold text-foreground mb-4">
+              Subscribe for relocation guides &amp; moving tips
+            </h3>
             <p className="text-muted-foreground mb-8">
               Get the latest moving guides, customs updates, and exclusive tips delivered to your inbox.
             </p>
