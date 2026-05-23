@@ -97,6 +97,7 @@ const ContactFooter = () => {
               <h4 className="font-display font-semibold text-foreground mb-4">Services</h4>
               <ul className="space-y-2 text-muted-foreground text-sm">
                 <li><Link to="/services/international-moving" className="hover:text-gold transition-colors">International Moving</Link></li>
+                <li><Link to="/corporate-relocation-pakistan" className="hover:text-gold transition-colors">Corporate Relocation</Link></li>
                 <li><Link to="/services/air-freight" className="hover:text-gold transition-colors">Air Freight</Link></li>
                 <li><Link to="/services/sea-freight" className="hover:text-gold transition-colors">Sea Freight</Link></li>
                 <li><Link to="/international-movers-pakistan/" className="hover:text-gold transition-colors">International Movers Pakistan</Link></li>
@@ -114,6 +115,7 @@ const ContactFooter = () => {
                 <li><Link to="/why-us" className="hover:text-gold transition-colors">Why Choose Us</Link></li>
                 <li><Link to="/process" className="hover:text-gold transition-colors">How It Works</Link></li>
                 <li><Link to="/blog" className="hover:text-gold transition-colors">Blog</Link></li>
+                <li><Link to="/blog/moving-checklist-pakistan/" className="hover:text-gold transition-colors">Moving Checklist Pakistan</Link></li>
                 <li><Link to="/blog/moving-cost-pakistan/" className="hover:text-gold transition-colors">Moving Cost Pakistan Guide</Link></li>
                 <li><Link to="/blog/packing-tips-house-shifting/" className="hover:text-gold transition-colors">Packing Tips House Shifting</Link></li>
                 <li><Link to="/blog/mistakes-during-house-shifting/" className="hover:text-gold transition-colors">House Shifting Mistakes</Link></li>
@@ -138,6 +140,7 @@ const ContactFooter = () => {
                 <li><Link to="/movers-islamabad" className="hover:text-gold transition-colors">Movers Islamabad</Link></li>
                 <li><Link to="/movers-lahore" className="hover:text-gold transition-colors">Movers Lahore</Link></li>
                 <li><Link to="/movers-karachi" className="hover:text-gold transition-colors">Movers Karachi</Link></li>
+                <li><Link to="/movers-multan" className="hover:text-gold transition-colors">Movers Multan</Link></li>
                 <li><Link to="/packers-and-movers-karachi" className="hover:text-gold transition-colors">Packers &amp; Movers Karachi</Link></li>
                 <li><Link to="/cargo-service-karachi" className="hover:text-gold transition-colors">Cargo Service Karachi</Link></li>
                 <li><Link to="/movers-and-packers-in-peshawar" className="hover:text-gold transition-colors">Movers &amp; Packers Peshawar</Link></li>

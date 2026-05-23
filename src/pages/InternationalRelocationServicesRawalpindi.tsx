@@ -177,7 +177,7 @@ const InternationalRelocationServicesRawalpindi = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+              src="/blog/packers-movers-islamabad-truck.jpg" 
               alt="Professional export packing and international relocation services in Rawalpindi" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

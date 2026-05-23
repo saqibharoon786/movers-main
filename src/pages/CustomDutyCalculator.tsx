@@ -24,7 +24,7 @@ const serviceData = {
     "Vehicle import duty calculation with government EV policy rates",
     "Complete customs clearance and documentation support"
   ],
-  heroImg: "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  heroImg: "/images/container.jpg",
   countries: [
     "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)", 
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 

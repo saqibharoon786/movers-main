@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import { computeSeoHead, toCanonicalUrl, SEO_SITE_URL } from "@/utils/seoHead";
 import { notifyPrerenderReady } from "@/utils/prerender";
+import { stripStaticFallbackMeta } from "@/utils/seoDom";
 
 interface SEOProps {
   title: string;
@@ -54,6 +55,8 @@ export const useSEO = ({
     });
     const normalizedPath = head.normalizedPath;
     const fullUrl = head.fullUrl;
+
+    stripStaticFallbackMeta();
 
     if (renderMetaInDom) {
       document.title = head.seoTitle;
@@ -178,4 +181,4 @@ export const useSEO = ({
   }, [title, description, keywords, urlPath, schema, ogImage, ogImageAlt, twitterImage, noindex, renderMetaInDom]);
 };
 
-export { toCanonicalUrl, normalizeSeoPath } from "@/utils/seoHead";
+export { toCanonicalUrl, normalizeSeoPath, resolveCanonicalPath, normalizeCanonicalUrl } from "@/utils/seoHead";

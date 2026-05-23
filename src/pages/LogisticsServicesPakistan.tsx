@@ -1,4 +1,5 @@
 import SeoLandingPageLayout from "@/components/marketing/SeoLandingPageLayout";
+import { pageTitles } from "@/seo/pageTitles";
 import { LogisticsServicesPakistanBody, logisticsServicesPakistanFaqs } from "@/content/logisticsServicesPakistanBody";
 
 const serviceSchema = {
@@ -13,7 +14,7 @@ const serviceSchema = {
 
 const LogisticsServicesPakistan = () => (
   <SeoLandingPageLayout
-    title="Logistics Services Pakistan | Freight Forwarding & Supply Chain"
+    title={pageTitles.logisticsPakistan}
     description="Logistics services Pakistan for supply chain planning, freight forwarding, and transport solutions with operational reliability."
     keywords="logistics services pakistan, supply chain pakistan, freight forwarding pakistan, transport solutions pakistan"
     urlPath="/logistics-services-pakistan/"
@@ -21,7 +22,7 @@ const LogisticsServicesPakistan = () => (
     h1="Logistics Services Pakistan"
     heroSubtext="Scalable logistics execution with route planning, freight coordination, and controlled delivery performance."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Logistics Services Pakistan" }]}
-    heroImageUrl="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    heroImageUrl="/images/freight-forwarding.png"
     heroImageAlt="Logistics and freight forwarding operations for supply chain in Pakistan"
     schema={serviceSchema}
     faqs={logisticsServicesPakistanFaqs}

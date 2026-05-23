@@ -11,7 +11,6 @@ const PrivacyPolicyPage = () => {
     description: "Privacy policy for Best International Movers & Logistics. How we collect, use, and protect your personal information.",
     keywords: "privacy policy, data protection, movers pakistan",
     urlPath: "/privacy-policy/",
-    noindex: true,
   });
 
   return (

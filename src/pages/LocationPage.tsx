@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import NotFound from "@/pages/NotFound";
 import { MapPin, Phone, Star, CheckCircle2, ArrowRight, Truck, Package, Warehouse, Briefcase, ShieldCheck, Clock, ThumbsUp, Building2, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
@@ -18,7 +18,7 @@ const locationData: Record<string, any> = {
     description: "Looking for reliable and experienced movers and packers in Rawalpindi? Global Glide Studio offers top-tier house shifting, office relocation, and professional packing services across Rawalpindi. With years of experience moving families and businesses safely, we ensure your belongings are transported with utmost care. From tightly packed commercial avenues to expansive residential societies, our local expertise guarantees a stress-free move.",
     coverage: "Bahria Town, Satellite Town, Gulraiz, Chaklala, Askari, PWD, Adyala Road, Westridge, DHA Phase 1 & 2, and Saddar.",
     address: "Commercial Market, Satellite Town, Rawalpindi",
-    heroImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920",
+    heroImg: "/images/hero-home.jpg",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106334.4076840742!2d72.96499870198642!3d33.61603525219922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948974419acb%3A0x984357e1632d30f!2sRawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1711234567890!5m2!1sen!2s",
     services: [
       { icon: Truck, title: "Local House Shifting", desc: "Expert home relocation services within Rawalpindi. We handle furniture dismantling, careful packing, and reassembly at your new destination." },
@@ -52,7 +52,7 @@ const locationData: Record<string, any> = {
     description: "Discover premium movers and packers in Islamabad for residential, corporate, and diplomatic relocations. We understand the specific, high-security needs of moving within the capital city and provide tailored, VIP packing and moving solutions. Whether you are moving nearby within the sectors or relocating across the country, our elite logistics team ensures maximum protection and efficiency.",
     coverage: "Sector F-6, F-7, F-8, F-10, F-11, E-7, G-9, G-10, G-11, G-13, Blue Area, DHA Islamabad, Bahria Enclave, D-12, Bani Gala, and Park View City.",
     address: "Blue Area, Jinnah Avenue, Islamabad",
-    heroImg: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImg: "/images/international-moving.jpg",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106260.67230491025!2d72.97746471842817!3d33.68442017329525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1711234567891!5m2!1sen!2s",
     services: [
       { icon: Briefcase, title: "VIP Diplomatic Moves", desc: "Specialized, high-security moving services tailored for diplomats, embassies, and high-profile executives in Islamabad." },
@@ -86,7 +86,7 @@ const locationData: Record<string, any> = {
     description: "Your most trusted moving partner in Khyber Pakhtunkhwa! Global Glide Studio stands as the leading movers and packers in Peshawar, offering reliable, fast, and highly secure logistics, shifting, and freight handling. With robust equipment and local familiarity, we efficiently handle both complex commercial heavy-lifting and straightforward residential shifting.",
     coverage: "Hayatabad, University Road, Saddar, Warsak Road, Regi Model Town, DHA Peshawar, Ring Road areas, and Karkhano Market.",
     address: "University Road, Peshawar",
-    heroImg: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1920",
+    heroImg: "/images/homeshifting.png",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105658.07008323491!2d71.45520972338491!3d33.97732252445839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b90f0e79cf%3A0xa816b2637558a412!2sPeshawar%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1711234567892!5m2!1sen!2s",
     services: [
       { icon: Package, title: "Heavy Machinery Transport", desc: "Safe, industrial-grade transport of heavy commercial machinery and industrial equipment across KPK." },
@@ -120,7 +120,7 @@ const locationData: Record<string, any> = {
     description: "Experience effortless relocating with the top-rated movers and packers in Lahore serving everywhere from DHA and Gulberg to Bahria Town and beyond. We provide round-the-clock moving services to make your transition in Lahore completely hassle-free. Our well-trained fleet ensures that the bustling traffic of Lahore never delays your important moving schedule.",
     coverage: "DHA Lahore (All Phases), Gulberg, Bahria Town Lahore, Model Town, Johar Town, Cantt, Askari, WAPDA Town, Allama Iqbal Town, and Valencia.",
     address: "Main Boulevard, Gulberg III, Lahore",
-    heroImg: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImg: "/images/peshawar.png",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.99380854497!2d74.19430582260655!3d31.483103657497673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1711234567893!5m2!1sen!2s",
     services: [
       { icon: Truck, title: "DHA & Bahria Moving", desc: "Specialized residential moving designed efficiently for gated communities requiring swift entry/exit protocols." },
@@ -151,10 +151,11 @@ const LocationPage = () => {
   const location = locationData[citySlug?.toLowerCase() || ""];
 
   useSEO({
-    title: location?.metaTitle || "Location | Best International Movers",
-    description: location?.metaDesc || "Top movers and packers in Pakistan.",
+    title: location?.metaTitle || "Page Not Found | Best International Movers",
+    description: location?.metaDesc || "The page you are looking for does not exist.",
     keywords: location?.metaKeywords || "movers, packers, logistics, shifting",
-    urlPath: `/${citySlug}/`,
+    urlPath: location ? `/${citySlug}/` : undefined,
+    noindex: !location,
     schema: location ? {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -173,16 +174,7 @@ const LocationPage = () => {
   });
 
   if (!location) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <div className="pt-32 pb-20 container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-display font-bold text-center mb-8">Location Not Found</h1>
-          <Link to="/services" className="text-gold hover:underline">View All Services</Link>
-        </div>
-        <ContactFooter />
-      </div>
-    );
+    return <NotFound />;
   }
 
   return (

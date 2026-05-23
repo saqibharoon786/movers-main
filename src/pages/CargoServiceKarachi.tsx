@@ -25,7 +25,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 
 const heroImg =
-  "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1920";
+  "/images/container.jpg";
 
 const heroStats = [
   { value: "Direct KPT Access", label: "Karachi Port & KICT" },

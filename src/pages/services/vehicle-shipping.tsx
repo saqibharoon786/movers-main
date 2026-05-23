@@ -40,7 +40,7 @@ const serviceData = {
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 
     "Germany", "Japan", "South Korea", "Singapore", "Malaysia", "Thailand"
   ],
-  heroImg: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/vehicle-shipping.jpg",
   faqs: [
     {
       q: "Can I pack items in my car?",

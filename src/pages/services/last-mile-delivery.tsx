@@ -21,7 +21,7 @@ const serviceData = {
     "Room-by-room placement",
     "Post-delivery follow-up"
   ],
-  heroImg: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/shipping.png",
   faqs: [
     {
       q: "Will you reassemble my furniture?",

@@ -24,7 +24,7 @@ const serviceData = {
     "Works with Pakistan's leading insurance underwriters for guaranteed claim settlements",
     "Letter of Credit (LC) compliant insurance certificates issued promptly"
   ],
-  heroImg: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/cargo-insurance.jpg",
   countries: [
     "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)", 
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 

@@ -14,7 +14,7 @@ const aboutLocalBusinessLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Best International Movers & Logistics",
-  image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+  image: "/images/hero-home.jpg",
   "@id": "https://bestintlmovers.com/about-us",
   url: "https://bestintlmovers.com",
   telephone: "+923009130211",
@@ -56,7 +56,11 @@ const AboutUs = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">About Best International Movers & Logistics</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Founded in Rawalpindi in 2010 — today Pakistan&apos;s most trusted international moving company with offices across four major cities and a global partner network spanning 100+ countries.
+              Founded in Rawalpindi in 2010 — today Pakistan&apos;s most trusted international moving company with offices across four major cities, a global partner network spanning 100+ countries, and dedicated{" "}
+              <Link to="/corporate-relocation-pakistan/" className="text-gold hover:underline">
+                corporate relocation
+              </Link>{" "}
+              programmes for multinationals, embassies, NGOs, and HR teams nationwide.
             </p>
           </motion.div>
         </div>

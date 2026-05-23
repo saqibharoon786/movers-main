@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/validate-seo-titles.mjs && vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "seo:internal-links": "node scripts/check-internal-links.js",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "postbuild": "react-snap && node scripts/generate-sitemap.js"
+    "postbuild": "node scripts/run-react-snap.cjs && node scripts/generate-sitemap.js"
   },
   "reactSnap": {
     "sitemapHostname": "https://bestintlmovers.com",

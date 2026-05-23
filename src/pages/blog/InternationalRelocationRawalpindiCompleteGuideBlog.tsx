@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 // Build complete Organization + Service schema
 function buildServiceSchema() {
@@ -85,7 +86,7 @@ function buildFAQSchema() {
 const InternationalRelocationRawalpindiCompleteGuideBlog = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "International Relocation from Rawalpindi 2025 — Complete Moving Guide | Best Intl Movers",
+    title: pageTitles.blogIntlRelocationRwp,
     description: "Planning international relocation from Rawalpindi? This complete 2025 guide covers everything — costs, packing, customs, air vs sea freight, popular destinations & expert tips from Best International Movers.",
     keywords: "international relocation rawalpindi, international relocation services rawalpindi, movers rawalpindi, packers and movers rawalpindi, moving company rawalpindi, rawalpindi to dubai movers, rawalpindi to uk movers, international moving rawalpindi, relocation rawalpindi islamabad",
     canonicalUrl: "https://bestintlmovers.com/blog/international-relocation-rawalpindi-complete-guide"
@@ -285,7 +286,7 @@ const InternationalRelocationRawalpindiCompleteGuideBlog = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+              src="/images/rwp.png" 
               alt="International Relocation from Rawalpindi - Complete Moving Guide" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

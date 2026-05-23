@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { formatSeoTitle } from "@/utils/seoHead";
+import { pageTitles } from "@/seo/pageTitles";
 import { ArrowRight, Mail, MessageCircle, Phone, Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
@@ -12,8 +14,7 @@ const PHONE_TEL = "tel:03009130211";
 const EMAIL = "info@bestintlmovers.com";
 const CANONICAL = "https://bestintlmovers.com/cargo-service-islamabad/";
 
-const TITLE =
-  "Cargo Service in Islamabad | International Air & Sea Freight | Best Intl Movers";
+const TITLE = formatSeoTitle(pageTitles.cargoIslamabad, "/cargo-service-islamabad/");
 const DESCRIPTION =
   "Top cargo service in Islamabad for air freight, sea freight and door-to-door international shipping. Serving F-6, F-7, G-11, DHA, Bahria Town. Call 0300-9130211 for free quote!";
 const KEYWORDS =

@@ -40,7 +40,7 @@ const serviceData = {
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 
     "Germany", "France", "Netherlands", "Turkey", "Singapore", "Hong Kong"
   ],
-  heroImg: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/air-freight.jpg",
   faqs: [
     {
       q: "How fast is air freight from Pakistan to the UAE?",

@@ -244,7 +244,7 @@ const PakistanCargoServices = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/164631/pexels-photo-164631.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+              src="/images/sea-freight.jpg" 
               alt="Pakistan cargo services - International air and sea freight operations" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

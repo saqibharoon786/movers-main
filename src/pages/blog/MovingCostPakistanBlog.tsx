@@ -35,7 +35,7 @@ const faqs = [
 export default function MovingCostPakistanBlog() {
   return (
     <BlogLayout
-      title="Moving Cost from Pakistan 2026 — Complete Price Guide (Sea, Air & Road)"
+      title="Moving Cost from Pakistan 2026 | Price Guide"
       description="How much does it cost to move internationally from Pakistan in 2026? Complete price guide covering sea freight, air freight, packing, customs & door-to-door costs from Islamabad, Rawalpindi & Lahore. Get free quote: 0300-9130211."
       keywords="Moving cost from Pakistan 2026, international moving cost Pakistan, sea freight cost Pakistan, packing charges Pakistan, relocation cost Pakistan 2026, shipping cost Pakistan to UAE, moving charges Islamabad Rawalpindi Lahore"
       urlPath="/blog/moving-cost-pakistan/"

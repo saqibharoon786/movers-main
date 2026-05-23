@@ -29,7 +29,7 @@ const TopShippingCompaniesInPakistan = () => {
         },
         "openingHours": "Mo-Sa 08:00-20:00",
         "priceRange": "$$",
-        "image": "https://images.pexels.com/photos/163726/pexels-photo-163726.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "image": "/images/container.jpg",
         "serviceType": "Shipping and Logistics Services"
       },
       {
@@ -153,7 +153,7 @@ const TopShippingCompaniesInPakistan = () => {
       h1="Top Shipping Companies in Pakistan – 2025 Complete Guide"
       heroSubtext="Discover the top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions. Call 0300-9130211"
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Top Shipping Companies Pakistan" }]}
-      heroImageUrl="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      heroImageUrl="/images/container.jpg"
       heroImageAlt="Top shipping companies in Pakistan for international cargo and logistics services"
       schema={serviceSchema}
       faqs={faqs}
@@ -162,7 +162,7 @@ const TopShippingCompaniesInPakistan = () => {
 
       {/* Hero Image */}
       <div className="my-8">
-        <img src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Top Shipping Companies in Pakistan" className="w-full rounded-xl shadow-2xl" />
+        <img src="/images/container.jpg" alt="Top Shipping Companies in Pakistan" className="w-full rounded-xl shadow-2xl" />
       </div>
 
       {/* Introduction */}

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import BlogLayout from "./BlogLayout";
+import { pageTitles } from "@/seo/pageTitles";
 
-const blogImage = "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200";
+const blogImage = "/images/pet-relocation.png";
 
 const faqs = [
   {
@@ -37,7 +38,7 @@ const faqs = [
 export default function PetRelocationFromPakistanBlog() {
   return (
     <BlogLayout
-      title="Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free | Best Intl Movers"
+      title={pageTitles.blogPetRelocation}
       description="Planning to relocate your pet from Pakistan? Get expert guidance on IATA crates, vet documents, customs clearance, costs, and trusted routes to UAE, UK, USA & Canada. Free quote available."
       keywords="pet relocation from Pakistan, pet movers Pakistan, IATA pet transport Pakistan, Pakistan to Dubai pet shipping, pet relocation Islamabad Lahore Rawalpindi"
       urlPath="/blog/pet-relocation-from-pakistan-complete-guide/"

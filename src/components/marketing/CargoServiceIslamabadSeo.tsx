@@ -5,13 +5,14 @@ import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useSEO } from "@/hooks/useSEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 const WA = "https://wa.me/923009130211";
 const PHONE_DISPLAY = "0300-9130211";
 const CONTACT_EMAIL = "saqibharoonharoon@gmail.com";
 const PATH = "/cargo-service-islamabad/";
 
-const SEO_TITLE = "International Cargo Service in Islamabad | Fast & Reliable Shipping";
+const SEO_TITLE = pageTitles.cargoIslamabad;
 const SEO_DESCRIPTION =
   "International cargo service in Islamabad: fast air cargo (3–5 days), economical sea freight (10–15+ days), door-to-door delivery, customs clearance & secure packing. Free quote.";
 const SEO_KEYWORDS =

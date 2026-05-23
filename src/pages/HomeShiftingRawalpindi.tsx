@@ -24,7 +24,7 @@ const serviceData = {
     "Insurance coverage — All belongings covered by transit insurance",
     "Trained & verified staff — Background-checked professional moving team"
   ],
-  heroImg: "https://images.unsplash.com/photo-1596075780750-81249df16d19?auto=format&fit=crop&q=80&w=1600",
+  heroImg: "/images/homeshifting.png",
   countries: [
     "Bahria Town Rawalpindi", "DHA Rawalpindi", "Askari Housing", "Satellite Town", 
     "Saddar Rawalpindi", "Westridge", "Chaklala", "Morgah Town", 

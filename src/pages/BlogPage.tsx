@@ -8,7 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const blogs = [
   {
     slug: "pet-relocation-from-pakistan-complete-guide",
-    img: "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200",
+    img: "/images/pet-relocation.png",
     title: "Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free",
     date: "Apr 29, 2026",
     category: "Pet Services",
@@ -19,7 +19,7 @@ const blogs = [
   },
   {
     slug: "packers-and-movers-islamabad-guide",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    img: "/images/hero-home.jpg",
     title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025)",
     date: "Apr 2025",
     category: "Moving Guides",
@@ -31,7 +31,7 @@ const blogs = [
   },
   {
     slug: "tips-for-stress-free-international-move",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    img: "/images/hero-home.jpg",
     title: "10 Tips for a Stress-Free International Move from Pakistan",
     date: "Apr 1, 2026",
     category: "Moving Tips",
@@ -42,7 +42,7 @@ const blogs = [
   },
   {
     slug: "air-freight-vs-sea-freight-pakistan",
-    img: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/air-freight.jpg",
     title: "Air Freight vs Sea Freight from Pakistan: Which is Right?",
     date: "Apr 1, 2026",
     category: "Logistics",
@@ -53,7 +53,7 @@ const blogs = [
   },
   {
     slug: "customs-regulations-pakistan-2025",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+    img: "/images/cargo-insurance.jpg",
     title: "Pakistan Customs Regulations for International Moving 2025",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -64,7 +64,7 @@ const blogs = [
   },
   {
     slug: "moving-from-pakistan-to-dubai-guide",
-    img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80",
+    img: "/images/international-moving.jpg",
     title: "Moving from Pakistan to Dubai: Complete Guide 2025",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -75,8 +75,8 @@ const blogs = [
   },
   {
     slug: "customs-regulations-guide-pakistan",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
-    title: "Complete Guide to Customs Regulations for Moving from Pakistan in 2024",
+    img: "/images/cargo-insurance.jpg",
+    title: "Pakistan Customs Regulations Guide | Moving Abroad",
     date: "Feb 28, 2024",
     category: "Guides",
     author: "Best International Movers",
@@ -109,7 +109,7 @@ const blogs = [
   },
   {
     slug: "best-international-moving-company-pakistan",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+    img: "/images/international-moving.jpg",
     title: "How to Choose the Best International Moving Company in Pakistan",
     date: "Feb 15, 2024",
     category: "Guides",
@@ -148,7 +148,7 @@ const blogs = [
   },
     {
     slug: "packing-guide-international-move",
-    img: "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/blog/packers-movers-islamabad-truck.jpg",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",
     date: "Feb 1, 2024",
     category: "Moving Tips",
@@ -227,7 +227,7 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={blog.title} description={blog.excerpt} urlPath={`/blog/${blog.slug}`} />
+      <SEO title={blog.title} description={blog.excerpt} urlPath={`/blog/${blog.slug}/`} />
       <BlogSchema title={blog.title} date={blog.date} />
       <Navbar />
       <div className="pt-32 pb-20">

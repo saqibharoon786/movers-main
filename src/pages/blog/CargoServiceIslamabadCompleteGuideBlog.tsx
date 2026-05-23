@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 // Build complete Organization + Service schema
 function buildServiceSchema() {
@@ -85,7 +86,7 @@ function buildFAQSchema() {
 const CargoServiceIslamabadCompleteGuideBlog = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "Cargo Service in Islamabad 2026 — Everything You Need to Know | Best Intl Movers",
+    title: pageTitles.blogCargoIslamabadGuide,
     description: "Looking for a reliable cargo service in Islamabad? This complete 2026 guide covers air cargo, sea cargo, costs, customs, and how to choose the best cargo company in Islamabad.",
     keywords: "cargo service islamabad, international cargo islamabad, cargo company islamabad, air cargo islamabad, sea cargo islamabad, cargo islamabad to dubai, cargo islamabad to uk, best cargo service islamabad",
     canonicalUrl: "https://bestintlmovers.com/blog/cargo-service-islamabad-complete-guide"
@@ -210,7 +211,7 @@ const CargoServiceIslamabadCompleteGuideBlog = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+              src="/images/air-freight.jpg" 
               alt="Cargo Service in Islamabad - International Shipping" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

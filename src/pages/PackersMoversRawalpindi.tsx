@@ -31,7 +31,7 @@ const PackersMoversRawalpindi = () => {
       h1="Packers and Movers in Rawalpindi"
       heroSubtext="Reliable Rawalpindi relocation teams with structured packing, safe transport, and clear handover standards."
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Packers & Movers Rawalpindi" }]}
-      heroImageUrl="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      heroImageUrl="/blog/packers-movers-islamabad-truck.jpg"
       heroImageAlt="Movers loading a truck in a gated community in Rawalpindi"
       schema={serviceSchema}
       faqs={packersMoversRawalpindiFaqs}

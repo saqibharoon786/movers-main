@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 // ─── Page Data ───────────────────────────────────────────────────────────────
 
@@ -32,7 +33,7 @@ const serviceData = {
     "secure storage Pakistan, warehouse storage Pakistan, climate controlled storage Pakistan, storage facility Islamabad, storage facility Rawalpindi, storage facility Lahore, storage Peshawar, short term storage Pakistan, long term warehousing Pakistan, self storage Pakistan, furniture storage Pakistan, moving storage Pakistan",
 
   heroImg:
-    "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1920",
+    "/images/secure-storage.png",
 
   intro: `International move ke dauraan ya phir visa, property ya kisi bhi wajah se delay ho jaye — aapko ek safe, clean aur secure jagah chahiye hoti hai jahan aapka qeemti samaan mehfooz rahe. Best International Movers & Logistics ki state-of-the-art storage facilities Rawalpindi, Islamabad, Lahore aur Peshawar mein available hain — climate control, 24/7 CCTV, aur full insurance ke saath. Chahe aapko hafte bhar ka storage chahiye ya saalon ka — hamari facility hamesha tayar hai.`,
 
@@ -228,8 +229,7 @@ function buildServiceSchema() {
 
 const SecureStorageService = () => {
   const serviceSeo = {
-    title:
-      "Secure Storage Pakistan | Climate-Controlled Warehouse | Best International Movers",
+    title: pageTitles.secureStoragePakistan,
     description: serviceData.desc,
     keywords: serviceData.keywords,
   };

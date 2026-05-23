@@ -84,7 +84,7 @@ export default function FaqHubPakistan() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Packers and Movers Pakistan FAQ – Moving, Cargo & Cost Guide"
+        title="Packers & Movers Pakistan FAQ | Moving Guide"
         description="Complete FAQ for packers and movers in Pakistan. Honest answers on pricing, process, insurance, international moving & cargo. Read before you book – 0300-9130211"
         keywords="packers and movers pakistan faq, movers pakistan questions, moving cost pakistan, house shifting questions pakistan, international moving faq pakistan, cargo services pakistan faq, how to choose packers movers pakistan"
         urlPath="/faqs-packers-movers-pakistan/"

@@ -24,7 +24,7 @@ const serviceData = {
     "Experienced & verified team — Professional background-checked moving staff",
     "Transparent pricing — Written quotes with no hidden charges"
   ],
-  heroImg: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  heroImg: "/images/peshawar.png",
   countries: [
     "Hayatabad (All Phases)", "University Town", "Saddar", "Cantt",
     "Gulbahar", "Kohat Road", "Warsak Road", "Ring Road",

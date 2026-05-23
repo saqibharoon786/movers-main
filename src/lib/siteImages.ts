@@ -1,88 +1,114 @@
-/** Shared image URLs — reliable CDN links for hero, gallery, and service pages. */
-const unsplash = (id: string, w = 1920) =>
-  `https://images.unsplash.com/photo-${id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${w}&q=80`;
+/** Self-hosted images under /public/images — no external Pexels/Unsplash URLs. */
+export const SITE_ORIGIN = "https://bestintlmovers.com";
 
-/** Pexels requires the full slug filename for reliable loading. */
-const pexels = (id: number, slug: string, w = 1920) =>
-  `https://images.pexels.com/photos/${id}/${slug}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+export const siteImagePaths = {
+  heroHome: "/images/hero-home.jpg",
+  internationalMoving: "/images/international-moving.jpg",
+  container: "/images/container.jpg",
+  seaFreight: "/images/sea-freight.jpg",
+  airFreight: "/images/air-freight.jpg",
+  shipping: "/images/shipping.png",
+  professionalPacking: "/images/professional-packing.png",
+  homeshifting: "/images/homeshifting.png",
+  secureStorage: "/images/secure-storage.png",
+  vehicleShipping: "/images/vehicle-shipping.jpg",
+  cargoInsurance: "/images/cargo-insurance.jpg",
+  customs: "/images/custom.png",
+  petRelocation: "/images/pet-relocation.png",
+  petBlog: "/images/pet-blog.png",
+  peshawar: "/images/peshawar.png",
+  rawalpindi: "/images/rwp.png",
+  goodsTransport: "/images/good.png",
+  packingMaterials: "/images/packing-materials.jpg",
+  freightForwarding: "/images/freight-forwarding.png",
+  nationwide: "/images/nationwide-distribution.png",
+  chinaCargo: "/images/china-to-pakistan-cargo.jpg",
+  blogIslamabadHero: "/blog/packers-movers-islamabad-hero.jpg",
+  blogIslamabadTruck: "/blog/packers-movers-islamabad-truck.jpg",
+} as const;
 
-/** Homepage hero slider — movers, packing, trucks (navy + gold overlay). */
+export type SiteImagePath = (typeof siteImagePaths)[keyof typeof siteImagePaths];
+
+/** Absolute URL for Open Graph / JSON-LD */
+export const siteImageUrl = (path: SiteImagePath | string) =>
+  path.startsWith("http") ? path : `${SITE_ORIGIN}${path}`;
+
+/** Homepage hero slider */
 export const heroSlides = [
   {
-    src: unsplash("1600585154340-be6161a56a0c"),
+    src: siteImagePaths.heroHome,
     alt: "Professional international home relocation",
     label: "Door-to-Door Moving",
   },
   {
-    src: pexels(4246128, "pexels-photo-4246128"),
+    src: siteImagePaths.professionalPacking,
     alt: "Movers loading truck with packed boxes",
     label: "Expert Packing Team",
   },
   {
-    src: pexels(4483610, "pexels-photo-4483610"),
+    src: siteImagePaths.packingMaterials,
     alt: "Cardboard boxes and packing materials",
     label: "Export-Grade Packing",
   },
   {
-    src: unsplash("1596075780750-81249df16d19"),
+    src: siteImagePaths.homeshifting,
     alt: "House shifting and furniture wrapping",
     label: "House Shifting",
   },
   {
-    src: pexels(4246120, "pexels-photo-4246120"),
+    src: siteImagePaths.blogIslamabadTruck,
     alt: "Moving truck on city street",
     label: "Nationwide Transport",
   },
   {
-    src: pexels(163726, "belgium-antwerp-shipping-container-163726"),
+    src: siteImagePaths.container,
     alt: "International sea freight containers",
     label: "Sea Freight & Cargo",
   },
 ] as const;
 
 export const siteImages = {
-  /** Modern home at dusk — homepage hero fallback */
-  heroHome: heroSlides[0].src,
-  cargoInsurance: unsplash("1454165804606-c3d57bc86b40", 1200),
-  petBlog: unsplash("1601758228826-054b69a9cc13", 1200),
-  petRelocation: unsplash("1601758228826-054b69a9cc13"),
-  peshawar: pexels(1115804, "pexels-photo-1115804", 1600),
-  rawalpindi: pexels(4246120, "pexels-photo-4246120", 1600),
-  homeshifting: unsplash("1596075780750-81249df16d19", 1600),
-  shipping: pexels(163726, "belgium-antwerp-shipping-container-163726", 1600),
-  container: pexels(163726, "belgium-antwerp-shipping-container-163726", 1600),
-  goodsTransportation: pexels(2199293, "pexels-photo-2199293", 1600),
+  heroHome: siteImagePaths.heroHome,
+  cargoInsurance: siteImagePaths.cargoInsurance,
+  petBlog: siteImagePaths.petBlog,
+  petRelocation: siteImagePaths.petRelocation,
+  peshawar: siteImagePaths.peshawar,
+  rawalpindi: siteImagePaths.rawalpindi,
+  homeshifting: siteImagePaths.homeshifting,
+  shipping: siteImagePaths.shipping,
+  container: siteImagePaths.container,
+  goodsTransportation: siteImagePaths.goodsTransport,
   gallery: [
     {
-      img: pexels(4246128, "pexels-photo-4246128", 800),
+      img: siteImagePaths.professionalPacking,
       title: "Lahore to Dubai — Family Home Relocation",
       location: "DHA Phase 6, Lahore → UAE",
     },
     {
-      img: pexels(7688336, "pexels-photo-7688336", 800),
+      img: siteImagePaths.internationalMoving,
       title: "Islamabad to UK — Corporate Office Move",
       location: "Blue Area, Islamabad → United Kingdom",
     },
     {
-      img: pexels(4483610, "pexels-photo-4483610", 800),
+      img: siteImagePaths.peshawar,
       title: "Peshawar to Saudi Arabia — Family Relocation",
       location: "Hayatabad, Peshawar → KSA",
     },
     {
-      img: pexels(4246120, "pexels-photo-4246120", 800),
+      img: siteImagePaths.rawalpindi,
       title: "Rawalpindi to Canada — Student Belongings Shipment",
       location: "Bahria Town, Rawalpindi → Canada",
     },
     {
-      img: pexels(163726, "belgium-antwerp-shipping-container-163726", 800),
+      img: siteImagePaths.container,
       title: "Karachi Port — FCL Container Dispatch to Jebel Ali",
       location: "Karachi → Dubai (sea freight)",
     },
     {
-      img: pexels(2199293, "pexels-photo-2199293", 800),
+      img: siteImagePaths.goodsTransport,
       title: "Islamabad to Karachi — Multi-Vehicle Transport",
       location: "Twin-city / long-haul Pakistan",
     },
   ],
-  galleryFallback: pexels(163726, "belgium-antwerp-shipping-container-163726", 800),
+  galleryFallback: siteImagePaths.container,
 } as const;

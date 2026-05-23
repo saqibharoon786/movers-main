@@ -151,7 +151,7 @@ const HomeShiftingRawalpindi = () => {
       h1="Home Shifting Rawalpindi – Professional Packers & Movers | Fast, Safe & Affordable"
       heroSubtext="Professional home shifting services in Rawalpindi. Expert packers & movers for safe, fast & stress-free house relocation. Get a FREE quote today – 0300-9130211"
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Home Shifting Rawalpindi" }]}
-      heroImageUrl="https://images.unsplash.com/photo-1596075780750-81249df16d19?auto=format&fit=crop&q=80&w=1600"
+      heroImageUrl="/images/homeshifting.png"
       heroImageAlt="Professional home shifting team in Rawalpindi packing furniture"
       schema={serviceSchema}
       faqs={faqs}

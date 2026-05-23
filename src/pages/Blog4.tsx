@@ -3,7 +3,7 @@ import { Blog4ArticleBody } from "@/content/blog4Article";
 
 const Blog4 = () => (
   <BlogArticleShell
-    title="Moving from Pakistan to Dubai: Complete Guide 2025"
+    title="Moving from Pakistan to Dubai Guide 2025"
     description="Complete guide to moving from Pakistan to Dubai UAE. Visa requirements, shipping options, costs, customs and tips. Expert advice for a smooth relocation. Read now!"
     keywords="moving from pakistan to dubai, relocating to dubai from pakistan, pakistan to dubai moving guide"
     urlPath="/blog/moving-from-pakistan-to-dubai-guide"

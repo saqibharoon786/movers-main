@@ -15,7 +15,7 @@ const BlogInternationalRelocationRawalpindi = () => {
         className="mb-12"
       >
         <img 
-          src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+          src="/images/rwp.png" 
           alt="International relocation services in Rawalpindi - Professional packing and shipping" 
           className="w-full h-auto object-cover rounded-2xl shadow-2xl border-4 border-white/10"
         />
@@ -88,7 +88,7 @@ const BlogInternationalRelocationRawalpindi = () => {
           </div>
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+              src="/images/rwp.png" 
               alt="Islamabad International Airport - Gateway for international relocation from Rawalpindi" 
               className="w-full h-auto object-cover rounded-xl shadow-lg"
             />
@@ -404,7 +404,7 @@ const BlogInternationalRelocationRawalpindi = () => {
 
         <div className="relative">
           <img 
-            src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+            src="/images/rwp.png" 
             alt="Professional international moving team packing household goods" 
             className="w-full h-auto object-cover rounded-xl shadow-lg"
           />

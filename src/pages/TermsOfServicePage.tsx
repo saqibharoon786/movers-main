@@ -11,7 +11,6 @@ const TermsOfServicePage = () => {
     description: "Terms of service for Best International Movers & Logisticsâ€”quotes, liability, insurance, payments, and cancellations.",
     keywords: "terms of service, movers terms pakistan",
     urlPath: "/terms-of-service/",
-    noindex: true,
   });
 
   return (

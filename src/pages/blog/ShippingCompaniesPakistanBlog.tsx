@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 // Build complete Organization + Service schema
 function buildServiceSchema() {
@@ -85,7 +86,7 @@ function buildFAQSchema() {
 const ShippingCompaniesPakistanBlog = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "Best Shipping Companies in Pakistan 2025 | International Cargo | Best Intl Movers",
+    title: pageTitles.blogShippingCompanies,
     description: "Looking for trusted shipping companies in Pakistan? Best International Movers offers international cargo shipping from Islamabad, Rawalpindi, Lahore & Karachi to 100+ countries. Get a free quote!",
     keywords: "shipping companies in pakistan, best shipping company pakistan, international shipping pakistan, cargo shipping pakistan, shipping company islamabad, shipping company rawalpindi, shipping company karachi, international cargo pakistan",
     canonicalUrl: "https://bestintlmovers.com/blog/shipping-companies-in-pakistan"
@@ -233,7 +234,7 @@ const ShippingCompaniesPakistanBlog = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+              src="/images/container.jpg" 
               alt="Best Shipping Companies in Pakistan - International Cargo Services" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

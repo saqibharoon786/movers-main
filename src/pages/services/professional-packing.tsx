@@ -33,7 +33,7 @@ const serviceData = {
     "professional packing services Pakistan, packers and movers Pakistan, packing service Islamabad, packing service Lahore, packing service Rawalpindi, packing service Peshawar, house shifting packing Pakistan, international moving packing Pakistan, furniture packing Pakistan, fragile items packing",
 
   heroImg:
-    "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "/blog/packers-movers-islamabad-truck.jpg",
 
   // ── Intro ────────────────────────────────────────────────────────────────
   intro: `Pakistan se baadesh samaan bhejne ka sabse mushkil aur zaroorat-mand qadam hota hai — sahi aur mahir tareeqe se packing karna. Galat packing ki wajah se cargo damage, insurance claims reject hona, ya customs mein masail ho sakte hain. Best International Movers & Logistics ke trained professional packers 15 saalon se Rawalpindi, Islamabad, Lahore aur Peshawar mein ghar aakar world-class packing service dete hain — taake aapka har qeemti saman port se destination tak bilkul mehfooz pahuche.`,

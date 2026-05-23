@@ -26,7 +26,7 @@ const PartLoadRemovalsPakistan = () => {
       h1="Part Load Removals to Pakistan — Affordable LCL Shipping Worldwide"
       heroSubtext="Pay only for the space you use. Affordable part load groupage shipping to Pakistan from UK, UAE, USA, Canada, Australia, and worldwide — with professional packing, customs clearance, and door-to-door delivery."
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Part Load Removals to Pakistan" }]}
-      heroImageUrl="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      heroImageUrl="/images/container.jpg"
       heroImageAlt="LCL groupage container shipping for part load removals to Pakistan"
       schema={serviceSchema}
       faqs={partLoadRemovalsPakistanFaqs}
