@@ -20,6 +20,7 @@ import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useSEO } from "@/hooks/useSEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 const WA = "https://wa.me/923009130211";
 const PHONE_DISPLAY = "0300-9130211";
@@ -27,7 +28,7 @@ const CONTACT_EMAIL = "info@bestintlmovers.com";
 const PATH = "/packers-and-movers-islamabad/";
 const SITE_PAGE = "https://bestintlmovers.com/packers-and-movers-islamabad/";
 
-const SEO_TITLE = "Packers and Movers in Islamabad | Best International Movers & Logistics";
+const SEO_TITLE = pageTitles.packersIslamabad;
 const SEO_DESCRIPTION =
   "Top packers and movers in Islamabad offering professional home shifting, office relocation & international moving. Serving F-6, F-7, G-11, DHA, Bahria Town & all sectors. Call 0300-9130211 for free quote!";
 const SEO_KEYWORDS =

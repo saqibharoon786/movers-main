@@ -20,7 +20,7 @@ const InternationalMoversPakistan = () => (
     h1="International Movers Pakistan"
     heroSubtext="Overseas moving with practical freight planning, customs-ready documentation, and clear execution from Pakistan to global destinations."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "International Movers Pakistan" }]}
-    heroImageUrl="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    heroImageUrl="/images/container.jpg"
     heroImageAlt="Shipping containers ready for international relocation from Pakistan"
     schema={serviceSchema}
     faqs={internationalMoversPakistanFaqs}

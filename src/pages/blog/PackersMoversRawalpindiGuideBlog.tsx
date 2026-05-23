@@ -4,11 +4,12 @@ import {
   PACKERS_MOVERS_RAWALPINDI_GUIDE_CANONICAL,
   PACKERS_MOVERS_RAWALPINDI_GUIDE_PATH,
 } from "@/data/packersMoversRawalpindiGuideBlog";
-const OG_IMAGE =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200";
+import { pageTitles } from "@/seo/pageTitles";
 
-const TITLE =
-  "Packers and Movers in Rawalpindi — Complete 2026 Guide | Best Intl Movers";
+const OG_IMAGE =
+  "/images/hero-home.jpg";
+
+const TITLE = pageTitles.blogPackersRawalpindiGuide;
 const DESCRIPTION =
   "Looking for trusted packers and movers in Rawalpindi? This 2026 guide covers costs, area-wise service, society rules, and how to choose the best moving company. Call 0300-9130211.";
 const KEYWORDS =

@@ -26,7 +26,7 @@ const serviceData = {
     "Professional packing & crating in China before export",
     "All-in freight quotes — no hidden charges, transparent pricing"
   ],
-  heroImg: "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  heroImg: "/images/container.jpg",
   cities: [
     "Karachi", "Lahore", "Islamabad", "Rawalpindi", 
     "Peshawar", "Faisalabad", "Multan", "Quetta", 

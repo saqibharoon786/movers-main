@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import BlogArticleShell from "@/components/blog/BlogArticleShell";
+import { pageTitles } from "@/seo/pageTitles";
 
 const CANONICAL_PATH = "/blog/packers-and-movers-islamabad-guide/";
 const OG_IMAGE =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200";
+  "/images/hero-home.jpg";
 
-const TITLE =
-  "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025) | Best Intl Movers";
+const TITLE = pageTitles.blogPackersIslamabadGuide;
 const DESCRIPTION =
   "Planning to shift in Islamabad? Read our complete 2025 guide on hiring the best packers and movers in Islamabad — costs, tips, what to avoid and how to get a free quote. Call 0300-9130211.";
 const KEYWORDS =

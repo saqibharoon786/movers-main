@@ -428,7 +428,7 @@ const PackersAndMoversKarachi = () => {
             </h1>
 
             <img
-              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1920"
+              src="/images/freight-forwarding.png"
               alt="Packers and movers in Karachi — professional packing and house shifting"
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

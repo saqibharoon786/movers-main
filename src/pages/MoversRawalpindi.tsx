@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 import PageBottomQuoteCta from "@/components/marketing/PageBottomQuoteCta";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -96,7 +97,7 @@ const faqs: { q: string; a: string }[] = [
 const MoversRawalpindi = () => (
   <div className="min-h-screen bg-background">
     <SEO
-      title="International Movers Rawalpindi | Packers & Movers | Best Intl Movers"
+      title={pageTitles.moversRawalpindi}
       description="Best international movers in Rawalpindi. Packing, sea & air freight to Dubai, UK, USA & 100+ countries. Free home survey. Call 0300-9130211."
       keywords="international movers Rawalpindi, packers movers Rawalpindi, overseas relocation Rawalpindi, Dubai movers Rawalpindi"
       urlPath="/movers-rawalpindi"

@@ -4,12 +4,12 @@ import {
   PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_CANONICAL,
   PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_PATH,
 } from "@/data/packersMoversIslamabadCompleteGuideBlog";
+import { pageTitles } from "@/seo/pageTitles";
 
 const OG_IMAGE =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200";
+  "/images/hero-home.jpg";
 
-const TITLE =
-  "Packers and Movers in Islamabad — Complete 2026 Guide | Best Intl Movers";
+const TITLE = pageTitles.blogPackersIslamabadComplete;
 const DESCRIPTION =
   "Looking for reliable packers and movers in Islamabad? This 2026 guide covers sector-wise logistics, pricing, society rules, and how to choose the best moving company. Call 0300-9130211.";
 const KEYWORDS =

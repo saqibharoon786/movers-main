@@ -71,7 +71,7 @@ const HomeShiftingServicesInRawalpindi = () => {
       "home shifting services in rawalpindi, home shifting rawalpindi, house shifting rawalpindi, movers rawalpindi, relocation rawalpindi",
     urlPath: PATH,
     schema: [serviceSchema, faqSchema],
-    ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200&h=630",
+    ogImage: "/images/hero-home.jpg",
     ogImageAlt: "Home shifting and moving services in Rawalpindi",
   });
 

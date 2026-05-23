@@ -26,7 +26,7 @@ const serviceData = {
     "Transparent Pricing – Written quotes with no hidden charges",
     "All Sectors Coverage – F, G, E, I series plus all major housing societies"
   ],
-  heroImg: "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  heroImg: "/blog/packers-movers-islamabad-truck.jpg",
   cities: [
     "F-5, F-6, F-7, F-8, F-10, F-11, F-12, F-13, F-14",
     "G-6, G-7, G-8, G-9, G-10, G-11, G-13, G-14, G-15, G-16",

@@ -35,7 +35,7 @@ const serviceData = {
     "Import/export permits for hassle-free international pet relocation",
     "Experienced pet handlers trained in animal care & stress-free transport"
   ],
-  heroImg: "https://images.unsplash.com/photo-1583337236082-8555968cbc2c?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/pet-relocation.png",
   countries: [
     "United Arab Emirates (UAE)", "United Kingdom (UK)", "United States (USA)", 
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 

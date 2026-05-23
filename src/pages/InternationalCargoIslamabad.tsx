@@ -237,7 +237,7 @@ const InternationalCargoIslamabad = () => {
             </h1>
             
             <img 
-              src="https://images.pexels.com/photos/259928/pexels-photo-259928.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+              src="/images/cargo-insurance.jpg" 
               alt="International cargo service Islamabad - Air and sea freight operations" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

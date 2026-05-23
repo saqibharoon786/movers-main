@@ -12,9 +12,25 @@ import {
   BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD,
   BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
 } from "@/data/bestPackersMoversIslamabad2026Blog";
+import {
+  MOVING_CHECKLIST_PAKISTAN_IMAGE,
+  MOVING_CHECKLIST_PAKISTAN_SLUG,
+} from "@/data/movingChecklistPakistanBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: MOVING_CHECKLIST_PAKISTAN_SLUG,
+    img: MOVING_CHECKLIST_PAKISTAN_IMAGE,
+    title: "The Complete Moving Checklist for Pakistan — International Relocation Guide 2026",
+    date: "May 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "11 min read",
+    excerpt:
+      "Planning to move from Pakistan? Use our complete moving checklist — documents, packing, customs, timelines & tips for stress-free international relocation.",
+    content: "Complete moving checklist Pakistan for international relocation in 2026.",
+  },
   {
     slug: BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
     img: BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
@@ -30,7 +46,7 @@ const allBlogs = [
   },
   {
     slug: PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG,
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    img: "/images/hero-home.jpg",
     title: "Packers and Movers in Islamabad — Complete 2026 Guide for Home, Office & Society Shifting",
     date: "May 15, 2026",
     category: "Moving Guides",
@@ -43,7 +59,7 @@ const allBlogs = [
   },
   {
     slug: PACKERS_MOVERS_RAWALPINDI_GUIDE_SLUG,
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    img: "/images/hero-home.jpg",
     title: "Packers and Movers in Rawalpindi — Complete 2026 Guide for Stress-Free Home & Office Shifting",
     date: "May 15, 2026",
     category: "Moving Guides",
@@ -55,7 +71,7 @@ const allBlogs = [
   },
   {
     slug: "international-relocation-rawalpindi-complete-guide",
-    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/rwp.png",
     title: "International Relocation from Rawalpindi 2025 — Complete Moving Guide | Best Intl Movers",
     date: "May 11, 2026",
     category: "Relocation Guide",
@@ -66,7 +82,7 @@ const allBlogs = [
   },
   {
     slug: "cargo-service-islamabad-complete-guide",
-    img: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/air-freight.jpg",
     title: "Cargo Service in Islamabad 2026 — Everything You Need to Know | Best Intl Movers",
     date: "May 11, 2026",
     category: "Cargo Guide",
@@ -77,7 +93,7 @@ const allBlogs = [
   },
   {
     slug: "shipping-companies-in-pakistan",
-    img: "https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/container.jpg",
     title: "Best Shipping Companies in Pakistan 2025 | International Cargo | Best Intl Movers",
     date: "May 11, 2026",
     category: "Shipping Guide",
@@ -88,7 +104,7 @@ const allBlogs = [
   },
   {
     slug: "international-relocation-services-rawalpindi",
-    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/rwp.png",
     title: "International Relocation Services in Rawalpindi: Everything You Need to Know Before Moving Abroad",
     date: "May 5, 2026",
     category: "Relocation Guide",
@@ -99,7 +115,7 @@ const allBlogs = [
   },
   {
     slug: "cargo-insurance-services-pakistan",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+    img: "/images/cargo-insurance.jpg",
     title: "Why Cargo Insurance Is the Most Important Thing You're Ignoring When Shipping from Pakistan",
     date: "May 2, 2026",
     category: "Shipping Tips | Insurance & Protection",
@@ -110,7 +126,7 @@ const allBlogs = [
   },
   {
     slug: "pet-relocation-from-pakistan-complete-guide",
-    img: "https://images.unsplash.com/photo-1601758228826-054b69a9cc13?auto=format&fit=crop&q=80&w=1200",
+    img: "/images/pet-relocation.png",
     title: "Pet Relocation from Pakistan 2026 — IATA Certified, Safe & Stress-Free",
     date: "Apr 29, 2026",
     category: "Pet Services",
@@ -121,7 +137,7 @@ const allBlogs = [
   },
   {
     slug: "packers-and-movers-islamabad-guide",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    img: "/images/hero-home.jpg",
     title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025)",
     date: "Apr 2025",
     category: "Moving Guides",
@@ -132,7 +148,7 @@ const allBlogs = [
   },
   {
     slug: "tips-for-stress-free-international-move",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    img: "/images/hero-home.jpg",
     title: "10 Tips for a Stress-Free International Move from Pakistan",
     date: "Apr 1, 2026",
     category: "Moving Tips",
@@ -143,7 +159,7 @@ const allBlogs = [
   },
   {
     slug: "air-freight-vs-sea-freight-pakistan",
-    img: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/images/air-freight.jpg",
     title: "Air Freight vs Sea Freight from Pakistan: Which is Right?",
     date: "Apr 1, 2026",
     category: "Logistics",
@@ -154,7 +170,7 @@ const allBlogs = [
   },
   {
     slug: "customs-regulations-pakistan-2025",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+    img: "/images/cargo-insurance.jpg",
     title: "Pakistan Customs Regulations for International Moving 2025",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -165,7 +181,7 @@ const allBlogs = [
   },
   {
     slug: "moving-from-pakistan-to-dubai-guide",
-    img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80",
+    img: "/images/international-moving.jpg",
     title: "Moving from Pakistan to Dubai: Complete Guide 2025",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -176,7 +192,7 @@ const allBlogs = [
   },
   {
     slug: "international-moving-services-pakistan",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+    img: "/images/international-moving.jpg",
     title: "How to Choose the Best International Moving Company in Pakistan",
     date: "Feb 15, 2024",
     category: "Guides",
@@ -187,7 +203,7 @@ const allBlogs = [
   },
   {
     slug: "packing-guide-international-move",
-    img: "https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "/blog/packers-movers-islamabad-truck.jpg",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",
     date: "Feb 1, 2024",
     category: "Moving Tips",
@@ -219,7 +235,7 @@ const BlogMainPage = () => {
     title: "Blog - Best International Movers & Logistics Pakistan",
     description: "Expert tips, guides, and news about international moving from Pakistan. Get insights on packing, customs, shipping, and relocation.",
     keywords: "moving blog pakistan, international moving tips, packing guide, customs regulations, shipping advice",
-    canonicalUrl: "https://bestintlmovers.com/blog"
+    canonicalUrl: "https://bestintlmovers.com/blog/"
   };
 
   return (
@@ -229,7 +245,7 @@ const BlogMainPage = () => {
         title={seoConfig.title}
         description={seoConfig.description}
         keywords={seoConfig.keywords}
-        urlPath="/blog"
+        urlPath="/blog/"
       />
       
       <Navbar />

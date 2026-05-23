@@ -19,8 +19,8 @@ export const islamabadMoversConfig: CityMoversStandaloneConfig = {
     keywords:
       "movers in islamabad, movers islamabad, packers islamabad, house shifting islamabad, home shifting islamabad, office relocation islamabad, dha islamabad movers, bahria enclave movers, blue area office relocation",
   },
-  heroImageUrl: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  ogImageUrl: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630",
+  heroImageUrl: "/images/international-moving.jpg",
+  ogImageUrl: "/images/international-moving.jpg",
   ogImageAlt: "Movers and packers team serving Islamabad sectors and societies",
   h1: "Movers and Packers in Islamabad",
   heroDescription:
@@ -106,8 +106,8 @@ export const lahoreMoversConfig: CityMoversStandaloneConfig = {
     keywords:
       "movers in lahore, packers and movers lahore, home shifting lahore, office relocation lahore, dha lahore movers, gulberg movers, model town movers, bahria town lahore movers",
   },
-  heroImageUrl: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  ogImageUrl: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630",
+  heroImageUrl: "/images/sea-freight.jpg",
+  ogImageUrl: "/images/sea-freight.jpg",
   ogImageAlt: "Movers and packers serving Lahore DHA and Gulberg",
   h1: "Movers and Packers in Lahore",
   heroDescription:
@@ -193,8 +193,8 @@ export const peshawarMoversConfig: CityMoversStandaloneConfig = {
     keywords:
       "international movers Peshawar, movers Peshawar KPK, Pakistan to Dubai movers Peshawar, door to door moving Peshawar, packers and movers Peshawar",
   },
-  heroImageUrl: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1920",
-  ogImageUrl: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200&h=630",
+  heroImageUrl: "/images/homeshifting.png",
+  ogImageUrl: "/images/homeshifting.png",
   ogImageAlt: "International movers in Peshawar and KPK — door-to-door relocations",
   h1: "International Moving Services from Peshawar — KPK's Trusted Movers",
   heroDescription:
@@ -287,8 +287,8 @@ export const rawalpindiMoversConfig: CityMoversStandaloneConfig = {
     keywords:
       "movers in rawalpindi, packers and movers rawalpindi, bahria town rawalpindi movers, askari housing movers, home shifting rawalpindi, office relocation rawalpindi, chaklala movers, pwd housing movers",
   },
-  heroImageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920",
-  ogImageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200&h=630",
+  heroImageUrl: "/images/cargo-insurance.jpg",
+  ogImageUrl: "/images/cargo-insurance.jpg",
   ogImageAlt: "Movers and packers in Rawalpindi for Bahria Town and Askari housing",
   h1: "Movers and Packers in Rawalpindi",
   heroDescription:

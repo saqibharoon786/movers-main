@@ -1,9 +1,50 @@
 {
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.bestintlmovers.com" }],
       "destination": "https://bestintlmovers.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/international-movers-islamabad",
+      "destination": "/international-movers-from-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/international-moving",
+      "destination": "/services/international-moving-services/",
+      "permanent": true
+    },
+    {
+      "source": "/office-relocation-islamabad",
+      "destination": "/packers-and-movers-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/secure-storage-islamabad",
+      "destination": "/services/secure-storage-services/",
+      "permanent": true
+    },
+    {
+      "source": "/international-moving/",
+      "destination": "/services/international-moving-services/",
+      "permanent": true
+    },
+    {
+      "source": "/international-movers-islamabad/",
+      "destination": "/international-movers-from-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/office-relocation-islamabad/",
+      "destination": "/packers-and-movers-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/secure-storage-islamabad/",
+      "destination": "/services/secure-storage-services/",
       "permanent": true
     }
   ],

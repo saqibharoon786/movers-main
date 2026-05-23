@@ -7,8 +7,19 @@ import {
   BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD,
   BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
 } from "@/data/bestPackersMoversIslamabad2026Blog";
+import {
+  MOVING_CHECKLIST_PAKISTAN_IMAGE,
+  MOVING_CHECKLIST_PAKISTAN_SLUG,
+} from "@/data/movingChecklistPakistanBlog";
 
 const posts = [
+  {
+    img: MOVING_CHECKLIST_PAKISTAN_IMAGE,
+    slug: MOVING_CHECKLIST_PAKISTAN_SLUG,
+    title: "Moving Checklist Pakistan 2026 — Complete International Relocation Guide",
+    date: "May 2026",
+    category: "Moving Guides",
+  },
   {
     img: BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE,
     slug: BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG,
@@ -16,9 +27,9 @@ const posts = [
     date: "May 19, 2026",
     category: "Moving Guides",
   },
-  { img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2025", date: "Apr 10, 2025", category: "Moving Tips" },
-  { img: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1200", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2025", category: "Logistics" },
-  { img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2025: Complete Guide", date: "Mar 15, 2025", category: "Guides" },
+  { img: "/images/hero-home.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2025", date: "Apr 10, 2025", category: "Moving Tips" },
+  { img: "/images/air-freight.jpg", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2025", category: "Logistics" },
+  { img: "/images/cargo-insurance.jpg", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2025: Complete Guide", date: "Mar 15, 2025", category: "Guides" },
 ];
 
 const BlogSection = () => {

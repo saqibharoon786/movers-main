@@ -5,11 +5,12 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 const blogData = {
   slug: "cargo-insurance-services-pakistan",
   title: "Why Cargo Insurance Is the Most Important Thing You're Ignoring When Shipping from Pakistan",
-  metaTitle: "Cargo Insurance Pakistan – Complete Guide 2025 | Best Intl Movers",
+  metaTitle: pageTitles.blogCargoInsurance,
   metaDescription: "Everything you need to know about cargo insurance in Pakistan. Types, costs, claims, and why carrier liability is never enough. Read the full guide by Best Intl Movers.",
   author: "Best International Movers & Logistics",
   category: "Shipping Tips | Insurance & Protection",
@@ -18,7 +19,7 @@ const blogData = {
   primaryKeyword: "Cargo Insurance Services Pakistan",
   secondaryKeywords: ["Transit Insurance Pakistan", "Marine Cargo Insurance Pakistan", "Shipping Insurance Pakistan", "Freight Insurance Pakistan", "Cargo Insurance International Shipping"],
   wordCount: "2,000+ words",
-  heroImg: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920"
+  heroImg: "/images/cargo-insurance.jpg"
 };
 
 // Related blogs for the cards section

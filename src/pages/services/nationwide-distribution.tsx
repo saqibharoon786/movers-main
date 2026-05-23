@@ -26,7 +26,7 @@ const serviceData = {
     "Cargo insurance available for all high-value distribution consignments",
     "Single-window solution — import, customs clearance & nationwide distribution"
   ],
-  heroImg: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/freight-forwarding.png",
   industries: [
     "FMCG (Food, Beverages, Personal Care)",
     "Pharmaceuticals & Healthcare",

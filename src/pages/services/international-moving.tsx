@@ -23,6 +23,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { pageTitles } from "@/seo/pageTitles";
 
 const serviceData = {
   slug: "international-moving-services",
@@ -46,7 +47,7 @@ const serviceData = {
     "Canada", "Australia", "Saudi Arabia", "Qatar", "Kuwait", 
     "Germany", "France", "Netherlands", "Turkey", "Malaysia", "Singapore"
   ],
-  heroImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920",
+  heroImg: "/images/hero-home.jpg",
   faqs: [
     {
       q: "How much does international moving cost from Pakistan?",
@@ -97,7 +98,7 @@ function buildServiceSchema() {
 
 const InternationalMovingService = () => {
   const serviceSeo = {
-    title: `${serviceData.title} in Pakistan | Best International Movers`,
+    title: pageTitles.intlMovingServices,
     description: serviceData.desc,
     keywords: `${serviceData.title}, international moving Pakistan, best international movers, overseas relocation Pakistan`,
   };
@@ -128,7 +129,15 @@ const InternationalMovingService = () => {
               className="w-full h-auto object-cover rounded-2xl mb-10 shadow-lg border-2 border-border"
             />
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData.desc}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">{serviceData.desc}</p>
+
+            <p className="text-muted-foreground leading-relaxed mb-10 p-5 rounded-xl border border-gold/25 bg-gold/5">
+              For HR teams, multinationals, and businesses managing employee assignments, see our dedicated{" "}
+              <Link to="/corporate-relocation-pakistan/" className="text-gold hover:underline font-medium">
+                Corporate Relocation Pakistan
+              </Link>{" "}
+              page — outbound and inbound moves, office relocation, executive white-glove service, and corporate account billing.
+            </p>
 
             <div className="glass-card rounded-xl p-8 border border-border mb-10">
               <h2 className="text-2xl font-display font-bold text-foreground mb-6">Key Features & Benefits</h2>

@@ -31,7 +31,7 @@ const serviceData = {
     "packing materials Pakistan, packaging supplies Pakistan, corrugated boxes Pakistan, bubble wrap Pakistan, ISPM-15 wooden crates, export packaging Pakistan, packing boxes Islamabad, packing materials Lahore, packing materials Rawalpindi",
 
   heroImg:
-    "https://images.unsplash.com/photo-1566438487617-ce78ab6bdf36?auto=format&fit=crop&q=80&w=1920",
+    "/images/pet-relocation.png",
 
   // ── Main SEO Content ────────────────────────────────────────────────────────
 

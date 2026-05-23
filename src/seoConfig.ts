@@ -1,14 +1,22 @@
+import { pageTitles } from "@/seo/pageTitles";
+
 export const seoConfig = {
   home: {
-    title: "Best International Movers Pakistan | Rawalpindi, Islamabad, Lahore | 15+ Years",
+    title: pageTitles.home,
     description:
       "Pakistan's best logistics company offering door-to-door international relocation to UAE, UK, USA, Canada and 100+ countries. Serving Islamabad, Rawalpindi, Lahore, Peshawar. Call 0300-9130211.",
     keywords:
       "international movers Pakistan, Pakistan to Dubai movers, international moving company Pakistan, door to door moving service, Rawalpindi movers, Islamabad movers, best logistics company Pakistan, movers Rawalpindi, movers Islamabad, Pakistan logistics services",
   },
-  services: { title: "Our Services | Best International Movers", description: "Professional international moving and logistics services." },
+  services: {
+    title: "Our Services | Best International Movers",
+    description:
+      "International moving, air & sea freight, customs clearance, packing, storage & vehicle shipping from Pakistan. Door-to-door to 100+ countries. Call 0300-9130211.",
+    keywords:
+      "international moving services pakistan, freight forwarding pakistan, customs clearance, professional packing, cargo insurance",
+  },
   contact: {
-    title: "Contact Us | Best International Movers & Logistics | 0300-9130211",
+    title: pageTitles.contact,
     description:
       "Contact Best International Movers & Logistics for a free moving quote. Call 0300-9130211 or WhatsApp us. Office: Blue Area, Jinnah Avenue, Islamabad.",
   },

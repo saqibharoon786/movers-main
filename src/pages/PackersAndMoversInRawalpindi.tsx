@@ -1,6 +1,7 @@
 import { Building2, Boxes, MapPinned, Shield, Truck, Package, Clock, Award, Users, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SeoLandingPageLayout from "@/components/marketing/SeoLandingPageLayout";
+import { pageTitles } from "@/seo/pageTitles";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -122,14 +123,14 @@ const PackersAndMoversInRawalpindi = () => {
     <SeoLandingPageLayout
       visualSkin="rwpPackers"
       topDecor={packersTopDecor}
-      title="Packers and Movers in Rawalpindi 2026 — Trusted Home & Office Shifting | Best Intl Movers"
+      title={pageTitles.packersRawalpindi}
       description="Looking for reliable packers and movers in Rawalpindi? Survey-based quotes, trained crews, zero hidden charges. Serving Bahria Town, DHA, Askari & all areas. Call 0300-9130211."
       keywords="packers and movers in Rawalpindi, packers movers Rawalpindi, home relocation Rawalpindi, office shifting Rawalpindi, moving company Rawalpindi, house shifting Rawalpindi, Bahria Town movers, DHA Rawalpindi packers"
       urlPath="/packers-and-movers-rawalpindi"
       h1="Packers and Movers in Rawalpindi — Reliable Home & Office Shifting"
       heroSubtext="Reliable Rawalpindi relocation teams with structured packing, safe transport, and clear handover standards — for homes, offices, and everything in between. Our survey-based approach eliminates hidden cost surprises and ensures the right crew and truck are assigned from day one."
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Packers & Movers Rawalpindi" }]}
-      heroImageUrl="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      heroImageUrl="/blog/packers-movers-islamabad-truck.jpg"
       heroImageAlt="Best packers and movers in Rawalpindi loading a truck for home shifting"
       schema={serviceSchema}
       faqs={faqs}
@@ -137,7 +138,7 @@ const PackersAndMoversInRawalpindi = () => {
     >
       {/* Services Offered Section */}
       <div className="my-8">
-        <img src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Packers and Movers in Rawalpindi" className="w-full rounded-lg shadow-lg" />
+        <img src="/blog/packers-movers-islamabad-truck.jpg" alt="Packers and Movers in Rawalpindi" className="w-full rounded-lg shadow-lg" />
       </div>
       <h1>Services Offered by Our Rawalpindi Moving Team</h1>
       <p>

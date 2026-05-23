@@ -24,7 +24,7 @@ const serviceData = {
     "Transit Insurance – Full coverage for all goods during transport",
     "Transparent Pricing – Written quotes with no hidden charges"
   ],
-  heroImg: "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  heroImg: "/images/good.png",
   cities: [
     "Rawalpindi", "Islamabad", "Lahore", "Karachi", "Peshawar", "Multan",
     "Faisalabad", "Sialkot", "Gujranwala", "Bahawalpur", "Quetta", "Abbottabad"
@@ -158,7 +158,7 @@ function buildBreadcrumbSchema() {
 const GoodsTransportationPakistan = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "Goods Transportation Pakistan – Nationwide Road Freight Service",
+    title: "Goods Transportation Pakistan | Road Freight",
     description: "Reliable goods transportation across Pakistan. Door-to-door road freight from Rawalpindi, Islamabad, Lahore, Karachi & Peshawar. Get a FREE quote – 0300-9130211",
     keywords: "goods transportation pakistan, goods transport service pakistan, road freight pakistan, cargo transportation pakistan, truck service pakistan, goods transport islamabad, goods transport rawalpindi, domestic freight pakistan",
     canonicalUrl: "https://bestintlmovers.com/goods-transportation-pakistan"

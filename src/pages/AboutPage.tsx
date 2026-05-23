@@ -8,10 +8,10 @@ import SEO from "@/components/SEO";
 import { seoConfig } from "@/seoConfig";
 
 const teamMembers = [
-  { name: "Ahmed Raza", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400" },
-  { name: "Tariq Mahmood", role: "Head of Operations", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400" },
-  { name: "Fatima Syed", role: "Customer Relations Manager", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" },
-  { name: "Usman Ali", role: "Chief Logistics Officer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400" },
+  { name: "Ahmed Raza", role: "CEO & Founder", image: "/images/international-moving.jpg" },
+  { name: "Tariq Mahmood", role: "Head of Operations", image: "/images/international-moving.jpg" },
+  { name: "Fatima Syed", role: "Customer Relations Manager", image: "/images/international-moving.jpg" },
+  { name: "Usman Ali", role: "Chief Logistics Officer", image: "/images/international-moving.jpg" },
 ];
 
 const certifications = [
@@ -35,8 +35,8 @@ const AboutPage = () => {
       <div className="pt-32 pb-20 relative overflow-hidden bg-navy-light border-b border-border">
         <div className="absolute inset-0 z-0">
           <picture>
-            <source srcSet="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920&fm=webp" type="image/webp" />
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920" alt="Team collaborating" fetchPriority="high" loading="eager" width="1920" height="1080" className="w-full h-full object-cover opacity-[0.1]" />
+            <source srcSet="/images/international-moving.jpg" type="image/webp" />
+            <img src="/images/international-moving.jpg" alt="Team collaborating" fetchPriority="high" loading="eager" width="1920" height="1080" className="w-full h-full object-cover opacity-[0.1]" />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/50"></div>
         </div>
@@ -57,8 +57,8 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <picture>
-                <source srcSet="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800&fm=webp" type="image/webp" />
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Office planning" loading="lazy" width="800" height="600" className="rounded-2xl shadow-xl w-full" />
+                <source srcSet="/images/cargo-insurance.jpg" type="image/webp" />
+                <img src="/images/cargo-insurance.jpg" alt="Office planning" loading="lazy" width="800" height="600" className="rounded-2xl shadow-xl w-full" />
               </picture>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">

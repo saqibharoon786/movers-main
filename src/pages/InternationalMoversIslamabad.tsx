@@ -1,5 +1,6 @@
 import SeoLandingPageLayout from "@/components/marketing/SeoLandingPageLayout";
 import { InternationalMoversIslamabadBody, internationalMoversIslamabadFaqs } from "@/content/internationalMoversIslamabadBody";
+import { pageTitles } from "@/seo/pageTitles";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -35,7 +36,7 @@ const movingCompanySchema = {
 
 const InternationalMoversIslamabad = () => (
   <SeoLandingPageLayout
-    title="International Movers from Islamabad | Overseas Relocation Services"
+    title={pageTitles.intlMoversIslamabad}
     description="Best international movers from Islamabad to 100+ countries. Expert customs clearance, air/sea freight, door-to-door service. Free survey & transparent quotes. Call 0300-9130211"
     keywords="international movers from islamabad, overseas movers islamabad"
     urlPath="/international-movers-from-islamabad/"

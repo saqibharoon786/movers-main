@@ -13,7 +13,7 @@ export const cargoIslamabadConfig: CargoCityConfig = {
   cityName: "Islamabad",
   breadcrumbLabel: "Cargo Islamabad",
   seo: {
-    title: "International Cargo Service in Islamabad | Fast & Reliable Shipping",
+    title: "Cargo Service Islamabad | Air & Sea Freight", // keep in sync with pageTitles.cargoIslamabad
     description:
       "Best international cargo service in Islamabad. Air, sea & door-to-door cargo with fast delivery, secure handling & affordable rates. Get a free quote today.",
     keywords:

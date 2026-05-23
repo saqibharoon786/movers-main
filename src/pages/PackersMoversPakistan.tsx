@@ -20,7 +20,7 @@ const PackersMoversPakistan = () => (
     h1="Packers and Movers in Pakistan"
     heroSubtext="Nationwide moving support with structured planning, safe packing, and predictable handovers."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Packers and Movers Pakistan" }]}
-    heroImageUrl="https://images.pexels.com/photos/7464725/pexels-photo-7464725.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    heroImageUrl="/images/professional-packing.png"
     heroImageAlt="Professional moving crew handling household boxes in Pakistan"
     schema={serviceSchema}
     faqs={packersMoversPakistanFaqs}

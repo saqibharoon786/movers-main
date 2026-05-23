@@ -21,7 +21,7 @@ const CargoServicesPakistan = () => (
     h1="Cargo Services Pakistan"
     heroSubtext="Reliable cargo movement with route-specific freight planning, secure handling, and practical delivery timelines."
     breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Cargo Services Pakistan" }]}
-    heroImageUrl="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    heroImageUrl="/images/good.png"
     heroImageAlt="Cargo containers and freight handling operations in Pakistan"
     schema={serviceSchema}
     faqs={cargoServicesPakistanFaqs}

@@ -1,9 +1,16 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useLayoutEffect, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation, useResolvedPath } from "react-router-dom";
-import { computeSeoHead, toCanonicalUrl, normalizeSeoPath, alignSeoPathWithBrowser } from "@/utils/seoHead";
+import {
+  computeSeoHead,
+  toCanonicalUrl,
+  normalizeSeoPath,
+  resolveCanonicalPath,
+  normalizeCanonicalUrl,
+} from "@/utils/seoHead";
 import { useSEO } from "@/hooks/useSEO";
 import { notifyPrerenderReady } from "@/utils/prerender";
+import { stripStaticFallbackMeta } from "@/utils/seoDom";
 
 interface SEOProps {
   title: string;
@@ -21,22 +28,16 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
   const resolvedPath = useResolvedPath(".");
 
   const effectivePath = useMemo(() => {
-    const explicitPath = normalizeSeoPath(urlPath);
-    let candidate: string | undefined;
-    if (explicitPath) candidate = explicitPath;
-    else {
-      const resolvedRoutePath = normalizeSeoPath(resolvedPath.pathname);
-      const liveLocationPath = normalizeSeoPath(location.pathname);
+    const explicitPath = resolveCanonicalPath(urlPath);
+    if (explicitPath) return explicitPath;
 
-      // Prevent transient "/" from overriding non-home routes.
-      if (resolvedRoutePath && resolvedRoutePath !== "/") candidate = resolvedRoutePath;
-      else if (liveLocationPath && liveLocationPath !== "/") candidate = liveLocationPath;
-      else if (resolvedRoutePath === "/" && liveLocationPath === "/") candidate = "/";
-      else candidate = resolvedRoutePath ?? liveLocationPath;
-    }
+    const resolvedRoutePath = resolveCanonicalPath(resolvedPath.pathname);
+    const liveLocationPath = resolveCanonicalPath(location.pathname);
 
-    const aligned = alignSeoPathWithBrowser(candidate) ?? candidate;
-    return aligned ?? "/";
+    if (resolvedRoutePath && resolvedRoutePath !== "/") return resolvedRoutePath;
+    if (liveLocationPath && liveLocationPath !== "/") return liveLocationPath;
+    if (resolvedRoutePath === "/" || liveLocationPath === "/") return "/";
+    return resolvedRoutePath ?? liveLocationPath ?? "/";
   }, [urlPath, resolvedPath.pathname, location.pathname]);
 
   const kw = keywords || title.toLowerCase().replace(/\s*\|\s*/g, ", ");
@@ -53,9 +54,8 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
   );
 
   const finalCanonicalUrl = useMemo(() => {
-    const trimmed = canonicalUrl?.trim();
-    if (!trimmed) return head.fullUrl;
-    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    const normalizedOverride = normalizeCanonicalUrl(canonicalUrl);
+    if (normalizedOverride) return normalizedOverride;
     return head.fullUrl;
   }, [canonicalUrl, head.fullUrl]);
 
@@ -68,6 +68,10 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
     urlPath: effectivePath,
     renderMetaInDom: false,
   });
+
+  useLayoutEffect(() => {
+    stripStaticFallbackMeta();
+  }, [head.seoDescription]);
 
   useEffect(() => {
     notifyPrerenderReady();

@@ -12,11 +12,12 @@ import {
   testimonials,
   trustChecklistRows,
 } from "@/data/bestPackersMoversIslamabad2026Blog";
+import { pageTitles } from "@/seo/pageTitles";
 
 const OG_IMAGE = BEST_PACKERS_MOVERS_ISLAMABAD_2026_OG_IMAGE;
 const ARTICLE_IMAGE = BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE;
 
-const TITLE = "Best Packers and Movers in Islamabad — Complete SEO Guide 2026 | Best Intl Movers";
+const TITLE = pageTitles.blogBestPackersIslamabad2026;
 const DESCRIPTION =
   "Best packers and movers in Islamabad 2026: house shifting, office relocation, pricing, F-7 DHA Bahria coverage & international moves. Free survey. Call 0300-9130211.";
 const KEYWORDS =

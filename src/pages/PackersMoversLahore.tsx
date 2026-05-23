@@ -24,7 +24,7 @@ const serviceData = {
     "Experienced & Verified Team – Professional background-checked moving staff",
     "Transparent Pricing – Written quotes with no hidden charges"
   ],
-  heroImg: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  heroImg: "/images/peshawar.png",
   cities: [
     "DHA Lahore", "Bahria Town Lahore", "Askari Housing", "Lake City", "Wapda Town",
     "Valencia Town", "Gulberg", "Model Town", "Garden Town", "Johar Town",

@@ -1,8 +1,15 @@
+import { siteImagePaths, siteImageUrl } from "@/lib/siteImages";
+
 const SITE_URL = "https://bestintlmovers.com";
 export const SEO_SITE_URL = SITE_URL;
 
-const DEFAULT_SOCIAL_IMAGE =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200";
+const DEFAULT_SOCIAL_IMAGE = siteImageUrl(siteImagePaths.heroHome);
+
+const normalizeOgImage = (image?: string) => {
+  if (!image) return DEFAULT_SOCIAL_IMAGE;
+  if (image.startsWith("http")) return image;
+  return siteImageUrl(image.startsWith("/") ? image : `/${image}`);
+};
 
 const toTitleCase = (value: string) =>
   value
@@ -19,16 +26,36 @@ const pathToLabel = (path: string) => {
   return toTitleCase(last);
 };
 
+/** Google SERP display limit — keep titles at or below 60 characters. */
+export const SEO_TITLE_MAX = 60;
+
 const clip = (value: string, max: number) => {
-  if (value.length <= max) return value;
-  return `${value.slice(0, max - 1).trimEnd()}…`;
+  const trimmed = value.trim();
+  if (trimmed.length <= max) return trimmed;
+  const slice = trimmed.slice(0, max);
+  const lastSpace = slice.lastIndexOf(" ");
+  const cut = lastSpace > max * 0.6 ? slice.slice(0, lastSpace) : slice;
+  return cut.trimEnd();
+};
+
+/** Normalize any page title for `<title>` and Open Graph (always ≤ SEO_TITLE_MAX). */
+export const formatSeoTitle = (title: string, urlPath?: string | null) => {
+  const normalizedPath = resolveCanonicalPath(urlPath) ?? "/";
+  const routeLabel = pathToLabel(normalizedPath);
+  const isBlogPath = normalizedPath.startsWith("/blog/");
+  const isFullSeoTitle = title.includes("|");
+  const titleHasRoute = title.toLowerCase().includes(routeLabel.toLowerCase());
+  const base =
+    isFullSeoTitle || titleHasRoute || normalizedPath === "/" || isBlogPath
+      ? title
+      : `${title} | ${routeLabel}`;
+  return clip(base, SEO_TITLE_MAX);
 };
 
 const looksLikeAbsoluteUrl = (value: string) => /^https?:\/\//i.test(value);
 
 /**
- * Normalized path with leading slash.
- * Preserves a trailing slash when the input contains one (except root "/").
+ * Normalized path with leading slash and trailing slash on all non-root paths.
  * Removes query/hash and collapses duplicate slashes.
  * Returns undefined when input is missing/invalid.
  */
@@ -54,11 +81,38 @@ export const normalizeSeoPath = (path?: string | null): string | undefined => {
 
   if (withLeading === "/") return "/";
 
-  const hasTrailingSlash = withLeading.endsWith("/");
   const noTrailing = withLeading.replace(/\/+$/, "");
+  return `${noTrailing}/`;
+};
 
-  // If input had a trailing slash, keep exactly one (e.g. "/contact/").
-  return hasTrailingSlash ? `${noTrailing}/` : noTrailing;
+/** Legacy short service paths → preferred canonical slug (no trailing slash keys). */
+const CANONICAL_PATH_ALIASES: Record<string, string> = {
+  "/services/vehicle-shipping": "/services/vehicle-shipping-services",
+  "/services/professional-packing": "/services/professional-packing-services",
+  "/services/packing-materials": "/services/packing-materials-services",
+  "/services/packing": "/services/professional-packing-services",
+  "/services/cargo-insurance": "/services/cargo-insurance-services",
+  "/services/sea-freight": "/services/sea-freight-services",
+  "/services/international-moving": "/services/international-moving-services",
+  "/services/secure-storage": "/services/secure-storage-services",
+  "/international-moving": "/services/international-moving-services",
+  "/international-movers-islamabad": "/international-movers-from-islamabad",
+  "/office-relocation-islamabad": "/packers-and-movers-islamabad",
+  "/secure-storage-islamabad": "/services/secure-storage-services",
+};
+
+/**
+ * Resolves the preferred canonical path (aliases + trailing slash policy).
+ */
+export const resolveCanonicalPath = (path?: string | null): string | undefined => {
+  const normalized = normalizeSeoPath(path);
+  if (!normalized) return undefined;
+
+  const key = stripTrailingSlashForCompare(normalized);
+  const alias = CANONICAL_PATH_ALIASES[key];
+  if (alias) return normalizeSeoPath(alias);
+
+  return normalized;
 };
 
 /** Same path ignoring trailing slash (for comparing router vs address bar). */
@@ -67,29 +121,24 @@ export const stripTrailingSlashForCompare = (path: string): string => {
   return path.replace(/\/+$/, "") || "/";
 };
 
-/**
- * When the SPA route matches the browser URL except for a trailing slash,
- * prefer the browser pathname so canonical matches the live (often redirected) URL.
- */
-export function alignSeoPathWithBrowser(computedPath: string | undefined): string | undefined {
-  if (computedPath == null || typeof window === "undefined") return computedPath;
-
-  const browserNorm = normalizeSeoPath(window.location.pathname);
-  const pathNorm = normalizeSeoPath(computedPath);
-  if (!browserNorm || !pathNorm) return computedPath;
-
-  if (stripTrailingSlashForCompare(browserNorm) === stripTrailingSlashForCompare(pathNorm)) {
-    return browserNorm;
-  }
-  return pathNorm;
-}
-
-/** Canonical URL: https://bestintlmovers.com (no www). Trailing slash follows normalized path. */
+/** Canonical URL: https://bestintlmovers.com (no www), trailing slash on inner pages. */
 export const toCanonicalUrl = (path?: string | null) => {
-  const normalizedPath = normalizeSeoPath(path);
+  const normalizedPath = resolveCanonicalPath(path);
   if (!normalizedPath) return undefined;
   if (normalizedPath === "/") return `${SITE_URL}/`;
   return `${SITE_URL}${normalizedPath}`;
+};
+
+/** Normalize an absolute canonical override to the site URL + path policy. */
+export const normalizeCanonicalUrl = (url?: string | null) => {
+  const trimmed = url?.trim();
+  if (!trimmed) return undefined;
+  if (!looksLikeAbsoluteUrl(trimmed)) return toCanonicalUrl(trimmed);
+  try {
+    return toCanonicalUrl(new URL(trimmed).pathname);
+  } catch {
+    return undefined;
+  }
 };
 
 export type ComputeSeoHeadInput = {
@@ -106,15 +155,12 @@ export type ComputeSeoHeadInput = {
 };
 
 export function computeSeoHead(input: ComputeSeoHeadInput) {
-  const canonicalPath = normalizeSeoPath(input.urlPath) ?? normalizeSeoPath(input.pathnameFallback);
+  const canonicalPath =
+    resolveCanonicalPath(input.urlPath) ?? resolveCanonicalPath(input.pathnameFallback);
   const normalizedPath = canonicalPath ?? "/";
   const routeLabel = pathToLabel(normalizedPath);
 
-  const isFullSeoTitle = input.title.includes("|");
-  const titleHasRoute = input.title.toLowerCase().includes(routeLabel.toLowerCase());
-  const seoTitleBase =
-    isFullSeoTitle || titleHasRoute || normalizedPath === "/" ? input.title : `${input.title} | ${routeLabel}`;
-  const seoTitle = clip(seoTitleBase, isFullSeoTitle ? 72 : 60);
+  const seoTitle = formatSeoTitle(input.title, normalizedPath);
 
   const cta = "Call or WhatsApp 0300-9130211.";
   const descriptionHasRoute = input.description.toLowerCase().includes(routeLabel.toLowerCase());
@@ -128,7 +174,7 @@ export function computeSeoHead(input: ComputeSeoHeadInput) {
   const seoDescription = clip(descriptionWithCta, 160);
 
   const fullUrl = toCanonicalUrl(canonicalPath);
-  const selectedOgImage = input.ogImage || DEFAULT_SOCIAL_IMAGE;
+  const selectedOgImage = normalizeOgImage(input.ogImage);
   const robots = input.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
 
   return {
