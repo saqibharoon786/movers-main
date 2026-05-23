@@ -267,6 +267,11 @@ const faqs = [
     a: "All Multan — Gulgasht, Bosan Road, New Multan, DHA Multan, City Housing, Cantt, Wapda Town, Al-Rehman Garden, and surrounding Khanewal, Sahiwal, Muzaffargarh, and Lodhran.",
   },
   {
+    q: "Do you offer local house shifting and office relocation in Multan, not just international moves?",
+    a: "",
+    packersLink: true,
+  },
+  {
     q: "How do I get a free quote for moving from Multan internationally?",
     a: "Call or WhatsApp 0300-9130211 or use our contact form. We arrange a free home survey and send a written quote within 24 hours with no obligation.",
   },
@@ -724,7 +729,18 @@ const MoversMultan = () => {
                 {faqs.map((faq, index) => (
                   <div key={index} className="border-b border-border pb-5 last:border-0">
                     <h3 className="font-display font-semibold text-foreground text-lg mb-2">{faq.q}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+                    {"packersLink" in faq && faq.packersLink ? (
+                      <p className="text-muted-foreground leading-relaxed">
+                        Yes. See our{" "}
+                        <Link to="/packers-and-movers-multan/" className="text-gold hover:underline font-medium">
+                          Packers and Movers Multan page
+                        </Link>{" "}
+                        for local house shifting, office relocation, intercity moves, furniture packing, and full
+                        domestic services — this page focuses on international and sea freight moves from Multan.
+                      </p>
+                    ) : (
+                      <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+                    )}
                   </div>
                 ))}
               </div>

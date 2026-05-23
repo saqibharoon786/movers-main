@@ -1,17 +1,13 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { useRef } from "react";
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import QuoteRequestForm from "@/components/QuoteRequestForm";
+import { QUOTE_INBOX_EMAIL } from "@/lib/quoteForm";
+
 const ContactFooter = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
 
   return (
     <>
@@ -19,47 +15,26 @@ const ContactFooter = () => {
         <div className="container mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
             <span className="text-gold font-semibold text-sm tracking-widest uppercase">Contact Us</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-3 mb-4">Get Your <span className="gold-gradient-text">Free Quote</span></h2>
+            <h3 className="text-3xl md:text-5xl font-display font-bold mt-3 mb-4">Get Your <span className="gold-gradient-text">Free Quote</span></h3>
             <p className="text-muted-foreground max-w-xl mx-auto">Fill out the form and our team will get back to you within 24 hours.</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-5 gap-12">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-3">
-              <form onSubmit={handleSubmit} className="glass-card rounded-xl p-8 space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="text" placeholder="Full Name" required className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <input type="email" placeholder="Email Address" required className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="tel" placeholder="Phone Number" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <select className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors">
-                    <option value="">Service Type</option>
-                    <option>International Moving</option>
-                    <option>Air Freight</option>
-                    <option>Sea Freight</option>
-                    <option>Customs Clearance</option>
-                    <option>Vehicle Shipping</option>
-                    <option>Storage</option>
-                    <option>Packing Only</option>
-                  </select>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="text" placeholder="Moving From (City, Country)" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <input type="text" placeholder="Moving To (City, Country)" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                </div>
-                <input type="text" placeholder="Approximate Volume (CBM) or Number of Rooms" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                <textarea rows={4} placeholder="Tell us about your move..." className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors resize-none" />
-                <button type="submit" className="w-full py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_40px_-5px_hsl(var(--gold)/0.5)] transition-all duration-300">
-                  {submitted ? "Quote Requested! âœ“" : <><Send size={18} /> Request Free Quote</>}
-                </button>
-              </form>
+              <div className="glass-card rounded-xl p-8">
+                <QuoteRequestForm source="Homepage Footer Quote Form" variant="full" />
+              </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="lg:col-span-2 space-y-6">
               {[
                 { icon: MapPin, title: "Our Offices", text: "Rawalpindi | Islamabad | Lahore | Peshawar" },
                 { icon: Phone, title: "Call / WhatsApp", text: "0300-9130211" },
-                { icon: Mail, title: "Email Us", text: "info@bestintlmovers.com" },
+                {
+                  icon: Mail,
+                  title: "Quote & Email",
+                  text: `${QUOTE_INBOX_EMAIL}\ninfo@bestintlmovers.com`,
+                },
                 { icon: Clock, title: "Hours", text: "Monday to Saturday 8:00 AM — 8:00 PM\nSunday: Emergency Only" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
@@ -141,6 +116,7 @@ const ContactFooter = () => {
                 <li><Link to="/movers-lahore" className="hover:text-gold transition-colors">Movers Lahore</Link></li>
                 <li><Link to="/movers-karachi" className="hover:text-gold transition-colors">Movers Karachi</Link></li>
                 <li><Link to="/movers-multan" className="hover:text-gold transition-colors">Movers Multan</Link></li>
+                <li><Link to="/packers-and-movers-multan" className="hover:text-gold transition-colors">Packers &amp; Movers Multan</Link></li>
                 <li><Link to="/packers-and-movers-karachi" className="hover:text-gold transition-colors">Packers &amp; Movers Karachi</Link></li>
                 <li><Link to="/cargo-service-karachi" className="hover:text-gold transition-colors">Cargo Service Karachi</Link></li>
                 <li><Link to="/movers-and-packers-in-peshawar" className="hover:text-gold transition-colors">Movers &amp; Packers Peshawar</Link></li>

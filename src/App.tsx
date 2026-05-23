@@ -52,6 +52,7 @@ const MoversKarachi = lazy(() => import("./pages/MoversKarachi.tsx"));
 const MoversMultan = lazy(() => import("./pages/MoversMultan.tsx"));
 const CorporateRelocationPakistan = lazy(() => import("./pages/CorporateRelocationPakistan.tsx"));
 const PackersAndMoversKarachi = lazy(() => import("./pages/PackersAndMoversKarachi.tsx"));
+const PackersAndMoversMultan = lazy(() => import("./pages/PackersAndMoversMultan.tsx"));
 const CargoServiceKarachi = lazy(() => import("./pages/CargoServiceKarachi.tsx"));
 const MoversAndPackersInPeshawar = lazy(() => import("./pages/MoversAndPackersInPeshawar.tsx"));
 const CargoIslamabad = lazy(() => import("./pages/CargoIslamabad.tsx"));
@@ -305,6 +306,8 @@ const App = () => (
           <Route path="/corporate-relocation-pakistan/" element={<CorporateRelocationPakistan />} />
           <Route path="/packers-and-movers-karachi" element={<PackersAndMoversKarachi />} />
           <Route path="/packers-and-movers-karachi/" element={<PackersAndMoversKarachi />} />
+          <Route path="/packers-and-movers-multan" element={<PackersAndMoversMultan />} />
+          <Route path="/packers-and-movers-multan/" element={<PackersAndMoversMultan />} />
           <Route path="/cargo-service-karachi" element={<CargoServiceKarachi />} />
           <Route path="/cargo-service-karachi/" element={<CargoServiceKarachi />} />
           <Route path="/movers-and-packers-in-peshawar" element={<MoversAndPackersInPeshawar />} />

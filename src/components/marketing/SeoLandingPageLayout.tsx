@@ -293,7 +293,7 @@ const SeoLandingPageLayout = ({
         </section>
 
         <section className={bottomCtaClass}>
-          <h2 className="text-2xl font-display font-bold text-foreground mb-3">Ready to get started?</h2>
+          <h3 className="text-2xl font-display font-bold text-foreground mb-3">Ready to get started?</h3>
           <p className="text-muted-foreground mb-6">
             Best International Movers & Logistics · {PHONE} · info@bestintlmovers.com · Mon–Sat 8:00 AM – 8:00 PM
           </p>

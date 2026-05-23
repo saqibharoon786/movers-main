@@ -80,17 +80,24 @@ const AirSeaFreightCityTemplate = ({ config }: Props) => {
           ))}
         </section>
 
-        <section>
-          <h2 className="text-3xl font-display font-bold text-center mb-8">
-            {config.mode === "air" ? "Air Freight Destinations" : "Sea Freight Corridors"} from {config.cityName}
+        <section aria-labelledby={`${config.mode}-routes-${config.cityName.toLowerCase()}`}>
+          <h2
+            id={`${config.mode}-routes-${config.cityName.toLowerCase()}`}
+            className="text-3xl font-display font-bold text-center mb-8"
+          >
+            {config.mode === "air"
+              ? `Major international air cargo routes from ${config.cityName}`
+              : `Major sea freight corridors from ${config.cityName}`}
           </h2>
-          <div className="flex flex-wrap justify-center gap-2">
+          <ul className="flex flex-wrap justify-center gap-2 list-none p-0 m-0">
             {config.destinations.map((d) => (
-              <span key={d} className="px-4 py-2 rounded-full border border-white/10 text-sm bg-navy-mid/50">
-                {d}
-              </span>
+              <li key={d}>
+                <span className="inline-block px-4 py-2 rounded-full border border-white/10 text-sm bg-navy-mid/50">
+                  {d}
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
         <section>

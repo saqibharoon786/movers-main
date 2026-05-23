@@ -79,15 +79,22 @@ const CargoServiceCityTemplate = ({ config }: Props) => {
           ))}
         </section>
 
-        <section>
-          <h2 className="text-3xl font-display font-bold text-center mb-8">Destinations from {config.cityName}</h2>
-          <div className="flex flex-wrap justify-center gap-2">
+        <section aria-labelledby={`cargo-lanes-${config.cityName.toLowerCase()}`}>
+          <h2
+            id={`cargo-lanes-${config.cityName.toLowerCase()}`}
+            className="text-3xl font-display font-bold text-center mb-8"
+          >
+            International cargo lanes from {config.cityName}
+          </h2>
+          <ul className="flex flex-wrap justify-center gap-2 list-none p-0 m-0">
             {config.destinations.map((d) => (
-              <span key={d} className="px-4 py-2 rounded-full border border-gold/25 text-sm text-foreground bg-navy-mid/40">
-                {d}
-              </span>
+              <li key={d}>
+                <span className="inline-block px-4 py-2 rounded-full border border-gold/25 text-sm text-foreground bg-navy-mid/40">
+                  {d}
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
           <p className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto">
             Need a lane not listed? We ship to 100+ countriesâ€”email{" "}
             <a className="text-gold hover:underline" href="mailto:info@bestintlmovers.com">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import QuoteRequestForm from "@/components/QuoteRequestForm";
+import { QUOTE_INBOX_EMAIL } from "@/lib/quoteForm";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,14 +17,6 @@ import SEO from "@/components/SEO";
 import { seoConfig } from "@/seoConfig";
 
 const ContactPage = () => {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO {...seoConfig.contact} urlPath="/contact" />
@@ -38,41 +31,20 @@ const ContactPage = () => {
 
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="lg:col-span-3">
-              <form onSubmit={handleSubmit} className="glass-card rounded-xl p-8 space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="text" placeholder="Full Name" required className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <input type="email" placeholder="Email Address" required className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="tel" placeholder="Phone Number" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <select className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors">
-                    <option value="">Service Type</option>
-                    <option>International Moving</option>
-                    <option>Air Freight</option>
-                    <option>Sea Freight</option>
-                    <option>Customs Clearance</option>
-                    <option>Vehicle Shipping</option>
-                    <option>Storage</option>
-                    <option>Packing Only</option>
-                  </select>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <input type="text" placeholder="Moving From (City)" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                  <input type="text" placeholder="Moving To (City, Country)" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                </div>
-                <input type="text" placeholder="Approximate Volume (CBM) or Number of Rooms" className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors" />
-                <textarea rows={4} placeholder="Tell us about your move..." className="w-full bg-navy-mid border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors resize-none" />
-                <button type="submit" className="w-full py-4 rounded-lg gold-gradient-bg text-primary-foreground font-bold text-lg flex items-center justify-center gap-2 hover:shadow-[0_0_40px_-5px_hsl(var(--gold)/0.5)] transition-all duration-300">
-                  {submitted ? "Quote Requested! âœ“" : <><Send size={18} /> Request Free Quote</>}
-                </button>
-              </form>
+              <div className="glass-card rounded-xl p-8">
+                <QuoteRequestForm source="Contact Page Quote Form" variant="full" />
+              </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} className="lg:col-span-2 space-y-6">
               {[
                 { icon: MapPin, title: "Offices", text: "Rawalpindi | Islamabad | Lahore | Peshawar" },
                 { icon: Phone, title: "Phone / WhatsApp", text: "0300-9130211" },
-                { icon: Mail, title: "Email Us", text: "info@bestintlmovers.com" },
+                {
+                  icon: Mail,
+                  title: "Quote & Email",
+                  text: `${QUOTE_INBOX_EMAIL}\ninfo@bestintlmovers.com`,
+                },
                 {
                   icon: Clock,
                   title: "Hours",

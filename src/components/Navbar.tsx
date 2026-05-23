@@ -38,6 +38,7 @@ const localLandingPages = [
   { label: "Movers Lahore", to: "/movers-lahore" },
   { label: "Movers Karachi", to: "/movers-karachi" },
   { label: "International Movers Multan", to: "/movers-multan" },
+  { label: "Packers & Movers Multan", to: "/packers-and-movers-multan" },
   { label: "Packers & Movers Karachi", to: "/packers-and-movers-karachi" },
   { label: "Cargo Service Karachi", to: "/cargo-service-karachi" },
   { label: "Movers & Packers Peshawar", to: "/movers-and-packers-in-peshawar" },
