@@ -18,7 +18,7 @@ export const pageTitles = {
   blogCargoIslamabadGuide: "Cargo Service Islamabad 2026 | Full Guide",
   blogCargoInsurance: "Cargo Insurance Pakistan Guide 2025",
   blogIntlRelocationRwp: "International Relocation Rawalpindi 2025",
-  blogShippingCompanies: "Best Shipping Companies in Pakistan 2025",
+  blogShippingCompanies: "Best Shipping Companies in Pakistan 2026",
   blogPetRelocation: "Pet Relocation from Pakistan 2026 | IATA",
   intlMoversIslamabad: "International Movers Islamabad | Overseas",
   intlMovingServices: "International Moving Pakistan | Door-to-Door",
@@ -26,4 +26,6 @@ export const pageTitles = {
   secureStorageIslamabad: "Secure Storage Islamabad | Warehouse",
   secureStoragePakistan: "Secure Storage Pakistan | Climate Control",
   packersMultan: "Packers and Movers Multan | Local & Intl Shifting",
+  storageUnitsIslamabad: "Storage Units Islamabad & Rawalpindi | Secure Self-Storage",
+  blogHomeShiftingIslamabad: "Home Shifting in Islamabad 2026 — Complete Guide",
 } as const;

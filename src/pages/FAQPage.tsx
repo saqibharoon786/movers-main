@@ -121,7 +121,7 @@ const FAQPage = () => {
           </section>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            <Accordion type="single" collapsible className="space-y-3">
+            <Accordion type="single" collapsible defaultValue="" className="space-y-3">
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`faq-${i}`} className="glass-card rounded-xl px-6 border border-border hover:border-gold/30 transition-colors">
                   <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-gold py-5 [&[data-state=open]]:text-gold">{f.q}</AccordionTrigger>

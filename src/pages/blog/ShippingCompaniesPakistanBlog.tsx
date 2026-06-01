@@ -33,7 +33,7 @@ function buildServiceSchema() {
       {
         "@type": "Article",
         "@id": "https://bestintlmovers.com/blog/shipping-companies-in-pakistan#article",
-        "headline": "Best Shipping Companies in Pakistan 2025 | International Cargo | Best Intl Movers",
+        "headline": "Best Shipping Companies in Pakistan 2026 | International Cargo | Best Intl Movers",
         "description": "Looking for trusted shipping companies in Pakistan? Best International Movers offers international cargo shipping from Islamabad, Rawalpindi, Lahore & Karachi to 100+ countries. Get a free quote!",
         "url": "https://bestintlmovers.com/blog/shipping-companies-in-pakistan",
         "provider": { "@id": "https://bestintlmovers.com/#organization" },
@@ -41,8 +41,8 @@ function buildServiceSchema() {
           "@type": "Organization",
           "name": "Best International Movers & Logistics"
         },
-        "datePublished": "2025-05-11",
-        "dateModified": "2025-05-11",
+        "datePublished": "2026-05-11",
+        "dateModified": "2026-05-11",
         "mainEntityOfPage": "https://bestintlmovers.com/blog/shipping-companies-in-pakistan"
       }
     ]
@@ -226,11 +226,11 @@ const ShippingCompaniesPakistanBlog = () => {
           >
             <div className="inline-flex items-center gap-2 bg-gold/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Ship className="text-gold" size={18} />
-              <span className="text-gold text-sm font-medium">Complete 2025 Guide</span>
+              <span className="text-gold text-sm font-medium">Complete 2026 Guide</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Best Shipping Companies in Pakistan — Complete <span className="text-gold">2025 Guide</span>
+              Best Shipping Companies in Pakistan — Complete <span className="text-gold">2026 Guide</span>
             </h1>
             
             <img 
@@ -240,7 +240,7 @@ const ShippingCompaniesPakistanBlog = () => {
             />
             
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Finding a reliable shipping company in Pakistan is not as simple as it sounds. This comprehensive 2025 guide by Best International Movers & Logistics — one of Pakistan's most trusted international shipping companies with 15+ years of experience — tells you everything you need to know about choosing the right shipping company in Pakistan.
+              Finding a reliable shipping company in Pakistan is not as simple as it sounds. This comprehensive 2026 guide by Best International Movers & Logistics — one of Pakistan's most trusted international shipping companies with 15+ years of experience — tells you everything you need to know about choosing the right shipping company in Pakistan.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -281,7 +281,7 @@ const ShippingCompaniesPakistanBlog = () => {
               </p>
 
               <p>
-                This comprehensive 2025 guide by <strong className="text-gold">Best International Movers & Logistics</strong> — one of Pakistan's most trusted international shipping companies with <strong className="text-gold">15+ years of experience</strong> and over <strong className="text-gold">5,000 successful shipments</strong> — tells you everything you need to know about choosing the right shipping company in Pakistan.
+                This comprehensive 2026 guide by <strong className="text-gold">Best International Movers & Logistics</strong> — one of Pakistan's most trusted international shipping companies with <strong className="text-gold">15+ years of experience</strong> and over <strong className="text-gold">5,000 successful shipments</strong> — tells you everything you need to know about choosing the right shipping company in Pakistan.
               </p>
             </motion.div>
 
@@ -414,11 +414,11 @@ const ShippingCompaniesPakistanBlog = () => {
               className="mb-12"
             >
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Shipping Costs from Pakistan — What to Expect in 2025
+                Shipping Costs from Pakistan — What to Expect in 2026
               </h2>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Air Freight Rates from Pakistan (2025 Estimates)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Air Freight Rates from Pakistan (2026 Estimates)</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse border border-border rounded-lg">
                     <thead>
@@ -446,7 +446,7 @@ const ShippingCompaniesPakistanBlog = () => {
 
               {/* Sea Freight LCL Rates */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Sea Freight LCL Rates from Pakistan (2025 Estimates)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Sea Freight LCL Rates from Pakistan (2026 Estimates)</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse border border-border rounded-lg">
                     <thead>

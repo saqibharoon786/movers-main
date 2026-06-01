@@ -35,40 +35,36 @@ const serviceData = {
   ],
   faqs: [
     {
-      q: "How much does home shifting cost in Islamabad?",
-      a: "Charges range from Rs. 12,000 for a studio apartment to Rs. 150,000+ for a large villa with full packing. The exact cost depends on home size, distance, floor level, and packing scope. Contact us for a free, itemised quote."
+      q: "How much does home shifting cost in Islamabad in 2026?",
+      a: "For a standard 2-bedroom home, local shifting within Islamabad costs approximately PKR 18,000–30,000. For Islamabad to Rawalpindi, expect PKR 22,000–38,000. Costs vary based on floors, packing requirements, distance, and season."
     },
     {
-      q: "How far in advance should I book?",
-      a: "We recommend 3 to 5 days for standard sector shifts. For large houses and month-end dates — the busiest periods — book at least one week ahead. Same-day shifting is available subject to availability."
+      q: "How many days in advance should I book home shifting in Islamabad?",
+      a: "For regular periods, 1–2 weeks advance booking is ideal. During peak seasons such as May–August, Eid, and year-end, book 3–4 weeks ahead. Same-day bookings are possible but cost more and quality cannot be guaranteed."
     },
     {
-      q: "Do you cover all sectors in Islamabad?",
-      a: "Yes. We cover all CDA sectors — F, G, E, I series — plus all major housing societies including Bahria Town, DHA, Park View City, Gulberg, Capital Smart City, B-17, and PWD."
+      q: "Do movers in Islamabad provide packing materials?",
+      a: "Professional movers like Best International Movers bring all packing materials — boxes, bubble wrap, stretch film, and moving blankets. This is included in full-service packages. Always confirm packing materials are included before booking."
     },
     {
-      q: "Can you shift from Islamabad to Rawalpindi on the same day?",
-      a: "Yes. Islamabad to Rawalpindi is a same-day shift for any home size. For full details and Rawalpindi-specific pricing visit our home shifting Rawalpindi page."
+      q: "Is it safe to use packers and movers in Islamabad?",
+      a: "Yes — with the right company. Check Google reviews, ask for written quotes, confirm insurance coverage, and ensure they have a physical office. Avoid WhatsApp-only operations with no verifiable address."
     },
     {
-      q: "Do you provide packing materials?",
-      a: "Yes. All packing materials — boxes, bubble wrap, stretch film, furniture blankets, tape, and foam padding — are included in the full packing service."
+      q: "Can you shift home furniture on the same day in Islamabad?",
+      a: "Yes, for small to medium homes, same-day shifting is possible if the team starts early (8–9 AM). Large 4–5 bedroom homes may require two days, especially if packing is included. Always discuss timeline expectations upfront."
     },
     {
-      q: "Are my goods insured?",
-      a: "Yes. All consignments are covered by transit insurance from pickup to delivery. Any damage during the move is fully compensated."
+      q: "What is the best time of year for home shifting in Islamabad?",
+      a: "October to December and February to April are the ideal months — mild weather, lower demand, and better availability of professional teams. Avoid July–September (monsoon) and peak Eid periods."
     },
     {
-      q: "Can you handle international moving from Islamabad?",
-      a: "Absolutely. Our international moving service covers door-to-door relocation from Islamabad to 100+ countries — UAE, UK, Canada, USA, Australia — with sea freight, air freight, customs clearance, and destination delivery."
+      q: "Do you offer home shifting services in all areas of Islamabad?",
+      a: "Yes. Best International Movers covers all of Islamabad including F-6, F-7, F-8, F-10, F-11, G-9, G-10, G-11, G-13, E-7, E-11, DHA, Bahria Enclave, Bani Gala, and all I-sectors. We also serve major areas of Rawalpindi."
     },
     {
-      q: "Do you shift offices after hours in Islamabad?",
-      a: "Yes. After-hours and weekend office shifting is available to minimise business disruption. Our commercial team is experienced in overnight corporate relocations."
-    },
-    {
-      q: "Can you move a piano or heavy gym equipment?",
-      a: "Yes. We handle specialist items — pianos, gym equipment, heavy safes, and antiques — with appropriate equipment and crew, quoted separately."
+      q: "What if something gets damaged during home shifting?",
+      a: "With Best International Movers, all moves are covered by transit insurance. Any damage is documented, assessed, and compensated according to the declared value of the item."
     }
   ]
 };
@@ -164,12 +160,30 @@ function buildBreadcrumbSchema() {
   };
 }
 
+function buildArticleSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Home Shifting in Islamabad 2026 — Complete Guide | Best International Movers",
+    "description": "Planning home shifting in Islamabad? Read our 2026 complete guide covering costs, tips, best packers and movers, checklists, and how to shift safely.",
+    "author": { "@type": "Organization", "name": "Best International Movers & Logistics" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Best International Movers & Logistics",
+      "logo": { "@type": "ImageObject", "url": "https://bestintlmovers.com/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bestintlmovers.com/home-shifting-islamabad" },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01"
+  };
+}
+
 const HomeShiftingIslamabad = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "Home Shifting Islamabad – Professional & Reliable Movers",
-    description: "Expert home shifting services in Islamabad. Professional packers & movers covering all F, G, E, I sectors, DHA & Bahria Town. FREE quote – 0300-9130211",
-    keywords: "home shifting islamabad, home shifting services islamabad, house shifting islamabad, packers and movers islamabad, house shifting services islamabad, movers islamabad",
+    title: "Home Shifting in Islamabad 2026 — Complete Guide | Best International Movers",
+    description: "Planning home shifting in Islamabad? Read our 2026 complete guide covering costs, tips, best packers and movers, checklists, and how to shift safely. Call 0300-9130211.",
+    keywords: "home shifting in Islamabad, home shifting Islamabad cost, house shifting services Islamabad, packers and movers Islamabad, home shifting checklist Pakistan, best movers Islamabad 2026, shifting from Islamabad to Rawalpindi, house shifting tips Pakistan, affordable home shifting Islamabad",
     canonicalUrl: "https://bestintlmovers.com/home-shifting-islamabad"
   };
 
@@ -181,7 +195,8 @@ const HomeShiftingIslamabad = () => {
         description={seoConfig.description}
         keywords={seoConfig.keywords}
         urlPath="/home-shifting-islamabad"
-        schema={[buildServiceSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
+        canonicalUrl={seoConfig.canonicalUrl}
+        schema={[buildArticleSchema(), buildServiceSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
       />
       
       <Navbar />
@@ -200,12 +215,12 @@ const HomeShiftingIslamabad = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Home Shifting Islamabad – Professional House Relocation Services
+              Home Shifting in Islamabad 2026 — The Complete Guide You Actually Need
             </h1>
             
             <img 
               src={serviceData.heroImg} 
-              alt="Family home shifting with professional movers in Islamabad" 
+              alt="professional home shifting Islamabad packers and movers truck" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />
             
@@ -247,15 +262,25 @@ const HomeShiftingIslamabad = () => {
               className="text-muted-foreground leading-relaxed space-y-4 mb-16"
             >
               <p>
-                Moving to a new home in Islamabad should feel like a fresh start — not a logistical nightmare. But the reality of home shifting in Pakistan's capital is more complex than most families anticipate. Booking the right vehicle, navigating CDA sector access rules, managing building security protocols in DHA and Bahria Town, coordinating lift bookings in high-rise apartments, and ensuring that years of household belongings arrive at the new address without a single scratch — it takes a team that knows exactly what it is doing.
+                Home shifting in Islamabad sounds simple until you are actually doing it. Whether you are moving within F-sectors, relocating from DHA to Bahria Town, shifting from Islamabad to Rawalpindi, or planning a full move abroad — the process involves careful planning, the right team, and a lot of smart decisions.
               </p>
 
               <p>
-                At <strong className="text-gold">Best International Movers & Logistics</strong>, we have been providing professional home shifting services in Islamabad for over 15 years. From compact studio apartments in G-11 to large family homes in F-7, corporate villas in E-7, and gated community houses in Bahria Town — our trained team handles every detail of your move with precision, care, and full transparency from start to finish.
+                In this 2026 complete guide, we explain what home shifting in Islamabad really involves, share the latest cost breakdown, provide a full moving checklist, and help you choose the best packers and movers in Islamabad with confidence.
               </p>
 
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>What home shifting in Islamabad really involves</li>
+                <li>Complete cost breakdown for 2026</li>
+                <li>Step-by-step moving checklist</li>
+                <li>How to choose the right packers and movers</li>
+                <li>Common mistakes that cost people money</li>
+                <li>Shifting from Islamabad to Rawalpindi tips</li>
+                <li>FAQ answered by our 15-year experts</li>
+              </ul>
+
               <p>
-                One call. One team. Complete home shifting in Islamabad — done right.
+                For professional packing, see our <Link to="/services/professional-packing" className="text-gold hover:underline">professional packing services</Link>. For trusted movers in the capital, visit our <Link to="/packers-and-movers-islamabad" className="text-gold hover:underline">packers and movers Islamabad</Link> page.
               </p>
             </motion.div>
 
@@ -406,7 +431,7 @@ const HomeShiftingIslamabad = () => {
               </div>
             </motion.div>
 
-            {/* H2: Home Shifting Charges */}
+            {/* H2: Home Shifting Cost */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -414,84 +439,223 @@ const HomeShiftingIslamabad = () => {
               className="mb-12"
             >
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Home Shifting Charges in Islamabad — Full Transparent Pricing
+                Home Shifting Cost in Islamabad 2026 — Complete Breakdown
               </h2>
               <div className="glass-card rounded-2xl p-8 border border-border">
                 <p className="text-foreground leading-relaxed mb-6">
-                  The quote you receive from us is the amount you pay — no additions at delivery, no surprise fuel surcharges, no last-minute labour fees.
+                  The number one question people ask is: how much does home shifting cost in Islamabad? The honest answer is: it depends. Here is a transparent breakdown of what to expect in 2026.
                 </p>
-                
+
+                <div className="overflow-x-auto mb-8">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="pb-3 text-gold font-semibold">Home Size</th>
+                        <th className="pb-3 text-gold font-semibold">Local Shift (within Islamabad)</th>
+                        <th className="pb-3 text-gold font-semibold">Islamabad ↔ Rawalpindi</th>
+                        <th className="pb-3 text-gold font-semibold">Islamabad → Lahore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-3 text-foreground">1 Room / Studio</td>
+                        <td className="py-3 text-gold font-bold">PKR 8,000–15,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 10,000–18,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 25,000+</td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-3 text-foreground">2 Bedroom Apartment</td>
+                        <td className="py-3 text-gold font-bold">PKR 18,000–30,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 22,000–38,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 45,000+</td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-3 text-foreground">3 Bedroom House</td>
+                        <td className="py-3 text-gold font-bold">PKR 30,000–50,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 35,000–60,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 70,000+</td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-3 text-foreground">4–5 Bedroom Villa</td>
+                        <td className="py-3 text-gold font-bold">PKR 55,000–90,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 65,000–100,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 120,000+</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 text-foreground">Full Office (small)</td>
+                        <td className="py-3 text-gold font-bold">PKR 40,000–70,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 50,000–80,000</td>
+                        <td className="py-3 text-gold font-bold">PKR 90,000+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-gold/20 backdrop-blur-sm rounded-lg p-6 border border-gold/30">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Estimated Local Home Shifting Charges in Islamabad (2025)</h3>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left">
-                        <thead>
-                          <tr className="border-b border-border">
-                            <th className="pb-3 text-gold font-semibold">Home Type</th>
-                            <th className="pb-3 text-gold font-semibold">Estimated Cost (Full Service)</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">Studio / 1-bedroom apartment</td>
-                            <td className="py-3 text-gold font-bold">Rs. 12,000 – 20,000</td>
-                          </tr>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">2-bedroom apartment</td>
-                            <td className="py-3 text-gold font-bold">Rs. 20,000 – 35,000</td>
-                          </tr>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">3-bedroom house (10 Marla)</td>
-                            <td className="py-3 text-gold font-bold">Rs. 35,000 – 55,000</td>
-                          </tr>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">4-bedroom house (1 Kanal)</td>
-                            <td className="py-3 text-gold font-bold">Rs. 55,000 – 90,000</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 text-foreground">Large villa / diplomatic residence</td>
-                            <td className="py-3 text-gold font-bold">Rs. 80,000 – 150,000+</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">What Affects Home Shifting Prices in Islamabad?</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      <li>Number of floors — above ground floor with no lift adds PKR 2,000–5,000 per floor.</li>
+                      <li>Packing service — professional packing adds PKR 3,000–15,000 depending on fragile items.</li>
+                      <li>Distance — within the same sector vs. F-6 to Bahria Town are very different.</li>
+                      <li>Time of year — Eid, summer, and year-end are peak periods.</li>
+                      <li>Heavy items — pianos, safes, imported gym equipment incur extra charges.</li>
+                      <li>Short-notice bookings — less than 48 hours typically add 15–25%.</li>
+                    </ul>
                   </div>
                   
                   <div className="bg-gold/20 backdrop-blur-sm rounded-lg p-6 border border-gold/30">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">Islamabad to Rawalpindi Shifting Estimates</h3>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left">
-                        <thead>
-                          <tr className="border-b border-border">
-                            <th className="pb-3 text-gold font-semibold">Home Type</th>
-                            <th className="pb-3 text-gold font-semibold">Estimated Cost</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">1-2 bedroom</td>
-                            <td className="py-3 text-gold font-bold">Rs. 12,000 – 25,000</td>
-                          </tr>
-                          <tr className="border-b border-border/50">
-                            <td className="py-3 text-foreground">3-bedroom house</td>
-                            <td className="py-3 text-gold font-bold">Rs. 25,000 – 45,000</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 text-foreground">Large house / full office</td>
-                            <td className="py-3 text-gold font-bold">Rs. 45,000 – 80,000</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Price Notes for 2026</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Seasonal demand influences the final cost. Summer and Eid periods are usually 10–20% more expensive because professional teams and trucks book up quickly.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Always get a written, itemised quote before confirming. Any company that refuses to give a written quote is a red flag. Hidden charges appear at the end of the move.
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="p-4 bg-gold/30 backdrop-blur-sm rounded-lg border border-gold/40">
                   <p className="text-foreground font-medium text-lg">
-                    <strong className="text-gold">Get your exact quote in 30 minutes</strong> — call or WhatsApp <strong className="text-gold">0300-9130211</strong> with your current sector, new address, home size, and preferred date.
+                    <strong className="text-gold">Pro Tip:</strong> Keep your move details ready and ask for a written quote that includes packing, labour, fuel, and insurance.
                   </p>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* H2: Home Shifting Checklist */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                Home Shifting Checklist — 4 Weeks Before Your Move
+              </h2>
+              <div className="glass-card rounded-2xl p-8 border border-border">
+                <p className="text-foreground leading-relaxed mb-6">
+                  The biggest mistake people make is starting too late. Here is the week-by-week checklist that our professional moving coordinators use for home shifting in Islamabad.
+                </p>
+                <div className="grid gap-6">
+                  <div className="bg-navy-light/30 rounded-xl p-6 border border-navy-light">
+                    <h3 className="text-xl font-semibold text-foreground mb-4">4 Weeks Before — Planning Phase</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      <li>Decide your exact moving date — avoid Eid week, Ramadan, and monsoon season if possible.</li>
+                      <li>Book your packers and movers — good teams get booked 2–3 weeks in advance.</li>
+                      <li>Start decluttering — sell, donate, or dispose of what you do not need.</li>
+                      <li>Measure your new home's doors and rooms — ensure large furniture fits.</li>
+                      <li>Notify your landlord and prepare your security deposit paperwork.</li>
+                      <li>Collect boxes and packing supplies if you plan to pack some items yourself.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-navy-light/30 rounded-xl p-6 border border-navy-light">
+                    <h3 className="text-xl font-semibold text-foreground mb-4">2 Weeks Before — Preparation Phase</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      <li>Confirm the moving company booking with a written agreement.</li>
+                      <li>Pack non-essential items first: books, décor, seasonal clothes, extra kitchenware.</li>
+                      <li>Label every box with room name, brief contents, and FRAGILE if needed.</li>
+                      <li>Take photos of your current home for security deposit disputes.</li>
+                      <li>Notify utility companies like <a href="https://www.iesco.com.pk/" target="_blank" rel="noreferrer" className="text-gold hover:underline">IESCO</a> and update your address with <a href="https://www.nadra.gov.pk/" target="_blank" rel="noreferrer" className="text-gold hover:underline">NADRA</a>.</li>
+                      <li>Update your bank accounts, vehicle registration, school records, and internet provider details.</li>
+                      <li>Arrange babysitting or pet care for moving day.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-navy-light/30 rounded-xl p-6 border border-navy-light">
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Moving Week — Execution Phase</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      <li>Confirm the team arrival time — usually 8–9 AM for morning shifts.</li>
+                      <li>Pack a first-night bag with essentials before boxes are loaded.</li>
+                      <li>Charge all power banks and keep chargers accessible.</li>
+                      <li>Defrost the refrigerator 24 hours before moving day.</li>
+                      <li>Drain the washing machine completely.</li>
+                      <li>Dismantle beds, wardrobes, and large furniture the evening before if possible.</li>
+                      <li>Keep important documents with you personally.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-navy-light/30 rounded-xl p-6 border border-navy-light">
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Moving Day — The Day Itself</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      <li>Be present during loading — do not leave the team unsupervised.</li>
+                      <li>Cross-check your inventory list as items are loaded.</li>
+                      <li>Do a final walkthrough of the old home: check every room, closet, and bathroom.</li>
+                      <li>Photograph any existing damage at the new property before unloading.</li>
+                      <li>Direct movers room by room — tell them exactly where each piece goes.</li>
+                      <li>Inspect every item after unloading and note any damage immediately.</li>
+                      <li>Pay only after the job is fully complete and you are satisfied.</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="text-foreground mt-6 font-semibold">
+                  Pro Tip: Keep a small cash amount ready on moving day for tips, tea, or any unexpected small expense. Movers appreciate it and it keeps the team motivated.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* H2: Choosing Packers and Movers */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                How to Choose Packers and Movers in Islamabad — 7 Things to Check
+              </h2>
+              <div className="glass-card rounded-2xl p-8 border border-border">
+                <div className="space-y-6 text-muted-foreground">
+                  <p>
+                    Islamabad has dozens of moving companies advertising online, but not all of them are reliable. Here is exactly how to tell the professional ones from the bad ones.
+                  </p>
+                  <ol className="list-decimal list-inside space-y-4">
+                    <li>
+                      <strong>They give a written quote.</strong> Any legitimate home shifting company in Islamabad will visit your home or do a video survey and provide an itemised quote. If the quote is only verbal, that is a red flag.
+                    </li>
+                    <li>
+                      <strong>They have verifiable reviews.</strong> Check Google Maps reviews, not only website testimonials. Look for recent feedback from the last 6 months.
+                    </li>
+                    <li>
+                      <strong>Their team is trained, not random labour.</strong> Professional movers know packing techniques, furniture dismantling, and safe handling. Ask if their crew is permanent staff or contracted.
+                    </li>
+                    <li>
+                      <strong>They use quality packing materials.</strong> Bubble wrap, stretch film, moving blankets, and corner protectors are the marks of a professional operation.
+                    </li>
+                    <li>
+                      <strong>They have insurance coverage.</strong> Accidents happen, and your mover should be able to confirm transit insurance in writing.
+                    </li>
+                    <li>
+                      <strong>They have a physical office.</strong> A verifiable address and phone number are accountability signals. WhatsApp-only operations with no address are risky.
+                    </li>
+                    <li>
+                      <strong>They have clear payment terms.</strong> Avoid companies demanding full payment upfront. Standard practice is 30–50% advance and the remainder on successful delivery.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* H2: Islamabad to Rawalpindi Tips */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                Home Shifting from Islamabad to Rawalpindi — Special Tips
+              </h2>
+              <div className="glass-card rounded-2xl p-8 border border-border">
+                <ul className="list-disc list-inside space-y-4 text-muted-foreground">
+                  <li>Many Rawalpindi areas like Saddar, Raja Bazaar, and old city markets have narrow streets, so smaller vehicles may be needed.</li>
+                  <li>Bahria Town Rawalpindi entry gates require vehicle registration and prior coordination with security.</li>
+                  <li>DHA Rawalpindi Phase 1–5 also requires advance gate passes for moving trucks.</li>
+                  <li>Early morning moves (before 8 AM) avoid peak traffic on GT Road and Murree Road corridors.</li>
+                  <li>The Airport Road and Chakala interchange can cause 45–90 minute delays during rush hours.</li>
+                  <li>If moving to an upper floor in Rawalpindi with no lift, inform the company in advance for manpower planning.</li>
+                </ul>
+                <p className="text-foreground mt-6">
+                  Best International Movers & Logistics serves all areas of both cities — including Bahria Town, DHA, Satellite Town, Gulraiz Housing, Askari, and all F, G, I, and H sectors in Islamabad.
+                </p>
               </div>
             </motion.div>
 
@@ -683,6 +847,23 @@ const HomeShiftingIslamabad = () => {
                   WhatsApp Us Now
                 </a>
               </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12 bg-navy-light/20 rounded-2xl p-8 border border-border"
+            >
+              <h2 className="text-3xl font-display font-bold text-foreground mb-4">
+                About the Author
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Best International Movers & Logistics has been Islamabad's trusted home shifting partner for over 15 years, serving 5,000+ families across Islamabad, Rawalpindi, Lahore, and Peshawar.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Our team combines local city knowledge, export-quality packing, transparent pricing, and transit insurance to make home shifting in Islamabad safe, predictable, and stress-free.
+              </p>
             </motion.div>
 
             {/* Related Services */}

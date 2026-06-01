@@ -106,7 +106,7 @@ export default function FaqHubPakistan() {
             {faqClusters.map((cluster, idx) => (
               <motion.section key={cluster.heading} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.08 }}>
                 <h2 className="text-2xl font-display font-bold mb-5">{cluster.heading}</h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible defaultValue="" className="space-y-3">
                   {cluster.faqs.map((f, i) => (
                     <AccordionItem key={f.q} value={`${cluster.heading}-${i}`} className="glass-card rounded-xl px-6 border border-border hover:border-gold/30 transition-colors">
                       <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-gold py-5 [&[data-state=open]]:text-gold">

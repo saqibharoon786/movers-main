@@ -146,12 +146,12 @@ const TopShippingCompaniesInPakistan = () => {
   return (
     <SeoLandingPageLayout
       visualSkin="default"
-      title="Top Shipping Companies in Pakistan – 2025 Complete Guide"
-      description="Discover the top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions. Call 0300-9130211"
+      title="Top Shipping Companies in Pakistan – 2026 Complete Guide"
+      description="Compare Pakistan's top shipping companies in 2026 for air freight, sea freight & cargo. Serving Islamabad, Rawalpindi & Karachi. Get free quotes today!"
       keywords="top shipping companies in pakistan, best shipping companies pakistan, freight companies pakistan, logistics companies pakistan, international shipping pakistan, cargo companies pakistan"
       urlPath="/top-shipping-companies-in-pakistan"
-      h1="Top Shipping Companies in Pakistan – 2025 Complete Guide"
-      heroSubtext="Discover the top shipping companies in Pakistan for air freight, sea freight & cargo services. Compare providers & find reliable logistics solutions. Call 0300-9130211"
+      h1="Top Shipping Companies in Pakistan – 2026 Complete Guide"
+      heroSubtext="Compare Pakistan's top shipping companies in 2026 for air freight, sea freight & cargo. Serving Islamabad, Rawalpindi & Karachi. Get free quotes today!"
       breadcrumbItems={[{ label: "Services", to: "/services" }, { label: "Top Shipping Companies Pakistan" }]}
       heroImageUrl="/images/container.jpg"
       heroImageAlt="Top shipping companies in Pakistan for international cargo and logistics services"
