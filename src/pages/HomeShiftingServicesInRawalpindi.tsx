@@ -252,7 +252,7 @@ const HomeShiftingServicesInRawalpindi = () => {
 
         <section>
           <h2 className="text-2xl md:text-3xl font-display font-bold text-center text-stone-50 mb-8">FAQ</h2>
-          <Accordion type="single" collapsible className="w-full space-y-2">
+          <Accordion type="single" collapsible defaultValue="" className="w-full space-y-2">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`hsr-${i}`} className="border border-stone-700 rounded-lg px-4 bg-[#1c1612]">
                 <AccordionTrigger className="text-left text-stone-100 hover:no-underline">{f.q}</AccordionTrigger>

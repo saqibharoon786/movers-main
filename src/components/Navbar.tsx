@@ -31,6 +31,7 @@ const locations = [
 
 const localLandingPages = [
   { label: "Packers & Movers Islamabad", to: "/packers-and-movers-islamabad" },
+  { label: "Storage Units Islamabad", to: "/storage-units-islamabad" },
   { label: "Packers Movers Lahore", to: "/packers-and-movers-lahore" },
   { label: "Packers Movers Rawalpindi", to: "/packers-and-movers-in-rawalpindi" },
   { label: "Home Shifting Islamabad", to: "/home-shifting-islamabad" },

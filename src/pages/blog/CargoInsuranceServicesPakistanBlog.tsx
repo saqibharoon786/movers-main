@@ -491,7 +491,7 @@ const CargoInsuranceServicesPakistanBlog = () => {
                 </div>
 
                 <div className="glass-card rounded-xl p-6 border border-border">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Typical premium ranges in Pakistan (2025):</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Typical premium ranges in Pakistan (2026):</h3>
                   <ul className="space-y-2">
                     <li><strong className="text-gold">All-Risk sea freight (household goods):</strong> 0.3% – 0.8% of cargo value</li>
                     <li><strong className="text-gold">All-Risk air freight:</strong> 0.2% – 0.5% of cargo value</li>

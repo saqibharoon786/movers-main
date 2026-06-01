@@ -20,6 +20,17 @@ import {
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
   {
+    slug: "home-shifting-islamabad",
+    img: "/blog/packers-movers-islamabad-truck.jpg",
+    title: "Home Shifting in Islamabad 2026 — Complete Guide | Best International Movers",
+    date: "Jun 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt: "Planning home shifting in Islamabad? Read our 2026 complete guide covering costs, tips, best packers and movers, checklists, and how to shift safely. Call 0300-9130211.",
+    content: "Complete home shifting guide for Islamabad in 2026.",
+  },
+  {
     slug: MOVING_CHECKLIST_PAKISTAN_SLUG,
     img: MOVING_CHECKLIST_PAKISTAN_IMAGE,
     title: "The Complete Moving Checklist for Pakistan — International Relocation Guide 2026",

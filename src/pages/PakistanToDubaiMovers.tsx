@@ -323,7 +323,7 @@ const PakistanToDubaiMovers = () => {
           <h2 className="text-2xl md:text-4xl font-display font-bold text-center mb-10">
             Frequently Asked Questions — Pakistan to Dubai Move
           </h2>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible defaultValue="" className="w-full">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger className="text-left text-foreground">{f.q}</AccordionTrigger>
