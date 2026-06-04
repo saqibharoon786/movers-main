@@ -116,7 +116,7 @@ export default function PackersMoversRawalpindiGuideBlog() {
         planning, and what questions to ask before you book. Whether you are shifting a one-bedroom apartment or a full
         corporate office, reading this before you make a single call will save you time, money, and stress. For
         hands-on service in your neighbourhood, see our dedicated{" "}
-        <Link to="/packers-and-movers-in-rawalpindi" className="text-gold hover:underline font-semibold">
+        <Link to="/packers-and-movers-rawalpindi/" className="text-gold hover:underline font-semibold">
           packers and movers in Rawalpindi
         </Link>{" "}
         service page.

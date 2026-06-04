@@ -230,7 +230,7 @@ const HomeShiftingServicesInRawalpindi = () => {
           <p className="text-sm text-stone-400 mb-5">Explore related services and reach our team.</p>
           <ul className="space-y-3 text-stone-200">
             <li>
-              <Link to="/packers-and-movers-in-rawalpindi" className="text-amber-400 hover:text-amber-300 underline-offset-2 hover:underline font-medium">
+              <Link to="/packers-and-movers-rawalpindi/" className="text-amber-400 hover:text-amber-300 underline-offset-2 hover:underline font-medium">
                 Packers and Movers Rawalpindi
               </Link>
               <span className="text-stone-500 text-sm"> — home &amp; office moves with packing crews.</span>

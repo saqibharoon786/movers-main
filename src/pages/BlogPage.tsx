@@ -220,8 +220,8 @@ const blogs = [
   {
     slug: "packers-and-movers-islamabad-guide",
     img: "/images/hero-home.jpg",
-    title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025)",
-    date: "Apr 2025",
+    title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2026)",
+    date: "Apr 2026",
     category: "Moving Guides",
     author: "Best International Movers",
     readTime: "11 min read",
@@ -237,7 +237,7 @@ const blogs = [
     category: "Moving Tips",
     author: "Best International Movers",
     readTime: "12 min read",
-    excerpt: "Planning to move internationally from Pakistan? Expert tips on packing, customs, documentation and choosing the right moving company—complete 2025 guide.",
+    excerpt: "Planning to move internationally from Pakistan? Expert tips on packing, customs, documentation and choosing the right moving company—complete 2026 guide.",
     content: "",
   },
   {

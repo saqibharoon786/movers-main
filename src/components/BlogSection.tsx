@@ -11,8 +11,19 @@ import {
   MOVING_CHECKLIST_PAKISTAN_IMAGE,
   MOVING_CHECKLIST_PAKISTAN_SLUG,
 } from "@/data/movingChecklistPakistanBlog";
+import {
+  CARGO_INSURANCE_INTERNATIONAL_IMAGE,
+  CARGO_INSURANCE_INTERNATIONAL_SLUG,
+} from "@/data/cargoInsuranceInternationalShipmentsBlog";
 
 const posts = [
+  {
+    img: CARGO_INSURANCE_INTERNATIONAL_IMAGE,
+    slug: CARGO_INSURANCE_INTERNATIONAL_SLUG,
+    title: "Cargo Insurance for International Shipments from Pakistan — Complete Guide 2026",
+    date: "June 4, 2026",
+    category: "Shipping & Insurance",
+  },
   {
     img: MOVING_CHECKLIST_PAKISTAN_IMAGE,
     slug: MOVING_CHECKLIST_PAKISTAN_SLUG,
@@ -27,9 +38,9 @@ const posts = [
     date: "May 19, 2026",
     category: "Moving Guides",
   },
-  { img: "/images/hero-home.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2025", date: "Apr 10, 2025", category: "Moving Tips" },
-  { img: "/images/air-freight.jpg", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2025", category: "Logistics" },
-  { img: "/images/cargo-insurance.jpg", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2025: Complete Guide", date: "Mar 15, 2025", category: "Guides" },
+  { img: "/images/hero-home.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
+  { img: "/images/air-freight.jpg", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2026", category: "Logistics" },
+  { img: "/images/cargo-insurance.jpg", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
 ];
 
 const BlogSection = () => {

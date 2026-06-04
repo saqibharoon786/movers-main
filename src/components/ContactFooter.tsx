@@ -28,7 +28,7 @@ const ContactFooter = () => {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} className="lg:col-span-2 space-y-6">
               {[
-                { icon: MapPin, title: "Our Offices", text: "Rawalpindi | Islamabad | Lahore | Peshawar" },
+                { icon: MapPin, title: "Our Offices", text: "Rawalpindi | Islamabad | Lahore | Karachi | Peshawar" },
                 { icon: Phone, title: "Call / WhatsApp", text: "0300-9130211" },
                 {
                   icon: Mail,
@@ -66,7 +66,7 @@ const ContactFooter = () => {
                   <span className="font-display font-semibold text-xs text-gold tracking-[0.2em] uppercase mt-1">Movers & Logistics</span>
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">Premium international moving and logistics services from Pakistan. Serving Rawalpindi, Islamabad, Lahore & Peshawar.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Premium international moving and logistics services from Pakistan. Serving Rawalpindi, Islamabad, Lahore, Karachi &amp; Peshawar.</p>
             </div>
             <div>
               <h4 className="font-display font-semibold text-foreground mb-4">Services</h4>
@@ -169,6 +169,7 @@ const ContactFooter = () => {
                 <li className="flex items-center gap-1"><MapPin size={12} className="text-gold" /> Rawalpindi</li>
                 <li className="flex items-center gap-1"><MapPin size={12} className="text-gold" /> Islamabad</li>
                 <li className="flex items-center gap-1"><MapPin size={12} className="text-gold" /> Lahore</li>
+                <li className="flex items-center gap-1"><MapPin size={12} className="text-gold" /> Karachi</li>
                 <li className="flex items-center gap-1"><MapPin size={12} className="text-gold" /> Peshawar</li>
               </ul>
               <h4 className="font-display font-semibold text-foreground mb-3">Follow Us</h4>
@@ -182,7 +183,7 @@ const ContactFooter = () => {
             </div>
           </div>
           <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">Â© 2025 Best International Movers & Logistics. All rights reserved.</p>
+            <p className="text-muted-foreground text-sm">© 2026 Best International Movers &amp; Logistics. All rights reserved.</p>
             <div className="flex gap-6 text-muted-foreground text-sm">
               <Link to="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
               <Link to="/terms-of-service" className="hover:text-gold transition-colors">Terms of Service</Link>

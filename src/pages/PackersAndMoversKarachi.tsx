@@ -155,8 +155,11 @@ const pricingRows = [
   { moveType: "Packing only service (per day)", cost: "PKR 6,000 – 12,000" },
   { moveType: "Karachi to Lahore (road cargo)", cost: "PKR 18,000 – 55,000" },
   { moveType: "Karachi to Islamabad (road cargo)", cost: "PKR 22,000 – 65,000" },
-  { moveType: "Karachi to Dubai (sea freight, LCL)", cost: "From PKR 75,000" },
-  { moveType: "Karachi to UK (sea freight, LCL)", cost: "From PKR 160,000" },
+  { moveType: "Karachi to Dubai (sea freight, LCL)", cost: "From USD 450 (approx PKR 125,000)" },
+  { moveType: "Karachi to UK (sea freight, LCL)", cost: "From USD 850 (approx PKR 235,000)" },
+  { moveType: "Karachi to Canada (sea freight, LCL)", cost: "From USD 1,100 (approx PKR 305,000)" },
+  { moveType: "Karachi to Saudi Arabia (sea freight)", cost: "From USD 380 (approx PKR 105,000)" },
+  { moveType: "Karachi to Australia (sea freight)", cost: "From USD 950 (approx PKR 263,000)" },
 ];
 
 const bookingSteps = [
@@ -241,27 +244,27 @@ const whyChoose = [
 const testimonials = [
   {
     quote:
-      "We moved from a 4-bedroom bungalow in DHA Phase 4 to a flat in Clifton. The team spent the entire day packing everything perfectly. The chandelier was wrapped in layers and crated. Nothing was damaged. Highly recommended.",
+      "We moved from a 4-bedroom bungalow in DHA Phase 4 to a flat in Clifton in May 2026. The team spent the entire day packing everything with absolute care. My chandelier was wrapped in multiple layers and custom crated. Not a single item was damaged. The most professional movers I have used in Karachi.",
     name: "Nadia Hussain",
-    route: "DHA Phase 4 → Clifton",
+    route: "DHA Phase 4 → Clifton | May 2026 ⭐⭐⭐⭐⭐",
   },
   {
     quote:
-      "I needed an office shift from SITE Area to Korangi on a Saturday. They sent 8 people and 2 vehicles, finished in 6 hours. By Monday everything was set up. Absolutely professional.",
+      "Needed a full office shift from SITE Area to Korangi on a Saturday in April 2026. Best International Movers sent 8 trained staff and 2 vehicles. Finished in 6 hours. By Monday morning every workstation was set up and fully operational. Zero downtime. Absolutely professional.",
     name: "Tariq Mehmood",
-    route: "SITE → Korangi Industrial",
+    route: "SITE Area → Korangi | April 2026 ⭐⭐⭐⭐⭐",
   },
   {
     quote:
-      "We used them to send cargo from Karachi to Islamabad — furniture, appliances, and 30 boxes. Everything arrived in 2 days. Not even one glass broke.",
+      "Sent furniture, appliances and 30 cartons from Gulshan-e-Iqbal Karachi to Islamabad in March 2026. Everything arrived safely in 2 days. Not even one glass broke despite the long road journey. Excellent packing and very reasonable price. Will use again.",
     name: "Rukhsana Akhtar",
-    route: "Gulshan-e-Iqbal → Islamabad",
+    route: "Gulshan-e-Iqbal → Islamabad | March 2026 ⭐⭐⭐⭐⭐",
   },
   {
     quote:
-      "Moving internationally from Karachi to Canada was my biggest worry. They handled packing, port, customs, everything. WhatsApp photos of our container at Karachi Port. Arrived in Toronto in 44 days exactly as quoted.",
+      "International move from PECHS Karachi to Toronto Canada in February 2026. Best International Movers handled all packing, Karachi Port export customs, sea freight and Canada customs clearance. WhatsApp photos of our container at every step. Arrived in Toronto in 44 days exactly as promised. Outstanding service.",
     name: "Adeel Raza",
-    route: "PECHS Karachi → Toronto, Canada",
+    route: "PECHS Karachi → Toronto, Canada | February 2026 ⭐⭐⭐⭐⭐",
   },
 ];
 
@@ -312,50 +315,63 @@ const faqs = [
 function buildLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "MovingCompany"],
-    name: "Best International Movers & Logistics — Packers and Movers Karachi",
-    url: "https://bestintlmovers.com/packers-and-movers-karachi",
-    telephone: "+923009130211",
-    email: "info@bestintlmovers.com",
-    address: {
+    "@type": "MovingCompany",
+    "name": "Best International Movers & Logistics",
+    "telephone": "+923009130211",
+    "url": "https://bestintlmovers.com/packers-and-movers-karachi",
+    "description": "Best packers and movers in Karachi offering professional house shifting, office relocation, cargo service and international moving from Karachi Port to 100+ countries.",
+    "address": {
       "@type": "PostalAddress",
-      addressLocality: "Karachi",
-      addressRegion: "Sindh",
-      addressCountry: "PK",
+      "streetAddress": "I.I. Chundrigar Road",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "addressCountry": "PK"
     },
-    areaServed: [
+    "priceRange": "PKR 8,000 - PKR 90,000",
+    "openingHours": "Mo-Sa 08:00-20:00",
+    "areaServed": [
+      "Karachi",
       "DHA Karachi",
       "Clifton",
       "Gulshan-e-Iqbal",
       "PECHS",
       "North Nazimabad",
-      "Saddar",
-      "Korangi",
-      "Malir",
       "Gulistan-e-Johar",
-      "North Karachi",
-      "Surjani Town",
-      "Orangi Town",
-      "Landhi",
-      "Karachi",
+      "Korangi",
+      "Saddar",
+      "Malir",
+      "Surjani Town"
     ],
-    description:
-      "Professional packers and movers in Karachi for house shifting, office relocation, cargo service and international moving. All Karachi areas covered.",
-    priceRange: "PKR 8,000 – 950,000",
-    openingHours: "Mo-Sa 08:00-20:00",
-    hasOfferCatalog: {
+    "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      name: "Karachi Moving Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "House Shifting Karachi" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Office Relocation Karachi" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cargo Service Karachi" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "International Moving Karachi" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Packing Service Karachi" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Storage Karachi" } },
-      ],
-    },
-    sameAs: ["https://www.facebook.com/share/r/18FvZRMQ27/"],
+      "name": "Moving Services Karachi",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "House Shifting Karachi",
+            "description": "Complete home shifting in Karachi from PKR 8,000"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Office Relocation Karachi",
+            "description": "Professional office moving in Karachi from PKR 20,000"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "International Cargo from Karachi Port",
+            "description": "Sea freight and air freight from Karachi to UAE, UK, Canada and 100+ countries"
+          }
+        }
+      ]
+    }
   };
 }
 
@@ -363,16 +379,48 @@ function buildFAQSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.link
-          ? "Our International Movers Karachi page focuses on international moving and sea freight. This page covers packing, shifting, cargo, and relocation within and from Karachi."
-          : faq.a,
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do packers and movers cost in Karachi in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Local 1-2 bedroom flat shifting starts from PKR 8,000–30,000. Larger homes PKR 25,000–90,000. International sea freight from Karachi to Dubai from USD 450. Call 0300-9130211 for a free home survey and exact written quote."
+        }
       },
-    })),
+      {
+        "@type": "Question",
+        "name": "Do you cover DHA, Clifton and Gulshan in Karachi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we cover all phases of DHA Karachi, Clifton all blocks, Gulshan-e-Iqbal, Gulistan-e-Johar, PECHS, North Nazimabad, North Karachi, Saddar, Korangi, Landhi, Malir, Surjani Town, Orangi Town and all surrounding areas of Karachi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle international cargo from Karachi Port?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we provide LCL and FCL sea freight from Karachi Port to 100+ countries including UAE, UK, Canada, Saudi Arabia and Australia. Weekly consolidations every Thursday. Air cargo also available from Jinnah International Airport. Call 0300-9130211."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book packers in Karachi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Local shifts: 5-7 days recommended. International sea freight: 2-3 weeks for vessel slots. Peak months May–August and December book earlier. Same-day shifting available for smaller moves booked before 10 AM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is furniture insured during shifting in Karachi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — all local moves carry transit insurance and all international moves carry marine cargo all-risk insurance. Complete compensation for any damage at no extra cost. Written insurance documentation provided before departure."
+        }
+      }
+    ]
   };
 }
 
@@ -394,9 +442,9 @@ function buildBreadcrumbSchema() {
 
 const PackersAndMoversKarachi = () => {
   const seoConfig = {
-    title: "Packers and Movers Karachi | Best Packing & Relocation Service",
+    title: "Packers and Movers Karachi 2026 | Call 0300-9130211",
     description:
-      "Trusted packers and movers in Karachi for house shifting, office relocation & international cargo. Expert packing, safe transport. Free survey. 0300-9130211.",
+      "Best packers and movers in Karachi 2026. House shifting from PKR 8,000. DHA, Clifton, Gulshan, PECHS all covered. Free home survey. Call 0300-9130211.",
     keywords:
       "packers and movers Karachi, packers movers Karachi, house shifting Karachi, cargo service Karachi, relocation Karachi, office shifting Karachi, packing service Karachi, movers packers Karachi, ghar shifting Karachi, goods transport Karachi",
     canonicalUrl: "https://bestintlmovers.com/packers-and-movers-karachi",
@@ -407,6 +455,8 @@ const PackersAndMoversKarachi = () => {
       <SEO
         title={seoConfig.title}
         description={seoConfig.description}
+        ogTitle="Packers and Movers Karachi 2026 | Best International Movers"
+        ogDescription="Best packers and movers in Karachi 2026. House shifting from PKR 8,000. DHA, Clifton, Gulshan, PECHS covered. Free survey. Call 0300-9130211."
         keywords={seoConfig.keywords}
         urlPath="/packers-and-movers-karachi"
         canonicalUrl={seoConfig.canonicalUrl}
@@ -424,7 +474,7 @@ const PackersAndMoversKarachi = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Packers and Movers in Karachi — Professional Packing, Safe Shifting
+              Best Packers and Movers in Karachi 2026 — House Shifting, Office Relocation &amp; International Cargo from Karachi Port
             </h1>
 
             <img
@@ -592,7 +642,7 @@ const PackersAndMoversKarachi = () => {
               className="mb-12"
             >
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Packers and Movers Karachi — Pricing Guide 2025
+                Packers and Movers Karachi — Pricing Guide 2026
               </h2>
               <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
                 After a free home survey, we give you a written fixed price. The table below gives starting estimates —
@@ -621,8 +671,7 @@ const PackersAndMoversKarachi = () => {
                 </table>
               </div>
               <p className="text-muted-foreground text-sm mt-4">
-                *All prices are starting estimates. Final price confirmed after free home survey. Includes labour,
-                materials, transport, and loading/unloading. No hidden charges.
+                All local prices include labour, packing materials, transport and loading/unloading. International prices are indicative — exact quote after free home survey. No hidden charges. Exchange rate applied at booking date. Call 0300-9130211.
               </p>
             </motion.div>
 

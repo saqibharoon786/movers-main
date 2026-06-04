@@ -181,7 +181,7 @@ export default function PackersMoversIslamabadCompleteGuideBlog() {
       </p>
       <p className="not-prose rounded-lg border border-gold/30 bg-gold/5 p-4 text-sm">
         🔗 Also moving within the twin cities? Our dedicated{" "}
-        <Link to="/packers-and-movers-in-rawalpindi" className="text-gold hover:underline font-semibold">
+        <Link to="/packers-and-movers-rawalpindi/" className="text-gold hover:underline font-semibold">
           packers and movers in Rawalpindi
         </Link>{" "}
         page covers Bahria Town gate rules, DHA access, and Rawalpindi-specific pricing in detail.

@@ -7,6 +7,7 @@ const services = [
   { icon: Car, label: "Pet Relocation Services", slug: "pet-relocation-services" },
   { icon: FileCheck, label: "Cargo Insurance Services", slug: "cargo-insurance-services" },
   { icon: Ship, label: "International Freight Forwarding", slug: "freight-forwarding-services" },
+  { icon: Ship, label: "Cargo Service Karachi", href: "/cargo-service-karachi" },
   { icon: Truck, label: "Door-to-Door Cargo Services (China to Pakistan)", slug: "china-to-pakistan-cargo-services" },
   { icon: MapPin, label: "Nationwide Distribution Services", slug: "nationwide-distribution-services" },
   { icon: Package, label: "Packing Materials Supply", slug: "packing-materials-services" },
@@ -33,7 +34,7 @@ const localLandingPages = [
   { label: "Packers & Movers Islamabad", to: "/packers-and-movers-islamabad" },
   { label: "Storage Units Islamabad", to: "/storage-units-islamabad" },
   { label: "Packers Movers Lahore", to: "/packers-and-movers-lahore" },
-  { label: "Packers Movers Rawalpindi", to: "/packers-and-movers-in-rawalpindi" },
+  { label: "Packers Movers Rawalpindi", to: "/packers-and-movers-rawalpindi/" },
   { label: "Home Shifting Islamabad", to: "/home-shifting-islamabad" },
   { label: "Home Shifting Rawalpindi", to: "/home-shifting-rawalpindi" },
   { label: "Movers Lahore", to: "/movers-lahore" },
@@ -202,8 +203,8 @@ const Navbar = () => {
                       >
                         {services.map((s) => (
                           <Link
-                            key={s.slug}
-                            to={`/services/${s.slug}`}
+                            key={s.label}
+                            to={s.href || `/services/${s.slug}`}
                             onClick={() => setOpen(false)}
                             className="flex items-center gap-2 py-2 text-muted-foreground hover:text-gold text-sm"
                           >
@@ -370,8 +371,8 @@ const Navbar = () => {
                             <div className="space-y-2">
                               {services.map((s) => (
                                 <Link
-                                  key={s.slug}
-                                  to={`/services/${s.slug}`}
+                                  key={s.label}
+                                  to={s.href || `/services/${s.slug}`}
                                   className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gold/10 transition-colors group/item"
                                 >
                                   <s.icon size={18} className="text-gold shrink-0" />
