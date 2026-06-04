@@ -343,7 +343,7 @@ export default function BestPackersMoversIslamabad2026Blog() {
       />
       <p>
         We also serve Rawalpindi in full coordination. For Rawalpindi moves, visit our{" "}
-        <Link to="/packers-and-movers-in-rawalpindi" className="text-gold hover:underline font-semibold">
+        <Link to="/packers-and-movers-rawalpindi/" className="text-gold hover:underline font-semibold">
           packers and movers in Rawalpindi
         </Link>{" "}
         page. Same-day service between Islamabad and Rawalpindi is available seven days a week.

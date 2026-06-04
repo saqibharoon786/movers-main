@@ -35,6 +35,8 @@ type Props = {
   /** Optional override for social images (defaults to heroImageUrl) */
   ogImage?: string;
   ogImageAlt?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   /** Service, LocalBusiness, Article, or array; FAQPage added automatically when faqs set */
   schema?: Record<string, unknown> | Record<string, unknown>[];
   /** Optional full-width strip above article prose (e.g. city-specific stats/cards) */
@@ -58,6 +60,8 @@ const SeoLandingPageLayout = ({
   heroImageAlt,
   ogImage,
   ogImageAlt,
+  ogTitle,
+  ogDescription,
   schema,
   topDecor,
   children,
@@ -145,6 +149,8 @@ const SeoLandingPageLayout = ({
         urlPath={path}
         canonicalUrl={canonicalUrl}
         schema={combinedSchema}
+        ogTitle={ogTitle}
+        ogDescription={ogDescription}
       />
       <Navbar />
       <section className={heroSectionClass}>

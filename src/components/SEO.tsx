@@ -21,9 +21,11 @@ interface SEOProps {
   /** Absolute canonical URL override (use when server forces trailing-slash redirects on specific routes). */
   canonicalUrl?: string;
   noindex?: boolean;
+  ogTitle?: string;
+  ogDescription?: string;
 }
 
-export default function SEO({ title, description, schema, keywords, urlPath, canonicalUrl, noindex }: SEOProps) {
+export default function SEO({ title, description, schema, keywords, urlPath, canonicalUrl, noindex, ogTitle, ogDescription }: SEOProps) {
   const location = useLocation();
   const resolvedPath = useResolvedPath(".");
 
@@ -90,8 +92,8 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
         property="og:url"
         content={finalCanonicalUrl ?? head.fullUrl ?? toCanonicalUrl(effectivePath) ?? "https://bestintlmovers.com/"}
       />
-      <meta property="og:title" content={head.seoTitle} />
-      <meta property="og:description" content={head.seoDescription} />
+      <meta property="og:title" content={ogTitle ?? head.seoTitle} />
+      <meta property="og:description" content={ogDescription ?? head.seoDescription} />
       <meta property="og:image" content={head.selectedOgImage} />
       {head.ogImageAlt ? <meta property="og:image:alt" content={head.ogImageAlt} /> : null}
       <meta property="og:image:width" content="1200" />
@@ -99,8 +101,8 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
       <meta property="og:site_name" content="Best International Movers & Logistics" />
       <meta property="og:locale" content="en_PK" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={head.seoTitle} />
-      <meta name="twitter:description" content={head.seoDescription} />
+      <meta name="twitter:title" content={ogTitle ?? head.seoTitle} />
+      <meta name="twitter:description" content={ogDescription ?? head.seoDescription} />
       <meta name="twitter:image" content={head.twitterImage} />
     </Helmet>
   );

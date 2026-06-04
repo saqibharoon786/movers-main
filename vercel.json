@@ -8,6 +8,16 @@
       "permanent": true
     },
     {
+      "source": "/packers-and-movers-in-rawalpindi",
+      "destination": "/packers-and-movers-rawalpindi/",
+      "permanent": true
+    },
+    {
+      "source": "/packers-and-movers-in-rawalpindi/",
+      "destination": "/packers-and-movers-rawalpindi/",
+      "permanent": true
+    },
+    {
       "source": "/international-movers-islamabad",
       "destination": "/international-movers-from-islamabad/",
       "permanent": true

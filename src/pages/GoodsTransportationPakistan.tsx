@@ -259,7 +259,7 @@ const GoodsTransportationPakistan = () => {
                   home shifting services
                 </Link>
                 {" "}and{" "}
-                <Link to="/packers-and-movers-in-rawalpindi" className="text-gold hover:underline">
+                <Link to="/packers-and-movers-rawalpindi/" className="text-gold hover:underline">
                   packers and movers in Rawalpindi
                 </Link>
                 {" "}we provide comprehensive solutions for all your transportation needs.
@@ -625,7 +625,7 @@ const GoodsTransportationPakistan = () => {
                     </div>
                   </Link>
                   
-                  <Link to="/packers-and-movers-in-rawalpindi" className="group">
+                  <Link to="/packers-and-movers-rawalpindi/" className="group">
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
                       <div className="flex items-center mb-2">
                         <Package className="text-gold mr-2" size={20} />

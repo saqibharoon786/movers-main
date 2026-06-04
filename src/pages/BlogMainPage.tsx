@@ -16,9 +16,25 @@ import {
   MOVING_CHECKLIST_PAKISTAN_IMAGE,
   MOVING_CHECKLIST_PAKISTAN_SLUG,
 } from "@/data/movingChecklistPakistanBlog";
+import {
+  CARGO_INSURANCE_INTERNATIONAL_SLUG,
+  CARGO_INSURANCE_INTERNATIONAL_IMAGE,
+  CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD,
+} from "@/data/cargoInsuranceInternationalShipmentsBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: CARGO_INSURANCE_INTERNATIONAL_SLUG,
+    img: CARGO_INSURANCE_INTERNATIONAL_IMAGE,
+    title: "Cargo Insurance for International Shipments from Pakistan — Complete Guide 2026",
+    date: "Jun 4, 2026",
+    category: "Insurance & Protection",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt: "Complete guide to cargo insurance for international shipments from Pakistan. Learn what's covered, costs, coverage levels, claims process and why it's essential for your move.",
+    content: "Complete guide to cargo insurance for international shipments from Pakistan.",
+  },
   {
     slug: "home-shifting-islamabad",
     img: "/blog/packers-movers-islamabad-truck.jpg",
@@ -83,12 +99,12 @@ const allBlogs = [
   {
     slug: "international-relocation-rawalpindi-complete-guide",
     img: "/images/rwp.png",
-    title: "International Relocation from Rawalpindi 2025 — Complete Moving Guide | Best Intl Movers",
+    title: "International Relocation from Rawalpindi 2026 — Complete Moving Guide | Best Intl Movers",
     date: "May 11, 2026",
     category: "Relocation Guide",
     author: "Best International Movers & Logistics",
     readTime: "30 min read",
-    excerpt: "Planning international relocation from Rawalpindi? This complete 2025 guide covers everything — costs, packing, customs, air vs sea freight, popular destinations & expert tips from Best International Movers.",
+    excerpt: "Planning international relocation from Rawalpindi? This complete 2026 guide covers everything — costs, packing, customs, air vs sea freight, popular destinations & expert tips from Best International Movers.",
     content: "Complete guide to international relocation from Rawalpindi with comprehensive information about moving abroad."
   },
   {
@@ -105,12 +121,12 @@ const allBlogs = [
   {
     slug: "shipping-companies-in-pakistan",
     img: "/images/container.jpg",
-    title: "Best Shipping Companies in Pakistan 2025 | International Cargo | Best Intl Movers",
+    title: "Best Shipping Companies in Pakistan 2026 | International Cargo | Best Intl Movers",
     date: "May 11, 2026",
     category: "Shipping Guide",
     author: "Best International Movers & Logistics",
     readTime: "20 min read",
-    excerpt: "Looking for trusted shipping companies in Pakistan? Complete 2025 guide to international cargo shipping from Islamabad, Rawalpindi, Lahore & Karachi to 100+ countries. Get a free quote!",
+    excerpt: "Looking for trusted shipping companies in Pakistan? Complete 2026 guide to international cargo shipping from Islamabad, Rawalpindi, Lahore & Karachi to 100+ countries. Get a free quote!",
     content: "Complete guide to shipping companies in Pakistan with rates, routes, and how to choose the best shipping service."
   },
   {
@@ -149,8 +165,8 @@ const allBlogs = [
   {
     slug: "packers-and-movers-islamabad-guide",
     img: "/images/hero-home.jpg",
-    title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2025)",
-    date: "Apr 2025",
+    title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2026)",
+    date: "Apr 2026",
     category: "Moving Guides",
     author: "Best International Movers",
     readTime: "11 min read",
@@ -165,7 +181,7 @@ const allBlogs = [
     category: "Moving Tips",
     author: "Best International Movers",
     readTime: "12 min read",
-    excerpt: "Planning to move internationally from Pakistan? Expert tips on packing, customs, documentation and choosing the right moving company—complete 2025 guide.",
+    excerpt: "Planning to move internationally from Pakistan? Expert tips on packing, customs, documentation and choosing the right moving company—complete 2026 guide.",
     content: "Expert tips for international moving from Pakistan with documentation guidance."
   },
   {
@@ -180,9 +196,9 @@ const allBlogs = [
     content: "Detailed comparison of air freight vs sea freight options from Pakistan."
   },
   {
-    slug: "customs-regulations-pakistan-2025",
+    slug: "customs-regulations-pakistan-2026",
     img: "/images/cargo-insurance.jpg",
-    title: "Pakistan Customs Regulations for International Moving 2025",
+    title: "Pakistan Customs Regulations for International Moving 2026",
     date: "Apr 1, 2026",
     category: "Guides",
     author: "Best International Movers",
@@ -193,7 +209,7 @@ const allBlogs = [
   {
     slug: "moving-from-pakistan-to-dubai-guide",
     img: "/images/international-moving.jpg",
-    title: "Moving from Pakistan to Dubai: Complete Guide 2025",
+    title: "Moving from Pakistan to Dubai: Complete Guide 2026",
     date: "Apr 1, 2026",
     category: "Guides",
     author: "Best International Movers",
@@ -349,6 +365,8 @@ const BlogMainPage = () => {
                         className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
                           blog.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
                             ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                            : blog.slug === CARGO_INSURANCE_INTERNATIONAL_SLUG
+                            ? CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />

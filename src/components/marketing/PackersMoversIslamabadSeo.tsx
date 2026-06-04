@@ -746,7 +746,7 @@ const PackersMoversIslamabadSeo = () => {
         {/* Pricing Guide */}
         <section className="space-y-6">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
-            Packers and Movers Charges in Islamabad 2025
+            Packers and Movers Charges in Islamabad 2026
           </h2>
           <p>
             Transparent pricing with no hidden charges. For international moves, see our{" "}
