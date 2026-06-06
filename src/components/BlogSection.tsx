@@ -38,7 +38,7 @@ const posts = [
     date: "May 19, 2026",
     category: "Moving Guides",
   },
-  { img: "/images/hero-home.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
+  { img: "/images/international-moving.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
   { img: "/images/air-freight.jpg", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2026", category: "Logistics" },
   { img: "/images/cargo-insurance.jpg", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
 ];

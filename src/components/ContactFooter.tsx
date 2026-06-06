@@ -117,7 +117,7 @@ const ContactFooter = () => {
                 <li><Link to="/movers-karachi" className="hover:text-gold transition-colors">Movers Karachi</Link></li>
                 <li><Link to="/movers-multan" className="hover:text-gold transition-colors">Movers Multan</Link></li>
                 <li><Link to="/packers-and-movers-multan" className="hover:text-gold transition-colors">Packers &amp; Movers Multan</Link></li>
-                <li><Link to="/packers-and-movers-karachi" className="hover:text-gold transition-colors">Packers &amp; Movers Karachi</Link></li>
+                <li><Link to="/house-shifting-karachi" className="hover:text-gold transition-colors">House Shifting Karachi</Link></li>
                 <li><Link to="/cargo-service-karachi" className="hover:text-gold transition-colors">Cargo Service Karachi</Link></li>
                 <li><Link to="/movers-and-packers-in-peshawar" className="hover:text-gold transition-colors">Movers &amp; Packers Peshawar</Link></li>
                 <li><Link to="/packers-and-movers-islamabad" className="hover:text-gold transition-colors">Packers &amp; Movers Islamabad</Link></li>

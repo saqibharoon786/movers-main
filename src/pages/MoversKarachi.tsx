@@ -121,7 +121,7 @@ const services = [
     icon: Truck,
     title: "House Shifting within Karachi",
     desc: "Local apartment-to-apartment and Karachi-to-other-city moves with same-day booking across all areas.",
-    link: { to: "/packers-and-movers-karachi", label: "Packers and Movers Karachi page →" },
+    link: { to: "/house-shifting-karachi", label: "House Shifting Karachi page →" },
   },
 ];
 
