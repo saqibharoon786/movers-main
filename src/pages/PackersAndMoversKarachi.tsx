@@ -318,7 +318,7 @@ function buildLocalBusinessSchema() {
     "@type": "MovingCompany",
     "name": "Best International Movers & Logistics",
     "telephone": "+923009130211",
-    "url": "https://bestintlmovers.com/packers-and-movers-karachi",
+    "url": "https://bestintlmovers.com/house-shifting-karachi",
     "description": "Best packers and movers in Karachi offering professional house shifting, office relocation, cargo service and international moving from Karachi Port to 100+ countries.",
     "address": {
       "@type": "PostalAddress",
@@ -433,8 +433,8 @@ function buildBreadcrumbSchema() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Packers and Movers Karachi",
-        item: "https://bestintlmovers.com/packers-and-movers-karachi",
+        name: "House Shifting Karachi",
+        item: "https://bestintlmovers.com/house-shifting-karachi",
       },
     ],
   };
@@ -442,12 +442,12 @@ function buildBreadcrumbSchema() {
 
 const PackersAndMoversKarachi = () => {
   const seoConfig = {
-    title: "Packers and Movers Karachi 2026 | Call 0300-9130211",
+    title: "House Shifting Services in Karachi | Best Packers & Movers Karachi",
     description:
-      "Best packers and movers in Karachi 2026. House shifting from PKR 8,000. DHA, Clifton, Gulshan, PECHS all covered. Free home survey. Call 0300-9130211.",
+      "Professional house shifting services in Karachi with free survey, fixed written quotes, export-grade packing, insured transport, and 15+ years of local moving experience. Call 0300-9130211.",
     keywords:
-      "packers and movers Karachi, packers movers Karachi, house shifting Karachi, cargo service Karachi, relocation Karachi, office shifting Karachi, packing service Karachi, movers packers Karachi, ghar shifting Karachi, goods transport Karachi",
-    canonicalUrl: "https://bestintlmovers.com/packers-and-movers-karachi",
+      "house shifting services Karachi, house shifting Karachi, packers and movers Karachi, packers movers Karachi, home shifting Karachi, best movers Karachi, professional packers Karachi, reliable movers Karachi, furniture movers Karachi, office shifting Karachi, cargo service Karachi, relocation Karachi, moving company Karachi, shifting company Karachi",
+    canonicalUrl: "https://bestintlmovers.com/house-shifting-karachi",
   };
 
   return (
@@ -457,8 +457,10 @@ const PackersAndMoversKarachi = () => {
         description={seoConfig.description}
         ogTitle="Packers and Movers Karachi 2026 | Best International Movers"
         ogDescription="Best packers and movers in Karachi 2026. House shifting from PKR 8,000. DHA, Clifton, Gulshan, PECHS covered. Free survey. Call 0300-9130211."
+        ogImage="/images/house-shifting-karachi.png"
+        ogImageAlt="Best International Movers Karachi house shifting and cargo service image"
         keywords={seoConfig.keywords}
-        urlPath="/packers-and-movers-karachi"
+        urlPath="/house-shifting-karachi"
         canonicalUrl={seoConfig.canonicalUrl}
         schema={[buildLocalBusinessSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
       />
@@ -474,18 +476,17 @@ const PackersAndMoversKarachi = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Best Packers and Movers in Karachi 2026 — House Shifting, Office Relocation &amp; International Cargo from Karachi Port
+              House Shifting Services in Karachi — Best Packers &amp; Movers for DHA, Clifton, Gulshan, PECHS &amp; All Areas
             </h1>
 
             <img
-              src="/images/freight-forwarding.png"
+              src="/images/house-shifting-karachi.png"
               alt="Packers and movers in Karachi — professional packing and house shifting"
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />
 
             <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              House Shifting | Office Relocation | Cargo Service | International Moving | DHA | Clifton | Gulshan |
-              PECHS | All Karachi Areas | Free Home Survey
+              Karachi never stops moving, and neither do we. From DHA and Clifton to Gulshan, PECHS, North Karachi and every neighbourhood in between — we provide reliable house shifting, office relocation, cargo service, and international moving with fixed quotes and insured transport.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
@@ -532,23 +533,23 @@ const PackersAndMoversKarachi = () => {
               className="text-muted-foreground leading-relaxed space-y-4 mb-16"
             >
               <h2 className="text-3xl font-display font-bold text-foreground mb-4">
-                Best Packers and Movers in Karachi — Trusted Since 15 Years
+                House Shifting Services in Karachi — Why Families Trust Best International Movers
               </h2>
               <p>
-                Finding reliable packers and movers in Karachi is one of the biggest challenges families and businesses
-                face when planning a shift. With over 15 years of moving experience and 1,200+ completed moves from
-                Karachi, Best International Movers &amp; Logistics has built a reputation that no newcomer can replicate
-                overnight.
+                Finding a truly reliable house shifting company in Karachi is still one of the most frustrating parts of
+                any move. Cheap phone quotes, untrained labour, weak packing, and surprise charges on moving day can turn
+                a simple shift into a costly headache. That is why Best International Movers &amp; Logistics was built to
+                remove every guesswork point from the process.
               </p>
               <p>
-                Our Karachi packing and moving team is dedicated, trained, and based locally — full-time trained packers
-                who know how to handle furniture, electronics, crockery, artwork, gym equipment, and every type of
-                household item. We serve every area of Karachi with one standard: professional, careful, and on time.
+                With 15+ years of Karachi experience, a full-time employed crew, export-grade packing materials, written
+                fixed quotes, and transit insurance on every local move, we give families and businesses a safer and more
+                transparent way to relocate across the city or abroad.
               </p>
               <p>
-                Whether you are shifting from DHA Phase 5 to Gulshan-e-Iqbal, relocating your office from I.I.
-                Chundrigar Road to Clifton, or shipping household goods internationally from Karachi Port — we handle
-                all of it under one roof, one point of contact, and one fixed price.
+                Whether you are moving from DHA to Clifton, shifting a 2-bedroom flat in Gulshan, relocating an office in
+                Korangi, or shipping furniture internationally from Karachi Port, we handle every detail with one point of
+                contact and one fixed price.
               </p>
             </motion.div>
 
@@ -559,8 +560,13 @@ const PackersAndMoversKarachi = () => {
               className="glass-card rounded-2xl p-8 border border-border mb-12"
             >
               <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                What Makes Our Packing Service Different in Karachi
+                What Makes Us Different from Other Packers and Movers in Karachi
               </h2>
+              <p className="text-muted-foreground mb-6">
+                We do not rely on day labour or verbal estimates. Every move starts with a free home survey, a written fixed
+                quotation, and a trained crew that knows how to move safely through narrow streets, staircases, high-rise
+                towers, and Karachi traffic conditions.
+              </p>
               <p className="text-muted-foreground mb-8">
                 The word &ldquo;packers&rdquo; is in dozens of company names in Karachi — but packing quality varies
                 enormously. Here is what our Karachi packing team does that most competitors skip:

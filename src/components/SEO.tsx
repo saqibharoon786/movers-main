@@ -23,9 +23,11 @@ interface SEOProps {
   noindex?: boolean;
   ogTitle?: string;
   ogDescription?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
-export default function SEO({ title, description, schema, keywords, urlPath, canonicalUrl, noindex, ogTitle, ogDescription }: SEOProps) {
+export default function SEO({ title, description, schema, keywords, urlPath, canonicalUrl, noindex, ogTitle, ogDescription, ogImage, ogImageAlt }: SEOProps) {
   const location = useLocation();
   const resolvedPath = useResolvedPath(".");
 
@@ -51,6 +53,8 @@ export default function SEO({ title, description, schema, keywords, urlPath, can
         keywords: kw,
         urlPath: effectivePath,
         noindex,
+        ogImage,
+        ogImageAlt,
       }),
     [title, description, kw, effectivePath, noindex]
   );

@@ -73,7 +73,7 @@ const allBlogs = [
   },
   {
     slug: PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG,
-    img: "/images/hero-home.jpg",
+    img: "/blog/packers-movers-islamabad-hero.jpg",
     title: "Packers and Movers in Islamabad — Complete 2026 Guide for Home, Office & Society Shifting",
     date: "May 15, 2026",
     category: "Moving Guides",
@@ -86,7 +86,7 @@ const allBlogs = [
   },
   {
     slug: PACKERS_MOVERS_RAWALPINDI_GUIDE_SLUG,
-    img: "/images/hero-home.jpg",
+    img: "/images/homeshifting.png",
     title: "Packers and Movers in Rawalpindi — Complete 2026 Guide for Stress-Free Home & Office Shifting",
     date: "May 15, 2026",
     category: "Moving Guides",
@@ -164,7 +164,7 @@ const allBlogs = [
   },
   {
     slug: "packers-and-movers-islamabad-guide",
-    img: "/images/hero-home.jpg",
+    img: "/images/professional-packing.png",
     title: "Packers and Movers in Islamabad: Complete Guide to Safe & Affordable House Shifting (2026)",
     date: "Apr 2026",
     category: "Moving Guides",
@@ -175,7 +175,7 @@ const allBlogs = [
   },
   {
     slug: "tips-for-stress-free-international-move",
-    img: "/images/hero-home.jpg",
+    img: "/images/international-moving.jpg",
     title: "10 Tips for a Stress-Free International Move from Pakistan",
     date: "Apr 1, 2026",
     category: "Moving Tips",
@@ -230,7 +230,7 @@ const allBlogs = [
   },
   {
     slug: "packing-guide-international-move",
-    img: "/blog/packers-movers-islamabad-truck.jpg",
+    img: "/images/packing-materials.jpg",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",
     date: "Feb 1, 2024",
     category: "Moving Tips",
