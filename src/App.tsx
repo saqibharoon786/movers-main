@@ -115,6 +115,15 @@ const BestInternationalMoversAndPackersGuide2026Blog = lazy(
 const CargoInsuranceInternationalShipments2026Blog = lazy(
   () => import("./pages/blog/CargoInsuranceInternationalShipments2026Blog.tsx"),
 );
+const OfficeRelocationKarachiZeroDowntimeGuide2026Blog = lazy(
+  () => import("./pages/blog/OfficeRelocationKarachiZeroDowntimeGuide2026Blog.tsx"),
+);
+const DhaKarachiMovingGuideSectorBySectorBlog = lazy(
+  () => import("./pages/blog/DhaKarachiMovingGuideSectorBySectorBlog.tsx"),
+);
+const KarachiToDubaiShippingCost2026Blog = lazy(
+  () => import("./pages/blog/KarachiToDubaiShippingCost2026Blog.tsx"),
+);
 const PackersMoversRawalpindiGuideBlog = lazy(() => import("./pages/blog/PackersMoversRawalpindiGuideBlog.tsx"));
 const PetRelocationFromPakistanBlog = lazy(() => import("./pages/blog/PetRelocationFromPakistanBlog.tsx"));
 const BlogInternationalRelocationRawalpindi = lazy(() => import("./pages/BlogInternationalRelocationRawalpindi.tsx"));
@@ -306,6 +315,30 @@ const App = () => (
           <Route
             path="/blog/cargo-insurance-international-shipments-2026/"
             element={<CargoInsuranceInternationalShipments2026Blog />}
+          />
+          <Route
+            path="/blog/office-relocation-karachi-zero-downtime-guide-2026"
+            element={<Navigate to="/blog/office-relocation-karachi-zero-downtime-guide-2026/" replace />}
+          />
+          <Route
+            path="/blog/office-relocation-karachi-zero-downtime-guide-2026/"
+            element={<OfficeRelocationKarachiZeroDowntimeGuide2026Blog />}
+          />
+          <Route
+            path="/blog/dha-karachi-moving-guide-sector-by-sector"
+            element={<Navigate to="/blog/dha-karachi-moving-guide-sector-by-sector/" replace />}
+          />
+          <Route
+            path="/blog/dha-karachi-moving-guide-sector-by-sector/"
+            element={<DhaKarachiMovingGuideSectorBySectorBlog />}
+          />
+          <Route
+            path="/blog/karachi-to-dubai-shipping-cost-2026"
+            element={<Navigate to="/blog/karachi-to-dubai-shipping-cost-2026/" replace />}
+          />
+          <Route
+            path="/blog/karachi-to-dubai-shipping-cost-2026/"
+            element={<KarachiToDubaiShippingCost2026Blog />}
           />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
