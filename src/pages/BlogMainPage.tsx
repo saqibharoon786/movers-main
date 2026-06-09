@@ -21,9 +21,60 @@ import {
   CARGO_INSURANCE_INTERNATIONAL_IMAGE,
   CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD,
 } from "@/data/cargoInsuranceInternationalShipmentsBlog";
+import {
+  OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
+  OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
+  OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE_CLASS_CARD,
+} from "@/data/officeRelocationKarachiZeroDowntimeBlog";
+import {
+  DHA_KARACHI_MOVING_GUIDE_SLUG,
+  DHA_KARACHI_MOVING_GUIDE_IMAGE,
+  DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD,
+} from "@/data/dhaKarachiMovingGuideSectorBySectorBlog";
+import {
+  KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
+  KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
+  KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD,
+} from "@/data/karachiToDubaiShippingCost2026Blog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
+    img: KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
+    title: "Karachi to Dubai Shipping Cost 2026 — Complete Full Breakdown",
+    date: "Jun 6, 2026",
+    category: "International Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "26 min read",
+    excerpt:
+      "Complete Karachi to Dubai shipping cost guide 2026. Sea freight, air cargo, household goods. LCL from USD 450, FCL from USD 1,200. Free quote. Call 0300-9130211.",
+    content: "Complete Karachi to Dubai shipping cost breakdown for families, expats and businesses in 2026.",
+  },
+  {
+    slug: DHA_KARACHI_MOVING_GUIDE_SLUG,
+    img: DHA_KARACHI_MOVING_GUIDE_IMAGE,
+    title: "Movers in DHA Karachi — Complete Sector by Sector Moving Guide 2026",
+    date: "Jun 6, 2026",
+    category: "DHA Karachi",
+    author: "Best International Movers & Logistics",
+    readTime: "28 min read",
+    excerpt:
+      "Complete DHA Karachi moving guide 2026. Movers for Phase 1–8, DHA City, all commercial zones. House shifting, office relocation, international. Call 0300-9130211.",
+    content: "Complete DHA Karachi sector-by-sector moving guide for all phases in 2026.",
+  },
+  {
+    slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
+    img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
+    title: "Office Relocation Karachi — The Complete Zero Downtime Guide 2026",
+    date: "Jun 6, 2026",
+    category: "Office Relocation",
+    author: "Best International Movers & Logistics",
+    readTime: "22 min read",
+    excerpt:
+      "Complete guide to zero-downtime office relocation in Karachi 2026. Weekend execution, IT-safe packing, server room moving. Free site survey. Call 0300-9130211.",
+    content: "Complete zero downtime office relocation guide for Karachi businesses in 2026.",
+  },
   {
     slug: CARGO_INSURANCE_INTERNATIONAL_SLUG,
     img: CARGO_INSURANCE_INTERNATIONAL_IMAGE,
@@ -367,6 +418,12 @@ const BlogMainPage = () => {
                             ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
                             : blog.slug === CARGO_INSURANCE_INTERNATIONAL_SLUG
                             ? CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD
+                            : blog.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
+                            ? OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE_CLASS_CARD
+                            : blog.slug === DHA_KARACHI_MOVING_GUIDE_SLUG
+                            ? DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD
+                            : blog.slug === KARACHI_TO_DUBAI_SHIPPING_COST_SLUG
+                            ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />

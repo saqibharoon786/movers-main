@@ -15,8 +15,41 @@ import {
   CARGO_INSURANCE_INTERNATIONAL_IMAGE,
   CARGO_INSURANCE_INTERNATIONAL_SLUG,
 } from "@/data/cargoInsuranceInternationalShipmentsBlog";
+import {
+  OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
+  OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
+} from "@/data/officeRelocationKarachiZeroDowntimeBlog";
+import {
+  DHA_KARACHI_MOVING_GUIDE_IMAGE,
+  DHA_KARACHI_MOVING_GUIDE_SLUG,
+} from "@/data/dhaKarachiMovingGuideSectorBySectorBlog";
+import {
+  KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
+  KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
+} from "@/data/karachiToDubaiShippingCost2026Blog";
 
 const posts = [
+  {
+    img: KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
+    slug: KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
+    title: "Karachi to Dubai Shipping Cost 2026 — Complete Full Breakdown",
+    date: "June 6, 2026",
+    category: "International Shipping",
+  },
+  {
+    img: DHA_KARACHI_MOVING_GUIDE_IMAGE,
+    slug: DHA_KARACHI_MOVING_GUIDE_SLUG,
+    title: "Movers in DHA Karachi — Complete Sector by Sector Moving Guide 2026",
+    date: "June 6, 2026",
+    category: "DHA Karachi",
+  },
+  {
+    img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
+    slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
+    title: "Office Relocation Karachi — The Complete Zero Downtime Guide 2026",
+    date: "June 6, 2026",
+    category: "Office Relocation",
+  },
   {
     img: CARGO_INSURANCE_INTERNATIONAL_IMAGE,
     slug: CARGO_INSURANCE_INTERNATIONAL_SLUG,
