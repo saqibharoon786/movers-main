@@ -154,8 +154,8 @@ function buildBreadcrumbSchema() {
 const InternationalCargoIslamabad = () => {
   // Primary SEO configuration
   const seoConfig = {
-    title: "International Cargo Service Islamabad – Air & Sea Freight",
-    description: "Professional international cargo service in Islamabad. Air freight, sea freight, FCL & LCL to UAE, UK, USA, Canada & 100+ countries. Call 0300-9130211 for quote.",
+    title: "International Cargo Service Islamabad | Air & Sea Freight 2026",
+    description: "Best international cargo service in Islamabad. Air & sea freight to Dubai, UK, USA, Canada & 100+ countries. Door-to-door delivery. Call 0300-9130211 for free quote.",
     keywords: "international cargo service islamabad, cargo service islamabad, air cargo islamabad, sea cargo islamabad, freight service islamabad, cargo company islamabad, international shipping islamabad, freight forwarding islamabad, cargo islamabad to dubai, air freight islamabad",
     canonicalUrl: "https://bestintlmovers.com/international-cargo-islamabad"
   };
@@ -233,7 +233,7 @@ const InternationalCargoIslamabad = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              International Cargo Service Islamabad – Reliable Air & Sea Freight to 100+ Countries
+              International Cargo Service Islamabad — Air & Sea Freight to 100+ Countries
             </h1>
             
             <img 
@@ -579,20 +579,20 @@ const InternationalCargoIslamabad = () => {
               className="mt-16 text-center"
             >
               <h3 className="text-xl font-semibold text-foreground mb-6">Related Pages</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/international-relocation-services-rawalpindi" className="text-gold hover:underline">
-                  International Relocation Services Rawalpindi
-                </Link>
-                <Link to="/container-shipping-pakistan" className="text-gold hover:underline">
-                  Container Shipping Pakistan
-                </Link>
-                <Link to="/custom-duty-calculator" className="text-gold hover:underline">
-                  Custom Duty Calculator
-                </Link>
-                <Link to="/services/international-moving" className="text-gold hover:underline">
-                  International Moving Services
-                </Link>
-              </div>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link to="/pakistan-to-dubai-movers" className="text-gold hover:underline">
+                    Pakistan to Dubai Movers
+                  </Link>
+                  <Link to="/pakistan-to-uk-movers" className="text-gold hover:underline">
+                    Pakistan to UK Movers
+                  </Link>
+                  <Link to="/services/international-moving" className="text-gold hover:underline">
+                    International Moving Services
+                  </Link>
+                  <Link to="/customs-clearance-islamabad" className="text-gold hover:underline">
+                    Customs Clearance Islamabad
+                  </Link>
+                </div>
             </motion.div>
 
           </div>
