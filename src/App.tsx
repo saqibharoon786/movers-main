@@ -115,6 +115,7 @@ const BestInternationalMoversAndPackersGuide2026Blog = lazy(
 const CargoInsuranceInternationalShipments2026Blog = lazy(
   () => import("./pages/blog/CargoInsuranceInternationalShipments2026Blog.tsx"),
 );
+const InternationalCargoServiceIslamabad2026 = lazy(() => import("./pages/blog/InternationalCargoServiceIslamabad2026.tsx"));
 const OfficeRelocationKarachiZeroDowntimeGuide2026Blog = lazy(
   () => import("./pages/blog/OfficeRelocationKarachiZeroDowntimeGuide2026Blog.tsx"),
 );
@@ -339,6 +340,14 @@ const App = () => (
           <Route
             path="/blog/karachi-to-dubai-shipping-cost-2026/"
             element={<KarachiToDubaiShippingCost2026Blog />}
+          />
+          <Route
+            path="/blog/international-cargo-service-islamabad-2026"
+            element={<Navigate to="/blog/international-cargo-service-islamabad-2026/" replace />}
+          />
+          <Route
+            path="/blog/international-cargo-service-islamabad-2026/"
+            element={<InternationalCargoServiceIslamabad2026 />}
           />
           <Route path="/blog/:slug" element={<BlogPage />} />
 
