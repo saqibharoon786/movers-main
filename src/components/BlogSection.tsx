@@ -30,6 +30,13 @@ import {
 
 const posts = [
   {
+    img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
+    slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
+    title: "Office Relocation Karachi — The Complete Zero Downtime Guide 2026",
+    date: "June 6, 2026",
+    category: "Office Relocation",
+  },
+  {
     img: KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
     slug: KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
     title: "Karachi to Dubai Shipping Cost 2026 — Complete Full Breakdown",
@@ -42,13 +49,6 @@ const posts = [
     title: "Movers in DHA Karachi — Complete Sector by Sector Moving Guide 2026",
     date: "June 6, 2026",
     category: "DHA Karachi",
-  },
-  {
-    img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
-    slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
-    title: "Office Relocation Karachi — The Complete Zero Downtime Guide 2026",
-    date: "June 6, 2026",
-    category: "Office Relocation",
   },
   {
     img: CARGO_INSURANCE_INTERNATIONAL_IMAGE,
@@ -104,6 +104,8 @@ const BlogSection = () => {
                       className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
                         p.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
                           ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                          : p.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
+                          ? "object-cover object-[50%_40%]"
                           : ""
                       }`}
                     />

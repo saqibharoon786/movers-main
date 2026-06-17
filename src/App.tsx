@@ -56,6 +56,9 @@ const OfficeRelocationKarachi = lazy(() => import("./pages/OfficeRelocationKarac
 const DhaKarachiMovers = lazy(() => import("./pages/DhaKarachiMovers.tsx"));
 const PackersAndMoversMultan = lazy(() => import("./pages/PackersAndMoversMultan.tsx"));
 const CargoServiceKarachi = lazy(() => import("./pages/CargoServiceKarachi.tsx"));
+const KarachiToDubaiCargo = lazy(() => import("./pages/KarachiToDubaiCargo.tsx"));
+const SeaFreightPakistanToUK = lazy(() => import("./pages/SeaFreightPakistanToUK.tsx"));
+const DhaKarachiMovingGuideSectorBySector = lazy(() => import("./pages/DhaKarachiMovingGuideSectorBySector.tsx"));
 const MoversAndPackersInPeshawar = lazy(() => import("./pages/MoversAndPackersInPeshawar.tsx"));
 const CargoIslamabad = lazy(() => import("./pages/CargoIslamabad.tsx"));
 const CargoRawalpindi = lazy(() => import("./pages/CargoRawalpindi.tsx"));
@@ -371,6 +374,8 @@ const App = () => (
           <Route path="/movers-karachi/" element={<MoversKarachi />} />
           <Route path="/dha-karachi-movers" element={<DhaKarachiMovers />} />
           <Route path="/dha-karachi-movers/" element={<DhaKarachiMovers />} />
+          <Route path="/dha-karachi-moving-guide-sector-by-sector" element={<DhaKarachiMovingGuideSectorBySector />} />
+          <Route path="/dha-karachi-moving-guide-sector-by-sector/" element={<DhaKarachiMovingGuideSectorBySector />} />
           <Route path="/movers-multan" element={<MoversMultan />} />
           <Route path="/movers-multan/" element={<MoversMultan />} />
           <Route path="/corporate-relocation-pakistan" element={<CorporateRelocationPakistan />} />
@@ -385,6 +390,10 @@ const App = () => (
           <Route path="/packers-and-movers-multan/" element={<PackersAndMoversMultan />} />
           <Route path="/cargo-service-karachi" element={<CargoServiceKarachi />} />
           <Route path="/cargo-service-karachi/" element={<CargoServiceKarachi />} />
+          <Route path="/karachi-to-dubai-cargo" element={<KarachiToDubaiCargo />} />
+          <Route path="/karachi-to-dubai-cargo/" element={<KarachiToDubaiCargo />} />
+          <Route path="/sea-freight-pakistan-to-uk" element={<SeaFreightPakistanToUK />} />
+          <Route path="/sea-freight-pakistan-to-uk/" element={<SeaFreightPakistanToUK />} />
           <Route path="/movers-and-packers-in-peshawar" element={<MoversAndPackersInPeshawar />} />
           <Route path="/movers-peshawar" element={<Navigate to="/movers-and-packers-in-peshawar" replace />} />
           <Route path="/international-movers-from-islamabad" element={<InternationalMoversIslamabad />} />

@@ -85,15 +85,20 @@ export default function OfficeRelocationKarachiZeroDowntimeGuide2026Blog() {
           </p>
 
           <h3 className="text-xl font-semibold mb-3 text-foreground">8 Weeks Before Move — Foundation</h3>
-          <p className="text-muted-foreground mb-3"><strong>Book your moving company and get a site survey.</strong> The most common Karachi office relocation mistake is leaving the moving company booking too late. Weekend dates — the only viable option for zero downtime — fill 6–8 weeks in advance among professional movers.</p>
+          <p className="text-muted-foreground mb-3"><strong>Book your moving company and get a site survey.</strong> The most common Karachi office relocation mistake is leaving the moving company booking too late. Weekend dates — the only viable option for zero downtime — fill 6–8 weeks in advance among professional movers. Book your weekend slot first, then plan everything else around it.</p>
+          <p className="text-muted-foreground mb-3 font-medium text-foreground">Actions this week:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
             <li>Contact Best International Movers for a free site survey of both your current and new Karachi office</li>
             <li>Get a written quotation with scope, crew, trucks, timing and insurance</li>
             <li>Sign agreement and lock your weekend move date</li>
-            <li>Appoint an internal Move Coordinator from your team</li>
+            <li>Appoint an internal Move Coordinator from your team — single point of contact between your business and the moving company</li>
           </ul>
           <p className="text-muted-foreground mb-6">
-            <strong>New office readiness check:</strong> During the site survey of your new office, confirm internet line installation date with your ISP (PTCL, Nayatel, StormFiber or WorldCall), electrical point locations for server room and workstations, false ceiling or raised floor for cable routing, and air conditioning capacity for server room.
+            <strong>New office readiness check:</strong> During the site survey of your new office, confirm internet line installation date with your ISP (PTCL, Nayatel, StormFiber or WorldCall), electrical point locations for server room and workstations, false ceiling or raised floor for cable routing, and air conditioning capacity for server room. IT issues at the new office discovered after move day cause the most preventable downtime.
+          </p>
+
+          <p className="text-muted-foreground mb-6 italic border-l-4 border-gold/40 pl-4">
+            <strong>Move Weekend — Execution (Friday Evening to Sunday):</strong> The full execution process is detailed in Section 3 below.
           </p>
 
           <h3 className="text-xl font-semibold mb-3 text-foreground">6 Weeks Before Move — Planning</h3>
@@ -200,14 +205,20 @@ export default function OfficeRelocationKarachiZeroDowntimeGuide2026Blog() {
           </ul>
 
           <h3 className="text-xl font-semibold mb-3 text-foreground">Workstation Relocation Protocol</h3>
-          <p className="text-muted-foreground mb-4">
-            Every workstation photographed before disconnection. All cables labelled with workstation number at both ends. CPU in padded IT crate. Monitor in foam-lined carton. At new office, cables reconnected from bag — workstation number on cables matches workstation tag on desk. No guessing, no improvisation.
-          </p>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
+            <li><strong>Documentation:</strong> Every workstation photographed (top-down, all cable connections visible) before disconnection. Workstation tag number visible in photograph.</li>
+            <li><strong>Cable Management:</strong> All cables labelled with workstation number at both ends before disconnection. Cables coiled, tied with velcro, placed in labelled zip-lock bag with workstation number. Bag taped to the workstation&apos;s CPU case for transit.</li>
+            <li><strong>Packing:</strong> CPU in padded IT crate. Monitor in foam-lined monitor carton. Keyboard and mouse in separate carton with workstation label. Docking station, USB hub and peripherals in same carton — all labelled.</li>
+            <li><strong>Reconnection:</strong> At new office, CPU placed on correct desk per floor plan. Cables reconnected from bag — workstation number on cables matches workstation tag on desk. Power on. Network connected. Login tested. Application opened. Move to next workstation.</li>
+          </ul>
 
           <h3 className="text-xl font-semibold mb-3 text-foreground">Network Infrastructure Relocation</h3>
-          <p className="text-muted-foreground">
-            Patch panel photographed with port labels visible. Switch port configuration documented. Reconnection sequence: core switch first, then access switches, then wireless access points, then patch panel connections. Router last — configuration uploaded from backup file. DHCP, VLANs, wireless and internet throughput tested before workstations connected.
-          </p>
+          <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+            <li><strong>Documentation Before Disconnect:</strong> Patch panel photographed with port labels visible. Every cable labelled at both ends with the port number it occupies. Switch port configuration documented (VLAN assignments, port speeds, POE settings). Router configuration backed up to file.</li>
+            <li><strong>Physical Move:</strong> Networking equipment packed in original boxes where available, otherwise in custom-padded cartons. Never mixed with general cargo.</li>
+            <li><strong>Reconnection Sequence:</strong> Core switch first. Then access switches. Then wireless access points. Then patch panel connections per the port documentation. Router last — connected and configuration uploaded from backup file.</li>
+            <li><strong>Testing:</strong> DHCP functioning confirmed. All VLANs accessible. Wireless networks broadcasting. Internet throughput tested. Only then are workstations connected.</li>
+          </ul>
         </section>
 
         <section className="mt-8">
@@ -469,6 +480,13 @@ export default function OfficeRelocationKarachiZeroDowntimeGuide2026Blog() {
           </p>
           <p className="text-muted-foreground">
             International office relocations from Karachi require additional planning time — typically 10–14 weeks — for export documentation, container booking, destination customs clearance coordination and destination IT infrastructure setup. Contact our international team at 0300-9130211 for a free international office relocation consultation.
+          </p>
+        </section>
+
+        <section className="mt-8">
+          <h2 className="text-2xl font-bold mb-4">13. Frequently Asked Questions — Zero Downtime Office Relocation Karachi 2026</h2>
+          <p className="text-muted-foreground mb-4">
+            The most common questions from Karachi businesses planning a zero-downtime office move — answered below.
           </p>
         </section>
 
