@@ -1,608 +1,480 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Plane, Anchor, MapPin, Phone, Package, Globe, ShieldCheck, FileCheck, Calculator, Clock, Users, AlertTriangle } from "lucide-react";
+import {
+  Plane,
+  Anchor,
+  MapPin,
+  Phone,
+  Package,
+  Globe,
+  ShieldCheck,
+  FileCheck,
+  Clock,
+  Truck,
+  Thermometer,
+  Car,
+  CheckCircle2,
+  MessageCircle,
+  Building,
+  Box,
+  Search,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  seoConfig,
+  faqs,
+  buildAllSchemas,
+  airCargoRates,
+  lclFclComparison,
+  seaTransitTable,
+  customsDocsTable,
+  doorToDoorTimes,
+  vehicleShippingTable,
+  pickupAreas,
+  shippingSteps,
+  whyChooseUs,
+  relatedLinks,
+} from "@/data/internationalCargoIslamabadContent";
 
-// Build complete Organization + Service schema
-function buildServiceSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://bestintlmovers.com/#organization",
-        "name": "Best International Movers & Logistics",
-        "url": "https://bestintlmovers.com",
-        "logo": "https://bestintlmovers.com/logo.png",
-        "telephone": "+923009130211",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+923009130211",
-          "contactType": "customer service",
-          "availableLanguage": ["English", "Urdu"]
-        },
-        "sameAs": [
-          "https://www.facebook.com/bestintlmovers",
-          "https://www.instagram.com/bestintlmovers"
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://bestintlmovers.com/international-cargo-islamabad#service",
-        "name": "International Cargo Service Islamabad – Air & Sea Freight",
-        "serviceType": "International Cargo Service",
-        "description": "Professional international cargo service in Islamabad. Air freight, sea freight, FCL & LCL to UAE, UK, USA, Canada & 100+ countries. Call 0300-9130211 for quote.",
-        "url": "https://bestintlmovers.com/international-cargo-islamabad",
-        "provider": { "@id": "https://bestintlmovers.com/#organization" },
-        "areaServed": { "@type": "City", name: "Islamabad" },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "PKR",
-          "priceRange": "3500-180000+",
-          "description": "International cargo services from Islamabad to worldwide destinations"
-        }
-      }
-    ]
-  };
-}
+const fade = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
-// FAQ Schema for rich results
-function buildFAQSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the cheapest way to send cargo internationally from Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "LCL sea freight is the most cost-effective method for large-volume shipments. For smaller consignments, consolidated air freight is cost-efficient. Express courier is fastest but most expensive per kilogram. Contact us for a comparison quote covering all options for your specific shipment."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does air cargo from Islamabad take to reach Dubai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Air cargo from Islamabad International Airport to Dubai typically arrives in 2 to 4 days, including customs clearance at both ends."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you collect cargo from home in Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We provide door-to-door collection from any residential or commercial address across all sectors and housing societies in Islamabad and Rawalpindi."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you handle Pakistan export customs clearance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our licensed customs team handles all WeBOC filing, HS code classification, FBR compliance, and port coordination — both at Islamabad Airport for air cargo and at Karachi Port for sea freight. Use our Custom Duty Calculator to estimate destination import duties."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my cargo insured during international transit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standard carrier liability is limited by international convention and rarely covers the full value of your goods. We recommend All-Risk cargo insurance on every shipment — available at approximately 0.3% to 0.8% of declared cargo value for complete protection."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you ship a car from Islamabad internationally?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We manage complete vehicle export from Islamabad — export documentation, inland transport to Karachi, RORO or container shipping, and destination import coordination."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I get a cargo quote for Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Call or WhatsApp 0300-9130211 with your cargo details — type of goods, estimated weight and dimensions, origin address in Islamabad, destination country and city, and required timeline. We provide a full written quotation within a few hours."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you send commercial goods and household items in the same container?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In some cases, yes — but mixed commercial and household shipments require careful documentation to avoid customs complications at destination. Our team assesses this during the planning stage."
-        }
-      }
-    ]
-  };
-}
-
-// Breadcrumb Schema
-function buildBreadcrumbSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { 
-        "@type": "ListItem", 
-        "position": 1,
-        "name": "Home", 
-        "item": "https://bestintlmovers.com" 
-      },
-      { 
-        "@type": "ListItem", 
-        "position": 2,
-        "name": "Services", 
-        "item": "https://bestintlmovers.com/services" 
-      },
-      { 
-        "@type": "ListItem", 
-        "position": 3,
-        "name": "International Cargo Islamabad", 
-        "item": "https://bestintlmovers.com/international-cargo-islamabad" 
-      }
-    ]
-  };
-}
-
-const InternationalCargoIslamabad = () => {
-  // Primary SEO configuration
-  const seoConfig = {
-    title: "International Cargo Service Islamabad | Air & Sea Freight 2026",
-    description: "Best international cargo service in Islamabad. Air & sea freight to Dubai, UK, USA, Canada & 100+ countries. Door-to-door delivery. Call 0300-9130211 for free quote.",
-    keywords: "international cargo service islamabad, cargo service islamabad, air cargo islamabad, sea cargo islamabad, freight service islamabad, cargo company islamabad, international shipping islamabad, freight forwarding islamabad, cargo islamabad to dubai, air freight islamabad",
-    canonicalUrl: "https://bestintlmovers.com/international-cargo-islamabad"
-  };
-
-  const airCargoTimes = [
-    { destination: "UAE (Dubai, Abu Dhabi)", time: "2 – 4 days" },
-    { destination: "Saudi Arabia (Riyadh, Jeddah)", time: "3 – 5 days" },
-    { destination: "Qatar (Doha)", time: "3 – 5 days" },
-    { destination: "United Kingdom (London)", time: "4 – 7 days" },
-    { destination: "USA (New York, Houston)", time: "5 – 8 days" },
-    { destination: "Canada (Toronto, Vancouver)", time: "5 – 8 days" },
-    { destination: "Australia (Sydney, Melbourne)", time: "6 – 10 days" },
-    { destination: "Germany & Europe", time: "4 – 7 days" },
-    { destination: "Malaysia & Singapore", time: "4 – 7 days" }
-  ];
-
-  const seaCargoTimes = [
-    { destination: "UAE (Dubai, Jebel Ali)", time: "3 – 5 weeks" },
-    { destination: "Saudi Arabia (Jeddah, Dammam)", time: "4 – 6 weeks" },
-    { destination: "Qatar & Kuwait", time: "4 – 6 weeks" },
-    { destination: "United Kingdom", time: "8 – 11 weeks" },
-    { destination: "USA & Canada", time: "10 – 14 weeks" },
-    { destination: "Australia", time: "9 – 12 weeks" },
-    { destination: "Germany & Europe", time: "8 – 11 weeks" },
-    { destination: "Malaysia & Singapore", time: "5 – 8 weeks" }
-  ];
-
-  const cargoTypes = [
-    { icon: Package, title: "Household Goods & Personal Effects", desc: "Furniture, appliances, electronics, crockery, clothing, artwork for families relocating internationally from Islamabad" },
-    { icon: Globe, title: "Commercial Merchandise", desc: "Textiles, surgical instruments, sports goods, leather products, processed food, handicrafts, and all Pakistani export goods" },
-    { icon: ShieldCheck, title: "Electronics & High-Value Items", desc: "Computers, servers, telecommunications equipment, medical devices with anti-static packing and full insurance" },
-    { icon: Anchor, title: "Industrial & Project Cargo", desc: "Machinery parts, industrial equipment, construction materials for overseas installations with specialist handling" },
-    { icon: Users, title: "Excess Baggage & Personal Parcels", desc: "Luggage, personal effects, and parcels sent internationally from Islamabad by air or consolidated sea freight" },
-    { icon: Plane, title: "Vehicles", desc: "Cars, SUVs, and motorcycles shipped via RORO or enclosed container with full documentation" }
-  ];
-
-  const pricingRates = [
-    { route: "Islamabad to Dubai", airRate: "USD 3.5 – 6.0 per kg", seaRate: "USD 35 – 60 per CBM" },
-    { route: "Islamabad to UK", airRate: "USD 5.0 – 8.0 per kg", seaRate: "USD 80 – 130 per CBM" },
-    { route: "Islamabad to Canada/USA", airRate: "USD 6.0 – 10.0 per kg", seaRate: "USD 120 – 180 per CBM" },
-    { route: "Islamabad to Australia", airRate: "USD 6.5 – 10.0 per kg", seaRate: "USD 100 – 160 per CBM" }
-  ];
-
-  const customerReviews = [
-    { name: "Ahmed Malik", location: "Blue Area Islamabad → Dubai", review: "Sent a commercial shipment from F-7 Islamabad to our Dubai client. Documentation was perfect, delivery was on time, and the rate was competitive. Will use for all future exports." },
-    { name: "Sobia Khan", location: "G-11 Islamabad → Toronto", review: "Used their air cargo service to send personal effects from Islamabad to Toronto before our sea freight arrived. Collected from our house in G-11, cleared customs without issue, delivered in 6 days." },
-    { name: "Tariq Hussain", location: "DHA Islamabad → London", review: "Shipped a full container of household goods from Islamabad to London. Professional packing at our home in DHA Phase 2, customs was fully managed, and delivery at the London address was exactly on schedule." },
-    { name: "Rizwan Ahmed", location: "I-8 Islamabad → Riyadh", review: "We use Best International Movers for regular commercial cargo to Saudi Arabia. Reliable, well-documented, competitive rates. They have never missed a promised timeline." }
-  ];
-
+function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
   return (
-    <div className="min-h-screen bg-background">
-      {/* SEO Component with all schemas */}
-      <SEO 
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        urlPath="/international-cargo-islamabad"
-        schema={[buildServiceSchema(), buildFAQSchema(), buildBreadcrumbSchema()]}
-      />
-      
-      <Navbar />
-      
-      {/* Hero Section with H1 */}
-      <div className="pt-32 pb-12 bg-gradient-to-br from-navy-dark via-navy to-navy-light">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            className="max-w-5xl mx-auto text-center"
-          >
-            <div className="inline-flex items-center gap-2 bg-gold/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <Plane className="text-gold" size={18} />
-              <span className="text-gold text-sm font-medium">Air & Sea Freight to 100+ Countries</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              International Cargo Service Islamabad — Air & Sea Freight to 100+ Countries
-            </h1>
-            
-            <img 
-              src="/images/cargo-insurance.jpg" 
-              alt="International cargo service Islamabad - Air and sea freight operations" 
-              className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
-            />
-            
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              {seoConfig.description}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all transform hover:scale-105"
-              >
-                <Phone size={18} />
-                Get Free Quote
-              </Link>
-              <a 
-                href="https://wa.me/923009130211" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center gap-2 border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all"
-              >
-                <MapPin size={18} />
-                WhatsApp Us Now
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            
-            {/* Long Description with Internal Links */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-muted-foreground leading-relaxed space-y-4 mb-16"
-            >
-              <p>
-                When you need to ship goods internationally from Islamabad — whether it is household items for an overseas move, commercial merchandise for export, urgent documents for a business partner abroad, or excess baggage for a family relocating — the quality and reliability of your cargo service provider determines everything. Wrong partner, wrong outcome.
-              </p>
-
-              <p>
-                At <strong className="text-gold">Best International Movers & Logistics</strong>, we provide complete international cargo services from Islamabad — connecting businesses and residents in the capital directly to over 100 countries worldwide through air freight, sea freight, FCL and LCL container shipping, express courier, and door-to-door cargo delivery. Our team manages every stage of the shipment in-house — from your premises in Islamabad to the final destination address abroad.
-              </p>
-
-              <p>
-                15+ years of experience. 15,000+ successful shipments. One call to get started.
-              </p>
-
-              <p>
-                Many people assume that sending cargo internationally is straightforward — book a service, hand over the goods, receive them at the destination. In practice, international cargo from Islamabad involves multiple regulated stages that must each be handled correctly: <strong className="text-gold">Pakistan Export Compliance</strong>, <strong className="text-gold">Carrier Selection and Booking</strong>, <strong className="text-gold">Destination Country Import Regulations</strong>, and <strong className="text-gold">Last-Mile Delivery</strong>.
-              </p>
-
-              <p>
-                Our international cargo service in Islamabad manages all of these stages — a single team, single point of contact, complete accountability from Islamabad to the destination door. Our{" "}
-                <Link to="/custom-duty-calculator" className="text-gold hover:underline">
-                  Custom Duty Calculator
-                </Link>
-                {" "}helps estimate import duties at your destination country.
-              </p>
-            </motion.div>
-
-            {/* Air Cargo Services */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-2xl p-8 border border-border mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Air Cargo from Islamabad International Airport
-              </h2>
-              <p className="text-muted-foreground mb-8 text-center">
-                Air freight is the fastest method for international cargo from Islamabad — essential for time-sensitive shipments, urgent personal effects, business documents, pharmaceutical goods, electronics, and any cargo where speed matters more than cost.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {[
-                  { icon: Plane, title: "Direct Carrier Bookings", desc: "Emirates SkyCargo, Turkish Cargo, Qatar Airways Cargo, Etihad Cargo, PIA Cargo" },
-                  { icon: Package, title: "Consolidated Air Freight", desc: "Pay only for the space your cargo occupies in shared shipments" },
-                  { icon: Clock, title: "Express Door-to-Door", desc: "Complete service from Islamabad to UAE, UK, USA, Saudi Arabia, Qatar" },
-                  { icon: ShieldCheck, title: "Charter Arrangements", desc: "Large-volume urgent consignments with dedicated aircraft" }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-4 p-4">
-                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="text-gold" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">Air Cargo Transit Times from Islamabad</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-border rounded-lg">
-                  <thead>
-                    <tr className="bg-navy-light/30">
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Destination</th>
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Transit Time (Air)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {airCargoTimes.map((route, index) => (
-                      <tr key={index} className={index % 2 === 0 ? "bg-navy-light/20" : "bg-navy-light/10"}>
-                        <td className="border border-border px-4 py-3 font-medium text-foreground">{route.destination}</td>
-                        <td className="border border-border px-4 py-3 text-muted-foreground">{route.time}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </motion.div>
-
-            {/* Sea Freight Services */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-2xl p-8 border border-border mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Sea Freight from Islamabad — FCL & LCL
-              </h2>
-              <p className="text-muted-foreground mb-8 text-center">
-                For larger volume shipments where cost efficiency matters more than speed — household goods, commercial merchandise, industrial equipment, construction materials — sea freight via Karachi Port is the most economical option.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {[
-                  { icon: Anchor, title: "FCL — Full Container Load", desc: "Exclusive container for your cargo. 20ft, 40ft, or 40ft High Cube options" },
-                  { icon: Package, title: "LCL — Less than Container Load", desc: "Share container space, pay only for cubic metres used" },
-                  { icon: FileCheck, title: "Complete Documentation", desc: "Bill of Lading, export customs, shipping documentation" },
-                  { icon: Globe, title: "Destination Delivery", desc: "Import clearance and final delivery at destination address" }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-4 p-4">
-                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="text-gold" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">Sea Freight Transit Times from Islamabad (Karachi Port)</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-border rounded-lg">
-                  <thead>
-                    <tr className="bg-navy-light/30">
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Destination</th>
-                      <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Sea Transit Time (Door-to-Door)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {seaCargoTimes.map((route, index) => (
-                      <tr key={index} className={index % 2 === 0 ? "bg-navy-light/20" : "bg-navy-light/10"}>
-                        <td className="border border-border px-4 py-3 font-medium text-foreground">{route.destination}</td>
-                        <td className="border border-border px-4 py-3 text-muted-foreground">{route.time}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </motion.div>
-
-            {/* Types of Cargo */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-2xl p-8 border border-border mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Types of Cargo We Handle from Islamabad
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {cargoTypes.map((cargo, idx) => (
-                  <div key={idx} className="text-center p-4">
-                    <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                      <cargo.icon className="text-gold" size={28} />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{cargo.title}</h3>
-                    <p className="text-muted-foreground text-sm">{cargo.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Pricing Guide */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                International Cargo Rates from Islamabad — Pricing Guide
-              </h2>
-              <div className="glass-card rounded-2xl p-8 border border-border">
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-border rounded-lg">
-                    <thead>
-                      <tr className="bg-navy-light/30">
-                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Route</th>
-                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Air Cargo Rate</th>
-                        <th className="border border-border px-4 py-3 text-left font-semibold text-foreground">Sea Freight LCL Rate</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {pricingRates.map((rate, index) => (
-                        <tr key={index} className={index % 2 === 0 ? "bg-navy-light/20" : "bg-navy-light/10"}>
-                          <td className="border border-border px-4 py-3 font-medium text-foreground">{rate.route}</td>
-                          <td className="border border-border px-4 py-3 font-semibold text-gold">{rate.airRate}</td>
-                          <td className="border border-border px-4 py-3 font-semibold text-gold">{rate.seaRate}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <p className="text-muted-foreground text-sm mt-4 italic">
-                  Note: These are indicative ranges. Actual rates depend on cargo dimensions, current market conditions, and specific routing. Contact us for a precise written quotation — 0300-9130211.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Service Areas */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-2xl p-8 border border-border mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Islamabad Areas We Collect Cargo From
-              </h2>
-              <div className="space-y-4">
-                {[
-                  { title: "F Sectors", areas: "F-5, F-6, F-7, F-8, F-10, F-11, F-12, F-13, F-14" },
-                  { title: "G Sectors", areas: "G-6, G-7, G-8, G-9, G-10, G-11, G-13, G-14, G-15" },
-                  { title: "E & I Sectors", areas: "E-7, E-11, I-8, I-9, I-10, I-11, I-14, I-15, I-16" },
-                  { title: "Housing Societies", areas: "Bahria Town, DHA Islamabad, Park View City, Gulberg Islamabad, Capital Smart City, B-17, PWD, CBR Town" },
-                  { title: "Commercial Areas", areas: "Blue Area, Jinnah Super, F-7 Markaz, G-8 Markaz" }
-                ].map((area, index) => (
-                  <div key={index} className="p-4 bg-navy-light/10 rounded-lg">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{area.title}</h3>
-                    <p className="text-muted-foreground">{area.areas}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-muted-foreground mt-4">
-                We also collect cargo from <strong className="text-gold">Rawalpindi</strong> — all sectors and housing societies — as part of our twin-city operations. See our{" "}
-                <Link to="/international-relocation-services-rawalpindi" className="text-gold hover:underline">
-                  international relocation services in Rawalpindi
-                </Link>
-                {" "}page for Rawalpindi-specific information.
-              </p>
-            </motion.div>
-
-            {/* Customer Reviews */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Customer Reviews — International Cargo Service Islamabad
-              </h2>
-              <div className="space-y-6">
-                {customerReviews.map((review, index) => (
-                  <div key={index} className="glass-card rounded-2xl p-6 border border-border">
-                    <blockquote className="text-lg italic text-muted-foreground mb-4">"{review.review}"</blockquote>
-                    <footer>
-                      <cite className="font-semibold text-foreground">{review.name}</cite>
-                      <span className="text-muted-foreground ml-2">— {review.location}</span>
-                    </footer>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* CTA Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="glass-card rounded-2xl p-8 border border-border bg-gradient-to-br from-gold/10 to-gold/5">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Get Your International Cargo Quote — Islamabad
-                </h2>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Whether you are shipping a single parcel urgently by air or a full container of household goods by sea — our team is ready to handle every detail.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all transform hover:scale-105"
-                  >
-                    <Phone size={18} />
-                    Get Free Quote
-                  </Link>
-                  <a 
-                    href="https://wa.me/923009130211" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center justify-center gap-2 border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all"
-                  >
-                    <MapPin size={18} />
-                    WhatsApp Us Now
-                  </a>
-                </div>
-                
-                <div className="mt-8 text-muted-foreground">
-                  <p className="font-semibold">📞 Call / WhatsApp: 0300-9130211</p>
-                  <p>🕐 Monday to Saturday | 8:00 AM – 8:00 PM</p>
-                  <p>📍 Islamabad | Rawalpindi | Lahore | Peshawar</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Related Pages */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-16 text-center"
-            >
-              <h3 className="text-xl font-semibold text-foreground mb-6">Related Pages</h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/pakistan-to-dubai-movers" className="text-gold hover:underline">
-                    Pakistan to Dubai Movers
-                  </Link>
-                  <Link to="/pakistan-to-uk-movers" className="text-gold hover:underline">
-                    Pakistan to UK Movers
-                  </Link>
-                  <Link to="/services/international-moving" className="text-gold hover:underline">
-                    International Moving Services
-                  </Link>
-                  <Link to="/customs-clearance-islamabad" className="text-gold hover:underline">
-                    Customs Clearance Islamabad
-                  </Link>
-                </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </div>
-      
-      <ContactFooter />
-      <WhatsAppButton />
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse border border-border rounded-lg text-sm">
+        <thead>
+          <tr className="bg-navy-light/40">
+            {headers.map((h) => (
+              <th key={h} className="border border-border px-4 py-3 text-left font-semibold text-foreground whitespace-nowrap">{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={i} className={i % 2 === 0 ? "bg-navy-light/10" : "bg-navy-light/20"}>
+              {row.map((cell, j) => (
+                <td key={j} className="border border-border px-4 py-2.5 text-muted-foreground">{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-};
+}
+
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return <h2 className="text-3xl font-display font-bold text-foreground mb-6">{children}</h2>;
+}
+
+const InternationalCargoIslamabad = () => (
+  <div className="min-h-screen bg-background">
+    <SEO
+      title={seoConfig.title}
+      description={seoConfig.description}
+      keywords={seoConfig.keywords}
+      urlPath="/international-cargo-islamabad"
+      schema={buildAllSchemas()}
+    />
+
+    <Navbar />
+
+    {/* Hero */}
+    <div className="pt-32 pb-12 bg-gradient-to-br from-navy-dark via-navy to-navy-light">
+      <div className="container mx-auto px-4">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-gold/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <Globe className="text-gold" size={18} />
+            <span className="text-gold text-sm font-medium">Islamabad&apos;s Most Trusted Cargo Company Since 2009</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+            International Cargo Service in Islamabad
+          </h1>
+          <img
+            src="/images/cargo-insurance.jpg"
+            alt="International cargo service Islamabad - Air and sea freight to 100+ countries"
+            className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
+          />
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+            Pakistan&apos;s most reliable international cargo service in Islamabad — offering end-to-end air cargo, sea freight, freight forwarding and door-to-door shipping from all sectors of Islamabad to UAE, UK, USA, Canada, Saudi Arabia and 100+ countries. Free pickup from your doorstep. Real-time cargo tracking. Zero paperwork hassle. Licensed by IATA, FIATA and Pakistan Customs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all">
+              <Phone size={18} /> Get Free Quote
+            </Link>
+            <a href="https://wa.me/923009130211" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all">
+              <MessageCircle size={18} /> WhatsApp 0300-9130211
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+
+    <div className="py-16 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto space-y-16">
+
+          {/* Intro */}
+          <motion.div {...fade} className="text-muted-foreground leading-relaxed space-y-4">
+            <p>
+              Whether you are a household sender relocating abroad, a business exporting commercial goods, or an expatriate sending personal effects home, our dedicated cargo team in Islamabad delivers with speed, security and complete transparency — from the moment we collect your goods in DHA Islamabad, Bahria Town, Blue Area, or any of Islamabad&apos;s 40+ sectors, to final delivery at the recipient&apos;s address anywhere in the world.
+            </p>
+          </motion.div>
+
+          {/* What Is */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>What Is International Cargo Service in Islamabad?</SectionHeading>
+            <div className="text-muted-foreground leading-relaxed space-y-4">
+              <p>
+                International cargo service in Islamabad is a professional logistics solution that manages the entire process of moving goods from your location in Islamabad to any destination worldwide. Unlike a simple courier or parcel service, a full-service cargo company handles professional packaging, export documentation, Pakistan Customs clearance through the WeBOC system, airline or shipping line booking, international transit, destination import clearance and final last-mile delivery.
+              </p>
+              <p>
+                As Islamabad is a landlocked city, all sea freight consignments are transported overland from Islamabad to Karachi Port or Port Qasim before being loaded onto international vessels. Air cargo departs from Benazir Bhutto International Airport (IATA: ISB), which operates direct and one-stop connections to major cargo hubs in the Middle East, Europe and beyond.
+              </p>
+              <p>
+                The scope encompasses air freight for urgent shipments, sea freight for large volumes, road freight for regional destinations such as Afghanistan and Central Asia, and multimodal freight combining transport modes for optimal cost and speed. For dedicated mode-specific services, see our{" "}
+                <Link to="/air-freight-islamabad" className="text-gold hover:underline">air freight Islamabad</Link> and{" "}
+                <Link to="/sea-freight-islamabad" className="text-gold hover:underline">sea freight Islamabad</Link> pages.
+              </p>
+              <p className="text-sm border-l-4 border-gold pl-4 italic">
+                <strong className="text-gold not-italic">Expert Insight:</strong> Islamabad businesses exporting to GCC countries consistently achieve the best cost-to-speed balance with air cargo due to short transit distances. For Europe-bound shipments above 500 kg, sea freight via Karachi Port often provides 65–75% cost savings over air at only a 20–25 day additional transit time.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Air Cargo */}
+          <motion.section {...fade}>
+            <SectionHeading>Air Cargo Service in Islamabad — Fast, Reliable International Air Freight</SectionHeading>
+            <div className="text-muted-foreground space-y-4 mb-6">
+              <p>
+                Air cargo from Islamabad connects Pakistan&apos;s capital to major cities worldwide through Benazir Bhutto International Airport (ISB). We maintain active accounts with PIA Cargo, Qatar Airways Cargo, Emirates SkyCargo, Turkish Cargo, Air Arabia, FedEx, DHL and UPS.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[
+                  { title: "Express Air Cargo", desc: "1–3 business days — priority airline booking" },
+                  { title: "Standard Air Cargo", desc: "3–5 business days — most popular and cost-effective" },
+                  { title: "Economy Air Consolidation", desc: "5–8 business days — weekly consolidation departures" },
+                ].map((s) => (
+                  <div key={s.title} className="glass-card rounded-xl p-4 border border-border">
+                    <h3 className="font-semibold text-foreground">{s.title}</h3>
+                    <p className="text-sm mt-1">{s.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2"><Plane size={20} className="text-gold" /> How Air Cargo from Islamabad Is Priced</h3>
+              <p>
+                Rates are calculated on chargeable weight — the higher of actual gross weight (kg) or volumetric weight: Length × Width × Height (cm) ÷ 5,000. Surcharges include Fuel Surcharge (FSC), Security Surcharge and Origin Handling Charge. Our team provides fully transparent all-inclusive quotations.
+              </p>
+            </div>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Air Cargo Rates from Islamabad 2026 — Estimated Per KG (All-Inclusive)</h3>
+            <DataTable
+              headers={["Destination City", "Rate (PKR/kg)", "Min. Chargeable", "Transit Time", "Service Level"]}
+              rows={airCargoRates.map((r) => [r.city, r.rate, r.min, r.transit, r.level])}
+            />
+            <p className="text-sm text-muted-foreground mt-3 flex items-start gap-2">
+              <span className="text-gold">⚠</span> Rate Notice: Estimates for reference only — subject to fuel surcharges, airline availability, commodity type and seasonal demand. Call 0300-9130211 for today&apos;s confirmed rate.
+            </p>
+            <p className="text-muted-foreground mt-4">
+              Air cargo accommodates personal effects, electronics, documents, spare parts, pharmaceuticals, food products (with permits), commercial samples and more. Prohibited items include narcotics, firearms, counterfeit goods and endangered species products.
+            </p>
+          </motion.section>
+
+          {/* Sea Cargo */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Sea Cargo Service from Islamabad — Economical Ocean Freight Worldwide</SectionHeading>
+            <div className="text-muted-foreground space-y-4 mb-6">
+              <p>
+                Sea freight via Karachi Port and Port Qasim is the most economical solution for large-volume cargo — household removals, commercial bulk goods, vehicles, machinery and furniture. Cost saving is often 60–80% less per cubic metre than air freight, with transit times of 20–50 days depending on destination.
+              </p>
+              <p>
+                Our end-to-end process covers collection from Islamabad, overland transport to Karachi, port handling, booking with MSC, Maersk, CMA CGM, COSCO and Hapag-Lloyd, ocean transit, destination clearance through partner agents, and final delivery.
+              </p>
+            </div>
+            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2"><Anchor size={20} className="text-gold" /> LCL vs FCL Sea Freight from Islamabad</h3>
+            <DataTable
+              headers={["Feature", "LCL (Less than Container Load)", "FCL (Full Container Load)"]}
+              rows={lclFclComparison.map((r) => [r.feature, r.lcl, r.fcl])}
+            />
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Sea Freight Transit Times from Islamabad (via Karachi Port) 2026</h3>
+            <DataTable
+              headers={["Destination Port", "Shipping Line Options", "LCL Transit", "FCL Transit"]}
+              rows={seaTransitTable.map((r) => [r.port, r.lines, r.lcl, r.fcl])}
+            />
+          </motion.section>
+
+          {/* Freight Forwarding */}
+          <motion.section {...fade}>
+            <SectionHeading>Freight Forwarding in Islamabad — Complete Trade Logistics Management</SectionHeading>
+            <div className="text-muted-foreground space-y-4">
+              <p>
+                As a licensed freight forwarder registered with IATA and FIATA, we act as your single point of contact for every step — truckers, airlines, shipping lines, customs agents and destination delivery. We cover export and import freight forwarding with full customs clearance. Learn more on our{" "}
+                <Link to="/freight-forwarding-islamabad" className="text-gold hover:underline">freight forwarding Islamabad</Link> page.
+              </p>
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  "HS Code Classification for duty calculation and compliance",
+                  "Export Documentation — invoice, packing list, COO, SPS, fumigation",
+                  "WeBOC Filing — electronic Goods Declaration for export clearance",
+                  "Cargo Booking with negotiated airline and shipping line rates",
+                  "All-risk marine cargo insurance at competitive premiums",
+                  "Transshipment coordination at Dubai, Singapore, Colombo, Rotterdam",
+                  "Destination agent network in 100+ countries",
+                  "Real-time track and trace from departure to delivery",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="text-gold shrink-0 mt-0.5" size={16} />
+                    <span className="text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm border-l-4 border-gold pl-4 italic">
+                <strong className="text-gold not-italic">Expert Tip:</strong> Pakistan&apos;s DTRE and SRO 450 export rebate schemes can significantly reduce input costs for manufactured goods exports. Our team assists Islamabad exporters in documenting shipments to maximise rebate claims.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Customs Clearance */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Customs Clearance Services in Islamabad — Expert Export Documentation</SectionHeading>
+            <div className="text-muted-foreground space-y-4 mb-6">
+              <p>
+                Every shipment leaving Pakistan must be declared to Pakistan Customs (FBR), and every destination import must clear that country&apos;s customs. Our licensed Customs Clearing Agents handle export GD filing, examination facilitation and duty drawback claims. For import clearance in Islamabad, see{" "}
+                <Link to="/customs-clearance-islamabad" className="text-gold hover:underline">customs clearance Islamabad</Link>.
+              </p>
+              <h3 className="text-xl font-semibold text-foreground">Step-by-Step Pakistan Customs Export Process</h3>
+              <ol className="list-decimal pl-6 space-y-2 text-sm">
+                <li><strong className="text-foreground">HS Code Classification</strong> — correct 8-digit code for every item</li>
+                <li><strong className="text-foreground">Goods Declaration (GD) Filing</strong> — electronic submission on WeBOC</li>
+                <li><strong className="text-foreground">Risk Assessment</strong> — Green, Yellow or Red channel via PACCS</li>
+                <li><strong className="text-foreground">Examination</strong> — agent accompanies officers if required</li>
+                <li><strong className="text-foreground">Export Clearance Certificate</strong> — cargo released to carrier</li>
+                <li><strong className="text-foreground">Destination Import Clearance</strong> — partner agents handle arrival customs</li>
+              </ol>
+            </div>
+            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2"><FileCheck size={20} className="text-gold" /> Documents Required for Cargo Customs Clearance</h3>
+            <DataTable
+              headers={["Document", "Required For", "Issued By", "Prepared By Us?"]}
+              rows={customsDocsTable.map((r) => [r.doc, r.for, r.by, r.us])}
+            />
+          </motion.section>
+
+          {/* Door to Door */}
+          <motion.section {...fade}>
+            <SectionHeading>Door-to-Door Cargo Service from Islamabad — Hassle-Free International Delivery</SectionHeading>
+            <p className="text-muted-foreground mb-6">
+              From a single phone call, we handle cargo collection, professional packing, export clearance, international transit, import clearance at destination, and final delivery — one contract, one invoice, one point of contact and real-time tracking the entire way.
+            </p>
+            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2"><Truck size={20} className="text-gold" /> Door-to-Door Cargo Delivery Times from Islamabad</h3>
+            <DataTable
+              headers={["Destination", "Air Door-to-Door", "Sea Door-to-Door (LCL)", "Best For"]}
+              rows={doorToDoorTimes.map((r) => [r.dest, r.air, r.sea, r.best])}
+            />
+          </motion.section>
+
+          {/* Commercial & Personal */}
+          <motion.section {...fade} className="grid md:grid-cols-2 gap-6">
+            <div className="glass-card rounded-2xl p-6 border border-border">
+              <h2 className="text-xl font-display font-bold text-foreground mb-4 flex items-center gap-2"><Building size={20} className="text-gold" /> Commercial Cargo &amp; Trade Freight</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Purpose-built for Islamabad exporters, manufacturers and e-commerce businesses requiring consistent schedules and contract rates. We handle textiles, surgical instruments, handicrafts, agricultural produce, pharmaceuticals, IT equipment and industrial machinery.
+              </p>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li>• Regular weekly air consolidations to Dubai, Riyadh, London, Toronto</li>
+                <li>• FCL block space agreements on major shipping lines</li>
+                <li>• Trade compliance — HS codes, COO, FORM-E, L/C documentation</li>
+                <li>• IATA-certified dangerous goods handling (Class 3, 4, 8, 9)</li>
+                <li>• E-commerce fulfillment — pick-and-pack and international dispatch</li>
+              </ul>
+            </div>
+            <div className="glass-card rounded-2xl p-6 border border-border">
+              <h2 className="text-xl font-display font-bold text-foreground mb-4 flex items-center gap-2"><Package size={20} className="text-gold" /> Personal Cargo &amp; Household Goods</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Personal cargo specialists guide families through international shipping, customs regulations and destination import rules that vary country by country — accompanied baggage excess, unaccompanied personal effects, full household removals and student shipments.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Most destination countries offer Personal Effects Import Relief for people relocating permanently. Our team advises on documentation to qualify for duty-free import — including UK Transferred Residence Relief (ToR1) for Pakistani nationals relocating to the UK after 12+ months abroad.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Packaging */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Professional Cargo Packaging in Islamabad — Export-Grade Packing</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-muted-foreground">
+              {[
+                { icon: Box, title: "Double-Wall Corrugated Cartons", desc: "Heavy-duty cartons rated for international stacking" },
+                { icon: ShieldCheck, title: "Polyethylene Foam", desc: "Custom-cut inserts for electronics and fragile items" },
+                { icon: Package, title: "Bubble Wrap & Stretch Wrap", desc: "Multi-layer protection for ceramics, artwork and instruments" },
+                { icon: Anchor, title: "ISPM-15 Wooden Crates", desc: "Heat-treated timber for machinery and oversized items" },
+                { icon: Truck, title: "Palletization", desc: "Consolidation on pallets for commercial LCL and FCL" },
+                { icon: Thermometer, title: "Moisture Barriers", desc: "Desiccant packets and liners for sea freight shipments" },
+              ].map((item) => (
+                <div key={item.title} className="p-4 rounded-xl bg-navy-light/10">
+                  <item.icon className="text-gold mb-2" size={22} />
+                  <h3 className="font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-1">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Tracking */}
+          <motion.section {...fade}>
+            <SectionHeading>International Cargo Tracking from Islamabad — Real-Time Shipment Visibility</SectionHeading>
+            <div className="text-muted-foreground space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="glass-card rounded-xl p-5 border border-border">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2"><Plane size={18} className="text-gold" /> Air Cargo Tracking</h3>
+                  <p className="text-sm">Track via 11-digit Airway Bill (AWB) on airline websites or Track-Trace.com / 17Track.net. WhatsApp updates at: Accepted, Departed ISB, Arrived Hub, Arrived Destination, Customs Cleared, Delivered.</p>
+                </div>
+                <div className="glass-card rounded-xl p-5 border border-border">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2"><Anchor size={18} className="text-gold" /> Sea Freight Tracking</h3>
+                  <p className="text-sm">FCL tracked via container number on shipping line websites. LCL via House Bill of Lading (HBL). Updates at: Received Karachi, Loaded on Vessel, Departed Karachi, Arrived Destination Port, Customs Cleared, Delivered.</p>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Vehicle Shipping */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Vehicle &amp; Car Shipping from Islamabad — International Auto Transport</SectionHeading>
+            <p className="text-muted-foreground mb-4">
+              Complete vehicle export management — MVRS de-registration, Pakistan Customs export GD, inland transport to Karachi Port, RoRo or container booking, marine insurance, ocean transit and destination import clearance for cars, SUVs, motorcycles and commercial vehicles.
+            </p>
+            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2"><Car size={20} className="text-gold" /> Vehicle Shipping from Islamabad — Estimated Costs &amp; Transit Times 2026</h3>
+            <DataTable
+              headers={["Destination", "RoRo Cost (Est.)", "Container Cost (Est.)", "Transit Time"]}
+              rows={vehicleShippingTable.map((r) => [r.dest, r.roro, r.container, r.transit])}
+            />
+          </motion.section>
+
+          {/* Pickup Coverage */}
+          <motion.section {...fade}>
+            <SectionHeading>Cargo Pickup Coverage Across Islamabad — All Sectors Served</SectionHeading>
+            <p className="text-muted-foreground mb-6">
+              Free doorstep cargo collection from every sector in Islamabad and Rawalpindi. Our fleet operates from our Blue Area, Jinnah Avenue office.
+            </p>
+            <div className="space-y-4">
+              {pickupAreas.map((area) => (
+                <div key={area.title} className="glass-card rounded-xl p-5 border border-border">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2 mb-2"><MapPin size={18} className="text-gold" /> {area.title}</h3>
+                  <p className="text-sm text-muted-foreground">{area.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Process */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Complete International Shipping Process from Islamabad — Step by Step</SectionHeading>
+            <div className="space-y-4">
+              {shippingSteps.map((s) => (
+                <div key={s.step} className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0 text-gold font-bold text-sm">{s.step.replace("Step ", "")}</div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{s.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Top Destinations */}
+          <motion.section {...fade}>
+            <SectionHeading>Cargo from Islamabad to Top Destinations — What You Need to Know</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+              {[
+                { dest: "Cargo to UAE from Islamabad", text: "Most popular destination. Air cargo 2–3 days at PKR 850–1,200/kg. Personal effects qualify for UAE Customs duty exemptions under Residency Transfer with precise documentation." },
+                { dest: "Cargo to UK from Islamabad", text: "UK HMRC allows duty-free household goods under Transfer of Residence Relief (ToR01). Air to London 3–5 days; sea to Felixstowe 28–38 days. We prepare ToR01-compliant documentation." },
+                { dest: "Cargo to USA from Islamabad", text: "Subject to US CBP regulations. Personal effects under USD 800 may qualify for de minimis exemption. We ensure ISF submission for sea freight and FDA compliance for regulated goods. Air to New York/LA 4–6 days." },
+                { dest: "Cargo to Saudi Arabia from Islamabad", text: "ZATCA requires precise customs documentation. Personal effects may qualify for duty exemption for new residents. Halal certification required for food. Air to Riyadh/Jeddah 2–4 days." },
+              ].map((d) => (
+                <div key={d.dest} className="glass-card rounded-xl p-5 border border-border">
+                  <h3 className="font-semibold text-foreground mb-2">{d.dest}</h3>
+                  <p>{d.text}</p>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Why Choose Us */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Why Best International Movers Is Islamabad&apos;s Most Trusted Cargo Company</SectionHeading>
+            <div className="space-y-4">
+              {whyChooseUs.map((item, i) => (
+                <div key={item.title} className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center shrink-0 text-gold font-bold text-sm">{i + 1}</div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* CTA */}
+          <motion.section {...fade} className="text-center bg-gradient-to-r from-gold/10 to-gold/5 rounded-2xl p-10 border border-gold/20">
+            <SectionHeading>Ship Your Cargo from Islamabad Today — Get a Free Quote in 5 Minutes</SectionHeading>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Join over 10,000 satisfied clients who trust Best International Movers for international cargo from Islamabad — single box or full container — to UAE, UK, USA, Canada, Saudi Arabia and 100+ countries.
+            </p>
+            <div className="text-muted-foreground mb-8 space-y-1 text-sm">
+              <p>📞 Call / WhatsApp: 0300-9130211</p>
+              <p>✉ Email: info@bestintlmovers.com</p>
+              <p>🕐 Monday – Saturday, 8:00 AM – 8:00 PM</p>
+              <p>📍 Office: Blue Area, Jinnah Avenue, Islamabad</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-gold text-navy-dark px-8 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-all">
+                <Phone size={18} /> Get Free Quote
+              </Link>
+              <a href="https://wa.me/923009130211" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-dark transition-all">
+                <MessageCircle size={18} /> WhatsApp Now
+              </a>
+            </div>
+          </motion.section>
+
+          {/* FAQ */}
+          <motion.section {...fade} className="glass-card rounded-2xl p-8 border border-border">
+            <SectionHeading>Frequently Asked Questions — International Cargo Service in Islamabad</SectionHeading>
+            <p className="text-muted-foreground mb-6">Can&apos;t find your answer? Call 0300-9130211 and speak directly with our cargo team.</p>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left font-display font-semibold text-foreground">
+                    {i + 1}. {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.section>
+
+          {/* Related Services */}
+          <motion.section {...fade}>
+            <SectionHeading>Related Cargo &amp; Logistics Services from Best International Movers</SectionHeading>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {relatedLinks.map((link) => (
+                <Link key={link.href} to={link.href} className="glass-card rounded-xl p-4 border border-border hover:border-gold/50 transition-colors flex items-center gap-2 text-sm text-gold">
+                  <Search size={14} /> {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.section>
+
+        </div>
+      </div>
+    </div>
+
+    <ContactFooter />
+    <WhatsAppButton />
+  </div>
+);
 
 export default InternationalCargoIslamabad;
