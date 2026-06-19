@@ -231,7 +231,7 @@ const blogs = [
   },
   {
     slug: "tips-for-stress-free-international-move",
-    img: "/images/international-moving.jpg",
+    img: "/images/good.png",
     title: "10 Tips for a Stress-Free International Move from Pakistan",
     date: "Apr 1, 2026",
     category: "Moving Tips",
@@ -253,7 +253,7 @@ const blogs = [
   },
   {
     slug: "customs-regulations-guide-pakistan",
-    img: "/images/cargo-insurance.jpg",
+    img: "/images/nationwide-distribution.png",
     title: "Pakistan Customs Regulations Guide | Moving Abroad",
     date: "Feb 28, 2024",
     category: "Guides",
@@ -287,7 +287,7 @@ const blogs = [
   },
   {
     slug: "best-international-moving-company-pakistan",
-    img: "/images/international-moving.jpg",
+    img: "/images/dha-movers-karachi.png",
     title: "How to Choose the Best International Moving Company in Pakistan",
     date: "Feb 15, 2024",
     category: "Guides",
@@ -326,7 +326,7 @@ const blogs = [
   },
     {
     slug: "packing-guide-international-move",
-    img: "/images/packing-materials.jpg",
+    img: "/images/secure-storage.png",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",
     date: "Feb 1, 2024",
     category: "Moving Tips",

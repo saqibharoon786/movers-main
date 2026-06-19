@@ -211,7 +211,7 @@ const CargoServiceIslamabadCompleteGuideBlog = () => {
             </h1>
             
             <img 
-              src="/images/air-freight.jpg" 
+              src="/images/china-to-pakistan-cargo.jpg" 
               alt="Cargo Service in Islamabad - International Shipping" 
               className="w-full max-w-4xl mx-auto h-auto object-cover rounded-2xl mb-8 shadow-2xl border-4 border-white/10"
             />

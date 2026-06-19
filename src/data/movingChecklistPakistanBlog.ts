@@ -5,8 +5,7 @@ export const MOVING_CHECKLIST_PAKISTAN_PATH = `/blog/${MOVING_CHECKLIST_PAKISTAN
 export const MOVING_CHECKLIST_PAKISTAN_CANONICAL =
   "https://bestintlmovers.com/blog/moving-checklist-pakistan/";
 
-export const MOVING_CHECKLIST_PAKISTAN_IMAGE =
-  "/blog/packers-movers-islamabad-truck.jpg";
+export const MOVING_CHECKLIST_PAKISTAN_IMAGE = "/images/packing-materials.jpg";
 
 export const MOVING_CHECKLIST_PAKISTAN_OG_IMAGE = MOVING_CHECKLIST_PAKISTAN_IMAGE;
 

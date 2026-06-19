@@ -94,7 +94,7 @@ const ContactFooter = () => {
                 <li><Link to="/blog/moving-cost-pakistan/" className="hover:text-gold transition-colors">Moving Cost Pakistan Guide</Link></li>
                 <li><Link to="/blog/packing-tips-house-shifting/" className="hover:text-gold transition-colors">Packing Tips House Shifting</Link></li>
                 <li><Link to="/blog/mistakes-during-house-shifting/" className="hover:text-gold transition-colors">House Shifting Mistakes</Link></li>
-                <li><Link to="/blog/air-vs-sea-freight-pakistan/" className="hover:text-gold transition-colors">Air vs Sea Freight Pakistan</Link></li>
+                <li><Link to="/blog/air-freight-vs-sea-freight-pakistan/" className="hover:text-gold transition-colors">Air vs Sea Freight Pakistan</Link></li>
                 <li><Link to="/blog/how-to-choose-packers-movers/" className="hover:text-gold transition-colors">How to Choose Packers Movers</Link></li>
                 <li><Link to="/blog/best-movers-islamabad-vs-lahore/" className="hover:text-gold transition-colors">Islamabad vs Lahore Movers</Link></li>
                 <li><Link to="/blog/office-relocation-checklist-pakistan/" className="hover:text-gold transition-colors">Office Relocation Checklist</Link></li>

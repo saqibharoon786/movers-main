@@ -3,8 +3,7 @@ import BlogArticleShell from "@/components/blog/BlogArticleShell";
 import { pageTitles } from "@/seo/pageTitles";
 
 const CANONICAL_PATH = "/blog/packers-and-movers-islamabad-guide/";
-const OG_IMAGE =
-  "/images/hero-home.jpg";
+const OG_IMAGE = "/images/professional-packing.png";
 
 const TITLE = pageTitles.blogPackersIslamabadGuide;
 const DESCRIPTION =

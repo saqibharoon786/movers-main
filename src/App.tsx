@@ -140,6 +140,11 @@ const CustomClearanceAgencyPakistan = lazy(() => import("./pages/CustomClearance
 const ShippingCompaniesPakistanBlog = lazy(() => import("./pages/blog/ShippingCompaniesPakistanBlog.tsx"));
 const CargoServiceIslamabadCompleteGuideBlog = lazy(() => import("./pages/blog/CargoServiceIslamabadCompleteGuideBlog.tsx"));
 const InternationalRelocationRawalpindiCompleteGuideBlog = lazy(() => import("./pages/blog/InternationalRelocationRawalpindiCompleteGuideBlog.tsx"));
+const CustomsClearanceProcessPakistanBlog = lazy(() => import("./pages/blog/CustomsClearanceProcessPakistanBlog.tsx"));
+const CargoChargesPakistanToUKBlog = lazy(() => import("./pages/blog/CargoChargesPakistanToUKBlog.tsx"));
+const BestFreightForwardersPakistanBlog = lazy(() => import("./pages/blog/BestFreightForwardersPakistanBlog.tsx"));
+const AirFreightVsSeaFreightPakistanBlog = lazy(() => import("./pages/blog/AirFreightVsSeaFreightPakistanBlog.tsx"));
+const InternationalRelocationChecklistFamiliesBlog = lazy(() => import("./pages/blog/InternationalRelocationChecklistFamiliesBlog.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -206,7 +211,7 @@ const App = () => (
           <Route path="/blog/tips-for-stress-free-international-move" element={<Navigate to="/blog/tips-for-stress-free-international-move/" replace />} />
           <Route path="/blog/tips-for-stress-free-international-move/" element={<Blog1 />} />
           <Route path="/blog/air-freight-vs-sea-freight-pakistan" element={<Navigate to="/blog/air-freight-vs-sea-freight-pakistan/" replace />} />
-          <Route path="/blog/air-freight-vs-sea-freight-pakistan/" element={<Blog2 />} />
+          <Route path="/blog/air-freight-vs-sea-freight-pakistan/" element={<AirFreightVsSeaFreightPakistanBlog />} />
           <Route path="/blog/customs-regulations-pakistan-2025" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2025/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2026" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
@@ -221,8 +226,8 @@ const App = () => (
           <Route path="/blog/packing-tips-house-shifting/" element={<PackingTipsHouseShiftingBlog />} />
           <Route path="/blog/mistakes-during-house-shifting" element={<Navigate to="/blog/mistakes-during-house-shifting/" replace />} />
           <Route path="/blog/mistakes-during-house-shifting/" element={<MistakesDuringHouseShiftingBlog />} />
-          <Route path="/blog/air-vs-sea-freight-pakistan" element={<Navigate to="/blog/air-vs-sea-freight-pakistan/" replace />} />
-          <Route path="/blog/air-vs-sea-freight-pakistan/" element={<AirVsSeaFreightPakistanBlog />} />
+          <Route path="/blog/air-vs-sea-freight-pakistan" element={<Navigate to="/blog/air-freight-vs-sea-freight-pakistan/" replace />} />
+          <Route path="/blog/air-vs-sea-freight-pakistan/" element={<Navigate to="/blog/air-freight-vs-sea-freight-pakistan/" replace />} />
           <Route path="/blog/how-to-choose-packers-movers" element={<Navigate to="/blog/how-to-choose-packers-movers/" replace />} />
           <Route path="/blog/how-to-choose-packers-movers/" element={<HowToChoosePackersMoversBlog />} />
           <Route path="/blog/best-movers-islamabad-vs-lahore" element={<Navigate to="/blog/best-movers-islamabad-vs-lahore/" replace />} />
@@ -272,6 +277,14 @@ const App = () => (
           <Route path="/blog/cargo-service-islamabad-complete-guide/" element={<CargoServiceIslamabadCompleteGuideBlog />} />
           <Route path="/blog/international-relocation-rawalpindi-complete-guide" element={<Navigate to="/blog/international-relocation-rawalpindi-complete-guide/" replace />} />
           <Route path="/blog/international-relocation-rawalpindi-complete-guide/" element={<InternationalRelocationRawalpindiCompleteGuideBlog />} />
+          <Route path="/blog/customs-clearance-process-pakistan" element={<Navigate to="/blog/customs-clearance-process-pakistan/" replace />} />
+          <Route path="/blog/customs-clearance-process-pakistan/" element={<CustomsClearanceProcessPakistanBlog />} />
+          <Route path="/blog/cargo-charges-pakistan-to-uk" element={<Navigate to="/blog/cargo-charges-pakistan-to-uk/" replace />} />
+          <Route path="/blog/cargo-charges-pakistan-to-uk/" element={<CargoChargesPakistanToUKBlog />} />
+          <Route path="/blog/best-freight-forwarders-pakistan" element={<Navigate to="/blog/best-freight-forwarders-pakistan/" replace />} />
+          <Route path="/blog/best-freight-forwarders-pakistan/" element={<BestFreightForwardersPakistanBlog />} />
+          <Route path="/blog/international-relocation-checklist-families" element={<Navigate to="/blog/international-relocation-checklist-families/" replace />} />
+          <Route path="/blog/international-relocation-checklist-families/" element={<InternationalRelocationChecklistFamiliesBlog />} />
           <Route
             path="/blog/international-moving-services-pakistan"
             element={<Navigate to="/international-movers-pakistan/" replace />}

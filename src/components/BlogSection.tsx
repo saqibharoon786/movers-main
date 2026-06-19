@@ -27,8 +27,63 @@ import {
   KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
   KARACHI_TO_DUBAI_SHIPPING_COST_SLUG,
 } from "@/data/karachiToDubaiShippingCost2026Blog";
+import {
+  CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_IMAGE,
+  CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_SLUG,
+} from "@/data/customsClearanceProcessPakistanBlog";
+import {
+  CARGO_CHARGES_PAKISTAN_TO_UK_IMAGE,
+  CARGO_CHARGES_PAKISTAN_TO_UK_SLUG,
+} from "@/data/cargoChargesPakistanToUKBlog";
+import {
+  BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
+  BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
+} from "@/data/bestFreightForwardersPakistanBlog";
+import {
+  AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_IMAGE,
+  AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
+} from "@/data/airFreightVsSeaFreightPakistanBlog";
+import {
+  INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
+  INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
+} from "@/data/internationalRelocationChecklistFamiliesBlog";
 
 const posts = [
+  {
+    img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
+    slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
+    title: "International Relocation Checklist for Families — Ultimate 2025–2026 Guide",
+    date: "June 19, 2026",
+    category: "Family Relocation",
+  },
+  {
+    img: AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_IMAGE,
+    slug: AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
+    title: "Air Freight vs Sea Freight in Pakistan — Which Should You Choose?",
+    date: "June 19, 2026",
+    category: "Logistics",
+  },
+  {
+    img: BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
+    slug: BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
+    title: "Best Freight Forwarders in Pakistan — Complete 2025–2026 Guide",
+    date: "June 19, 2026",
+    category: "Freight Forwarding",
+  },
+  {
+    img: CARGO_CHARGES_PAKISTAN_TO_UK_IMAGE,
+    slug: CARGO_CHARGES_PAKISTAN_TO_UK_SLUG,
+    title: "Cargo Charges from Pakistan to UK — Complete 2026 Pricing Guide",
+    date: "June 19, 2026",
+    category: "International Shipping",
+  },
+  {
+    img: CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_IMAGE,
+    slug: CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_SLUG,
+    title: "Customs Clearance Process in Pakistan — Complete 2026 Guide",
+    date: "June 19, 2026",
+    category: "Customs & Compliance",
+  },
   {
     img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
     slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
@@ -71,9 +126,8 @@ const posts = [
     date: "May 19, 2026",
     category: "Moving Guides",
   },
-  { img: "/images/international-moving.jpg", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
-  { img: "/images/air-freight.jpg", slug: "air-freight-vs-sea-freight-pakistan", title: "Air Freight vs Sea Freight from Pakistan: Cost & Speed Comparison", date: "Mar 28, 2026", category: "Logistics" },
-  { img: "/images/cargo-insurance.jpg", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
+  { img: "/images/good.png", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
+  { img: "/images/nationwide-distribution.png", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
 ];
 
 const BlogSection = () => {
