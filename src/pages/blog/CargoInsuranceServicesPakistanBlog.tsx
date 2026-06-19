@@ -51,7 +51,7 @@ const relatedBlogs = [
   {
     title: "Air vs Sea Freight: Complete Comparison",
     excerpt: "Detailed comparison of air and sea freight options for international shipping from Pakistan.",
-    slug: "air-vs-sea-freight-pakistan",
+    slug: "air-freight-vs-sea-freight-pakistan",
     category: "Shipping Tips",
     readTime: "14 min read",
     date: "April 18, 2026"

@@ -6,8 +6,7 @@ import {
 } from "@/data/packersMoversRawalpindiGuideBlog";
 import { pageTitles } from "@/seo/pageTitles";
 
-const OG_IMAGE =
-  "/images/hero-home.jpg";
+const OG_IMAGE = "/images/homeshifting.png";
 
 const TITLE = pageTitles.blogPackersRawalpindiGuide;
 const DESCRIPTION =

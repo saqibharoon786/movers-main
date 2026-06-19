@@ -36,9 +36,89 @@ import {
   KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE,
   KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD,
 } from "@/data/karachiToDubaiShippingCost2026Blog";
+import {
+  CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_SLUG,
+  CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_IMAGE,
+} from "@/data/customsClearanceProcessPakistanBlog";
+import {
+  CARGO_CHARGES_PAKISTAN_TO_UK_SLUG,
+  CARGO_CHARGES_PAKISTAN_TO_UK_IMAGE,
+} from "@/data/cargoChargesPakistanToUKBlog";
+import {
+  BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
+  BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
+} from "@/data/bestFreightForwardersPakistanBlog";
+import {
+  AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
+  AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_IMAGE,
+} from "@/data/airFreightVsSeaFreightPakistanBlog";
+import {
+  INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
+  INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
+} from "@/data/internationalRelocationChecklistFamiliesBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
+    img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
+    title: "International Relocation Checklist for Families: The Ultimate 2025–2026 Guide",
+    date: "Jun 19, 2026",
+    category: "Family Relocation",
+    author: "Best International Movers & Logistics",
+    readTime: "30 min read",
+    excerpt:
+      "Complete international relocation checklist for families — visas, schools, shipping, housing, healthcare, finances, kids & pets. Step-by-step from 12 months before to first month after arrival.",
+    content: "Ultimate international relocation checklist for families moving abroad in 2025–2026.",
+  },
+  {
+    slug: AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
+    img: AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_IMAGE,
+    title: "Air Freight vs Sea Freight in Pakistan: Which One Should You Actually Choose?",
+    date: "Jun 19, 2026",
+    category: "Logistics",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt:
+      "Compare air freight vs sea freight in Pakistan — cost, transit time, cargo suitability, customs, seasonal factors & a practical decision framework for importers and exporters.",
+    content: "Complete air vs sea freight comparison guide for Pakistan shipments in 2026.",
+  },
+  {
+    slug: BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
+    img: BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
+    title: "Best Freight Forwarders in Pakistan: Complete 2025–2026 Guide",
+    date: "Jun 19, 2026",
+    category: "Freight Forwarding",
+    author: "Best International Movers & Logistics",
+    readTime: "28 min read",
+    excerpt:
+      "Complete guide to the best freight forwarders in Pakistan — air & sea freight, customs clearance, Karachi, Lahore, Islamabad, rates, certifications & 15-point checklist.",
+    content: "Complete guide to best freight forwarders in Pakistan for air freight, sea freight, and customs clearance.",
+  },
+  {
+    slug: CARGO_CHARGES_PAKISTAN_TO_UK_SLUG,
+    img: CARGO_CHARGES_PAKISTAN_TO_UK_IMAGE,
+    title: "Cargo Charges from Pakistan to UK: The Complete 2026 Pricing Guide",
+    date: "Jun 19, 2026",
+    category: "International Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "20 min read",
+    excerpt:
+      "Complete 2026 guide to cargo charges from Pakistan to the UK — air vs sea freight, FCL/LCL rates, surcharges, customs, VAT, transit times & tips to avoid overpaying.",
+    content: "Complete cargo charges and pricing guide for Pakistan to UK shipping in 2026.",
+  },
+  {
+    slug: CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_SLUG,
+    img: CUSTOMS_CLEARANCE_PROCESS_PAKISTAN_IMAGE,
+    title: "Customs Clearance Process in Pakistan: The Complete 2026 Guide for Importers and Exporters",
+    date: "Jun 19, 2026",
+    category: "Customs & Compliance",
+    author: "Best International Movers & Logistics",
+    readTime: "22 min read",
+    excerpt:
+      "Complete 2026 guide to customs clearance in Pakistan — WeBOC, HS codes, duty assessment, Green/Yellow/Red channels, documents, timelines & tips to avoid delays at Karachi Port and Islamabad Airport.",
+    content: "Complete customs clearance process guide for importers and exporters in Pakistan.",
+  },
   {
     slug: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG,
     img: OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE,
@@ -124,7 +204,7 @@ const allBlogs = [
   },
   {
     slug: PACKERS_MOVERS_ISLAMABAD_COMPLETE_GUIDE_SLUG,
-    img: "/blog/packers-movers-islamabad-hero.jpg",
+    img: "/images/house-shifting-karachi.png",
     title: "Packers and Movers in Islamabad — Complete 2026 Guide for Home, Office & Society Shifting",
     date: "May 15, 2026",
     category: "Moving Guides",
@@ -160,7 +240,7 @@ const allBlogs = [
   },
   {
     slug: "cargo-service-islamabad-complete-guide",
-    img: "/images/air-freight.jpg",
+    img: "/images/china-to-pakistan-cargo.jpg",
     title: "Cargo Service in Islamabad 2026 — Everything You Need to Know | Best Intl Movers",
     date: "May 11, 2026",
     category: "Cargo Guide",
@@ -182,7 +262,7 @@ const allBlogs = [
   },
   {
     slug: "international-relocation-services-rawalpindi",
-    img: "/images/rwp.png",
+    img: "/images/shipping.png",
     title: "International Relocation Services in Rawalpindi: Everything You Need to Know Before Moving Abroad",
     date: "May 5, 2026",
     category: "Relocation Guide",
@@ -226,7 +306,7 @@ const allBlogs = [
   },
   {
     slug: "tips-for-stress-free-international-move",
-    img: "/images/international-moving.jpg",
+    img: "/images/good.png",
     title: "10 Tips for a Stress-Free International Move from Pakistan",
     date: "Apr 1, 2026",
     category: "Moving Tips",
@@ -236,19 +316,8 @@ const allBlogs = [
     content: "Expert tips for international moving from Pakistan with documentation guidance."
   },
   {
-    slug: "air-freight-vs-sea-freight-pakistan",
-    img: "/images/air-freight.jpg",
-    title: "Air Freight vs Sea Freight from Pakistan: Which is Right?",
-    date: "Apr 1, 2026",
-    category: "Logistics",
-    author: "Best International Movers",
-    readTime: "12 min read",
-    excerpt: "Compare air and sea freight costs, transit times, pros and cons—and choose the right shipping method for your move.",
-    content: "Detailed comparison of air freight vs sea freight options from Pakistan."
-  },
-  {
     slug: "customs-regulations-pakistan-2026",
-    img: "/images/cargo-insurance.jpg",
+    img: "/images/nationwide-distribution.png",
     title: "Pakistan Customs Regulations for International Moving 2026",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -259,7 +328,7 @@ const allBlogs = [
   },
   {
     slug: "moving-from-pakistan-to-dubai-guide",
-    img: "/images/international-moving.jpg",
+    img: "/images/vehicle-shipping.jpg",
     title: "Moving from Pakistan to Dubai: Complete Guide 2026",
     date: "Apr 1, 2026",
     category: "Guides",
@@ -270,7 +339,7 @@ const allBlogs = [
   },
   {
     slug: "international-moving-services-pakistan",
-    img: "/images/international-moving.jpg",
+    img: "/images/dha-movers-karachi.png",
     title: "How to Choose the Best International Moving Company in Pakistan",
     date: "Feb 15, 2024",
     category: "Guides",
@@ -281,7 +350,7 @@ const allBlogs = [
   },
   {
     slug: "packing-guide-international-move",
-    img: "/images/packing-materials.jpg",
+    img: "/images/secure-storage.png",
     title: "Ultimate Packing Guide for International Moving: Protect Your Belongings",
     date: "Feb 1, 2024",
     category: "Moving Tips",
@@ -295,6 +364,9 @@ const allBlogs = [
 // Categories for filtering
 const categories = [
   "All",
+  "Family Relocation",
+  "Freight Forwarding",
+  "Customs & Compliance",
   "Office Relocation",
   "DHA Karachi",
   "International Shipping",

@@ -6,8 +6,7 @@ import {
 } from "@/data/packersMoversIslamabadCompleteGuideBlog";
 import { pageTitles } from "@/seo/pageTitles";
 
-const OG_IMAGE =
-  "/images/hero-home.jpg";
+const OG_IMAGE = "/images/house-shifting-karachi.png";
 
 const TITLE = pageTitles.blogPackersIslamabadComplete;
 const DESCRIPTION =
