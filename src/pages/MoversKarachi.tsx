@@ -500,7 +500,7 @@ const MoversKarachi = () => {
                 </p>
                 <p className="text-sm border-l-4 border-gold pl-4 bg-gold/5 rounded-r-lg py-3">
                   For our sea freight pricing and container options from Karachi, see our{" "}
-                  <Link to="/services/sea-freight/" className="text-gold hover:underline font-medium">
+                  <Link to="/services/sea-freight-services/" className="text-gold hover:underline font-medium">
                     Sea Freight Pakistan guide →
                   </Link>
                 </p>
@@ -572,7 +572,7 @@ const MoversKarachi = () => {
                       )}
                       {!svc.link && svc.title.includes("Sea Freight") && (
                         <p className="mt-2 text-sm">
-                          <Link to="/services/sea-freight/" className="text-gold hover:underline font-medium">
+                          <Link to="/services/sea-freight-services/" className="text-gold hover:underline font-medium">
                             View full sea freight details →
                           </Link>
                         </p>

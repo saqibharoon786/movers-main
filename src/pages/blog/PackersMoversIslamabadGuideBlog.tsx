@@ -250,7 +250,7 @@ export default function PackersMoversIslamabadGuideBlog() {
       <h3>Storage and Warehousing</h3>
       <p>
         If your new home is not ready yet, short and long-term climate-controlled facilities keep your belongings safe.
-        Compare options on our <Link to="/services/secure-storage">storage services</Link> page.
+        Compare options on our <Link to="/services/secure-storage-services/">storage services</Link> page.
       </p>
       <h3>Vehicle Transport</h3>
       <p>

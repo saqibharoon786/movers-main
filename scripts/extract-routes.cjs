@@ -19,6 +19,12 @@ function addPath(paths, route) {
   paths.add(`${trimmed}/`);
 }
 
+const REDIRECT_BLOG_SLUGS = new Set([
+  "home-shifting-islamabad",
+  "international-moving-services-pakistan",
+  "customs-regulations-guide-pakistan",
+]);
+
 function extractBlogSlugsFromSource(filePath) {
   if (!fs.existsSync(filePath)) return [];
   const content = fs.readFileSync(filePath, "utf8");
@@ -26,7 +32,9 @@ function extractBlogSlugsFromSource(filePath) {
   const re = /slug:\s*"([^"]+)"/g;
   let match;
   while ((match = re.exec(content)) !== null) {
-    slugs.push(match[1]);
+    if (!REDIRECT_BLOG_SLUGS.has(match[1])) {
+      slugs.push(match[1]);
+    }
   }
   return slugs;
 }

@@ -70,7 +70,7 @@ const FAQPage = () => {
                 air freight
               </Link>{" "}
               with{" "}
-              <Link to="/services/sea-freight" className="text-gold hover:underline">
+              <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
                 sea freight
               </Link>
               , or booking{" "}
@@ -93,7 +93,7 @@ const FAQPage = () => {
                 cargo service Islamabad
               </Link>
               . If you need storage between addresses, review{" "}
-              <Link to="/services/secure-storage" className="text-gold hover:underline">
+              <Link to="/services/secure-storage-services/" className="text-gold hover:underline">
                 secure storage
               </Link>{" "}
               and our{" "}

@@ -45,7 +45,7 @@ const serviceData = {
       q: "What are the current import duties on Chinese goods in Pakistan?",
       a: "Import duties on Chinese goods in Pakistan vary by HS code and product category, ranging from 0% to 35%, plus applicable sales tax (17%) and additional customs duties. Under the Pakistan-China Free Trade Agreement (PCFTA) Phase II, thousands of Chinese product categories enjoy preferential or zero-duty tariff rates. Our customs clearance team calculates your exact landed cost — including duties, taxes, and clearance fees — before you finalize your import decision.",
       hasLink: true,
-      linkTo: "/blog/customs-regulations-guide-pakistan",
+      linkTo: "/blog/customs-regulations-pakistan-2026/",
       linkText: "customs regulations guide Pakistan",
       linkSentence: "For complete customs information, read our ",
       linkEnding: "."
@@ -292,7 +292,7 @@ const ChinaToPakistanCargoService = () => {
 
               <p>
                 We offer three core shipping modes from China to Pakistan. Our{" "}
-                <Link to="/services/sea-freight" className="text-gold hover:underline">
+                <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
                   sea freight service
                 </Link>
                 {" handles FCL (Full Container Load) and LCL (Less than Container Load) shipments from major Chinese ports — Shanghai, Ningbo, Guangzhou, Shenzhen, and Qingdao — direct to Karachi and Port Qasim. For urgent shipments, our air freight from China to Pakistan delivers to Karachi (KHI), Lahore (LHE), and Islamabad (ISB) airports with both economy and express options — including DG certified cargo such as lithium batteries and industrial chemicals. For the most cost-effective overland option, our CPEC land route via the Karakoram Highway and Khunjerab Pass is ideal for bulk and heavy cargo from Northern China."}

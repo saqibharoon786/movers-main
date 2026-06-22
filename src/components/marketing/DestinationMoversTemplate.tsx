@@ -165,7 +165,7 @@ const DestinationMoversTemplate = ({ config }: Props) => {
                   international moving
                 </Link>
                 ,{" "}
-                <Link to="/services/sea-freight" className="text-gold hover:underline">
+                <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
                   sea freight
                 </Link>
                 , and{" "}
@@ -327,7 +327,7 @@ const DestinationMoversTemplate = ({ config }: Props) => {
               <Link to="/services/air-freight" className="rounded-lg border border-border px-4 py-3 hover:border-gold/40 hover:text-gold">
                 Air freight from Pakistan
               </Link>
-              <Link to="/services/sea-freight" className="rounded-lg border border-border px-4 py-3 hover:border-gold/40 hover:text-gold">
+              <Link to="/services/sea-freight-services/" className="rounded-lg border border-border px-4 py-3 hover:border-gold/40 hover:text-gold">
                 Sea freight from Pakistan
               </Link>
               <Link to="/services/customs-clearance" className="rounded-lg border border-border px-4 py-3 hover:border-gold/40 hover:text-gold">

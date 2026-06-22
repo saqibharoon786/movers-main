@@ -314,11 +314,11 @@ const cargoFaqPageSchema = {
 const relatedLinks = [
   { to: "/packers-and-movers-islamabad", label: "Packers and Movers Islamabad" },
   { to: "/air-freight-islamabad", label: "Air Freight Islamabad" },
-  { to: "/services/sea-freight", label: "Sea Freight Pakistan" },
+  { to: "/services/sea-freight-services/", label: "Sea Freight Pakistan" },
   { to: "/pakistan-to-dubai-movers", label: "Pakistan to Dubai Movers" },
   { to: "/services/international-moving", label: "International Moving Islamabad" },
   { to: "/home-shifting-islamabad", label: "Home Shifting Islamabad" },
-  { to: "/services/secure-storage", label: "Storage Services Islamabad" },
+  { to: "/services/secure-storage-services/", label: "Storage Services Islamabad" },
   { to: "/cargo-service-rawalpindi", label: "Cargo Service Rawalpindi" },
 ];
 

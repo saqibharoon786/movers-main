@@ -85,7 +85,7 @@ const services = [
     icon: Ship,
     title: "Sea Freight from Multan",
     desc: "Goods travel from Multan to Karachi Port or Port Qasim. FCL for large homes; LCL for smaller volumes — flexible and cost-effective.",
-    link: { to: "/services/sea-freight/", label: "Sea freight services →" },
+    link: { to: "/services/sea-freight-services/", label: "Sea freight services →" },
   },
   {
     icon: Plane,
@@ -107,7 +107,7 @@ const services = [
     icon: Car,
     title: "Vehicle Shipping from Multan",
     desc: "Cars, SUVs, and motorcycles collected in Multan and exported from Karachi Port with marine insurance and import guidance abroad.",
-    link: { to: "/services/vehicle-shipping/", label: "Vehicle shipping →" },
+    link: { to: "/services/vehicle-shipping-services/", label: "Vehicle shipping →" },
   },
   {
     icon: Building2,

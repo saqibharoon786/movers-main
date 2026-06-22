@@ -160,7 +160,7 @@ const posts = [
     category: "Moving Guides",
   },
   { img: "/images/good.png", slug: "tips-for-stress-free-international-move", title: "10 Tips for a Stress-Free Pakistan to Dubai Move in 2026", date: "Apr 10, 2026", category: "Moving Tips" },
-  { img: "/images/nationwide-distribution.png", slug: "customs-regulations-guide-pakistan", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
+  { img: "/images/nationwide-distribution.png", slug: "customs-regulations-pakistan-2026", title: "Pakistan Customs Import Regulations 2026: Complete Guide", date: "Mar 15, 2026", category: "Guides" },
 ];
 
 const BlogSection = () => {

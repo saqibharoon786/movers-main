@@ -353,7 +353,7 @@ export default function CarShippingPakistanUKBlog() {
       </p>
       <p>
         Explore our{" "}
-        <Link to="/services/vehicle-shipping/">vehicle shipping service</Link>,{" "}
+        <Link to="/services/vehicle-shipping-services/">vehicle shipping service</Link>,{" "}
         <Link to="/pakistan-to-uk-movers">Pakistan to UK movers</Link>, and{" "}
         <Link to="/sea-freight-pakistan-to-uk">sea freight Pakistan to UK</Link> pages for route-specific support and quotes.
       </p>

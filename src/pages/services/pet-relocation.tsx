@@ -62,7 +62,7 @@ const serviceData = {
       q: "What documentation is required for international pet travel from Pakistan?",
       a: "Required documents typically include a government-issued veterinary health certificate, up-to-date vaccination records (especially rabies), microchip certificate (ISO 15 digit), import permit from the destination country, and in some cases a CITES permit for exotic species. Our team prepares and verifies all documentation on your behalf.",
       hasLink: true,
-      linkTo: "/blog/customs-regulations-guide-pakistan",
+      linkTo: "/blog/customs-regulations-pakistan-2026/",
       linkText: "Pakistan customs import regulations 2025",
       linkSentence: "For complete customs information, read our "
     },
@@ -78,7 +78,7 @@ const serviceData = {
       q: "What happens if my pet is denied entry at customs?",
       a: "With proper documentation arranged by our team, denial is extremely rare. However, we have contingency plans including temporary boarding facilities and documentation corrections to resolve any issues quickly.",
       hasLink: true,
-      linkTo: "/services/secure-storage",
+      linkTo: "/services/secure-storage-services/",
       linkText: "secure storage facilities Pakistan",
       linkSentence: "We also offer "
     }

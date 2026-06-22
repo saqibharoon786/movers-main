@@ -142,11 +142,11 @@ const CityMoversStandaloneTemplate = ({ config }: Props) => {
                 international moving
               </Link>
               ,{" "}
-              <Link to="/services/professional-packing" className="text-gold hover:underline">
+              <Link to="/services/professional-packing-services/" className="text-gold hover:underline">
                 professional packing
               </Link>
               ,{" "}
-              <Link to="/services/secure-storage" className="text-gold hover:underline">
+              <Link to="/services/secure-storage-services/" className="text-gold hover:underline">
                 secure storage
               </Link>
               , and{" "}

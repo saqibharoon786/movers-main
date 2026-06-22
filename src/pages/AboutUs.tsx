@@ -193,7 +193,7 @@ const AboutUs = () => {
               air freight
             </Link>{" "}
             is worth the premium versus{" "}
-            <Link to="/services/sea-freight" className="text-gold hover:underline">
+            <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
               sea freight
             </Link>{" "}
             for bulk — and we put the rationale in writing so your finance team can approve confidently.

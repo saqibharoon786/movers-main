@@ -277,7 +277,7 @@ const FreightForwardingService = () => {
 
               <p>
                 We offer full-spectrum freight forwarding across all major transport modes. Our{" "}
-                <Link to="/services/sea-freight" className="text-gold hover:underline">
+                <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
                   sea freight services
                 </Link>
                 {" cover both FCL (Full Container Load) and LCL (Less than Container Load) shipments via Karachi and Port Qasim — working with global carriers including Maersk, MSC, and Hapag-Lloyd. For urgent consignments, our air freight forwarding team coordinates with Emirates SkyCargo, DHL, and other major airlines to move your cargo fast, including DG (dangerous goods) certified shipments."}

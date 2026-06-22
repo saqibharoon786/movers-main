@@ -94,11 +94,22 @@ const CANONICAL_PATH_ALIASES: Record<string, string> = {
   "/services/cargo-insurance": "/services/cargo-insurance-services",
   "/services/sea-freight": "/services/sea-freight-services",
   "/services/international-moving": "/services/international-moving-services",
-  "/services/secure-storage": "/services/secure-storage-services",
+  "/services/secure-storage-services/": "/services/secure-storage-services",
   "/international-moving": "/services/international-moving-services",
   "/international-movers-islamabad": "/international-movers-from-islamabad",
   "/office-relocation-islamabad": "/packers-and-movers-islamabad",
   "/secure-storage-islamabad": "/services/secure-storage-services",
+  "/blog/home-shifting-islamabad": "/home-shifting-islamabad",
+  "/blog/customs-regulations-pakistan-2026/": "/blog/customs-regulations-pakistan-2026",
+  "/blog/international-moving-services-pakistan": "/international-movers-pakistan",
+  "/blog/customs-regulations-pakistan-2025": "/blog/customs-regulations-pakistan-2026",
+};
+
+/** Build `/services/.../` path using canonical slug aliases. */
+export const resolveServicePath = (segment: string): string => {
+  const cleaned = segment.replace(/^\/+|\/+$/g, "");
+  const path = `/services/${cleaned}`;
+  return resolveCanonicalPath(path) ?? normalizeSeoPath(path) ?? path;
 };
 
 /**

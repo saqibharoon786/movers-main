@@ -316,7 +316,7 @@ const InternationalMovingService = () => {
                 
                 <div className="glass-card rounded-xl p-6 text-muted-foreground border border-gold/20">
                   <p>
-                    We also offer <Link to="/services/professional-packing" className="text-gold hover:underline">professional packing services</Link> and <Link to="/services/customs-clearance" className="text-gold hover:underline">customs clearance assistance</Link> for your international move.
+                    We also offer <Link to="/services/professional-packing-services/" className="text-gold hover:underline">professional packing services</Link> and <Link to="/services/customs-clearance" className="text-gold hover:underline">customs clearance assistance</Link> for your international move.
                   </p>
                 </div>
               </div>

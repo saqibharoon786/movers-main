@@ -320,7 +320,7 @@ export default function BestPackersMoversIslamabad2026Blog() {
           international movers Islamabad
         </Link>{" "}
         service page and{" "}
-        <Link to="/services/sea-freight" className="text-gold hover:underline font-semibold">
+        <Link to="/services/sea-freight-services/" className="text-gold hover:underline font-semibold">
           sea freight services
         </Link>
         .
@@ -423,7 +423,7 @@ export default function BestPackersMoversIslamabad2026Blog() {
           Cargo service Islamabad
         </Link>{" "}
         &nbsp;|&nbsp;{" "}
-        <Link to="/services/secure-storage" className="text-gold hover:underline font-semibold">
+        <Link to="/services/secure-storage-services/" className="text-gold hover:underline font-semibold">
           Secure storage
         </Link>
       </p>

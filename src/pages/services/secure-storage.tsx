@@ -141,14 +141,14 @@ Iske alawa kai log Pakistan mein apna ghar sell ya kiraye par de kar baadesh shi
   ],
 
   relatedServices: [
-    { label: "Professional Packing Service", href: "/services/professional-packing" },
+    { label: "Professional Packing Service", href: "/services/professional-packing-services/" },
     { label: "International Moving Pakistan", href: "/services/international-moving" },
     { label: "Packing Materials Supply", href: "/services/packing-materials" },
     { label: "Customs Clearance Pakistan", href: "/services/customs-clearance" },
-    { label: "Sea Freight Pakistan", href: "/services/sea-freight" },
+    { label: "Sea Freight Pakistan", href: "/services/sea-freight-services/" },
     { label: "Air Freight Pakistan", href: "/services/air-freight" },
     { label: "Last Mile Delivery", href: "/services/last-mile-delivery" },
-    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping" },
+    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping-services/" },
   ],
 
   cities: [
@@ -176,7 +176,7 @@ Iske alawa kai log Pakistan mein apna ghar sell ya kiraye par de kar baadesh shi
   blogLinks: [
     { label: "10 Tips for Stress-Free International Move 2025", href: "/blog/tips-for-stress-free-international-move" },
     { label: "Air Freight vs Sea Freight from Pakistan", href: "/blog/air-freight-vs-sea-freight-pakistan" },
-    { label: "Pakistan Customs Import Regulations 2025 Guide", href: "/blog/customs-regulations-guide-pakistan" },
+    { label: "Pakistan Customs Import Regulations 2025 Guide", href: "/blog/customs-regulations-pakistan-2026/" },
     { label: "International Shipping Cost from Pakistan", href: "/blog/international-shipping-cost-pakistan/" },
     { label: "Packing Tips for House Shifting Pakistan", href: "/blog/packing-tips-house-shifting/" },
   ],
@@ -298,7 +298,7 @@ const SecureStorageService = () => {
                   kiraye par de rahe hain aur kuch items temporarily store karne hain, ya
                   internationally shift karne ke baad bhi kuch cheezein Pakistan mein rakhni hain —
                   hamare long-term warehousing options bilkul perfect hain. Hamare{" "}
-                  <Link to="/services/professional-packing" className="text-gold hover:underline font-medium">
+                  <Link to="/services/professional-packing-services/" className="text-gold hover:underline font-medium">
                     professional packing service
                   </Link>{" "}
                   ke saath storage combine karna sabse popular aur cost-effective option hai.
@@ -444,7 +444,7 @@ const SecureStorageService = () => {
                           </Link>
                           ,{" "}
                           <Link
-                            to="/services/professional-packing"
+                            to="/services/professional-packing-services/"
                             className="text-gold hover:underline font-medium"
                           >
                             professional packing
@@ -458,7 +458,7 @@ const SecureStorageService = () => {
                           E-commerce sellers, importers, aur corporate clients ke liye dedicated
                           pallet positions aur real-time inventory management available hai.{" "}
                           <Link
-                            to="/services/sea-freight"
+                            to="/services/sea-freight-services/"
                             className="text-gold hover:underline font-medium"
                           >
                             Sea freight

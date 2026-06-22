@@ -598,7 +598,7 @@ const CustomClearanceAgencyPakistan = () => {
               { to: "/services/air-freight", label: "Air Freight Services Pakistan" },
               { to: "/custom-duty-calculator", label: "Custom Duty Calculator" },
               { to: "/door-to-door-cargo-pakistan", label: "Door to Door Cargo Pakistan" },
-              { to: "/services/vehicle-shipping", label: "Vehicle Shipping Service" }
+              { to: "/services/vehicle-shipping-services/", label: "Vehicle Shipping Service" }
             ].map((item) => (
               <Link 
                 key={item.to}
