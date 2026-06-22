@@ -47,8 +47,41 @@ import {
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
 } from "@/data/internationalRelocationChecklistFamiliesBlog";
+import {
+  CAR_SHIPPING_PAKISTAN_UK_IMAGE,
+  CAR_SHIPPING_PAKISTAN_UK_SLUG,
+} from "@/data/carShippingPakistanUKBlog";
+import {
+  COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_IMAGE,
+  COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_SLUG,
+} from "@/data/commercialFreightForwardingPakistanUAEBlog";
+import {
+  CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
+  CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
+} from "@/data/customsAndDutyPakistanUKBlog";
 
 const posts = [
+  {
+    img: CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
+    slug: CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
+    title: "Customs and Duty Pakistan to UK — Complete 2026 Guide",
+    date: "June 22, 2026",
+    category: "Customs & Compliance",
+  },
+  {
+    img: COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_IMAGE,
+    slug: COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_SLUG,
+    title: "Commercial Freight Forwarding Pakistan to UAE — Complete 2026 Guide",
+    date: "June 22, 2026",
+    category: "Freight Forwarding",
+  },
+  {
+    img: CAR_SHIPPING_PAKISTAN_UK_IMAGE,
+    slug: CAR_SHIPPING_PAKISTAN_UK_SLUG,
+    title: "Car Shipping Pakistan to UK & UK to Pakistan — Complete 2026 Guide",
+    date: "June 22, 2026",
+    category: "Vehicle Shipping",
+  },
   {
     img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
     slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
