@@ -176,34 +176,50 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/terms-of-service/" element={<TermsOfServicePage />} />
           <Route path="/services" element={<ServicesIndex />} />
-          <Route path="/services/international-moving-services" element={<InternationalMovingService />} />
-          <Route path="/services/international-moving/" element={<InternationalMovingService />} />
-          <Route path="/services/air-freight" element={<AirFreightService />} />
+          <Route path="/services/international-moving-services" element={<Navigate to="/services/international-moving-services/" replace />} />
+          <Route path="/services/international-moving-services/" element={<InternationalMovingService />} />
+          <Route path="/services/international-moving" element={<Navigate to="/services/international-moving-services/" replace />} />
+          <Route path="/services/international-moving/" element={<Navigate to="/services/international-moving-services/" replace />} />
+          <Route path="/services/air-freight" element={<Navigate to="/services/air-freight/" replace />} />
           <Route path="/services/air-freight/" element={<AirFreightService />} />
-          <Route path="/services/sea-freight-services" element={<SeaFreightService />} />
-          <Route path="/services/sea-freight/" element={<SeaFreightService />} />
-          <Route path="/services/customs-clearance" element={<CustomsClearanceService />} />
-          <Route path="/services/professional-packing-services" element={<ProfessionalPackingService />} />
-          <Route path="/services/professional-packing" element={<ProfessionalPackingService />} />
-          <Route path="/services/professional-packing/" element={<ProfessionalPackingService />} />
-          <Route path="/services/packing" element={<ProfessionalPackingService />} />
-          <Route path="/services/packing/" element={<ProfessionalPackingService />} />
-          <Route path="/services/pet-relocation-services" element={<PetRelocationService />} />
-          <Route path="/services/freight-forwarding-services" element={<FreightForwardingService />} />
-          <Route path="/services/china-to-pakistan-cargo-services" element={<ChinaToPakistanCargoService />} />
-          <Route path="/services/nationwide-distribution-services" element={<NationwideDistributionService />} />
-          <Route path="/services/packing-materials-services" element={<PackingMaterialsService />} />
-          <Route path="/services/packing-materials" element={<PackingMaterialsService />} />
-          <Route path="/services/packing-materials/" element={<PackingMaterialsService />} />
-          <Route path="/services/cargo-insurance-services" element={<CargoInsuranceService />} />
-          <Route path="/services/cargo-insurance" element={<CargoInsuranceService />} />
-          <Route path="/services/cargo-insurance/" element={<CargoInsuranceService />} />
-          <Route path="/services/secure-storage-services" element={<SecureStorageService />} />
-          <Route path="/services/secure-storage/" element={<SecureStorageService />} />
-          <Route path="/services/vehicle-shipping-services" element={<VehicleShippingService />} />
-          <Route path="/services/vehicle-shipping" element={<VehicleShippingService />} />
-          <Route path="/services/vehicle-shipping/" element={<VehicleShippingService />} />
-          <Route path="/services/last-mile-delivery" element={<LastMileDeliveryService />} />
+          <Route path="/services/sea-freight-services" element={<Navigate to="/services/sea-freight-services/" replace />} />
+          <Route path="/services/sea-freight-services/" element={<SeaFreightService />} />
+          <Route path="/services/sea-freight" element={<Navigate to="/services/sea-freight-services/" replace />} />
+          <Route path="/services/sea-freight/" element={<Navigate to="/services/sea-freight-services/" replace />} />
+          <Route path="/services/customs-clearance" element={<Navigate to="/services/customs-clearance/" replace />} />
+          <Route path="/services/customs-clearance/" element={<CustomsClearanceService />} />
+          <Route path="/services/professional-packing-services" element={<Navigate to="/services/professional-packing-services/" replace />} />
+          <Route path="/services/professional-packing-services/" element={<ProfessionalPackingService />} />
+          <Route path="/services/professional-packing" element={<Navigate to="/services/professional-packing-services/" replace />} />
+          <Route path="/services/professional-packing/" element={<Navigate to="/services/professional-packing-services/" replace />} />
+          <Route path="/services/packing" element={<Navigate to="/services/professional-packing-services/" replace />} />
+          <Route path="/services/packing/" element={<Navigate to="/services/professional-packing-services/" replace />} />
+          <Route path="/services/pet-relocation-services" element={<Navigate to="/services/pet-relocation-services/" replace />} />
+          <Route path="/services/pet-relocation-services/" element={<PetRelocationService />} />
+          <Route path="/services/freight-forwarding-services" element={<Navigate to="/services/freight-forwarding-services/" replace />} />
+          <Route path="/services/freight-forwarding-services/" element={<FreightForwardingService />} />
+          <Route path="/services/china-to-pakistan-cargo-services" element={<Navigate to="/services/china-to-pakistan-cargo-services/" replace />} />
+          <Route path="/services/china-to-pakistan-cargo-services/" element={<ChinaToPakistanCargoService />} />
+          <Route path="/services/nationwide-distribution-services" element={<Navigate to="/services/nationwide-distribution-services/" replace />} />
+          <Route path="/services/nationwide-distribution-services/" element={<NationwideDistributionService />} />
+          <Route path="/services/packing-materials-services" element={<Navigate to="/services/packing-materials-services/" replace />} />
+          <Route path="/services/packing-materials-services/" element={<PackingMaterialsService />} />
+          <Route path="/services/packing-materials" element={<Navigate to="/services/packing-materials-services/" replace />} />
+          <Route path="/services/packing-materials/" element={<Navigate to="/services/packing-materials-services/" replace />} />
+          <Route path="/services/cargo-insurance-services" element={<Navigate to="/services/cargo-insurance-services/" replace />} />
+          <Route path="/services/cargo-insurance-services/" element={<CargoInsuranceService />} />
+          <Route path="/services/cargo-insurance" element={<Navigate to="/services/cargo-insurance-services/" replace />} />
+          <Route path="/services/cargo-insurance/" element={<Navigate to="/services/cargo-insurance-services/" replace />} />
+          <Route path="/services/secure-storage-services" element={<Navigate to="/services/secure-storage-services/" replace />} />
+          <Route path="/services/secure-storage-services/" element={<SecureStorageService />} />
+          <Route path="/services/secure-storage-services/" element={<Navigate to="/services/secure-storage-services/" replace />} />
+          <Route path="/services/secure-storage/" element={<Navigate to="/services/secure-storage-services/" replace />} />
+          <Route path="/services/vehicle-shipping-services" element={<Navigate to="/services/vehicle-shipping-services/" replace />} />
+          <Route path="/services/vehicle-shipping-services/" element={<VehicleShippingService />} />
+          <Route path="/services/vehicle-shipping" element={<Navigate to="/services/vehicle-shipping-services/" replace />} />
+          <Route path="/services/vehicle-shipping/" element={<Navigate to="/services/vehicle-shipping-services/" replace />} />
+          <Route path="/services/last-mile-delivery" element={<Navigate to="/services/last-mile-delivery/" replace />} />
+          <Route path="/services/last-mile-delivery/" element={<LastMileDeliveryService />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
@@ -219,6 +235,8 @@ const App = () => (
           <Route path="/blog/air-freight-vs-sea-freight-pakistan/" element={<AirFreightVsSeaFreightPakistanBlog />} />
           <Route path="/blog/customs-regulations-pakistan-2025" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2025/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
+          <Route path="/blog/customs-regulations-pakistan-2026/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
+          <Route path="/blog/customs-regulations-guide-pakistan/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2026" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2026/" element={<Blog3 />} />
           <Route path="/blog/moving-from-pakistan-to-dubai-guide" element={<Navigate to="/blog/moving-from-pakistan-to-dubai-guide/" replace />} />

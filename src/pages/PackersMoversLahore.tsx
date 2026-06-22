@@ -681,7 +681,7 @@ const PackersMoversLahore = () => {
                     </div>
                   </Link>
                   
-                  <Link to="/services/secure-storage" className="group">
+                  <Link to="/services/secure-storage-services/" className="group">
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all">
                       <div className="flex items-center mb-2">
                         <Building className="text-gold mr-2" size={20} />

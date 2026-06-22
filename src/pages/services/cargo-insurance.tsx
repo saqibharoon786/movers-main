@@ -239,7 +239,7 @@ const CargoInsuranceService = () => {
               <p>
                 Shipping cargo without proper insurance is a risk no business or family should take. Whether 
                 you're sending goods via{" "}
-                <Link to="/services/sea-freight" className="text-gold hover:underline">sea freight from Pakistan</Link>
+                <Link to="/services/sea-freight-services/" className="text-gold hover:underline">sea freight from Pakistan</Link>
                 {", "}
                 <Link to="/services/air-freight" className="text-gold hover:underline">air freight</Link>
                 {", or through domestic goods transportation, standard carrier liability rarely covers the full value of your goods in case of loss, damage, or theft. At Best International Movers & Logistics — Pakistan's most trusted logistics company in Pakistan — we provide comprehensive cargo insurance solutions tailored to your shipment type, value, and destination."}

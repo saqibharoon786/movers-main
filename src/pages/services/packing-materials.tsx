@@ -123,14 +123,14 @@ Hamare export-grade packing materials international shipping standards ke mutabi
   ],
 
   relatedServices: [
-    { label: "Professional Packing Service", href: "/services/professional-packing" },
-    { label: "Secure Storage Solutions", href: "/services/secure-storage" },
+    { label: "Professional Packing Service", href: "/services/professional-packing-services/" },
+    { label: "Secure Storage Solutions", href: "/services/secure-storage-services/" },
     { label: "International Moving", href: "/services/international-moving" },
     { label: "Customs Clearance Pakistan", href: "/services/customs-clearance" },
-    { label: "Sea Freight Pakistan", href: "/services/sea-freight" },
+    { label: "Sea Freight Pakistan", href: "/services/sea-freight-services/" },
     { label: "Air Freight Pakistan", href: "/services/air-freight" },
     { label: "Last Mile Delivery", href: "/services/last-mile-delivery" },
-    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping" },
+    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping-services/" },
   ],
 
   cities: [
@@ -160,7 +160,7 @@ Hamare export-grade packing materials international shipping standards ke mutabi
     { label: "How to Pack Fragile Items for International Shipping", href: "/blog/packing-fragile-items-guide/" },
     { label: "Air Freight vs Sea Freight from Pakistan", href: "/blog/air-freight-vs-sea-freight-pakistan" },
     { label: "International Shipping Cost from Pakistan", href: "/blog/international-shipping-cost-pakistan/" },
-    { label: "Pakistan Customs Import Regulations 2025 Guide", href: "/blog/customs-regulations-guide-pakistan" },
+    { label: "Pakistan Customs Import Regulations 2025 Guide", href: "/blog/customs-regulations-pakistan-2026/" },
   ],
 };
 
@@ -282,7 +282,7 @@ const PackingMaterialsService = () => {
                         boxes, aur anti-moisture stretch film — yeh sab milkar aapke samaan ko port se
                         final delivery tak 100% safe rakhte hain. Agar aap{" "}
                         <Link
-                          to="/services/professional-packing"
+                          to="/services/professional-packing-services/"
                           className="text-gold hover:underline font-medium"
                         >
                           professional packing service
@@ -382,7 +382,7 @@ const PackingMaterialsService = () => {
                           Dono options available hain. Aap sirf materials khareed sakte hain ya hamare
                           professional packers ko hire kar sakte hain.{" "}
                           <Link
-                            to="/services/professional-packing"
+                            to="/services/professional-packing-services/"
                             className="text-gold hover:underline font-medium"
                           >
                             Professional Packing Service

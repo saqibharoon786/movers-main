@@ -739,7 +739,7 @@ const FreightForwardingPakistan = () => {
               { to: "/services/customs-clearance", label: "Custom Clearance Services in Pakistan" },
               { to: "/services/international-moving", label: "International Moving Services" },
               { to: "/services/air-freight", label: "Air Freight Services Pakistan" },
-              { to: "/services/vehicle-shipping", label: "Vehicle Shipping Service" },
+              { to: "/services/vehicle-shipping-services/", label: "Vehicle Shipping Service" },
               { to: "/custom-duty-calculator", label: "Custom Duty Calculator" },
               { to: "/door-to-door-cargo-pakistan", label: "Door to Door Cargo Pakistan" }
             ].map((item) => (

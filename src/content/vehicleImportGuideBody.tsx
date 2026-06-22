@@ -20,7 +20,7 @@ export function VehicleImportGuidePakistanBody() {
         <strong>How to import a vehicle in Pakistan</strong> is one of the most searched logistics topics because the steps cross shipping, customs, taxation, and registrationâ€”and mistakes are expensive. This <strong>vehicle import customs guide Pakistan</strong> explains the 2025-era workflow in practical terms for individuals considering <strong>car import Pakistan customs</strong> clearance after buying abroad or returning with a vehicle. It is educational, not legal advice; always verify current statutes, SROs, and FBR/customs notifications with official sources and a licensed clearing agent before you commit money overseas.
       </p>
       <p>
-        Best International Movers & Logistics regularly coordinates international transport legs (for example containerised moves alongside household goods) and works with documentation patterns familiar to <strong>import vehicle Pakistan</strong> pathways. For sea-service context see <Link to="/container-shipping-pakistan">container shipping Pakistan</Link> and <Link to="/services/vehicle-shipping">vehicle shipping</Link>.
+        Best International Movers & Logistics regularly coordinates international transport legs (for example containerised moves alongside household goods) and works with documentation patterns familiar to <strong>import vehicle Pakistan</strong> pathways. For sea-service context see <Link to="/container-shipping-pakistan">container shipping Pakistan</Link> and <Link to="/services/vehicle-shipping-services/">vehicle shipping</Link>.
       </p>
 
       <h2>Transfer of residence and returning Pakistanis</h2>

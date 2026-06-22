@@ -149,13 +149,13 @@ Destination par hamare last mile delivery team unpacking bhi krti hai aur sab ku
   // ── All verified internal links ─────────────────────────────────────────
   relatedServices: [
     { label: "International Moving Pakistan", href: "/services/international-moving" },
-    { label: "Secure Storage Solutions", href: "/services/secure-storage" },
+    { label: "Secure Storage Solutions", href: "/services/secure-storage-services/" },
     { label: "Packing Materials Supply", href: "/services/packing-materials" },
     { label: "Customs Clearance Pakistan", href: "/services/customs-clearance" },
-    { label: "Sea Freight Pakistan", href: "/services/sea-freight" },
+    { label: "Sea Freight Pakistan", href: "/services/sea-freight-services/" },
     { label: "Air Freight Pakistan", href: "/services/air-freight" },
     { label: "Last Mile Delivery", href: "/services/last-mile-delivery" },
-    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping" },
+    { label: "Vehicle Shipping Pakistan", href: "/services/vehicle-shipping-services/" },
   ],
 
   cities: [
@@ -300,7 +300,7 @@ const ProfessionalPackingService = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   Jab aap internationally shift karte hain — chahe Pakistan se Dubai, UK, Canada ya
                   Australia — toh aapka samaan{" "}
-                  <Link to="/services/sea-freight" className="text-gold hover:underline font-medium">
+                  <Link to="/services/sea-freight-services/" className="text-gold hover:underline font-medium">
                     sea freight
                   </Link>{" "}
                   ya air freight ka lambi safar karta hai. Hamare professional packers internationally
@@ -335,7 +335,7 @@ const ProfessionalPackingService = () => {
                   blankets aur stretch film se wrap karti hai. Container loading ke waqt furniture ko
                   bracing aur strapping se secure kiya jata hai taake sea freight ke dauraan bhi koi
                   movement na ho. Agar aap samaan temporary store karna chahte hain toh hamare{" "}
-                  <Link to="/services/secure-storage" className="text-gold hover:underline font-medium">
+                  <Link to="/services/secure-storage-services/" className="text-gold hover:underline font-medium">
                     secure storage facility
                   </Link>{" "}
                   bhi available hai.

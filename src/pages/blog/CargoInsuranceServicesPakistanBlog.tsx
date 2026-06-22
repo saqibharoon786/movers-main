@@ -775,7 +775,7 @@ const CargoInsuranceServicesPakistanBlog = () => {
                   </div>
                 </Link>
                 
-                <Link to="/services/professional-packing" className="group block p-4 glass-card rounded-xl border border-border hover:border-gold/30 transition-all">
+                <Link to="/services/professional-packing-services/" className="group block p-4 glass-card rounded-xl border border-border hover:border-gold/30 transition-all">
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground group-hover:text-gold transition-colors">Professional Packing Service</h3>

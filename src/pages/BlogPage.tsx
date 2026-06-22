@@ -92,7 +92,7 @@ const blogs = [
 <h3>What Affects Home Shifting Prices in Islamabad?</h3>
 <ul>
 <li><strong>Number of floors</strong> — above ground floor with no lift adds PKR 2,000–5,000 per floor due to heavy manual carrying.</li>
-<li><strong>Packing service</strong> — professional <a href="/services/professional-packing">professional packing services</a> add PKR 3,000–15,000 depending on the volume of fragile items.</li>
+<li><strong>Packing service</strong> — professional <a href="/services/professional-packing-services/">professional packing services</a> add PKR 3,000–15,000 depending on the volume of fragile items.</li>
 <li><strong>Distance</strong> — moving within the same sector is much cheaper than shipping from F-6 to DHA or Bahria Town.</li>
 <li><strong>Time of year</strong> — Eid holidays, peak summer, and month-end are high-demand periods that affect rate averages.</li>
 <li><strong>Heavy or specialty items</strong> — moving a piano, large safe, or heavy gym equipment requires specialized gear and incurs extra charges.</li>
@@ -252,7 +252,7 @@ const blogs = [
     content: "",
   },
   {
-    slug: "customs-regulations-guide-pakistan",
+    slug: "customs-regulations-pakistan-2026",
     img: "/images/nationwide-distribution.png",
     title: "Pakistan Customs Regulations Guide | Moving Abroad",
     date: "Feb 28, 2024",
@@ -280,7 +280,7 @@ const blogs = [
 <p>Duty exposure changes by destination and commodity class. Estimate liability early with our <a href="/custom-duty-calculator">Pakistan custom duty calculator</a>, then validate assumptions with your destination customs advisor before final booking.</p>
 
 <h2>Related Services for Safer Clearance</h2>
-<p>Clients moving homes usually pair <a href="/services/professional-packing">professional packing services</a> with <a href="/services/customs-clearance">customs clearance support</a> to reduce inspection issues and paperwork errors.</p>
+<p>Clients moving homes usually pair <a href="/services/professional-packing-services/">professional packing services</a> with <a href="/services/customs-clearance">customs clearance support</a> to reduce inspection issues and paperwork errors.</p>
 
 <h2>Best Routes from Pakistan</h2>
 <p>For destination-specific planning, review <a href="/pakistan-to-dubai-movers">Pakistan to Dubai movers</a> and <a href="/pakistan-to-uk-movers">Pakistan to UK movers</a> pages to compare transit times, document flow, and handling approach.</p>`
@@ -302,7 +302,7 @@ const blogs = [
 <p>A proper pre-move survey should classify fragile goods, oversized pieces, access constraints, and preferred freight mode. Generic phone quotes without inspection are high-risk.</p>
 
 <h3>2) Freight Strategy</h3>
-<p>Ask when they recommend <a href="/services/air-freight">air freight</a> versus <a href="/services/sea-freight">sea freight</a>, and whether they provide mixed-mode options for urgent and non-urgent items.</p>
+<p>Ask when they recommend <a href="/services/air-freight">air freight</a> versus <a href="/services/sea-freight-services/">sea freight</a>, and whether they provide mixed-mode options for urgent and non-urgent items.</p>
 
 <h3>3) Documentation Control</h3>
 <p>Strong movers provide document templates, ownership declarations, and destination compliance notes before dispatch. This is where most failed relocations break down.</p>
@@ -349,10 +349,10 @@ const blogs = [
 <p>Start with non-daily items, then room-priority cartons, then fragile sets. Keep one essentials carton (documents, chargers, medication) and one customs carton with copies of invoices and inventory references.</p>
 
 <h2>Pair Packing With Freight & Compliance</h2>
-<p>For heavy household moves, coordinate packing with <a href="/services/sea-freight">sea freight planning</a>. For urgent shipments, use <a href="/services/air-freight">air freight options</a>. If the move includes dutiable items, pre-calculate with the <a href="/custom-duty-calculator">custom duty calculator</a>.</p>
+<p>For heavy household moves, coordinate packing with <a href="/services/sea-freight-services/">sea freight planning</a>. For urgent shipments, use <a href="/services/air-freight">air freight options</a>. If the move includes dutiable items, pre-calculate with the <a href="/custom-duty-calculator">custom duty calculator</a>.</p>
 
 <h2>City-Level Support in Pakistan</h2>
-<p>Our packing teams work from <a href="/movers-islamabad">Islamabad</a>, <a href="/movers-rawalpindi">Rawalpindi</a>, <a href="/movers-lahore">Lahore</a>, and <a href="/movers-and-packers-in-peshawar">Peshawar</a>. You can also review our <a href="/services/professional-packing">professional packing service page</a> for scope details and add-ons.</p>`
+<p>Our packing teams work from <a href="/movers-islamabad">Islamabad</a>, <a href="/movers-rawalpindi">Rawalpindi</a>, <a href="/movers-lahore">Lahore</a>, and <a href="/movers-and-packers-in-peshawar">Peshawar</a>. You can also review our <a href="/services/professional-packing-services/">professional packing service page</a> for scope details and add-ons.</p>`
   },
 ];
 

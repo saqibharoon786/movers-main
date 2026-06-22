@@ -74,13 +74,13 @@ const ContactFooter = () => {
                 <li><Link to="/services/international-moving" className="hover:text-gold transition-colors">International Moving</Link></li>
                 <li><Link to="/corporate-relocation-pakistan" className="hover:text-gold transition-colors">Corporate Relocation</Link></li>
                 <li><Link to="/services/air-freight" className="hover:text-gold transition-colors">Air Freight</Link></li>
-                <li><Link to="/services/sea-freight" className="hover:text-gold transition-colors">Sea Freight</Link></li>
+                <li><Link to="/services/sea-freight-services/" className="hover:text-gold transition-colors">Sea Freight</Link></li>
                 <li><Link to="/international-movers-pakistan/" className="hover:text-gold transition-colors">International Movers Pakistan</Link></li>
                 <li><Link to="/packers-and-movers-pakistan/" className="hover:text-gold transition-colors">Packers &amp; Movers Pakistan</Link></li>
                 <li><Link to="/cargo-services-pakistan/" className="hover:text-gold transition-colors">Cargo Services Pakistan</Link></li>
                 <li><Link to="/logistics-services-pakistan/" className="hover:text-gold transition-colors">Logistics Services Pakistan</Link></li>
-                <li><Link to="/services/vehicle-shipping" className="hover:text-gold transition-colors">Vehicle Shipping</Link></li>
-                <li><Link to="/services/secure-storage" className="hover:text-gold transition-colors">Storage Solutions</Link></li>
+                <li><Link to="/services/vehicle-shipping-services/" className="hover:text-gold transition-colors">Vehicle Shipping</Link></li>
+                <li><Link to="/services/secure-storage-services/" className="hover:text-gold transition-colors">Storage Solutions</Link></li>
               </ul>
             </div>
             <div>

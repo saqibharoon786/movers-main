@@ -187,7 +187,7 @@ export function InternationalRelocationServicesRawalpindiBody() {
                 customs clearance team
               </Link>
               {" "}handles all documentation while our{" "}
-              <Link to="/services/sea-freight" className="text-gold hover:underline">
+              <Link to="/services/sea-freight-services/" className="text-gold hover:underline">
                 sea freight experts
               </Link>
               {" "}manage container shipping.

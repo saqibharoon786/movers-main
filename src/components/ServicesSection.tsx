@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Globe, Package, Warehouse, Car, Plane, Ship, FileCheck, Truck, ArrowRight, Building2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { servicePath } from "@/utils/servicePaths";
 
 const services = [
   { icon: Globe, title: "International Moving", slug: "international-moving", desc: "Complete door-to-door relocation services across 100+ countries with expert handling." },
@@ -44,7 +44,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group glass-card rounded-xl p-6 hover:border-gold/40 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
-              <Link to={"href" in s && s.href ? s.href : `/services/${s.slug}`} className="block">
+              <Link to={"href" in s && s.href ? s.href : servicePath(s.slug)} className="block">
                 <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
                   <s.icon size={28} className="text-gold" />
                 </div>

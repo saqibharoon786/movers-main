@@ -56,6 +56,126 @@
       "source": "/secure-storage-islamabad/",
       "destination": "/services/secure-storage-services/",
       "permanent": true
+    },
+    {
+      "source": "/services/international-moving",
+      "destination": "/services/international-moving-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/international-moving/",
+      "destination": "/services/international-moving-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/sea-freight",
+      "destination": "/services/sea-freight-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/sea-freight/",
+      "destination": "/services/sea-freight-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/professional-packing",
+      "destination": "/services/professional-packing-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/professional-packing/",
+      "destination": "/services/professional-packing-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/packing",
+      "destination": "/services/professional-packing-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/packing/",
+      "destination": "/services/professional-packing-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/packing-materials",
+      "destination": "/services/packing-materials-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/packing-materials/",
+      "destination": "/services/packing-materials-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cargo-insurance",
+      "destination": "/services/cargo-insurance-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cargo-insurance/",
+      "destination": "/services/cargo-insurance-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/secure-storage",
+      "destination": "/services/secure-storage-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/secure-storage/",
+      "destination": "/services/secure-storage-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/vehicle-shipping",
+      "destination": "/services/vehicle-shipping-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/vehicle-shipping/",
+      "destination": "/services/vehicle-shipping-services/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/home-shifting-islamabad",
+      "destination": "/home-shifting-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/home-shifting-islamabad/",
+      "destination": "/home-shifting-islamabad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/customs-regulations-guide-pakistan",
+      "destination": "/blog/customs-regulations-pakistan-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/customs-regulations-guide-pakistan/",
+      "destination": "/blog/customs-regulations-pakistan-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/customs-regulations-pakistan-2025",
+      "destination": "/blog/customs-regulations-pakistan-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/customs-regulations-pakistan-2025/",
+      "destination": "/blog/customs-regulations-pakistan-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/international-moving-services-pakistan",
+      "destination": "/international-movers-pakistan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/international-moving-services-pakistan/",
+      "destination": "/international-movers-pakistan/",
+      "permanent": true
     }
   ],
   "headers": [

@@ -216,6 +216,7 @@ const allBlogs = [
   },
   {
     slug: "home-shifting-islamabad",
+    linkTo: "/home-shifting-islamabad/",
     img: "/blog/packers-movers-islamabad-truck.jpg",
     title: "Home Shifting in Islamabad 2026 — Complete Guide | Best International Movers",
     date: "Jun 2026",
@@ -387,6 +388,7 @@ const allBlogs = [
   },
   {
     slug: "international-moving-services-pakistan",
+    linkTo: "/international-movers-pakistan/",
     img: "/images/dha-movers-karachi.png",
     title: "How to Choose the Best International Moving Company in Pakistan",
     date: "Feb 15, 2024",
@@ -529,7 +531,7 @@ const BlogMainPage = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="group"
               >
-                <Link to={`/blog/${blog.slug}/`} className="block h-full">
+                <Link to={blog.linkTo ?? `/blog/${blog.slug}/`} className="block h-full">
                   <div className="glass-card rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-all h-full">
                     <div className="overflow-hidden">
                       <img
