@@ -56,9 +56,57 @@ import {
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
 } from "@/data/internationalRelocationChecklistFamiliesBlog";
+import {
+  CAR_SHIPPING_PAKISTAN_UK_SLUG,
+  CAR_SHIPPING_PAKISTAN_UK_IMAGE,
+} from "@/data/carShippingPakistanUKBlog";
+import {
+  COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_SLUG,
+  COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_IMAGE,
+} from "@/data/commercialFreightForwardingPakistanUAEBlog";
+import {
+  CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
+  CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
+} from "@/data/customsAndDutyPakistanUKBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
+    img: CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
+    title: "Customs and Duty Pakistan to UK: The Complete 2026 Guide for Individuals and Businesses",
+    date: "Jun 22, 2026",
+    category: "Customs & Compliance",
+    author: "Best International Movers & Logistics",
+    readTime: "26 min read",
+    excerpt:
+      "Complete 2026 guide to customs and duty between Pakistan and the UK — HMRC UKGT, import VAT, WeBOC, Pakistan duty layers, £135 threshold & household goods exemption.",
+    content: "Complete customs and duty guide for Pakistan-UK shipments in 2026.",
+  },
+  {
+    slug: COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_SLUG,
+    img: COMMERCIAL_FREIGHT_FORWARDING_PAKISTAN_UAE_IMAGE,
+    title: "Commercial Freight Forwarding Pakistan to UAE: The Complete 2026 Guide for Exporters and Importers",
+    date: "Jun 22, 2026",
+    category: "Freight Forwarding",
+    author: "Best International Movers & Logistics",
+    readTime: "24 min read",
+    excerpt:
+      "Complete 2026 guide to commercial freight forwarding from Pakistan to the UAE — WeBOC, Form E, UAE customs duty & VAT, FCL/LCL, product-specific rules & transit times.",
+    content: "Complete commercial freight forwarding guide for Pakistan-UAE corridor in 2026.",
+  },
+  {
+    slug: CAR_SHIPPING_PAKISTAN_UK_SLUG,
+    img: CAR_SHIPPING_PAKISTAN_UK_IMAGE,
+    title: "Car Shipping Pakistan to UK and UK to Pakistan: The Complete 2026 Guide",
+    date: "Jun 22, 2026",
+    category: "Vehicle Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "22 min read",
+    excerpt:
+      "Complete 2026 guide to car shipping between Pakistan and the UK — import schemes, RoRo vs container, customs duty, transit times, documentation & common mistakes.",
+    content: "Complete car shipping guide for Pakistan-UK corridor in 2026.",
+  },
   {
     slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
     img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,

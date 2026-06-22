@@ -145,6 +145,11 @@ const CargoChargesPakistanToUKBlog = lazy(() => import("./pages/blog/CargoCharge
 const BestFreightForwardersPakistanBlog = lazy(() => import("./pages/blog/BestFreightForwardersPakistanBlog.tsx"));
 const AirFreightVsSeaFreightPakistanBlog = lazy(() => import("./pages/blog/AirFreightVsSeaFreightPakistanBlog.tsx"));
 const InternationalRelocationChecklistFamiliesBlog = lazy(() => import("./pages/blog/InternationalRelocationChecklistFamiliesBlog.tsx"));
+const CarShippingPakistanUKBlog = lazy(() => import("./pages/blog/CarShippingPakistanUKBlog.tsx"));
+const CommercialFreightForwardingPakistanUAEBlog = lazy(
+  () => import("./pages/blog/CommercialFreightForwardingPakistanUAEBlog.tsx"),
+);
+const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndDutyPakistanUKBlog.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -285,6 +290,21 @@ const App = () => (
           <Route path="/blog/best-freight-forwarders-pakistan/" element={<BestFreightForwardersPakistanBlog />} />
           <Route path="/blog/international-relocation-checklist-families" element={<Navigate to="/blog/international-relocation-checklist-families/" replace />} />
           <Route path="/blog/international-relocation-checklist-families/" element={<InternationalRelocationChecklistFamiliesBlog />} />
+          <Route path="/blog/car-shipping-pakistan-uk-2026" element={<Navigate to="/blog/car-shipping-pakistan-uk-2026/" replace />} />
+          <Route path="/blog/car-shipping-pakistan-uk-2026/" element={<CarShippingPakistanUKBlog />} />
+          <Route
+            path="/blog/commercial-freight-forwarding-pakistan-uae-2026"
+            element={<Navigate to="/blog/commercial-freight-forwarding-pakistan-uae-2026/" replace />}
+          />
+          <Route
+            path="/blog/commercial-freight-forwarding-pakistan-uae-2026/"
+            element={<CommercialFreightForwardingPakistanUAEBlog />}
+          />
+          <Route
+            path="/blog/customs-and-duty-pakistan-uk-2026"
+            element={<Navigate to="/blog/customs-and-duty-pakistan-uk-2026/" replace />}
+          />
+          <Route path="/blog/customs-and-duty-pakistan-uk-2026/" element={<CustomsAndDutyPakistanUKBlog />} />
           <Route
             path="/blog/international-moving-services-pakistan"
             element={<Navigate to="/international-movers-pakistan/" replace />}
