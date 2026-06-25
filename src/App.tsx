@@ -10,6 +10,8 @@ const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const ServicesIndex = lazy(() => import("./pages/services/index.tsx"));
 const InternationalMovingService = lazy(() => import("./pages/services/international-moving.tsx"));
 const AirFreightService = lazy(() => import("./pages/services/air-freight.tsx"));
+const AirCargoPakistanToUK = lazy(() => import("./pages/services/air-cargo-pakistan-to-uk.tsx"));
+const AirCargoPakistanToCanada = lazy(() => import("./pages/services/air-cargo-pakistan-to-canada.tsx"));
 const SeaFreightService = lazy(() => import("./pages/services/sea-freight.tsx"));
 const CustomsClearanceService = lazy(() => import("./pages/services/customs-clearance.tsx"));
 const ProfessionalPackingService = lazy(() => import("./pages/services/professional-packing.tsx"));
@@ -182,6 +184,12 @@ const App = () => (
           <Route path="/services/international-moving/" element={<Navigate to="/services/international-moving-services/" replace />} />
           <Route path="/services/air-freight" element={<Navigate to="/services/air-freight/" replace />} />
           <Route path="/services/air-freight/" element={<AirFreightService />} />
+          <Route path="/services/air-cargo-pakistan-to-uk" element={<Navigate to="/services/air-cargo-pakistan-to-uk/" replace />} />
+          <Route path="/services/air-cargo-pakistan-to-uk/" element={<AirCargoPakistanToUK />} />
+          <Route path="/services/air-cargo-pakistan-to-canada" element={<Navigate to="/services/air-cargo-pakistan-to-canada/" replace />} />
+          <Route path="/services/air-cargo-pakistan-to-canada/" element={<AirCargoPakistanToCanada />} />
+          <Route path="/services/sea-freight-pakistan-to-uk" element={<Navigate to="/sea-freight-pakistan-to-uk/" replace />} />
+          <Route path="/services/sea-freight-pakistan-to-uk/" element={<Navigate to="/sea-freight-pakistan-to-uk/" replace />} />
           <Route path="/services/sea-freight-services" element={<Navigate to="/services/sea-freight-services/" replace />} />
           <Route path="/services/sea-freight-services/" element={<SeaFreightService />} />
           <Route path="/services/sea-freight" element={<Navigate to="/services/sea-freight-services/" replace />} />
