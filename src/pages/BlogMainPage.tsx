@@ -68,9 +68,26 @@ import {
   CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
   CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
 } from "@/data/customsAndDutyPakistanUKBlog";
+import {
+  MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG,
+  MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
+  MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD,
+} from "@/data/movingFromPakistanToCanadaGuideBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG,
+    img: MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
+    title: "Moving from Pakistan to Canada — The Complete 2025 Guide for Families, Professionals & Students",
+    date: "Jun 27, 2026",
+    category: "Relocation Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "12 min read",
+    excerpt:
+      "Complete 2025 guide to moving from Pakistan to Canada — visas, Express Entry, shipping, CBSA customs, cost of living, housing, healthcare & Pakistani community tips.",
+    content: "Complete Pakistan to Canada relocation guide for families, professionals and students.",
+  },
   {
     slug: CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
     img: CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
@@ -549,6 +566,8 @@ const BlogMainPage = () => {
                             ? DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD
                             : blog.slug === KARACHI_TO_DUBAI_SHIPPING_COST_SLUG
                             ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
+                            : blog.slug === MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG
+                            ? MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />

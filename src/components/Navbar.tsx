@@ -12,6 +12,8 @@ const services = [
   { icon: Plane, label: "Air Cargo Pakistan to UK", href: "/services/air-cargo-pakistan-to-uk/" },
   { icon: Plane, label: "Air Cargo Pakistan to Canada", href: "/services/air-cargo-pakistan-to-canada/" },
   { icon: Ship, label: "Sea Freight Pakistan to UK", href: "/services/sea-freight-pakistan-to-uk/" },
+  { icon: Home, label: "Household Goods Shipping Pakistan to UK", href: "/services/household-goods-shipping-pakistan-to-uk/" },
+  { icon: Globe, label: "Relocation Services Pakistan to UK", href: "/services/relocation-services-pakistan-to-uk/" },
   { icon: Home, label: "DHA Karachi Moving Guide", href: "/dha-karachi-moving-guide-sector-by-sector" },
   { icon: Truck, label: "Door-to-Door Cargo Services (China to Pakistan)", slug: "china-to-pakistan-cargo-services" },
   { icon: MapPin, label: "Nationwide Distribution Services", slug: "nationwide-distribution-services" },
