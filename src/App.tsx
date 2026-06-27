@@ -24,6 +24,8 @@ const CargoInsuranceService = lazy(() => import("./pages/services/cargo-insuranc
 const SecureStorageService = lazy(() => import("./pages/services/secure-storage.tsx"));
 const VehicleShippingService = lazy(() => import("./pages/services/vehicle-shipping.tsx"));
 const LastMileDeliveryService = lazy(() => import("./pages/services/last-mile-delivery.tsx"));
+const HouseholdGoodsShippingPakistanToUK = lazy(() => import("./pages/services/household-goods-shipping-pakistan-to-uk.tsx"));
+const RelocationServicesPakistanToUK = lazy(() => import("./pages/services/relocation-services-pakistan-to-uk.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
@@ -152,6 +154,9 @@ const CommercialFreightForwardingPakistanUAEBlog = lazy(
   () => import("./pages/blog/CommercialFreightForwardingPakistanUAEBlog.tsx"),
 );
 const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndDutyPakistanUKBlog.tsx"));
+const MovingFromPakistanToCanadaGuideBlog = lazy(
+  () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
+);
 
 const queryClient = new QueryClient();
 
@@ -228,6 +233,10 @@ const App = () => (
           <Route path="/services/vehicle-shipping/" element={<Navigate to="/services/vehicle-shipping-services/" replace />} />
           <Route path="/services/last-mile-delivery" element={<Navigate to="/services/last-mile-delivery/" replace />} />
           <Route path="/services/last-mile-delivery/" element={<LastMileDeliveryService />} />
+          <Route path="/services/household-goods-shipping-pakistan-to-uk" element={<Navigate to="/services/household-goods-shipping-pakistan-to-uk/" replace />} />
+          <Route path="/services/household-goods-shipping-pakistan-to-uk/" element={<HouseholdGoodsShippingPakistanToUK />} />
+          <Route path="/services/relocation-services-pakistan-to-uk" element={<Navigate to="/services/relocation-services-pakistan-to-uk/" replace />} />
+          <Route path="/services/relocation-services-pakistan-to-uk/" element={<RelocationServicesPakistanToUK />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
@@ -331,6 +340,11 @@ const App = () => (
             element={<Navigate to="/blog/customs-and-duty-pakistan-uk-2026/" replace />}
           />
           <Route path="/blog/customs-and-duty-pakistan-uk-2026/" element={<CustomsAndDutyPakistanUKBlog />} />
+          <Route
+            path="/blog/moving-from-pakistan-to-canada-guide"
+            element={<Navigate to="/blog/moving-from-pakistan-to-canada-guide/" replace />}
+          />
+          <Route path="/blog/moving-from-pakistan-to-canada-guide/" element={<MovingFromPakistanToCanadaGuideBlog />} />
           <Route
             path="/blog/international-moving-services-pakistan"
             element={<Navigate to="/international-movers-pakistan/" replace />}
