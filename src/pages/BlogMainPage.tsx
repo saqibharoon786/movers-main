@@ -73,9 +73,43 @@ import {
   MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
   MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD,
 } from "@/data/movingFromPakistanToCanadaGuideBlog";
+import {
+  CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG,
+  CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE,
+  CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD,
+} from "@/data/canadaCustomsRulesPersonalEffectsPakistanBlog";
+import {
+  PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG,
+  PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE,
+  PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD,
+} from "@/data/packingTipsInternationalMovingToCanadaBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG,
+    img: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE,
+    title: "Packing Tips for International Moving to Canada — Complete Room-by-Room Guide for Pakistanis (2025)",
+    date: "Jun 27, 2026",
+    category: "Moving Tips",
+    author: "Best International Movers & Logistics",
+    readTime: "14 min read",
+    excerpt:
+      "Expert packing tips for Pakistan-to-Canada sea freight — room-by-room guide for furniture, crockery, electronics, Pakistani carpets, CBSA customs labelling, and complete packing checklist.",
+    content: "Complete packing guide for international moving from Pakistan to Canada.",
+  },
+  {
+    slug: CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG,
+    img: CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE,
+    title: "Canada Customs Rules for Personal Effects — Complete 2025 Guide for Pakistanis",
+    date: "Jun 27, 2026",
+    category: "Customs & Compliance",
+    author: "Best International Movers & Logistics",
+    readTime: "13 min read",
+    excerpt:
+      "Complete CBSA guide for Pakistanis — Settler's Effects duty-free exemption, B4 & B4A forms, prohibited items, inspection process, and step-by-step customs clearance for household goods.",
+    content: "Canada customs rules for personal effects from Pakistan — B4 B4A and Settler's Effects guide.",
+  },
   {
     slug: MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG,
     img: MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
@@ -568,6 +602,10 @@ const BlogMainPage = () => {
                             ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
                             : blog.slug === MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG
                             ? MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD
+                            : blog.slug === CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG
+                            ? CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD
+                            : blog.slug === PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG
+                            ? PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />
