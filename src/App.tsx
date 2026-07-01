@@ -157,6 +157,12 @@ const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndD
 const MovingFromPakistanToCanadaGuideBlog = lazy(
   () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
 );
+const CanadaCustomsRulesPersonalEffectsPakistanBlog = lazy(
+  () => import("./pages/blog/CanadaCustomsRulesPersonalEffectsPakistanBlog.tsx"),
+);
+const PackingTipsInternationalMovingToCanadaBlog = lazy(
+  () => import("./pages/blog/PackingTipsInternationalMovingToCanadaBlog.tsx"),
+);
 
 const queryClient = new QueryClient();
 
@@ -345,6 +351,22 @@ const App = () => (
             element={<Navigate to="/blog/moving-from-pakistan-to-canada-guide/" replace />}
           />
           <Route path="/blog/moving-from-pakistan-to-canada-guide/" element={<MovingFromPakistanToCanadaGuideBlog />} />
+          <Route
+            path="/blog/canada-customs-rules-personal-effects-pakistan"
+            element={<Navigate to="/blog/canada-customs-rules-personal-effects-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/canada-customs-rules-personal-effects-pakistan/"
+            element={<CanadaCustomsRulesPersonalEffectsPakistanBlog />}
+          />
+          <Route
+            path="/blog/packing-tips-international-moving-to-canada"
+            element={<Navigate to="/blog/packing-tips-international-moving-to-canada/" replace />}
+          />
+          <Route
+            path="/blog/packing-tips-international-moving-to-canada/"
+            element={<PackingTipsInternationalMovingToCanadaBlog />}
+          />
           <Route
             path="/blog/international-moving-services-pakistan"
             element={<Navigate to="/international-movers-pakistan/" replace />}
