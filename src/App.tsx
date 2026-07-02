@@ -11,7 +11,7 @@ const ServicesIndex = lazy(() => import("./pages/services/index.tsx"));
 const InternationalMovingService = lazy(() => import("./pages/services/international-moving.tsx"));
 const AirFreightService = lazy(() => import("./pages/services/air-freight.tsx"));
 const AirCargoPakistanToUK = lazy(() => import("./pages/services/air-cargo-pakistan-to-uk.tsx"));
-const AirCargoPakistanToCanada = lazy(() => import("./pages/services/air-cargo-pakistan-to-canada.tsx"));
+const AirCargoToCanada = lazy(() => import("./pages/services/air-cargo-to-canada.tsx"));
 const SeaFreightService = lazy(() => import("./pages/services/sea-freight.tsx"));
 const CustomsClearanceService = lazy(() => import("./pages/services/customs-clearance.tsx"));
 const ProfessionalPackingService = lazy(() => import("./pages/services/professional-packing.tsx"));
@@ -163,6 +163,15 @@ const CanadaCustomsRulesPersonalEffectsPakistanBlog = lazy(
 const PackingTipsInternationalMovingToCanadaBlog = lazy(
   () => import("./pages/blog/PackingTipsInternationalMovingToCanadaBlog.tsx"),
 );
+const FamilyRelocationToUkFromPakistanBlog = lazy(
+  () => import("./pages/blog/FamilyRelocationToUkFromPakistanBlog.tsx"),
+);
+const InternationalShippingProcessGuideBlog = lazy(
+  () => import("./pages/blog/InternationalShippingProcessGuideBlog.tsx"),
+);
+const StudentRelocationToCanadaFromPakistanBlog = lazy(
+  () => import("./pages/blog/StudentRelocationToCanadaFromPakistanBlog.tsx"),
+);
 
 const queryClient = new QueryClient();
 
@@ -197,8 +206,10 @@ const App = () => (
           <Route path="/services/air-freight/" element={<AirFreightService />} />
           <Route path="/services/air-cargo-pakistan-to-uk" element={<Navigate to="/services/air-cargo-pakistan-to-uk/" replace />} />
           <Route path="/services/air-cargo-pakistan-to-uk/" element={<AirCargoPakistanToUK />} />
-          <Route path="/services/air-cargo-pakistan-to-canada" element={<Navigate to="/services/air-cargo-pakistan-to-canada/" replace />} />
-          <Route path="/services/air-cargo-pakistan-to-canada/" element={<AirCargoPakistanToCanada />} />
+          <Route path="/services/air-cargo-pakistan-to-canada" element={<Navigate to="/services/air-cargo-to-canada/" replace />} />
+          <Route path="/services/air-cargo-pakistan-to-canada/" element={<Navigate to="/services/air-cargo-to-canada/" replace />} />
+          <Route path="/services/air-cargo-to-canada" element={<Navigate to="/services/air-cargo-to-canada/" replace />} />
+          <Route path="/services/air-cargo-to-canada/" element={<AirCargoToCanada />} />
           <Route path="/services/sea-freight-pakistan-to-uk" element={<Navigate to="/sea-freight-pakistan-to-uk/" replace />} />
           <Route path="/services/sea-freight-pakistan-to-uk/" element={<Navigate to="/sea-freight-pakistan-to-uk/" replace />} />
           <Route path="/services/sea-freight-services" element={<Navigate to="/services/sea-freight-services/" replace />} />
@@ -366,6 +377,30 @@ const App = () => (
           <Route
             path="/blog/packing-tips-international-moving-to-canada/"
             element={<PackingTipsInternationalMovingToCanadaBlog />}
+          />
+          <Route
+            path="/blog/family-relocation-to-uk-from-pakistan"
+            element={<Navigate to="/blog/family-relocation-to-uk-from-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/family-relocation-to-uk-from-pakistan/"
+            element={<FamilyRelocationToUkFromPakistanBlog />}
+          />
+          <Route
+            path="/blog/international-shipping-process-guide"
+            element={<Navigate to="/blog/international-shipping-process-guide/" replace />}
+          />
+          <Route
+            path="/blog/international-shipping-process-guide/"
+            element={<InternationalShippingProcessGuideBlog />}
+          />
+          <Route
+            path="/blog/student-relocation-to-canada-from-pakistan"
+            element={<Navigate to="/blog/student-relocation-to-canada-from-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/student-relocation-to-canada-from-pakistan/"
+            element={<StudentRelocationToCanadaFromPakistanBlog />}
           />
           <Route
             path="/blog/international-moving-services-pakistan"

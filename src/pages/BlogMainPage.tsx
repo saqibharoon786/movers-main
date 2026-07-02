@@ -83,9 +83,60 @@ import {
   PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE,
   PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD,
 } from "@/data/packingTipsInternationalMovingToCanadaBlog";
+import {
+  FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG,
+  FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE,
+  FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD,
+} from "@/data/familyRelocationToUkFromPakistanBlog";
+import {
+  INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG,
+  INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE,
+  INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD,
+} from "@/data/internationalShippingProcessGuideBlog";
+import {
+  STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG,
+  STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE,
+  STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD,
+} from "@/data/studentRelocationToCanadaFromPakistanBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG,
+    img: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE,
+    title: "Student Relocation to Canada from Pakistan — The Complete 2025–2026 Guide",
+    date: "Jun 27, 2026",
+    category: "Student Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "20 min read",
+    excerpt:
+      "Complete guide for Pakistani students relocating to Canada — study permit, SDS, shipping luggage, housing, banking, healthcare, part-time work, cost of living & PR pathway.",
+    content: "Student relocation to Canada from Pakistan — visas, shipping, housing and PR guide.",
+  },
+  {
+    slug: INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG,
+    img: INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE,
+    title: "International Shipping Process: Complete Step-by-Step Guide 2025–2026",
+    date: "Jun 27, 2026",
+    category: "Shipping Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "22 min read",
+    excerpt:
+      "Complete international shipping process from Pakistan — air freight, sea freight, customs clearance, documentation, Incoterms, tracking & costs for UAE, UK, USA, Canada & beyond.",
+    content: "Step-by-step international shipping process guide for Pakistan exporters and importers.",
+  },
+  {
+    slug: FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG,
+    img: FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE,
+    title: "Family Relocation to UK from Pakistan — The Complete 2025 Guide for Pakistani Families",
+    date: "Jun 27, 2026",
+    category: "Family Relocation",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt:
+      "Complete 2025 guide to family relocation from Pakistan to UK — visas, schools, NHS, ToR customs relief, Pakistani community areas, shipping household goods & settling-in checklist.",
+    content: "Complete family relocation guide from Pakistan to UK for Pakistani families.",
+  },
   {
     slug: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG,
     img: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE,
@@ -606,6 +657,12 @@ const BlogMainPage = () => {
                             ? CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD
                             : blog.slug === PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG
                             ? PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD
+                            : blog.slug === FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG
+                            ? FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                            : blog.slug === INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG
+                            ? INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD
+                            : blog.slug === STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG
+                            ? STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />
