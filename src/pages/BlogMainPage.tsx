@@ -98,9 +98,43 @@ import {
   STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE,
   STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD,
 } from "@/data/studentRelocationToCanadaFromPakistanBlog";
+import {
+  INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG,
+  INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE,
+  INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD,
+} from "@/data/internationalPackingGuidePakistanBlog";
+import {
+  SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG,
+  SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE,
+  SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD,
+} from "@/data/shippingFurnitureToUkFromPakistanBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG,
+    img: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE,
+    title: "Shipping Furniture to UK from Pakistan — The Complete 2025 Guide",
+    date: "Jun 27, 2026",
+    category: "UK Moving Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "14 min read",
+    excerpt:
+      "Should you ship furniture from Pakistan to UK or buy new? Complete guide — costs, packing, ToR customs relief, FCL/LCL options, and which Pakistani furniture is worth shipping.",
+    content: "Complete guide to shipping furniture from Pakistan to UK — costs, packing and customs.",
+  },
+  {
+    slug: INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG,
+    img: INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE,
+    title: "The Ultimate International Packing Guide for Pakistanis — UK, Canada, Australia & Beyond (2025)",
+    date: "Jun 27, 2026",
+    category: "Packing Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "16 min read",
+    excerpt:
+      "Complete international packing guide for Pakistani movers — materials, room-by-room techniques, fragile items, Pakistani specialty items, labelling, customs docs for UK, Canada, Australia & UAE.",
+    content: "Ultimate international packing guide for Pakistanis moving to UK, Canada, Australia and beyond.",
+  },
   {
     slug: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG,
     img: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE,
@@ -663,6 +697,10 @@ const BlogMainPage = () => {
                             ? INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD
                             : blog.slug === STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG
                             ? STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                            : blog.slug === INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG
+                            ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
+                            : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
+                            ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
                             : ""
                         }`}
                       />

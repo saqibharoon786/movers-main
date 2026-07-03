@@ -172,6 +172,12 @@ const InternationalShippingProcessGuideBlog = lazy(
 const StudentRelocationToCanadaFromPakistanBlog = lazy(
   () => import("./pages/blog/StudentRelocationToCanadaFromPakistanBlog.tsx"),
 );
+const InternationalPackingGuidePakistanBlog = lazy(
+  () => import("./pages/blog/InternationalPackingGuidePakistanBlog.tsx"),
+);
+const ShippingFurnitureToUkFromPakistanBlog = lazy(
+  () => import("./pages/blog/ShippingFurnitureToUkFromPakistanBlog.tsx"),
+);
 
 const queryClient = new QueryClient();
 
@@ -401,6 +407,22 @@ const App = () => (
           <Route
             path="/blog/student-relocation-to-canada-from-pakistan/"
             element={<StudentRelocationToCanadaFromPakistanBlog />}
+          />
+          <Route
+            path="/blog/international-packing-guide-pakistan"
+            element={<Navigate to="/blog/international-packing-guide-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/international-packing-guide-pakistan/"
+            element={<InternationalPackingGuidePakistanBlog />}
+          />
+          <Route
+            path="/blog/shipping-furniture-to-uk-from-pakistan"
+            element={<Navigate to="/blog/shipping-furniture-to-uk-from-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/shipping-furniture-to-uk-from-pakistan/"
+            element={<ShippingFurnitureToUkFromPakistanBlog />}
           />
           <Route
             path="/blog/international-moving-services-pakistan"
