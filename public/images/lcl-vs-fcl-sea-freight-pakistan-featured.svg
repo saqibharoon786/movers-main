@@ -1,0 +1,73 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a5f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="containerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  
+  <!-- Ship/Container Illustration -->
+  <g transform="translate(600, 280)">
+    <!-- Water -->
+    <path d="M-400 150 Q-300 130 -200 150 Q-100 170 0 150 Q100 130 200 150 Q300 170 400 150 L400 200 L-400 200 Z" fill="#0ea5e9" opacity="0.3" />
+    <path d="M-400 160 Q-300 140 -200 160 Q-100 180 0 160 Q100 140 200 160 Q300 180 400 160 L400 200 L-400 200 Z" fill="#0ea5e9" opacity="0.2" />
+    
+    <!-- Ship hull -->
+    <path d="M-200 100 L-150 150 L150 150 L200 100 Z" fill="#64748b" />
+    <path d="M-180 100 L-140 140 L140 140 L180 100 Z" fill="#475569" />
+    
+    <!-- Containers on ship -->
+    <rect x="-120" y="40" width="60" height="30" fill="url(#containerGradient)" rx="2" />
+    <rect x="-50" y="40" width="60" height="30" fill="#3b82f6" rx="2" />
+    <rect x="20" y="40" width="60" height="30" fill="#10b981" rx="2" />
+    <rect x="90" y="40" width="60" height="30" fill="#ef4444" rx="2" />
+    
+    <rect x="-95" y="10" width="60" height="30" fill="#8b5cf6" rx="2" />
+    <rect x="-25" y="10" width="60" height="30" fill="url(#containerGradient)" rx="2" />
+    <rect x="45" y="10" width="60" height="30" fill="#06b6d4" rx="2" />
+    
+    <!-- LCL vs FCL labels -->
+    <text x="-150" y="-30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f59e0b">LCL</text>
+    <text x="80" y="-30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f59e0b">FCL</text>
+    
+    <!-- Arrow -->
+    <path d="M-30 -25 L30 -25" stroke="#f59e0b" stroke-width="3" />
+    <path d="M25 -30 L30 -25 L25 -20" stroke="#f59e0b" stroke-width="3" fill="none" />
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">LCL vs FCL: Complete Sea Freight Guide</text>
+  <text x="600" y="130" font-family="Arial, sans-serif" font-size="28" fill="#f59e0b" text-anchor="middle">Pakistan Exporters & Importers — 2026</text>
+  
+  <!-- Key points -->
+  <g transform="translate(100, 480)">
+    <rect x="0" y="0" width="300" height="100" fill="#1e293b" rx="8" opacity="0.8" />
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">LCL</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Share container</text>
+    <text x="150" y="75" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Pay per CBM</text>
+  </g>
+  
+  <g transform="translate(450, 480)">
+    <rect x="0" y="0" width="300" height="100" fill="#1e293b" rx="8" opacity="0.8" />
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">FCL</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Full container</text>
+    <text x="150" y="75" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Flat rate</text>
+  </g>
+  
+  <g transform="translate(800, 480)">
+    <rect x="0" y="0" width="300" height="100" fill="#1e293b" rx="8" opacity="0.8" />
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">Break-even</text>
+    <text x="150" y="55" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">14-16 CBM</text>
+    <text x="150" y="75" font-family="Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">FCL cheaper above</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">bestintlmovers.com — Sea Freight Specialists</text>
+</svg>

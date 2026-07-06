@@ -53,6 +53,14 @@ import {
   AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_IMAGE,
 } from "@/data/airFreightVsSeaFreightPakistanBlog";
 import {
+  AIR_CARGO_COST_FROM_PAKISTAN_SLUG,
+  AIR_CARGO_COST_FROM_PAKISTAN_IMAGE,
+} from "@/data/airCargoCostFromPakistanBlog";
+import {
+  COMMERCIAL_CARGO_GUIDE_PAKISTAN_SLUG,
+  COMMERCIAL_CARGO_GUIDE_PAKISTAN_IMAGE,
+} from "@/data/commercialCargoGuidePakistanBlog";
+import {
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
 } from "@/data/internationalRelocationChecklistFamiliesBlog";
@@ -114,7 +122,7 @@ const allBlogs = [
   {
     slug: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG,
     img: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE,
-    title: "Shipping Furniture to UK from Pakistan — The Complete 2025 Guide",
+    title: "Shipping Furniture to UK from Pakistan — The Complete 2026 Guide",
     date: "Jun 27, 2026",
     category: "UK Moving Guide",
     author: "Best International Movers & Logistics",
@@ -126,7 +134,7 @@ const allBlogs = [
   {
     slug: INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG,
     img: INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE,
-    title: "The Ultimate International Packing Guide for Pakistanis — UK, Canada, Australia & Beyond (2025)",
+    title: "The Ultimate International Packing Guide for Pakistanis — UK, Canada, Australia & Beyond (2026)",
     date: "Jun 27, 2026",
     category: "Packing Guide",
     author: "Best International Movers & Logistics",
@@ -138,7 +146,7 @@ const allBlogs = [
   {
     slug: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG,
     img: STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE,
-    title: "Student Relocation to Canada from Pakistan — The Complete 2025–2026 Guide",
+    title: "Student Relocation to Canada from Pakistan — The Complete 2026 Guide",
     date: "Jun 27, 2026",
     category: "Student Guide",
     author: "Best International Movers & Logistics",
@@ -150,7 +158,7 @@ const allBlogs = [
   {
     slug: INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG,
     img: INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE,
-    title: "International Shipping Process: Complete Step-by-Step Guide 2025–2026",
+    title: "International Shipping Process: Complete Step-by-Step Guide 2026",
     date: "Jun 27, 2026",
     category: "Shipping Guide",
     author: "Best International Movers & Logistics",
@@ -162,19 +170,19 @@ const allBlogs = [
   {
     slug: FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG,
     img: FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE,
-    title: "Family Relocation to UK from Pakistan — The Complete 2025 Guide for Pakistani Families",
+    title: "Family Relocation to UK from Pakistan — The Complete 2026 Guide for Pakistani Families",
     date: "Jun 27, 2026",
     category: "Family Relocation",
     author: "Best International Movers & Logistics",
     readTime: "15 min read",
     excerpt:
-      "Complete 2025 guide to family relocation from Pakistan to UK — visas, schools, NHS, ToR customs relief, Pakistani community areas, shipping household goods & settling-in checklist.",
+      "Complete 2026 guide to family relocation from Pakistan to UK — visas, schools, NHS, ToR customs relief, Pakistani community areas, shipping household goods & settling-in checklist.",
     content: "Complete family relocation guide from Pakistan to UK for Pakistani families.",
   },
   {
     slug: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG,
     img: PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE,
-    title: "Packing Tips for International Moving to Canada — Complete Room-by-Room Guide for Pakistanis (2025)",
+    title: "Packing Tips for International Moving to Canada — Complete Room-by-Room Guide for Pakistanis (2026)",
     date: "Jun 27, 2026",
     category: "Moving Tips",
     author: "Best International Movers & Logistics",
@@ -186,7 +194,7 @@ const allBlogs = [
   {
     slug: CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG,
     img: CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE,
-    title: "Canada Customs Rules for Personal Effects — Complete 2025 Guide for Pakistanis",
+    title: "Canada Customs Rules for Personal Effects — Complete 2026 Guide for Pakistanis",
     date: "Jun 27, 2026",
     category: "Customs & Compliance",
     author: "Best International Movers & Logistics",
@@ -198,13 +206,13 @@ const allBlogs = [
   {
     slug: MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG,
     img: MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
-    title: "Moving from Pakistan to Canada — The Complete 2025 Guide for Families, Professionals & Students",
+    title: "Moving from Pakistan to Canada — The Complete 2026 Guide for Families, Professionals & Students",
     date: "Jun 27, 2026",
     category: "Relocation Guide",
     author: "Best International Movers & Logistics",
     readTime: "12 min read",
     excerpt:
-      "Complete 2025 guide to moving from Pakistan to Canada — visas, Express Entry, shipping, CBSA customs, cost of living, housing, healthcare & Pakistani community tips.",
+      "Complete 2026 guide to moving from Pakistan to Canada — visas, Express Entry, shipping, CBSA customs, cost of living, housing, healthcare & Pakistani community tips.",
     content: "Complete Pakistan to Canada relocation guide for families, professionals and students.",
   },
   {
@@ -246,14 +254,14 @@ const allBlogs = [
   {
     slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
     img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
-    title: "International Relocation Checklist for Families: The Ultimate 2025–2026 Guide",
+    title: "International Relocation Checklist for Families: The Ultimate 2026 Guide",
     date: "Jun 19, 2026",
     category: "Family Relocation",
     author: "Best International Movers & Logistics",
     readTime: "30 min read",
     excerpt:
       "Complete international relocation checklist for families — visas, schools, shipping, housing, healthcare, finances, kids & pets. Step-by-step from 12 months before to first month after arrival.",
-    content: "Ultimate international relocation checklist for families moving abroad in 2025–2026.",
+    content: "Ultimate international relocation checklist for families moving abroad in 2026.",
   },
   {
     slug: AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
@@ -268,9 +276,33 @@ const allBlogs = [
     content: "Complete air vs sea freight comparison guide for Pakistan shipments in 2026.",
   },
   {
+    slug: AIR_CARGO_COST_FROM_PAKISTAN_SLUG,
+    img: AIR_CARGO_COST_FROM_PAKISTAN_IMAGE,
+    title: "Air Cargo Cost from Pakistan 2026 — Complete Rate Guide (UK, Canada, Australia, UAE)",
+    date: "Jul 6, 2026",
+    category: "International Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "13 min read",
+    excerpt:
+      "Transparent 2026 guide to air cargo rates from Pakistan to the UK, Canada, Australia, UAE, Saudi Arabia and USA, plus chargeable weight and hidden fees.",
+    content: "Complete air cargo cost guide for Pakistan routes in 2026.",
+  },
+  {
+    slug: COMMERCIAL_CARGO_GUIDE_PAKISTAN_SLUG,
+    img: COMMERCIAL_CARGO_GUIDE_PAKISTAN_IMAGE,
+    title: "Commercial Cargo from Pakistan — The Complete Export Shipping Guide 2026",
+    date: "July 6, 2026",
+    category: "Customs & Compliance",
+    author: "Best International Movers & Logistics",
+    readTime: "16 min read",
+    excerpt:
+      "Complete guide to shipping commercial cargo from Pakistan internationally. Covers export documentation, HS codes, customs clearance, freight options (air & sea), Incoterms, duties, and how to choose the right freight forwarder.",
+    content: "Complete guide to shipping commercial cargo from Pakistan internationally in 2026.",
+  },
+  {
     slug: BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
     img: BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
-    title: "Best Freight Forwarders in Pakistan: Complete 2025–2026 Guide",
+    title: "Best Freight Forwarders in Pakistan: Complete 2026 Guide",
     date: "Jun 19, 2026",
     category: "Freight Forwarding",
     author: "Best International Movers & Logistics",
@@ -670,40 +702,77 @@ const BlogMainPage = () => {
                 <Link to={blog.linkTo ?? `/blog/${blog.slug}/`} className="block h-full">
                   <div className="glass-card rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-all h-full">
                     <div className="overflow-hidden">
-                      <img
-                        src={blog.img}
-                        alt={blog.title}
-                        loading="lazy"
-                        className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
-                          blog.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
-                            ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
-                            : blog.slug === CARGO_INSURANCE_INTERNATIONAL_SLUG
-                            ? CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD
-                            : blog.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
-                            ? OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE_CLASS_CARD
-                            : blog.slug === DHA_KARACHI_MOVING_GUIDE_SLUG
-                            ? DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD
-                            : blog.slug === KARACHI_TO_DUBAI_SHIPPING_COST_SLUG
-                            ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
-                            : blog.slug === MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG
-                            ? MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD
-                            : blog.slug === CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG
-                            ? CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD
-                            : blog.slug === PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG
-                            ? PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD
-                            : blog.slug === FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG
-                            ? FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
-                            : blog.slug === INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG
-                            ? INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD
-                            : blog.slug === STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG
-                            ? STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD
-                            : blog.slug === INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG
-                            ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
-                            : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
-                            ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
-                            : ""
-                        }`}
-                      />
+                      {blog.img.endsWith('.svg') ? (
+                        <img
+                          src={blog.img}
+                          alt={blog.title}
+                          loading="lazy"
+                          className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
+                            blog.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
+                              ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                              : blog.slug === CARGO_INSURANCE_INTERNATIONAL_SLUG
+                              ? CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD
+                              : blog.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
+                              ? OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE_CLASS_CARD
+                              : blog.slug === DHA_KARACHI_MOVING_GUIDE_SLUG
+                              ? DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === KARACHI_TO_DUBAI_SHIPPING_COST_SLUG
+                              ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
+                              : blog.slug === MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG
+                              ? MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG
+                              ? CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD
+                              : blog.slug === PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG
+                              ? PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD
+                              : blog.slug === FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG
+                              ? FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG
+                              ? INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG
+                              ? STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG
+                              ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
+                              ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : ""
+                          }`}
+                        />
+                      ) : (
+                        <img
+                          src={blog.img}
+                          alt={blog.title}
+                          loading="lazy"
+                          className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
+                            blog.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
+                              ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                              : blog.slug === CARGO_INSURANCE_INTERNATIONAL_SLUG
+                              ? CARGO_INSURANCE_INTERNATIONAL_IMAGE_CLASS_CARD
+                              : blog.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
+                              ? OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_IMAGE_CLASS_CARD
+                              : blog.slug === DHA_KARACHI_MOVING_GUIDE_SLUG
+                              ? DHA_KARACHI_MOVING_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === KARACHI_TO_DUBAI_SHIPPING_COST_SLUG
+                              ? KARACHI_TO_DUBAI_SHIPPING_COST_IMAGE_CLASS_CARD
+                              : blog.slug === MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG
+                              ? MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === CANADA_CUSTOMS_PERSONAL_EFFECTS_SLUG
+                              ? CANADA_CUSTOMS_PERSONAL_EFFECTS_IMAGE_CLASS_CARD
+                              : blog.slug === PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_SLUG
+                              ? PACKING_TIPS_INTERNATIONAL_MOVING_CANADA_IMAGE_CLASS_CARD
+                              : blog.slug === FAMILY_RELOCATION_UK_FROM_PAKISTAN_SLUG
+                              ? FAMILY_RELOCATION_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === INTERNATIONAL_SHIPPING_PROCESS_GUIDE_SLUG
+                              ? INTERNATIONAL_SHIPPING_PROCESS_GUIDE_IMAGE_CLASS_CARD
+                              : blog.slug === STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_SLUG
+                              ? STUDENT_RELOCATION_CANADA_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === INTERNATIONAL_PACKING_GUIDE_PAKISTAN_SLUG
+                              ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
+                              ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : ""
+                          }`}
+                        />
+                      )}
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-4">

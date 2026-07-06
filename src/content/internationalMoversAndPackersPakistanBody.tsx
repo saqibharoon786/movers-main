@@ -104,7 +104,9 @@ export function InternationalMoversAndPackersPakistanBody() {
       <h3>Air Freight for International Moves</h3>
       <p>
         We arrange air freight from Islamabad, Lahore, and Karachi airports for urgent shipments, high-value items, and
-        time-critical consignments that cannot wait for the next available vessel sailing.
+        time-critical consignments that cannot wait for the next available vessel sailing. For dedicated air and sea cargo
+        from the capital region, see our{" "}
+        <Link to="/cargo-service-islamabad/">International Cargo Service in Islamabad</Link>.
       </p>
 
       <h3>Customs Documentation and Clearance</h3>
@@ -138,7 +140,8 @@ export function InternationalMoversAndPackersPakistanBody() {
 
       <h2>Cities We Operate From in Pakistan</h2>
       <p>
-        Islamabad — F sectors, G sectors, E sectors, DHA, Bahria Town
+        Islamabad — F sectors, G sectors, E sectors, DHA, Bahria Town (
+        <Link to="/cargo-service-islamabad/">International Cargo Service in Islamabad</Link>)
         <br />
         Rawalpindi — Satellite Town, DHA, Bahria Town, Chaklala, Gulraiz
         <br />
@@ -181,7 +184,10 @@ export function InternationalMoversAndPackersPakistanBody() {
 
       <h2>Internal links (helpful)</h2>
       <p>
-        If your pickup is in Islamabad, start here: <Link to="/packers-and-movers-islamabad">Packers and Movers Islamabad</Link>.
+        If your pickup is in Islamabad, start here:{" "}
+        <Link to="/packers-and-movers-islamabad">Packers and Movers Islamabad</Link> or our{" "}
+        <Link to="/cargo-service-islamabad/">International Cargo Service in Islamabad</Link> for air freight, sea freight,
+        and door-to-door cargo.
       </p>
     </>
   );

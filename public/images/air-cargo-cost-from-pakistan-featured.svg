@@ -1,0 +1,26 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#08111F"/>
+  <rect x="64" y="64" width="1472" height="772" rx="28" fill="#0F1D33" stroke="#D7A63A" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="250" cy="250" r="160" fill="#D7A63A" fill-opacity="0.14"/>
+  <circle cx="1338" cy="670" r="210" fill="#E6B84C" fill-opacity="0.1"/>
+  <path d="M240 622L396 466L544 598L708 430L884 606L1032 478L1220 654" stroke="#D7A63A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240 627H1220" stroke="#F4E7BE" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
+  <rect x="220" y="160" width="340" height="112" rx="18" fill="#12304D"/>
+  <rect x="240" y="186" width="176" height="14" rx="7" fill="#D7A63A" fill-opacity="0.85"/>
+  <rect x="240" y="214" width="242" height="12" rx="6" fill="#F4E7BE" fill-opacity="0.75"/>
+  <rect x="900" y="160" width="328" height="132" rx="20" fill="#0C2138" stroke="#D7A63A" stroke-opacity="0.35"/>
+  <rect x="930" y="196" width="132" height="14" rx="7" fill="#D7A63A"/>
+  <rect x="930" y="226" width="214" height="12" rx="6" fill="#F4E7BE" fill-opacity="0.72"/>
+  <path d="M420 300H1040" stroke="#D7A63A" stroke-width="6" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M420 346H912" stroke="#F4E7BE" stroke-width="4" stroke-linecap="round" stroke-opacity="0.35"/>
+  <rect x="220" y="710" width="1120" height="56" rx="18" fill="#0B1628" stroke="#D7A63A" stroke-opacity="0.2"/>
+  <circle cx="278" cy="738" r="16" fill="#D7A63A"/>
+  <circle cx="420" cy="738" r="16" fill="#8C4C1F" fill-opacity="0.35"/>
+  <circle cx="562" cy="738" r="16" fill="#D7A63A" fill-opacity="0.7"/>
+  <circle cx="704" cy="738" r="16" fill="#8C4C1F" fill-opacity="0.35"/>
+  <circle cx="846" cy="738" r="16" fill="#D7A63A"/>
+  <circle cx="988" cy="738" r="16" fill="#8C4C1F" fill-opacity="0.35"/>
+  <circle cx="1130" cy="738" r="16" fill="#D7A63A" fill-opacity="0.7"/>
+  <text x="118" y="120" fill="#F4E7BE" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Air Cargo Cost from Pakistan</text>
+  <text x="118" y="160" fill="#D7A63A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">2026 guide for UK, Canada, Australia, UAE &amp; USA</text>
+</svg>
