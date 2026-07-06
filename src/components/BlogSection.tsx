@@ -44,6 +44,14 @@ import {
   AIR_FREIGHT_VS_SEA_FREIGHT_PAKISTAN_SLUG,
 } from "@/data/airFreightVsSeaFreightPakistanBlog";
 import {
+  AIR_CARGO_COST_FROM_PAKISTAN_IMAGE,
+  AIR_CARGO_COST_FROM_PAKISTAN_SLUG,
+} from "@/data/airCargoCostFromPakistanBlog";
+import {
+  COMMERCIAL_CARGO_GUIDE_PAKISTAN_IMAGE,
+  COMMERCIAL_CARGO_GUIDE_PAKISTAN_SLUG,
+} from "@/data/commercialCargoGuidePakistanBlog";
+import {
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
   INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
 } from "@/data/internationalRelocationChecklistFamiliesBlog";
@@ -59,8 +67,26 @@ import {
   CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
   CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
 } from "@/data/customsAndDutyPakistanUKBlog";
+import {
+  LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
+  LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,
+} from "@/data/lclVsFclSeaFreightPakistanBlog";
 
 const posts = [
+  {
+    img: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
+    slug: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,
+    title: "LCL vs FCL: Complete Sea Freight Guide 2026",
+    date: "July 6, 2026",
+    category: "Sea Freight",
+  },
+  {
+    img: COMMERCIAL_CARGO_GUIDE_PAKISTAN_IMAGE,
+    slug: COMMERCIAL_CARGO_GUIDE_PAKISTAN_SLUG,
+    title: "Commercial Cargo from Pakistan — The Complete Export Shipping Guide 2026",
+    date: "July 6, 2026",
+    category: "Customs & Compliance",
+  },
   {
     img: CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
     slug: CUSTOMS_AND_DUTY_PAKISTAN_UK_SLUG,
@@ -85,7 +111,7 @@ const posts = [
   {
     img: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_IMAGE,
     slug: INTERNATIONAL_RELOCATION_CHECKLIST_FAMILIES_SLUG,
-    title: "International Relocation Checklist for Families — Ultimate 2025–2026 Guide",
+    title: "International Relocation Checklist for Families — Ultimate 2026 Guide",
     date: "June 19, 2026",
     category: "Family Relocation",
   },
@@ -97,9 +123,16 @@ const posts = [
     category: "Logistics",
   },
   {
+    img: AIR_CARGO_COST_FROM_PAKISTAN_IMAGE,
+    slug: AIR_CARGO_COST_FROM_PAKISTAN_SLUG,
+    title: "Air Cargo Cost from Pakistan 2026 — Complete Rate Guide (UK, Canada, Australia, UAE)",
+    date: "July 6, 2026",
+    category: "International Shipping",
+  },
+  {
     img: BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
     slug: BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
-    title: "Best Freight Forwarders in Pakistan — Complete 2025–2026 Guide",
+    title: "Best Freight Forwarders in Pakistan — Complete 2026 Guide",
     date: "June 19, 2026",
     category: "Freight Forwarding",
   },
@@ -180,8 +213,7 @@ const BlogSection = () => {
             <motion.article key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.1, duration: 0.5 }}>
               <Link to={`/blog/${p.slug}/`} className="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-gold/30 transition-all block">
                 <div className="overflow-hidden">
-                  <picture>
-                    <source srcSet={`${p.img}&fm=webp`} type="image/webp" />
+                  {p.img.endsWith('.svg') ? (
                     <img
                       src={p.img}
                       alt={p.title}
@@ -196,7 +228,25 @@ const BlogSection = () => {
                           : ""
                       }`}
                     />
-                  </picture>
+                  ) : (
+                    <picture>
+                      <source srcSet={`${p.img}&fm=webp`} type="image/webp" />
+                      <img
+                        src={p.img}
+                        alt={p.title}
+                        loading="lazy"
+                        width={640}
+                        height={360}
+                        className={`w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500 ${
+                          p.slug === BEST_PACKERS_MOVERS_ISLAMABAD_2026_SLUG
+                            ? BEST_PACKERS_MOVERS_ISLAMABAD_2026_IMAGE_CLASS_CARD
+                            : p.slug === OFFICE_RELOCATION_KARACHI_ZERO_DOWNTIME_SLUG
+                            ? "object-cover object-[50%_40%]"
+                            : ""
+                        }`}
+                      />
+                    </picture>
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">

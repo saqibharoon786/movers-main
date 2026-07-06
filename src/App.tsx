@@ -148,10 +148,14 @@ const CustomsClearanceProcessPakistanBlog = lazy(() => import("./pages/blog/Cust
 const CargoChargesPakistanToUKBlog = lazy(() => import("./pages/blog/CargoChargesPakistanToUKBlog.tsx"));
 const BestFreightForwardersPakistanBlog = lazy(() => import("./pages/blog/BestFreightForwardersPakistanBlog.tsx"));
 const AirFreightVsSeaFreightPakistanBlog = lazy(() => import("./pages/blog/AirFreightVsSeaFreightPakistanBlog.tsx"));
+const AirCargoCostFromPakistanBlog = lazy(() => import("./pages/blog/AirCargoCostFromPakistanBlog.tsx"));
 const InternationalRelocationChecklistFamiliesBlog = lazy(() => import("./pages/blog/InternationalRelocationChecklistFamiliesBlog.tsx"));
 const CarShippingPakistanUKBlog = lazy(() => import("./pages/blog/CarShippingPakistanUKBlog.tsx"));
 const CommercialFreightForwardingPakistanUAEBlog = lazy(
   () => import("./pages/blog/CommercialFreightForwardingPakistanUAEBlog.tsx"),
+);
+const CommercialCargoGuidePakistanBlog = lazy(
+  () => import("./pages/blog/CommercialCargoGuidePakistanBlog.tsx"),
 );
 const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndDutyPakistanUKBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
@@ -273,6 +277,8 @@ const App = () => (
           <Route path="/blog/tips-for-stress-free-international-move/" element={<Blog1 />} />
           <Route path="/blog/air-freight-vs-sea-freight-pakistan" element={<Navigate to="/blog/air-freight-vs-sea-freight-pakistan/" replace />} />
           <Route path="/blog/air-freight-vs-sea-freight-pakistan/" element={<AirFreightVsSeaFreightPakistanBlog />} />
+          <Route path="/blog/air-cargo-cost-from-pakistan" element={<Navigate to="/blog/air-cargo-cost-from-pakistan/" replace />} />
+          <Route path="/blog/air-cargo-cost-from-pakistan/" element={<AirCargoCostFromPakistanBlog />} />
           <Route path="/blog/customs-regulations-pakistan-2025" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2025/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
           <Route path="/blog/customs-regulations-pakistan-2026/" element={<Navigate to="/blog/customs-regulations-pakistan-2026/" replace />} />
@@ -357,6 +363,14 @@ const App = () => (
           <Route
             path="/blog/commercial-freight-forwarding-pakistan-uae-2026/"
             element={<CommercialFreightForwardingPakistanUAEBlog />}
+          />
+          <Route
+            path="/blog/commercial-cargo-guide-pakistan"
+            element={<Navigate to="/blog/commercial-cargo-guide-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/commercial-cargo-guide-pakistan/"
+            element={<CommercialCargoGuidePakistanBlog />}
           />
           <Route
             path="/blog/customs-and-duty-pakistan-uk-2026"
