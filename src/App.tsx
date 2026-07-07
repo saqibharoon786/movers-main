@@ -158,6 +158,9 @@ const CommercialCargoGuidePakistanBlog = lazy(
   () => import("./pages/blog/CommercialCargoGuidePakistanBlog.tsx"),
 );
 const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndDutyPakistanUKBlog.tsx"));
+const LclVsFclSeaFreightPakistanBlog = lazy(() => import("./pages/blog/LclVsFclSeaFreightPakistanBlog.tsx"));
+const ExportShippingPakistanBlog = lazy(() => import("./pages/blog/ExportShippingPakistanBlog.tsx"));
+const ExpressCargoBlog = lazy(() => import("./pages/blog/ExpressCargoBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
   () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
 );
@@ -371,6 +374,22 @@ const App = () => (
           <Route
             path="/blog/commercial-cargo-guide-pakistan/"
             element={<CommercialCargoGuidePakistanBlog />}
+          />
+          <Route
+            path="/blog/export-shipping-pakistan"
+            element={<Navigate to="/blog/export-shipping-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/export-shipping-pakistan/"
+            element={<ExportShippingPakistanBlog />}
+          />
+          <Route
+            path="/blog/lcl-vs-fcl-sea-freight-pakistan"
+            element={<Navigate to="/blog/lcl-vs-fcl-sea-freight-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/lcl-vs-fcl-sea-freight-pakistan/"
+            element={<LclVsFclSeaFreightPakistanBlog />}
           />
           <Route
             path="/blog/customs-and-duty-pakistan-uk-2026"

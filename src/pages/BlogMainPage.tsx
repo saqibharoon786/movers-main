@@ -77,6 +77,18 @@ import {
   CUSTOMS_AND_DUTY_PAKISTAN_UK_IMAGE,
 } from "@/data/customsAndDutyPakistanUKBlog";
 import {
+  LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,
+  LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
+} from "@/data/lclVsFclSeaFreightPakistanBlog";
+import {
+  EXPORT_SHIPPING_PAKISTAN_SLUG,
+  EXPORT_SHIPPING_PAKISTAN_IMAGE,
+} from "@/data/exportShippingPakistanBlog";
+import {
+  EXPRESS_CARGO_SLUG,
+  EXPRESS_CARGO_IMAGE,
+} from "@/data/expressCargoBlog";
+import {
   MOVING_PAKISTAN_TO_CANADA_GUIDE_SLUG,
   MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE,
   MOVING_PAKISTAN_TO_CANADA_GUIDE_IMAGE_CLASS_CARD,
@@ -119,6 +131,42 @@ import {
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: EXPRESS_CARGO_SLUG,
+    img: EXPRESS_CARGO_IMAGE,
+    title: "Express Cargo from Pakistan — Fastest International Shipping 2026",
+    date: "July 6, 2026",
+    category: "Express Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "14 min read",
+    excerpt:
+      "Need express cargo from Pakistan urgently? Best Int'l Movers delivers international express shipments in 24–72 hours from Karachi, Lahore & Islamabad to UK, Canada, UAE, Australia & worldwide. Same-day pickup. 24/7 service.",
+    content: "Express cargo from Pakistan — fastest international shipping guide.",
+  },
+  {
+    slug: EXPORT_SHIPPING_PAKISTAN_SLUG,
+    img: EXPORT_SHIPPING_PAKISTAN_IMAGE,
+    title: "Export Shipping from Pakistan — Complete Guide 2026",
+    date: "July 6, 2026",
+    category: "Export Guide",
+    author: "Best International Movers & Logistics",
+    readTime: "25 min read",
+    excerpt:
+      "Complete guide to export shipping from Pakistan. Covers air freight vs sea freight, WeBOC customs, Form E, export documentation, Incoterms, shipping rates to UAE, UK, USA, Canada, and step-by-step export process.",
+    content: "Export shipping from Pakistan — complete guide for exporters and importers.",
+  },
+  {
+    slug: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,
+    img: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
+    title: "LCL vs FCL: Complete Sea Freight Guide 2026",
+    date: "July 6, 2026",
+    category: "Sea Freight",
+    author: "Best International Movers & Logistics",
+    readTime: "20 min read",
+    excerpt:
+      "Complete guide to LCL vs FCL sea freight from Pakistan. Covers cost comparison, transit times, when to choose each, CBM calculation, container sizes, and Pakistan routes to UAE, UK, USA, Canada.",
+    content: "LCL vs FCL sea freight comparison guide for Pakistan exporters and importers.",
+  },
   {
     slug: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG,
     img: SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE,

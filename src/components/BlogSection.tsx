@@ -71,8 +71,30 @@ import {
   LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
   LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,
 } from "@/data/lclVsFclSeaFreightPakistanBlog";
+import {
+  EXPORT_SHIPPING_PAKISTAN_IMAGE,
+  EXPORT_SHIPPING_PAKISTAN_SLUG,
+} from "@/data/exportShippingPakistanBlog";
+import {
+  EXPRESS_CARGO_IMAGE,
+  EXPRESS_CARGO_SLUG,
+} from "@/data/expressCargoBlog";
 
 const posts = [
+  {
+    img: EXPRESS_CARGO_IMAGE,
+    slug: EXPRESS_CARGO_SLUG,
+    title: "Express Cargo from Pakistan — Fastest International Shipping 2026",
+    date: "July 6, 2026",
+    category: "Express Shipping",
+  },
+  {
+    img: EXPORT_SHIPPING_PAKISTAN_IMAGE,
+    slug: EXPORT_SHIPPING_PAKISTAN_SLUG,
+    title: "Export Shipping from Pakistan — Complete Guide 2026",
+    date: "July 6, 2026",
+    category: "Export Guide",
+  },
   {
     img: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_IMAGE,
     slug: LCL_VS_FCL_SEA_FREIGHT_PAKISTAN_SLUG,

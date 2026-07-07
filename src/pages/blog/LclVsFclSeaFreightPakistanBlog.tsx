@@ -82,14 +82,6 @@ export default function LclVsFclSeaFreightPakistanBlog() {
 
       <LclVsFclSeaFreightPakistanBody />
 
-      <h2>Frequently Asked Questions — LCL vs FCL Sea Freight from Pakistan</h2>
-      {lclVsFclSeaFreightPakistanFaqs.map((faq) => (
-        <div key={faq.q} className="not-prose mb-6">
-          <h3 className="text-lg font-display font-semibold text-foreground mb-2">{faq.q}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
-        </div>
-      ))}
-
       <CtaBox>
         <strong className="text-foreground block mb-2 text-base">
           📦 Get Your Free LCL & FCL Sea Freight Quote — Pakistan to Global Destinations
