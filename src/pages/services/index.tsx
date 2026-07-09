@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes } from "lucide-react";
+import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -261,6 +261,105 @@ const allServices = [
   { slug: "sea-freight-services", icon: Ship, title: "Sea Freight Services", desc: "FCL & LCL ocean freight from Karachi Port and Port Qasim to global destinations.", longDesc: "Sea freight is the most cost-effective way to ship large volumes of goods internationally. At Best International Movers, we offer both Full Container Load (FCL) and Less than Container Load (LCL) sea freight services from Pakistan's major ports — primarily Karachi Port and Port Qasim — to destinations across the globe.", features: ["Direct partnerships with Maersk, MSC, Hapag-Lloyd", "Weekly sailings from Karachi toward Jebel Ali, Felixstowe, Rotterdam, Halifax & more", "In-house customs brokerage for Pakistan export documentation", "Real-time container tracking from origin port to destination", "Climate-controlled storage while awaiting vessel departure", "Door-to-door coordination with transparent quotes"], heroImg: "/images/container.jpg", faqs: [{q:"What is the difference between FCL and LCL?", a:"FCL means you pay for an entire 20ft or 40ft container — best for full household or office moves. LCL means you share container space and pay by volume (CBM), ideal for partial shipments."}, {q:"How long does sea freight take from Pakistan?", a:"Transit varies by lane and consolidation, but many Dubai-bound services fall in roughly 2-3 weeks for LCL groupage and slightly longer for FCL depending on sailing and destination port."}, {q:"Are port charges included in a door-to-door quote?", a:"When quoted door-to-door, we spell out origin, ocean, and destination handling so you can compare apples to apples — ask for a written scope."}], related: ["air-freight", "customs-clearance"] },
   { slug: "customs-clearance", icon: FileCheck, title: "Customs Clearance", desc: "Expert customs brokerage ensuring smooth border crossings and compliance.", longDesc: "Navigating international customs regulations can be complex. Our licensed customs brokers handle all documentation, duties, taxes, and compliance requirements in both origin and destination countries. We ensure your shipment clears customs quickly and without delays.", features: ["Licensed customs brokers", "Duty & tax calculation", "Import/export documentation", "Regulatory compliance", "Quarantine clearance", "Trade agreement benefits"], heroImg: "/images/cargo-insurance.jpg", faqs: [{q:"Do I need to be present for customs clearance?", a:"Generally no, our brokers handle clearance on your behalf with the proper power of attorney."}, {q:"How long does clearance take?", a:"Normally 2-4 days, provided all documentation is accurate and there are no unexpected customs hold-ups."}, {q:"Who pays the duties and taxes?", a:"We calculate and pay destination duties and taxes on your behalf, which are invoiced separately or included in the master quote."}, {q:"Which documents do exporters from Pakistan need most often?", a:"Commercial invoice, packing list, exporter profile, and destination-specific permits for restricted goods. We prepare templates and validate HS codes before submission."}, {q:"Can you coordinate clearance at destination as well?", a:"Yes. We work with vetted agents in major hubs (UAE, UK, North America, GCC) so import clearance aligns with your delivery appointment."}], related: ["international-moving", "sea-freight"] },
   { slug: "last-mile-delivery", icon: Truck, title: "Last Mile Delivery", desc: "Precision delivery and unpacking at your new home, wherever in the world.", longDesc: "The last mile is the most important. Our delivery teams ensure your belongings are carefully transported from port or warehouse to your new home. We handle unpacking, furniture assembly, and placement so you can start enjoying your new space immediately.", features: ["Scheduled delivery windows", "Furniture assembly", "Debris removal", "Appliance installation", "Room-by-room placement", "Post-delivery follow-up"], heroImg: "/images/shipping.png", faqs: [{q:"Will you reassemble my furniture?", a:"Yes, full reassembly of beds, wardrobes, and standard furniture is included in our white-glove service."}, {q:"Do you remove packing debris?", a:"Absolutely, we clear out all empty boxes and packing materials after unpacking on the same day."}, {q:"Is there an extra charge for stairs/elevators?", a:"Normally included, but complex access (like 5th floor no elevator) may require an extra handling fee."}], related: ["professional-packing", "international-moving"] },
+  { 
+    slug: "import-export-services-pakistan", 
+    icon: Globe, 
+    title: "Import Export Services Pakistan", 
+    desc: "Pakistan's most trusted import & export freight company. Air Freight, Sea Freight, Customs Clearance, Export Documentation, Import Duty, Door-to-Door services to UAE, UK, USA, Canada, Germany, China.", 
+    longDesc: "Pakistan stands at the crossroads of global trade — exporting textiles, garments, surgical instruments, rice, mangoes, leather, and sports goods to markets in the UAE, UK, USA, Europe, and China, while importing machinery, electronics, chemicals, vehicles, and raw materials from around the world. bestintlmovers.com is Pakistan's licensed import and export services provider — IATA certified for air freight, FIATA member for sea freight, WeBOC-registered for customs clearance, and operational across Karachi, Lahore, Islamabad, Faisalabad, Sialkot, and all major Pakistani cities. We provide end-to-end import export solutions: from freight booking and export documentation to customs clearance, duty payment, and door-to-door delivery worldwide.",
+    features: [
+      "IATA Licensed Air Freight Agent — all major airlines",
+      "Pakistan Customs C-Licence — WeBOC registered clearing agent",
+      "FIATA Member — international freight standards",
+      "Sea Freight — FCL & LCL, Maersk, MSC, CMA CGM, Hapag-Lloyd partners",
+      "Export Documentation — GD, Form E, Certificate of Origin, Phytosanitary",
+      "Import Clearance — duty calculation, WeBOC GD, port examination handling",
+      "All Pakistan cities: Karachi, Lahore, Islamabad, Faisalabad, Sialkot, Rawalpindi",
+      "All global routes: UAE, UK, USA, Canada, Germany, China, Australia, GCC"
+    ], 
+    heroImg: "/images/container.jpg", 
+    faqs: [
+      {
+        q: "What import export services does bestintlmovers.com provide in Pakistan?",
+        a: "bestintlmovers.com provides a complete range of import and export services from all major Pakistani cities. Our export services include: air freight and sea freight booking from Karachi, Lahore, Islamabad, Faisalabad, and Sialkot; export customs clearance (WeBOC Goods Declaration filing); Form E submission and coordination; Certificate of Origin from all major Chambers of Commerce; phytosanitary, health, halal, and fumigation certificates; cargo insurance; and door-to-door export to any country. Our import services include: freight coordination from overseas suppliers; sea and air freight import to Pakistan; WeBOC import GD filing; import duty calculation and payment; bonded warehouse; port examination management; and door-to-door delivery to your Pakistan warehouse."
+      },
+      {
+        q: "How do I start importing goods into Pakistan for the first time?",
+        a: "Starting import operations in Pakistan requires: (1) Register your business with SECP and obtain an NTN from FBR. (2) Register for Sales Tax (STN) if you will be a regular importer. (3) Identify your product's HS code — this determines import duty rate. (4) Check Pakistan Customs' Import Policy Order for any restrictions. (5) Open a foreign currency account with an authorised bank for import payments. (6) Find a reliable overseas supplier. (7) Engage bestintlmovers.com for freight booking, customs clearance, and door delivery. (8) Arrange cargo insurance."
+      },
+      {
+        q: "What documents are required for export from Pakistan?",
+        a: "Core documents required for every export from Pakistan: Commercial Invoice, Packing List, Goods Declaration / GD (WeBOC filing), Form E (State Bank forex repatriation), Bill of Lading (sea freight) or Air Waybill (air freight), and Certificate of Origin (TDAP or Chamber of Commerce). Additional documents depend on commodity: Phytosanitary Certificate for fruits, vegetables, seeds; Export Health Certificate for seafood, meat, dairy; Halal Certificate for food to Gulf countries; Fumigation Certificate for wooden packaging; MSDS for chemicals; DRAP Certificate for pharmaceuticals."
+      }
+    ], 
+    related: ["freight-forwarding", "customs-clearance", "air-freight", "sea-freight"] 
+  },
+  { 
+    slug: "office-moving-services", 
+    icon: Building2, 
+    title: "Office Moving Services", 
+    desc: "Professional office moving services across Pakistan. Fast, secure, zero-downtime office relocation for corporates, IT firms & startups in Islamabad, Lahore, Karachi & Rawalpindi.", 
+    longDesc: "Relocating a business is nothing like moving a house. An office move involves sensitive IT infrastructure, confidential files, expensive furniture, servers, workstations, and — most importantly — your company's ability to keep working without interruption. Best International Movers & Logistics built a dedicated team of office moving services specialists who understand what's really at stake when a business changes its address. For over 15 years, we've helped corporates, startups, law firms, IT companies, embassies, banks, and multinational branch offices across Pakistan relocate their workplaces with zero data loss, zero equipment damage, and minimal downtime.",
+    features: [
+      "15+ Years of Corporate Moving Experience",
+      "Zero-Downtime Moving Model — weekend, evening, overnight moves",
+      "Trained Office Movers — electronics, server racks, glass partitions, executive furniture",
+      "Full Insurance Coverage — every item moved is covered against damage or loss",
+      "IT & Electronics Handling Expertise — safe disconnection, anti-static packing, reconnection",
+      "Confidential Document Handling — sealed crates for HR files, financial records, legal documents",
+      "Nationwide & International Reach — local office shifts to international headquarters relocation",
+      "Dedicated Move Coordinator — single point of contact from survey to final setup"
+    ], 
+    heroImg: "/images/container.jpg", 
+    faqs: [
+      {
+        q: "What are office moving services?",
+        a: "Office moving services cover the complete relocation of a business's workplace — furniture, IT equipment, documents, and fixtures — from one location to another, handled by trained professionals to minimize downtime and damage."
+      },
+      {
+        q: "How much do office moving services cost in Pakistan?",
+        a: "Costs vary based on office size, distance, IT equipment volume, and packing requirements. We provide a free on-site survey and a detailed, no-obligation quote before any work begins."
+      },
+      {
+        q: "Can you move our office without disrupting business operations?",
+        a: "Yes. We specialize in zero-downtime relocations, scheduling moves after business hours or over weekends so your team returns to a fully functional office without losing working days."
+      }
+    ], 
+    related: ["professional-packing", "secure-storage-services", "international-moving"] 
+  },
+  { 
+    slug: "logistics-services-pakistan", 
+    icon: Truck, 
+    title: "Logistics Services Pakistan", 
+    desc: "Reliable logistics services in Pakistan — air freight, sea freight, customs clearance, warehousing & cargo solutions for businesses. 15+ years experience, 100+ countries.", 
+    longDesc: "Every business that moves goods — whether across Karachi to Lahore or across Pakistan to Dubai, London, or New York — depends on one thing above all else: a logistics partner that delivers on time, every time. Best International Movers & Logistics provides comprehensive logistics services in Pakistan built for businesses that can't afford delays, damaged cargo, or customs bottlenecks. For over 15 years, we've supported importers, exporters, manufacturers, retailers, and multinational companies across Pakistan with air freight, sea freight, warehousing, customs brokerage, and end-to-end supply chain coordination.",
+    features: [
+      "15+ Years of Freight & Cargo Experience",
+      "Global Partner Network — Maersk Line, Emirates SkyCargo, MSC Shipping, DHL Global, Hapag-Lloyd, DB Schenker",
+      "100+ Countries Served — Gulf, Europe, North America, Asia and beyond",
+      "Multi-Modal Freight Options — air, sea, and land freight tailored to timeline and budget",
+      "In-House Customs Brokerage — licensed clearance experts handling documentation and compliance",
+      "Warehousing & Storage — secure, monitored storage facilities for inventory and staging",
+      "Real-Time Shipment Tracking — milestone updates at every stage of the journey",
+      "Dedicated Account Coordinators — single point of contact managing your shipments"
+    ], 
+    heroImg: "/images/container.jpg", 
+    faqs: [
+      {
+        q: "What logistics services do you offer in Pakistan?",
+        a: "We offer air freight, sea freight, customs clearance, warehousing, domestic cargo transport, vehicle shipping, and full business relocation logistics — covering every major city in Pakistan and 100+ countries internationally."
+      },
+      {
+        q: "Which cities do you provide logistics services in?",
+        a: "We provide logistics services in Islamabad, Rawalpindi, Lahore, Karachi, Peshawar, and other major cities, with direct port and airport access for international freight."
+      },
+      {
+        q: "How much do logistics services cost in Pakistan?",
+        a: "Costs depend on freight mode (air vs. sea), cargo volume, destination, and any additional services like warehousing or specialized packing. We provide a transparent, itemized quote after assessing your shipment."
+      }
+    ], 
+    related: ["freight-forwarding", "customs-clearance", "air-freight", "sea-freight"] 
+  },
 ];
 
 const locations = [

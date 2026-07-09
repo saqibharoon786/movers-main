@@ -128,9 +128,25 @@ import {
   SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE,
   SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD,
 } from "@/data/shippingFurnitureToUkFromPakistanBlog";
+import {
+  INTERNATIONAL_LOGISTICS_IMAGE,
+  INTERNATIONAL_LOGISTICS_SLUG,
+} from "@/data/internationalLogisticsGuide";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: INTERNATIONAL_LOGISTICS_SLUG,
+    img: INTERNATIONAL_LOGISTICS_IMAGE,
+    title: "International Logistics Guide 2026: Complete Freight & Shipping Guide",
+    date: "July 9, 2026",
+    category: "Logistics",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt:
+      "Complete international logistics guide for Pakistani businesses — freight modes, customs documentation, Incoterms, costs & common mistakes. Everything you need to ship globally in 2026.",
+    content: "International logistics guide for shipping from Pakistan to the world.",
+  },
   {
     slug: EXPRESS_CARGO_SLUG,
     img: EXPRESS_CARGO_IMAGE,
