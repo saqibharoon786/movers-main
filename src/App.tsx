@@ -26,13 +26,15 @@ const VehicleShippingService = lazy(() => import("./pages/services/vehicle-shipp
 const LastMileDeliveryService = lazy(() => import("./pages/services/last-mile-delivery.tsx"));
 const HouseholdGoodsShippingPakistanToUK = lazy(() => import("./pages/services/household-goods-shipping-pakistan-to-uk.tsx"));
 const RelocationServicesPakistanToUK = lazy(() => import("./pages/services/relocation-services-pakistan-to-uk.tsx"));
+const ImportExportServicesPakistan = lazy(() => import("./pages/services/import-export-services-pakistan.tsx"));
+const OfficeMovingServicesPakistan = lazy(() => import("./pages/services/office-moving-services-pakistan.tsx"));
+const LogisticsServicesPakistan = lazy(() => import("./pages/services/logistics-services-pakistan.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
 const FaqHubPakistan = lazy(() => import("./pages/FaqHubPakistan.tsx"));
 const InternationalMoversPakistan = lazy(() => import("./pages/InternationalMoversPakistan.tsx"));
 const CargoServicesPakistan = lazy(() => import("./pages/CargoServicesPakistan.tsx"));
-const LogisticsServicesPakistan = lazy(() => import("./pages/LogisticsServicesPakistan.tsx"));
 const PackersMoversPakistan = lazy(() => import("./pages/PackersMoversPakistan.tsx"));
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));
@@ -161,6 +163,7 @@ const CustomsAndDutyPakistanUKBlog = lazy(() => import("./pages/blog/CustomsAndD
 const LclVsFclSeaFreightPakistanBlog = lazy(() => import("./pages/blog/LclVsFclSeaFreightPakistanBlog.tsx"));
 const ExportShippingPakistanBlog = lazy(() => import("./pages/blog/ExportShippingPakistanBlog.tsx"));
 const ExpressCargoBlog = lazy(() => import("./pages/blog/ExpressCargoBlog.tsx"));
+const InternationalLogisticsGuideBlog = lazy(() => import("./pages/blog/InternationalLogisticsGuideBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
   () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
 );
@@ -267,6 +270,12 @@ const App = () => (
           <Route path="/services/household-goods-shipping-pakistan-to-uk/" element={<HouseholdGoodsShippingPakistanToUK />} />
           <Route path="/services/relocation-services-pakistan-to-uk" element={<Navigate to="/services/relocation-services-pakistan-to-uk/" replace />} />
           <Route path="/services/relocation-services-pakistan-to-uk/" element={<RelocationServicesPakistanToUK />} />
+          <Route path="/services/import-export-services-pakistan" element={<Navigate to="/services/import-export-services-pakistan/" replace />} />
+          <Route path="/services/import-export-services-pakistan/" element={<ImportExportServicesPakistan />} />
+          <Route path="/services/office-moving-services" element={<Navigate to="/services/office-moving-services/" replace />} />
+          <Route path="/services/office-moving-services/" element={<OfficeMovingServicesPakistan />} />
+          <Route path="/services/logistics-services-pakistan" element={<Navigate to="/services/logistics-services-pakistan/" replace />} />
+          <Route path="/services/logistics-services-pakistan/" element={<LogisticsServicesPakistan />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
@@ -382,6 +391,22 @@ const App = () => (
           <Route
             path="/blog/export-shipping-pakistan/"
             element={<ExportShippingPakistanBlog />}
+          />
+          <Route
+            path="/blog/express-cargo-from-pakistan"
+            element={<Navigate to="/blog/express-cargo-from-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/express-cargo-from-pakistan/"
+            element={<ExpressCargoBlog />}
+          />
+          <Route
+            path="/blog/international-logistics-guide-2026"
+            element={<Navigate to="/blog/international-logistics-guide-2026/" replace />}
+          />
+          <Route
+            path="/blog/international-logistics-guide-2026/"
+            element={<InternationalLogisticsGuideBlog />}
           />
           <Route
             path="/blog/lcl-vs-fcl-sea-freight-pakistan"

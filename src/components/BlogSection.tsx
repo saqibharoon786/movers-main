@@ -79,8 +79,19 @@ import {
   EXPRESS_CARGO_IMAGE,
   EXPRESS_CARGO_SLUG,
 } from "@/data/expressCargoBlog";
+import {
+  INTERNATIONAL_LOGISTICS_IMAGE,
+  INTERNATIONAL_LOGISTICS_SLUG,
+} from "@/data/internationalLogisticsGuide";
 
 const posts = [
+  {
+    img: INTERNATIONAL_LOGISTICS_IMAGE,
+    slug: INTERNATIONAL_LOGISTICS_SLUG,
+    title: "International Logistics Guide 2026: Complete Freight & Shipping Guide",
+    date: "July 9, 2026",
+    category: "Logistics",
+  },
   {
     img: EXPRESS_CARGO_IMAGE,
     slug: EXPRESS_CARGO_SLUG,
