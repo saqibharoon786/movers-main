@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2 } from "lucide-react";
+import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2, Wrench, Activity } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -358,7 +358,106 @@ const allServices = [
         a: "Costs depend on freight mode (air vs. sea), cargo volume, destination, and any additional services like warehousing or specialized packing. We provide a transparent, itemized quote after assessing your shipment."
       }
     ], 
-    related: ["freight-forwarding", "customs-clearance", "air-freight", "sea-freight"] 
+    related: ["freight-forwarding", "customs-clearance", "air-freight", "sea-freight"]
+  },
+  {
+    slug: "heavy-machinery-relocation",
+    icon: Wrench,
+    title: "Heavy Machinery Relocation",
+    desc: "Professional heavy machinery relocation services in Pakistan. Safe rigging, dismantling, transport & reinstallation of industrial equipment.",
+    longDesc: "Moving heavy machinery isn't a job for regular movers. A single miscalculated lift, an improperly secured load, or a poorly planned transport route can damage equipment worth millions of rupees — or worse, put workers at serious risk. Best International Movers & Logistics provides specialized heavy machinery relocation services built specifically for the unique demands of industrial equipment: precision rigging, structural load calculations, permit-compliant transport, and careful reinstallation at the destination site.",
+    features: [
+      "15+ Years of Industrial Moving Experience",
+      "Certified Rigging & Lifting Expertise",
+      "Specialized Transport Fleet — Flatbed trailers, low-loaders, and heavy-haul vehicles",
+      "Full Insurance Coverage for all equipment",
+      "Permit & Route Planning for oversized loads",
+      "Reinstallation & Calibration Support",
+      "Minimal Production Downtime",
+      "Nationwide & Cross-Border Capability"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is heavy machinery relocation?",
+        a: "Heavy machinery relocation is the specialized process of dismantling, rigging, transporting, and reinstalling large industrial equipment from one facility to another, requiring engineering assessment and certified lifting expertise.",
+      },
+      {
+        q: "What types of machinery do you relocate?",
+        a: "We relocate CNC machines, generators, textile machinery, printing presses, production line equipment, construction machinery, boilers, and material handling equipment, among other industrial assets.",
+      },
+      {
+        q: "How much does heavy machinery relocation cost in Pakistan?",
+        a: "Costs depend on machine weight, dismantling complexity, distance, site access conditions, and reinstallation requirements. We provide a free site survey and detailed quote before any work begins.",
+      },
+    ],
+    related: ["office-moving-services", "logistics-services-pakistan", "freight-forwarding"]
+  },
+  {
+    slug: "warehouse-relocation",
+    icon: Warehouse,
+    title: "Warehouse Relocation",
+    desc: "Professional warehouse relocation services in Pakistan. Safe inventory handling, racking dismantling, forklift transport & zero-disruption warehouse moves.",
+    longDesc: "Relocating a warehouse is one of the most operationally sensitive moves a business can undertake. Unlike an office move, a warehouse relocation involves thousands of SKUs, heavy racking systems, forklifts, and inventory that must stay accurately tracked at every stage. Best International Movers & Logistics provides specialized warehouse relocation services built around one goal: moving your entire facility without losing inventory accuracy, damaging stock, or stopping operations longer than absolutely necessary.",
+    features: [
+      "15+ Years of Facility Relocation Experience",
+      "Inventory-Accurate Move Process with SKU-level tracking",
+      "Racking Dismantling & Reassembly Expertise",
+      "Forklift & Heavy Equipment Transport",
+      "Phased Relocation Planning for minimal downtime",
+      "Full Insurance Coverage for inventory and equipment",
+      "Minimal Operational Downtime",
+      "Nationwide Coverage across Pakistan"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is warehouse relocation?",
+        a: "Warehouse relocation is the process of moving an entire storage or distribution facility — including racking systems, inventory, and material handling equipment — from one location to another with accurate inventory tracking throughout.",
+      },
+      {
+        q: "How much does warehouse relocation cost in Pakistan?",
+        a: "Costs depend on warehouse size, inventory volume, racking complexity, distance, and phasing requirements. We provide a free site survey and detailed quote before any work begins.",
+      },
+      {
+        q: "Can you relocate our warehouse without stopping order fulfillment?",
+        a: "Yes, we use phased relocation planning — moving lower-turnover inventory first and keeping high-demand SKUs operational until the final transition window — to minimize disruption to fulfillment.",
+      },
+    ],
+    related: ["office-moving-services", "heavy-machinery-relocation", "logistics-services-pakistan"]
+  },
+  {
+    slug: "medical-equipment-shipping",
+    icon: Activity,
+    title: "Medical Equipment Shipping",
+    desc: "Professional medical equipment shipping services in Pakistan. Safe transport of hospital, lab & diagnostic equipment with temperature control, insurance & compliance handling.",
+    longDesc: "Medical equipment isn't just expensive — it's often life-critical, delicately calibrated, and regulated by strict handling standards. A damaged MRI coil, a mishandled centrifuge, or a temperature-compromised lab reagent shipment doesn't just cost money — it can delay patient care and put a hospital or lab out of compliance. Best International Movers & Logistics provides specialized medical equipment shipping services built for the unique demands of healthcare logistics.",
+    features: [
+      "15+ Years of Sensitive Equipment Handling Experience",
+      "Specialized Packing for Fragile & Calibrated Equipment",
+      "Temperature-Controlled Transport for sensitive shipments",
+      "Full Insurance Coverage for high-value medical equipment",
+      "Compliance-Conscious Documentation for medical devices",
+      "Manufacturer Coordination for disconnection/reconnection",
+      "Minimal Facility Downtime",
+      "Nationwide & International Reach"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is medical equipment shipping?",
+        a: "Medical equipment shipping is the specialized process of packing, transporting, and installing healthcare equipment — such as diagnostic, laboratory, and surgical devices — while protecting calibration accuracy and regulatory compliance throughout the move.",
+      },
+      {
+        q: "What types of medical equipment do you ship?",
+        a: "We ship diagnostic imaging equipment, laboratory instruments, surgical equipment, hospital furniture, dental equipment, patient monitoring systems, and temperature-sensitive pharmaceutical and reagent shipments.",
+      },
+      {
+        q: "How much does medical equipment shipping cost in Pakistan?",
+        a: "Costs depend on equipment fragility, size, temperature control requirements, distance, and regulatory documentation needs. We provide a free assessment and detailed quote before any work begins.",
+      },
+    ],
+    related: ["warehouse-relocation", "heavy-machinery-relocation", "logistics-services-pakistan"]
   },
 ];
 
