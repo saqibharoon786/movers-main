@@ -83,6 +83,10 @@ import {
   INTERNATIONAL_LOGISTICS_IMAGE,
   INTERNATIONAL_LOGISTICS_SLUG,
 } from "@/data/internationalLogisticsGuide";
+import {
+  HEAVY_MACHINERY_RELOCATION_IMAGE,
+  HEAVY_MACHINERY_RELOCATION_SLUG,
+} from "@/data/heavyMachineryRelocationGuide";
 
 const posts = [
   {
@@ -91,6 +95,13 @@ const posts = [
     title: "International Logistics Guide 2026: Complete Freight & Shipping Guide",
     date: "July 9, 2026",
     category: "Logistics",
+  },
+  {
+    img: HEAVY_MACHINERY_RELOCATION_IMAGE,
+    slug: HEAVY_MACHINERY_RELOCATION_SLUG,
+    title: "Complete Guide to Heavy Machinery Relocation in Pakistan 2026",
+    date: "July 10, 2026",
+    category: "Industrial Moving",
   },
   {
     img: EXPRESS_CARGO_IMAGE,

@@ -132,6 +132,10 @@ import {
   INTERNATIONAL_LOGISTICS_IMAGE,
   INTERNATIONAL_LOGISTICS_SLUG,
 } from "@/data/internationalLogisticsGuide";
+import {
+  HEAVY_MACHINERY_RELOCATION_IMAGE,
+  HEAVY_MACHINERY_RELOCATION_SLUG,
+} from "@/data/heavyMachineryRelocationGuide";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
@@ -146,6 +150,18 @@ const allBlogs = [
     excerpt:
       "Complete international logistics guide for Pakistani businesses — freight modes, customs documentation, Incoterms, costs & common mistakes. Everything you need to ship globally in 2026.",
     content: "International logistics guide for shipping from Pakistan to the world.",
+  },
+  {
+    slug: HEAVY_MACHINERY_RELOCATION_SLUG,
+    img: HEAVY_MACHINERY_RELOCATION_IMAGE,
+    title: "Complete Guide to Heavy Machinery Relocation in Pakistan 2026",
+    date: "July 10, 2026",
+    category: "Industrial Moving",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt:
+      "The complete 2026 guide to heavy machinery relocation in Pakistan — rigging, permits, safety, costs & common mistakes. Everything manufacturers need to know before moving industrial equipment.",
+    content: "Heavy machinery relocation guide for industrial equipment moving in Pakistan.",
   },
   {
     slug: EXPRESS_CARGO_SLUG,
