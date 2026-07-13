@@ -87,6 +87,14 @@ import {
   HEAVY_MACHINERY_RELOCATION_IMAGE,
   HEAVY_MACHINERY_RELOCATION_SLUG,
 } from "@/data/heavyMachineryRelocationGuide";
+import {
+  INDUSTRIAL_RELOCATION_GUIDE_IMAGE,
+  INDUSTRIAL_RELOCATION_GUIDE_SLUG,
+} from "@/data/industrialRelocationGuide";
+import {
+  FACTORY_RELOCATION_GUIDE_IMAGE,
+  FACTORY_RELOCATION_GUIDE_SLUG,
+} from "@/data/factoryRelocationGuide";
 
 const posts = [
   {
@@ -101,6 +109,20 @@ const posts = [
     slug: HEAVY_MACHINERY_RELOCATION_SLUG,
     title: "Complete Guide to Heavy Machinery Relocation in Pakistan 2026",
     date: "July 10, 2026",
+    category: "Industrial Moving",
+  },
+  {
+    img: INDUSTRIAL_RELOCATION_GUIDE_IMAGE,
+    slug: INDUSTRIAL_RELOCATION_GUIDE_SLUG,
+    title: "Complete Guide to Industrial Relocation in Pakistan 2026",
+    date: "July 13, 2026",
+    category: "Industrial Moving",
+  },
+  {
+    img: FACTORY_RELOCATION_GUIDE_IMAGE,
+    slug: FACTORY_RELOCATION_GUIDE_SLUG,
+    title: "Factory Relocation Guide for Pakistani Businesses 2026",
+    date: "July 13, 2026",
     category: "Industrial Moving",
   },
   {

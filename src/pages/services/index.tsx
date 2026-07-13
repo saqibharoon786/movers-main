@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2, Wrench, Activity } from "lucide-react";
+import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2, Wrench, Activity, Factory, Network } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -458,6 +458,138 @@ const allServices = [
       },
     ],
     related: ["warehouse-relocation", "heavy-machinery-relocation", "logistics-services-pakistan"]
+  },
+  {
+    slug: "business-relocation-pakistan",
+    icon: Building2,
+    title: "Business Relocation",
+    desc: "Complete business relocation services in Pakistan — offices, warehouses, machinery & full facility moves. Zero-downtime relocation for corporates & industries.",
+    longDesc: "Relocating a business is never just about moving boxes from one address to another. It's about protecting revenue, keeping employees productive, safeguarding equipment, and making sure clients never notice a disruption. Best International Movers & Logistics provides complete business relocation services in Pakistan — covering everything from office moves and warehouse transitions to heavy machinery relocation and full multi-facility corporate moves.",
+    features: [
+      "15+ Years of Corporate Relocation Experience",
+      "One Provider for Every Move Type — Offices, warehouses, machinery, and IT infrastructure",
+      "Zero-Downtime Planning Approach",
+      "Trained, Specialized Teams for each asset type",
+      "Full Insurance Coverage for all assets",
+      "Dedicated Move Coordinator",
+      "Nationwide & International Capability",
+      "Transparent, Itemized Quotes"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is included in business relocation services?",
+        a: "Business relocation services cover the complete move of a company's physical operations — offices, warehouses, production facilities, and equipment — including packing, transport, setup, and coordination across every asset type.",
+      },
+      {
+        q: "How much does business relocation cost in Pakistan?",
+        a: "Costs depend on the scope of the move, business size, distance, equipment complexity, and timing requirements. We provide a free consultation and site survey for an accurate, itemized quote.",
+      },
+      {
+        q: "Can you handle relocations involving both an office and a warehouse?",
+        a: "Yes, we coordinate combined relocations — office, warehouse, and machinery — as a single, unified project with one timeline and one point of accountability.",
+      },
+    ],
+    related: ["office-moving-services", "warehouse-relocation", "heavy-machinery-relocation"]
+  },
+  {
+    slug: "industrial-relocation",
+    icon: Factory,
+    title: "Industrial Relocation",
+    desc: "Complete industrial relocation services in Pakistan — factory, plant & production facility moves. Machinery, utilities, licensing & workforce coordination handled end-to-end.",
+    longDesc: "Relocating an industrial facility is a fundamentally different challenge than moving an office or even a single piece of machinery. A full factory or plant relocation involves production equipment, utility infrastructure, regulatory compliance, workforce coordination, and often a phased shutdown-and-restart plan. Best International Movers & Logistics provides complete industrial relocation services in Pakistan — managing every layer of a factory or plant move as one coordinated project.",
+    features: [
+      "15+ Years of Industrial Relocation Experience",
+      "End-to-End Project Management — Machinery, utilities, inventory, and offices",
+      "Certified Rigging & Engineering Expertise",
+      "Phased Shutdown & Restart Planning",
+      "Regulatory & Documentation Support",
+      "Specialized Transport Fleet for oversized equipment",
+      "Full Insurance Coverage",
+      "Nationwide & Cross-Border Capability"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is industrial relocation?",
+        a: "Industrial relocation is the complete process of moving a manufacturing plant or production facility from one location to another, covering machinery, utility infrastructure, inventory, and regulatory documentation as one coordinated project.",
+      },
+      {
+        q: "How is industrial relocation different from heavy machinery relocation?",
+        a: "Heavy machinery relocation focuses specifically on moving equipment, while industrial relocation covers the entire facility ecosystem — machinery, utilities, inventory, offices, and regulatory coordination — as a single project.",
+      },
+      {
+        q: "How much does industrial relocation cost in Pakistan?",
+        a: "Costs depend on facility size, machinery volume, utility complexity, regulatory requirements, distance, and inventory volume. We provide a free feasibility assessment and detailed quote before any work begins.",
+      },
+    ],
+    related: ["heavy-machinery-relocation", "warehouse-relocation", "business-relocation-pakistan"]
+  },
+  {
+    slug: "corporate-logistics-pakistan",
+    icon: Network,
+    title: "Corporate Logistics",
+    desc: "Corporate logistics services in Pakistan — dedicated account management, recurring freight programs, supply chain coordination & asset logistics for businesses.",
+    longDesc: "For companies that ship regularly — whether it's recurring inventory shipments, multi-branch distribution, or ongoing equipment and asset movement — logistics isn't a one-time transaction. It's an operational function that needs consistency, accountability, and a partner who understands your business. Best International Movers & Logistics provides corporate logistics services in Pakistan built specifically for businesses that need a dedicated, long-term logistics partner.",
+    features: [
+      "15+ Years of Enterprise Logistics Experience",
+      "Dedicated Account Management",
+      "Volume-Based Rate Structures",
+      "Multi-Branch & Multi-Location Coordination",
+      "Integrated Service Model — Freight, customs, warehousing, relocation",
+      "Consistent Reporting & Visibility",
+      "Scalable Support",
+      "Global Carrier Network"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is corporate logistics?",
+        a: "Corporate logistics is the structured, ongoing management of a company's freight, distribution, and supply chain operations through a dedicated account relationship, rather than one-off, transactional shipping arrangements.",
+      },
+      {
+        q: "How is corporate logistics different from regular freight services?",
+        a: "Corporate logistics includes a dedicated account coordinator, volume-based rate agreements, and consistent processes across every shipment, while regular freight services are typically booked individually without ongoing account structure.",
+      },
+      {
+        q: "What types of businesses benefit from corporate logistics accounts?",
+        a: "Manufacturers with recurring exports, retail chains with multi-branch distribution, multinational corporations, import/export businesses, and companies with ongoing equipment or asset logistics needs all benefit from structured corporate accounts.",
+      },
+    ],
+    related: ["logistics-services-pakistan", "business-relocation-pakistan", "warehouse-relocation"]
+  },
+  {
+    slug: "factory-relocation-pakistan",
+    icon: Factory,
+    title: "Factory Relocation",
+    desc: "Professional factory relocation services in Pakistan. Complete manufacturing unit moves — machinery, staff transition & production restart planning.",
+    longDesc: "Every year, Pakistani manufacturers relocate their factories — moving to bigger units, shifting into designated industrial zones, consolidating multiple production sites, or simply responding to lease terms. Best International Movers & Logistics provides complete factory relocation services in Pakistan designed around the practical realities factory owners face — tight timelines, staff coordination, machinery risk, and the pressure to get back to full production fast.",
+    features: [
+      "15+ Years of Factory Relocation Experience",
+      "Certified Rigging & Machinery Handling",
+      "Production-First Scheduling",
+      "Full-Scope Project Management — Machinery, inventory, staff work areas",
+      "Specialized Transport Fleet — Flatbeds and low-loaders",
+      "Full Insurance Coverage",
+      "Permit & Route Coordination",
+      "Nationwide Coverage across industrial hubs"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is factory relocation?",
+        a: "Factory relocation is the process of moving an entire manufacturing unit — including production machinery, inventory, and work areas — from one location to another, with the goal of resuming full production as quickly as possible.",
+      },
+      {
+        q: "How much does factory relocation cost in Pakistan?",
+        a: "Costs depend on machinery volume, distance, inventory volume, facility access conditions, and utility coordination requirements. We provide a free site survey and detailed quote before any work begins.",
+      },
+      {
+        q: "How long does a factory relocation take?",
+        a: "Timelines vary based on facility size and machinery complexity — smaller factory moves may take one to two weeks, while larger, multi-line relocations can take several weeks of phased planning.",
+      },
+    ],
+    related: ["heavy-machinery-relocation", "industrial-relocation", "warehouse-relocation"]
   },
 ];
 

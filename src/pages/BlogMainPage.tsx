@@ -136,6 +136,10 @@ import {
   HEAVY_MACHINERY_RELOCATION_IMAGE,
   HEAVY_MACHINERY_RELOCATION_SLUG,
 } from "@/data/heavyMachineryRelocationGuide";
+import {
+  INDUSTRIAL_RELOCATION_GUIDE_IMAGE,
+  INDUSTRIAL_RELOCATION_GUIDE_SLUG,
+} from "@/data/industrialRelocationGuide";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
@@ -162,6 +166,18 @@ const allBlogs = [
     excerpt:
       "The complete 2026 guide to heavy machinery relocation in Pakistan — rigging, permits, safety, costs & common mistakes. Everything manufacturers need to know before moving industrial equipment.",
     content: "Heavy machinery relocation guide for industrial equipment moving in Pakistan.",
+  },
+  {
+    slug: INDUSTRIAL_RELOCATION_GUIDE_SLUG,
+    img: INDUSTRIAL_RELOCATION_GUIDE_IMAGE,
+    title: "Complete Guide to Industrial Relocation in Pakistan 2026",
+    date: "July 13, 2026",
+    category: "Industrial Moving",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt:
+      "The complete 2026 guide to industrial relocation in Pakistan — feasibility planning, utility coordination, regulatory compliance, costs & workforce transition for full plant moves.",
+    content: "Industrial relocation guide for full facility moves in Pakistan.",
   },
   {
     slug: EXPRESS_CARGO_SLUG,
