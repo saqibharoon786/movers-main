@@ -32,6 +32,10 @@ const LogisticsServicesPakistan = lazy(() => import("./pages/services/logistics-
 const HeavyMachineryRelocationPakistan = lazy(() => import("./pages/services/heavy-machinery-relocation-pakistan.tsx"));
 const WarehouseRelocationPakistan = lazy(() => import("./pages/services/warehouse-relocation-pakistan.tsx"));
 const MedicalEquipmentShippingPakistan = lazy(() => import("./pages/services/medical-equipment-shipping-pakistan.tsx"));
+const BusinessRelocationPakistan = lazy(() => import("./pages/services/business-relocation-pakistan.tsx"));
+const IndustrialRelocationPakistan = lazy(() => import("./pages/services/industrial-relocation-pakistan.tsx"));
+const CorporateLogisticsPakistan = lazy(() => import("./pages/services/corporate-logistics-pakistan.tsx"));
+const FactoryRelocationPakistan = lazy(() => import("./pages/services/factory-relocation-pakistan.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
@@ -168,6 +172,7 @@ const ExportShippingPakistanBlog = lazy(() => import("./pages/blog/ExportShippin
 const ExpressCargoBlog = lazy(() => import("./pages/blog/ExpressCargoBlog.tsx"));
 const InternationalLogisticsGuideBlog = lazy(() => import("./pages/blog/InternationalLogisticsGuideBlog.tsx"));
 const HeavyMachineryRelocationGuideBlog = lazy(() => import("./pages/blog/HeavyMachineryRelocationGuideBlog.tsx"));
+const IndustrialRelocationGuideBlog = lazy(() => import("./pages/blog/IndustrialRelocationGuideBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
   () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
 );
@@ -286,6 +291,14 @@ const App = () => (
           <Route path="/services/warehouse-relocation/" element={<WarehouseRelocationPakistan />} />
           <Route path="/services/medical-equipment-shipping" element={<Navigate to="/services/medical-equipment-shipping/" replace />} />
           <Route path="/services/medical-equipment-shipping/" element={<MedicalEquipmentShippingPakistan />} />
+          <Route path="/services/business-relocation-pakistan" element={<Navigate to="/services/business-relocation-pakistan/" replace />} />
+          <Route path="/services/business-relocation-pakistan/" element={<BusinessRelocationPakistan />} />
+          <Route path="/services/industrial-relocation" element={<Navigate to="/services/industrial-relocation/" replace />} />
+          <Route path="/services/industrial-relocation/" element={<IndustrialRelocationPakistan />} />
+          <Route path="/services/corporate-logistics-pakistan" element={<Navigate to="/services/corporate-logistics-pakistan/" replace />} />
+          <Route path="/services/corporate-logistics-pakistan/" element={<CorporateLogisticsPakistan />} />
+          <Route path="/services/factory-relocation-pakistan" element={<Navigate to="/services/factory-relocation-pakistan/" replace />} />
+          <Route path="/services/factory-relocation-pakistan/" element={<FactoryRelocationPakistan />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
@@ -425,6 +438,14 @@ const App = () => (
           <Route
             path="/blog/heavy-machinery-relocation-guide-pakistan-2026/"
             element={<HeavyMachineryRelocationGuideBlog />}
+          />
+          <Route
+            path="/blog/industrial-relocation-guide-pakistan-2026"
+            element={<Navigate to="/blog/industrial-relocation-guide-pakistan-2026/" replace />}
+          />
+          <Route
+            path="/blog/industrial-relocation-guide-pakistan-2026/"
+            element={<IndustrialRelocationGuideBlog />}
           />
           <Route
             path="/blog/lcl-vs-fcl-sea-freight-pakistan"
