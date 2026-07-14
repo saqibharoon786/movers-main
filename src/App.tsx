@@ -58,6 +58,7 @@ const PakistanToAustralia = lazy(() => import("./pages/PakistanToAustralia.tsx")
 const PakistanToQatar = lazy(() => import("./pages/PakistanToQatar.tsx"));
 const PakistanToGermany = lazy(() => import("./pages/PakistanToGermany.tsx"));
 const PakistanToMalaysia = lazy(() => import("./pages/PakistanToMalaysia.tsx"));
+const PakistanToGermanyRoute = lazy(() => import("./pages/PakistanToGermanyRoute.tsx"));
 const MoversIslamabad = lazy(() => import("./pages/MoversIslamabad.tsx"));
 const MoversRawalpindi = lazy(() => import("./pages/MoversRawalpindi.tsx"));
 const MoversLahore = lazy(() => import("./pages/MoversLahore.tsx"));
@@ -75,6 +76,9 @@ const DhaKarachiMovingGuideSectorBySector = lazy(() => import("./pages/DhaKarach
 const MoversAndPackersInPeshawar = lazy(() => import("./pages/MoversAndPackersInPeshawar.tsx"));
 const CargoIslamabad = lazy(() => import("./pages/CargoIslamabad.tsx"));
 const CargoRawalpindi = lazy(() => import("./pages/CargoRawalpindi.tsx"));
+const CargoFaisalabad = lazy(() => import("./pages/CargoFaisalabad.tsx"));
+const CargoSialkot = lazy(() => import("./pages/CargoSialkot.tsx"));
+const CargoGujranwala = lazy(() => import("./pages/CargoGujranwala.tsx"));
 const AirFreightIslamabad = lazy(() => import("./pages/AirFreightIslamabad.tsx"));
 const SeaFreightIslamabad = lazy(() => import("./pages/SeaFreightIslamabad.tsx"));
 const AirFreightRawalpindi = lazy(() => import("./pages/AirFreightRawalpindi.tsx"));
@@ -173,6 +177,7 @@ const ExpressCargoBlog = lazy(() => import("./pages/blog/ExpressCargoBlog.tsx"))
 const InternationalLogisticsGuideBlog = lazy(() => import("./pages/blog/InternationalLogisticsGuideBlog.tsx"));
 const HeavyMachineryRelocationGuideBlog = lazy(() => import("./pages/blog/HeavyMachineryRelocationGuideBlog.tsx"));
 const IndustrialRelocationGuideBlog = lazy(() => import("./pages/blog/IndustrialRelocationGuideBlog.tsx"));
+const FactoryRelocationGuideBlog = lazy(() => import("./pages/blog/FactoryRelocationGuideBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
   () => import("./pages/blog/MovingFromPakistanToCanadaGuideBlog.tsx"),
 );
@@ -448,6 +453,14 @@ const App = () => (
             element={<IndustrialRelocationGuideBlog />}
           />
           <Route
+            path="/blog/factory-relocation-guide-pakistani-businesses"
+            element={<Navigate to="/blog/factory-relocation-guide-pakistani-businesses/" replace />}
+          />
+          <Route
+            path="/blog/factory-relocation-guide-pakistani-businesses/"
+            element={<FactoryRelocationGuideBlog />}
+          />
+          <Route
             path="/blog/lcl-vs-fcl-sea-freight-pakistan"
             element={<Navigate to="/blog/lcl-vs-fcl-sea-freight-pakistan/" replace />}
           />
@@ -612,6 +625,8 @@ const App = () => (
           <Route path="/pakistan-to-qatar-movers" element={<PakistanToQatar />} />
           <Route path="/pakistan-to-germany-movers" element={<PakistanToGermany />} />
           <Route path="/pakistan-to-malaysia-movers" element={<PakistanToMalaysia />} />
+          <Route path="/routes/pakistan-to-germany" element={<Navigate to="/routes/pakistan-to-germany/" replace />} />
+          <Route path="/routes/pakistan-to-germany/" element={<PakistanToGermanyRoute />} />
 
           <Route path="/movers-islamabad" element={<MoversIslamabad />} />
           <Route path="/movers-rawalpindi" element={<MoversRawalpindi />} />
@@ -651,6 +666,13 @@ const App = () => (
           <Route path="/cargo-service-islamabad" element={<CargoIslamabad />} />
           <Route path="/cargo-service-islamabad/" element={<CargoIslamabad />} />
           <Route path="/cargo-service-rawalpindi" element={<CargoRawalpindi />} />
+          <Route path="/cargo-service-rawalpindi/" element={<CargoRawalpindi />} />
+          <Route path="/locations/cargo-services-faisalabad" element={<Navigate to="/locations/cargo-services-faisalabad/" replace />} />
+          <Route path="/locations/cargo-services-faisalabad/" element={<CargoFaisalabad />} />
+          <Route path="/locations/cargo-services-sialkot" element={<Navigate to="/locations/cargo-services-sialkot/" replace />} />
+          <Route path="/locations/cargo-services-sialkot/" element={<CargoSialkot />} />
+          <Route path="/locations/cargo-services-gujranwala" element={<Navigate to="/locations/cargo-services-gujranwala/" replace />} />
+          <Route path="/locations/cargo-services-gujranwala/" element={<CargoGujranwala />} />
           <Route path="/air-freight-islamabad" element={<AirFreightIslamabad />} />
           <Route path="/sea-freight-islamabad" element={<SeaFreightIslamabad />} />
           <Route path="/air-freight-rawalpindi" element={<AirFreightRawalpindi />} />

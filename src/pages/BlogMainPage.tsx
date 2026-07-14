@@ -140,6 +140,10 @@ import {
   INDUSTRIAL_RELOCATION_GUIDE_IMAGE,
   INDUSTRIAL_RELOCATION_GUIDE_SLUG,
 } from "@/data/industrialRelocationGuide";
+import {
+  FACTORY_RELOCATION_GUIDE_IMAGE,
+  FACTORY_RELOCATION_GUIDE_SLUG,
+} from "@/data/factoryRelocationGuide";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
@@ -178,6 +182,18 @@ const allBlogs = [
     excerpt:
       "The complete 2026 guide to industrial relocation in Pakistan — feasibility planning, utility coordination, regulatory compliance, costs & workforce transition for full plant moves.",
     content: "Industrial relocation guide for full facility moves in Pakistan.",
+  },
+  {
+    slug: FACTORY_RELOCATION_GUIDE_SLUG,
+    img: FACTORY_RELOCATION_GUIDE_IMAGE,
+    title: "Factory Relocation Guide for Pakistani Businesses 2026",
+    date: "July 13, 2026",
+    category: "Industrial Moving",
+    author: "Best International Movers & Logistics",
+    readTime: "15 min read",
+    excerpt:
+      "A practical factory relocation guide for Pakistani business owners — when to move, choosing a new location, budgeting, employee retention & step-by-step planning for a smooth transition.",
+    content: "Factory relocation guide for Pakistani businesses.",
   },
   {
     slug: EXPRESS_CARGO_SLUG,
