@@ -59,6 +59,8 @@ const PakistanToQatar = lazy(() => import("./pages/PakistanToQatar.tsx"));
 const PakistanToGermany = lazy(() => import("./pages/PakistanToGermany.tsx"));
 const PakistanToMalaysia = lazy(() => import("./pages/PakistanToMalaysia.tsx"));
 const PakistanToGermanyRoute = lazy(() => import("./pages/PakistanToGermanyRoute.tsx"));
+const PakistanToMalaysiaRoute = lazy(() => import("./pages/PakistanToMalaysiaRoute.tsx"));
+const PakistanToChinaRoute = lazy(() => import("./pages/PakistanToChinaRoute.tsx"));
 const MoversIslamabad = lazy(() => import("./pages/MoversIslamabad.tsx"));
 const MoversRawalpindi = lazy(() => import("./pages/MoversRawalpindi.tsx"));
 const MoversLahore = lazy(() => import("./pages/MoversLahore.tsx"));
@@ -627,6 +629,10 @@ const App = () => (
           <Route path="/pakistan-to-malaysia-movers" element={<PakistanToMalaysia />} />
           <Route path="/routes/pakistan-to-germany" element={<Navigate to="/routes/pakistan-to-germany/" replace />} />
           <Route path="/routes/pakistan-to-germany/" element={<PakistanToGermanyRoute />} />
+          <Route path="/routes/pakistan-to-malaysia" element={<Navigate to="/routes/pakistan-to-malaysia/" replace />} />
+          <Route path="/routes/pakistan-to-malaysia/" element={<PakistanToMalaysiaRoute />} />
+          <Route path="/routes/pakistan-to-china" element={<Navigate to="/routes/pakistan-to-china/" replace />} />
+          <Route path="/routes/pakistan-to-china/" element={<PakistanToChinaRoute />} />
 
           <Route path="/movers-islamabad" element={<MoversIslamabad />} />
           <Route path="/movers-rawalpindi" element={<MoversRawalpindi />} />
