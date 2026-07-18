@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, Building2, Wrench, Activity, Factory, Network } from "lucide-react";
+import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, TreePine, Building2, Wrench, Activity, Factory, Network } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -524,6 +524,105 @@ const allServices = [
       },
     ],
     related: ["heavy-machinery-relocation", "warehouse-relocation", "business-relocation-pakistan"]
+  },
+  {
+    slug: "wooden-crating-services",
+    icon: TreePine,
+    title: "Wooden Crating",
+    desc: "Professional wooden crating services in Pakistan — pine, hardwood & plywood export crates, ISPM 15 heat-treated for machinery, electronics & cargo.",
+    longDesc: "Wooden crating services design and manufacture crates from timber materials — pine, hardwood, plywood, and OSB panels — heat-treated to ISPM 15 standards for safe, customs-compliant shipping. Best International Movers & Logistics builds wooden crates across Pakistan for machinery, electronics, medical equipment, and industrial cargo.",
+    features: [
+      "15+ Years of Wooden Crating Experience",
+      "ISPM 15 Heat-Treated Timber",
+      "Pine, Hardwood, Plywood & OSB Crates",
+      "Heavy Equipment & Machinery Crating",
+      "Electronics & Medical Equipment Crating",
+      "Reusable & Collapsible Crate Designs",
+      "Door-to-Door Export Logistics",
+      "Full Insurance Coverage"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What are wooden crating services?",
+        a: "Wooden crating services cover the design, material selection, construction, and treatment of timber-based crates used to protect cargo during domestic and international transport.",
+      },
+      {
+        q: "What is ISPM 15 and why does it matter for wooden crates?",
+        a: "ISPM 15 is the international phytosanitary standard requiring heat treatment of wooden packaging material used in trade, mandatory for most wooden crates shipped internationally to avoid customs rejection.",
+      },
+      {
+        q: "Are wooden crates better than cardboard for shipping?",
+        a: "For heavier or higher-value cargo, wooden crates offer significantly greater structural protection and moisture resistance than cardboard packaging.",
+      },
+    ],
+    related: ["custom-crating-services", "freight-management-services", "heavy-machinery-relocation"]
+  },
+  {
+    slug: "custom-crating-services",
+    icon: Boxes,
+    title: "Custom Crating",
+    desc: "Professional custom crating services in Pakistan — ISPM 15 certified wooden crates for machinery, electronics, art & medical equipment.",
+    longDesc: "Custom crating services design and build engineered wooden crates tailored to a specific item's dimensions, weight, and fragility — protecting machinery, electronics, medical equipment, and fine art during domestic and international transport. Best International Movers & Logistics provides ISPM 15 certified custom crating across Pakistan, built by a professional export packing team with 15+ years of experience.",
+    features: [
+      "15+ Years of Custom Crating Experience",
+      "ISPM 15 Certified Wooden Crates",
+      "Heavy Equipment & Machinery Crating",
+      "Medical Equipment & Electronics Crating",
+      "Art & Antique Protective Crating",
+      "Engineering-First Crate Design",
+      "Door-to-Door Export Logistics",
+      "Full Insurance Coverage"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What are custom crating services?",
+        a: "Custom crating services involve designing and building engineered wooden crates tailored to a specific item's dimensions, weight, and fragility, providing protection standard packaging can't match.",
+      },
+      {
+        q: "What is ISPM 15 certification?",
+        a: "ISPM 15 is the international standard requiring heat treatment of wooden packaging material used in international trade, mandatory for most wooden crates, pallets, and dunnage shipped internationally.",
+      },
+      {
+        q: "Can you crate fragile items like artwork or antiques?",
+        a: "Yes, specialized art crating with climate-controlled, vibration-isolated protection is available for paintings, sculptures, antiques, and other high-value fragile items.",
+      },
+    ],
+    related: ["professional-packing-services", "freight-management-services", "heavy-machinery-relocation"]
+  },
+  {
+    slug: "freight-management-services",
+    icon: Route,
+    title: "Freight Management",
+    desc: "Professional freight management services in Pakistan — carrier selection, route optimization, customs clearance & real-time tracking. 15+ years experience.",
+    longDesc: "Freight management services coordinate every stage of a shipment's journey — carrier selection, route planning, documentation, customs clearance, tracking, and delivery — as a single managed process. Best International Movers & Logistics provides complete freight management across sea, air, and road freight for businesses in Pakistan, backed by 15+ years of experience, 5,000+ successful shipments, and a global network spanning 100+ countries.",
+    features: [
+      "15+ Years of Freight Management Experience",
+      "5,000+ Successful Shipments Managed",
+      "100+ Countries Served",
+      "Sea, Air & Road Freight Management",
+      "Licensed Customs Brokerage",
+      "Real-Time Shipment Tracking",
+      "Freight Cost Optimization",
+      "Dedicated Freight Coordinators"
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What are freight management services?",
+        a: "Freight management services coordinate every stage of a shipment's journey — planning, carrier selection, documentation, customs clearance, tracking, and delivery — as a single, ongoing managed process rather than individual bookings.",
+      },
+      {
+        q: "How is freight management different from freight forwarding?",
+        a: "Freight forwarding typically arranges transport for a single shipment, while freight management takes a broader, ongoing view — optimizing costs, consolidating cargo, and managing risk across a business's full shipping activity over time.",
+      },
+      {
+        q: "Can freight management reduce shipping costs?",
+        a: "Yes, through volume-based carrier negotiation, route optimization, and cargo consolidation opportunities that are difficult to access when booking shipments individually.",
+      },
+    ],
+    related: ["freight-forwarding-services", "logistics-services-pakistan", "corporate-logistics-pakistan"]
   },
   {
     slug: "corporate-logistics-pakistan",

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+ himport { Link } from "react-router-dom";
 
 export const packersMoversPakistanFaqs = [
   { q: "How much do packers and movers in Pakistan charge?", a: "Cost depends on city, distance, home size, packing scope, and handling complexity. Survey-based pricing gives the most accurate quote." },

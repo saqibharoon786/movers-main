@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+zimport { Link } from "react-router-dom";
 import { CheckCircle2, AlertTriangle, ShieldCheck, FileText, ArrowRight, Phone, Mail } from "lucide-react";
 
 function InfoBox({ children, variant = "gold" }: { children: React.ReactNode; variant?: "gold" | "warn" | "save" | "blue" | "green" | "red" | "orange" }) {

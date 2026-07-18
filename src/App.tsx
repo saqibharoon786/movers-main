@@ -35,6 +35,9 @@ const MedicalEquipmentShippingPakistan = lazy(() => import("./pages/services/med
 const BusinessRelocationPakistan = lazy(() => import("./pages/services/business-relocation-pakistan.tsx"));
 const IndustrialRelocationPakistan = lazy(() => import("./pages/services/industrial-relocation-pakistan.tsx"));
 const CorporateLogisticsPakistan = lazy(() => import("./pages/services/corporate-logistics-pakistan.tsx"));
+const FreightManagementServices = lazy(() => import("./pages/services/freight-management-services.tsx"));
+const CustomCratingServices = lazy(() => import("./pages/services/custom-crating-services.tsx"));
+const WoodenCratingServices = lazy(() => import("./pages/services/wooden-crating-services.tsx"));
 const FactoryRelocationPakistan = lazy(() => import("./pages/services/factory-relocation-pakistan.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
@@ -59,6 +62,8 @@ const PakistanToQatar = lazy(() => import("./pages/PakistanToQatar.tsx"));
 const PakistanToGermany = lazy(() => import("./pages/PakistanToGermany.tsx"));
 const PakistanToMalaysia = lazy(() => import("./pages/PakistanToMalaysia.tsx"));
 const PakistanToGermanyRoute = lazy(() => import("./pages/PakistanToGermanyRoute.tsx"));
+const PakistanToMalaysiaRoute = lazy(() => import("./pages/PakistanToMalaysiaRoute.tsx"));
+const PakistanToChinaRoute = lazy(() => import("./pages/PakistanToChinaRoute.tsx"));
 const MoversIslamabad = lazy(() => import("./pages/MoversIslamabad.tsx"));
 const MoversRawalpindi = lazy(() => import("./pages/MoversRawalpindi.tsx"));
 const MoversLahore = lazy(() => import("./pages/MoversLahore.tsx"));
@@ -302,6 +307,12 @@ const App = () => (
           <Route path="/services/industrial-relocation/" element={<IndustrialRelocationPakistan />} />
           <Route path="/services/corporate-logistics-pakistan" element={<Navigate to="/services/corporate-logistics-pakistan/" replace />} />
           <Route path="/services/corporate-logistics-pakistan/" element={<CorporateLogisticsPakistan />} />
+          <Route path="/services/freight-management-services" element={<Navigate to="/services/freight-management-services/" replace />} />
+          <Route path="/services/freight-management-services/" element={<FreightManagementServices />} />
+          <Route path="/services/custom-crating-services" element={<Navigate to="/services/custom-crating-services/" replace />} />
+          <Route path="/services/custom-crating-services/" element={<CustomCratingServices />} />
+          <Route path="/services/wooden-crating-services" element={<Navigate to="/services/wooden-crating-services/" replace />} />
+          <Route path="/services/wooden-crating-services/" element={<WoodenCratingServices />} />
           <Route path="/services/factory-relocation-pakistan" element={<Navigate to="/services/factory-relocation-pakistan/" replace />} />
           <Route path="/services/factory-relocation-pakistan/" element={<FactoryRelocationPakistan />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
@@ -627,6 +638,10 @@ const App = () => (
           <Route path="/pakistan-to-malaysia-movers" element={<PakistanToMalaysia />} />
           <Route path="/routes/pakistan-to-germany" element={<Navigate to="/routes/pakistan-to-germany/" replace />} />
           <Route path="/routes/pakistan-to-germany/" element={<PakistanToGermanyRoute />} />
+          <Route path="/routes/pakistan-to-malaysia" element={<Navigate to="/routes/pakistan-to-malaysia/" replace />} />
+          <Route path="/routes/pakistan-to-malaysia/" element={<PakistanToMalaysiaRoute />} />
+          <Route path="/routes/pakistan-to-china" element={<Navigate to="/routes/pakistan-to-china/" replace />} />
+          <Route path="/routes/pakistan-to-china/" element={<PakistanToChinaRoute />} />
 
           <Route path="/movers-islamabad" element={<MoversIslamabad />} />
           <Route path="/movers-rawalpindi" element={<MoversRawalpindi />} />
