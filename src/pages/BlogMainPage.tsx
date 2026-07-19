@@ -144,9 +144,41 @@ import {
   FACTORY_RELOCATION_GUIDE_IMAGE,
   FACTORY_RELOCATION_GUIDE_SLUG,
 } from "@/data/factoryRelocationGuide";
+import {
+  CUSTOM_WOODEN_CRATES_IMAGE,
+  CUSTOM_WOODEN_CRATES_SLUG,
+} from "@/data/customWoodenCratesBlog";
+import {
+  CUSTOM_CRATING_SERVICES_GUIDE_IMAGE,
+  CUSTOM_CRATING_SERVICES_GUIDE_SLUG,
+} from "@/data/customCratingServicesGuideBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: CUSTOM_CRATING_SERVICES_GUIDE_SLUG,
+    img: CUSTOM_CRATING_SERVICES_GUIDE_IMAGE,
+    title: "Complete Guide to Custom Crating Services (2026)",
+    date: "July 19, 2026",
+    category: "Export Packaging",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt:
+      "The most complete guide to custom crating services for Pakistani exporters — types, ISPM-15 compliance, materials, costs, engineering process, and expert packing tips.",
+    content: "Complete guide to custom crating services in Pakistan for international export.",
+  },
+  {
+    slug: CUSTOM_WOODEN_CRATES_SLUG,
+    img: CUSTOM_WOODEN_CRATES_IMAGE,
+    title: "Benefits of Custom Wooden Crates for International Shipping (Complete Guide 2026)",
+    date: "July 19, 2026",
+    category: "Export Packaging",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt:
+      "Discover the top 15 benefits of custom wooden crates for international shipping — ISPM 15 compliance, heavy cargo protection, moisture resistance, cost savings, and expert packing tips from Pakistan's leading crating specialists.",
+    content: "Complete guide to custom wooden crates for international shipping from Pakistan.",
+  },
   {
     slug: INTERNATIONAL_LOGISTICS_SLUG,
     img: INTERNATIONAL_LOGISTICS_IMAGE,

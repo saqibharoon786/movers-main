@@ -181,6 +181,8 @@ const ExportShippingPakistanBlog = lazy(() => import("./pages/blog/ExportShippin
 const ExpressCargoBlog = lazy(() => import("./pages/blog/ExpressCargoBlog.tsx"));
 const InternationalLogisticsGuideBlog = lazy(() => import("./pages/blog/InternationalLogisticsGuideBlog.tsx"));
 const HeavyMachineryRelocationGuideBlog = lazy(() => import("./pages/blog/HeavyMachineryRelocationGuideBlog.tsx"));
+const CustomWoodenCratesBlog = lazy(() => import("./pages/blog/CustomWoodenCratesBlog.tsx"));
+const CustomCratingServicesGuideBlog = lazy(() => import("./pages/blog/CustomCratingServicesGuideBlog.tsx"));
 const IndustrialRelocationGuideBlog = lazy(() => import("./pages/blog/IndustrialRelocationGuideBlog.tsx"));
 const FactoryRelocationGuideBlog = lazy(() => import("./pages/blog/FactoryRelocationGuideBlog.tsx"));
 const MovingFromPakistanToCanadaGuideBlog = lazy(
@@ -454,6 +456,22 @@ const App = () => (
           <Route
             path="/blog/heavy-machinery-relocation-guide-pakistan-2026/"
             element={<HeavyMachineryRelocationGuideBlog />}
+          />
+          <Route
+            path="/blog/benefits-of-custom-wooden-crates-for-international-shipping"
+            element={<Navigate to="/blog/benefits-of-custom-wooden-crates-for-international-shipping/" replace />}
+          />
+          <Route
+            path="/blog/benefits-of-custom-wooden-crates-for-international-shipping/"
+            element={<CustomWoodenCratesBlog />}
+          />
+          <Route
+            path="/blog/complete-guide-to-custom-crating-services"
+            element={<Navigate to="/blog/complete-guide-to-custom-crating-services/" replace />}
+          />
+          <Route
+            path="/blog/complete-guide-to-custom-crating-services/"
+            element={<CustomCratingServicesGuideBlog />}
           />
           <Route
             path="/blog/industrial-relocation-guide-pakistan-2026"
