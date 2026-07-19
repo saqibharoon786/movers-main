@@ -639,7 +639,7 @@ const CustomCratingServices = () => {
                 ]}
               />
               <p className="text-muted-foreground text-sm mt-4">
-                For heavy equipment moves, review our <Link to="/blog/heavy-machinery-relocation-guide-pakistan-2026/" className="text-gold hover:underline">Complete Guide to Heavy Machinery Relocation</Link> before shipping.
+                For heavy equipment moves, review our <Link to="/blog/heavy-machinery-relocation-guide-pakistan-2026/" className="text-gold hover:underline">Complete Guide to Heavy Machinery Relocation</Link> before shipping. For a full educational overview of custom crating types, ISPM-15, materials, and costs, read our <Link to="/blog/complete-guide-to-custom-crating-services/" className="text-gold hover:underline">Complete Guide to Custom Crating Services</Link>.
               </p>
             </div>
 

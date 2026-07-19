@@ -599,7 +599,7 @@ const WoodenCratingServices = () => {
                 ]}
               />
               <p className="text-muted-foreground text-sm mt-4">
-                For heavy equipment moves, review our <Link to="/blog/heavy-machinery-relocation-guide-pakistan-2026/" className="text-gold hover:underline">Complete Guide to Heavy Machinery Relocation</Link> before shipping.
+                For heavy equipment moves, review our <Link to="/blog/heavy-machinery-relocation-guide-pakistan-2026/" className="text-gold hover:underline">Complete Guide to Heavy Machinery Relocation</Link> before shipping. For a full breakdown of why custom wooden crates outperform standard packaging, read our <Link to="/blog/benefits-of-custom-wooden-crates-for-international-shipping/" className="text-gold hover:underline">Benefits of Custom Wooden Crates for International Shipping</Link> guide.
               </p>
             </div>
 
