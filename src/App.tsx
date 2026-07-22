@@ -39,6 +39,7 @@ const FreightManagementServices = lazy(() => import("./pages/services/freight-ma
 const CustomCratingServices = lazy(() => import("./pages/services/custom-crating-services.tsx"));
 const WoodenCratingServices = lazy(() => import("./pages/services/wooden-crating-services.tsx"));
 const FactoryRelocationPakistan = lazy(() => import("./pages/services/factory-relocation-pakistan.tsx"));
+const ProjectLogisticsPakistan = lazy(() => import("./pages/services/project-logistics-pakistan.tsx"));
 const WhyUsPage = lazy(() => import("./pages/WhyUsPage.tsx"));
 const ProcessPage = lazy(() => import("./pages/ProcessPage.tsx"));
 const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
@@ -317,6 +318,8 @@ const App = () => (
           <Route path="/services/wooden-crating-services/" element={<WoodenCratingServices />} />
           <Route path="/services/factory-relocation-pakistan" element={<Navigate to="/services/factory-relocation-pakistan/" replace />} />
           <Route path="/services/factory-relocation-pakistan/" element={<FactoryRelocationPakistan />} />
+          <Route path="/services/project-logistics-pakistan" element={<Navigate to="/services/project-logistics-pakistan/" replace />} />
+          <Route path="/services/project-logistics-pakistan/" element={<ProjectLogisticsPakistan />} />
           {/* <Route path="/services:slug" element={<ServicesPage />} /> */}
           <Route path="/why-us" element={<WhyUsPage />} />
           <Route path="/process" element={<ProcessPage />} />

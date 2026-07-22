@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, TreePine, Building2, Wrench, Activity, Factory, Network } from "lucide-react";
+import { Route, Ship, Truck, Plane, Globe, Package, Warehouse, Car, FileCheck, ArrowRight, MapPin, Phone, CheckCircle2, ShieldCheck, Award, Users, ChevronDown, PawPrint, Shield, Boxes, TreePine, Building2, Wrench, Activity, Factory, Network, Anchor } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -689,6 +689,40 @@ const allServices = [
       },
     ],
     related: ["heavy-machinery-relocation", "industrial-relocation", "warehouse-relocation"]
+  },
+  {
+    slug: "project-logistics-pakistan",
+    icon: Anchor,
+    title: "Project Logistics",
+    desc: "End-to-end project logistics in Pakistan — heavy lift, oversized cargo, break bulk shipping & EPC freight for oil & gas, power, mining & construction.",
+    longDesc:
+      "Project logistics manages the end-to-end transportation of oversized, heavy, and high-value cargo for large-scale industrial projects — power plants, oil and gas facilities, mining operations, and infrastructure builds — covering route surveys, heavy lift planning, customs clearance, and final delivery as one coordinated engineering process.",
+    features: [
+      "15+ Years of Project Logistics Experience",
+      "Route Survey & Engineering Assessment",
+      "Heavy Lift & Break Bulk Shipping",
+      "EPC Project Freight Management",
+      "Karachi Port, Port Qasim & Gwadar Port Handling",
+      "Licensed Customs Clearance for Project Cargo",
+      "Multi-Axle & Lowboy Heavy Haulage",
+      "24/7 Support for Schedule-Critical Deliveries",
+    ],
+    heroImg: "/images/container.jpg",
+    faqs: [
+      {
+        q: "What is project logistics?",
+        a: "Project logistics refers to the specialized planning, engineering assessment, and transportation of oversized, overweight, or high-value cargo tied to large-scale industrial, energy, or infrastructure projects.",
+      },
+      {
+        q: "What is a route survey and why is it necessary?",
+        a: "A route survey physically verifies bridge weight limits, road widths, and clearance constraints along a planned transport path before cargo movement is booked, preventing costly mid-transport discoveries.",
+      },
+      {
+        q: "Which ports handle project cargo in Pakistan?",
+        a: "Karachi Port, Port Qasim, and Gwadar Port each support project cargo handling, with specific capabilities varying by cargo type and the port's available heavy lift infrastructure.",
+      },
+    ],
+    related: ["heavy-machinery-relocation", "freight-management-services", "logistics-services-pakistan"]
   },
 ];
 
