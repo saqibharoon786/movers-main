@@ -46,6 +46,7 @@ const FAQPage = lazy(() => import("./pages/FAQPage.tsx"));
 const FaqHubPakistan = lazy(() => import("./pages/FaqHubPakistan.tsx"));
 const InternationalMoversPakistan = lazy(() => import("./pages/InternationalMoversPakistan.tsx"));
 const CargoServicesPakistan = lazy(() => import("./pages/CargoServicesPakistan.tsx"));
+const PackagingLogisticsSolutions = lazy(() => import("./pages/PackagingLogisticsSolutions.tsx"));
 const PackersMoversPakistan = lazy(() => import("./pages/PackersMoversPakistan.tsx"));
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));
@@ -750,6 +751,8 @@ const App = () => (
           <Route path="/cargo-services-pakistan/" element={<CargoServicesPakistan />} />
           <Route path="/logistics-services-pakistan" element={<Navigate to="/logistics-services-pakistan/" replace />} />
           <Route path="/logistics-services-pakistan/" element={<LogisticsServicesPakistan />} />
+          <Route path="/packaging-logistics-solutions" element={<Navigate to="/packaging-logistics-solutions/" replace />} />
+          <Route path="/packaging-logistics-solutions/" element={<PackagingLogisticsSolutions />} />
           <Route path="/packers-and-movers-pakistan" element={<Navigate to="/packers-and-movers-pakistan/" replace />} />
           <Route path="/packers-and-movers-pakistan/" element={<PackersMoversPakistan />} />
           <Route path="/custom-clearance-agency-in-pakistan" element={<CustomClearanceAgencyPakistan />} />
