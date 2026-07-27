@@ -728,6 +728,8 @@ const PackagingLogisticsSolutions = () => {
               <div className="grid sm:grid-cols-2 gap-3 text-sm">
                 <Link to="/services/custom-crating-services/" className="text-gold hover:underline">Custom Crating Services</Link>
                 <Link to="/services/wooden-crating-services/" className="text-gold hover:underline">Wooden Crating Services</Link>
+                <Link to="/glass-packing-services/" className="text-gold hover:underline">Glass Packing Services</Link>
+                <Link to="/industrial-packing-services/" className="text-gold hover:underline">Industrial Packing Services</Link>
                 <Link to="/services/freight-management-services/" className="text-gold hover:underline">Freight Management Services</Link>
                 <Link to="/services/logistics-services-pakistan/" className="text-gold hover:underline">Logistics Services Pakistan</Link>
                 <Link to="/services/corporate-logistics-pakistan/" className="text-gold hover:underline">Corporate Logistics Pakistan</Link>
