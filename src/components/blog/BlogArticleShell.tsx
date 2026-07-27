@@ -105,7 +105,7 @@ const BlogArticleShell = ({
           <div className="mt-14 glass-card rounded-2xl p-8 border border-gold/20 text-center">
             <h3 className="text-2xl font-display font-bold text-foreground mb-3">Need a shipping plan?</h3>
             <p className="text-muted-foreground mb-6">
-              Get a free quote from Best International Movers & Logistics — 0300-9130211 · info@bestintlmovers.com
+              Get a free quotes from Best International Movers & Logistics — 0300-9130211 · info@bestintlmovers.com
             </p>
             <Link to="/contact" className="inline-flex px-8 py-3 rounded-lg gold-gradient-bg text-primary-foreground font-bold">
               Get Free Quote
