@@ -150,7 +150,7 @@ export default function BestInternationalMoversAndPackersGuide2026Blog() {
           <Link to="/cargo-services-pakistan/">Cargo services Pakistan</Link>
         </li>
         <li>
-          <Link to="/packers-and-movers-pakistan/">Packers and movers Pakistan</Link>
+          <Link to="/packers-and-movers/">Packers and movers Pakistan</Link>
         </li>
       </ul>
       <h2>Navigating common red flags</h2>

@@ -76,7 +76,7 @@ const ContactFooter = () => {
                 <li><Link to="/services/air-freight" className="hover:text-gold transition-colors">Air Freight</Link></li>
                 <li><Link to="/services/sea-freight-services/" className="hover:text-gold transition-colors">Sea Freight</Link></li>
                 <li><Link to="/international-movers-pakistan/" className="hover:text-gold transition-colors">International Movers Pakistan</Link></li>
-                <li><Link to="/packers-and-movers-pakistan/" className="hover:text-gold transition-colors">Packers &amp; Movers Pakistan</Link></li>
+                <li><Link to="/packers-and-movers/" className="hover:text-gold transition-colors">Packers &amp; Movers Pakistan</Link></li>
                 <li><Link to="/cargo-services-pakistan/" className="hover:text-gold transition-colors">Cargo Services Pakistan</Link></li>
                 <li><Link to="/logistics-services-pakistan/" className="hover:text-gold transition-colors">Logistics Services Pakistan</Link></li>
                 <li><Link to="/services/vehicle-shipping-services/" className="hover:text-gold transition-colors">Vehicle Shipping</Link></li>

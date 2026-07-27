@@ -47,6 +47,8 @@ const FaqHubPakistan = lazy(() => import("./pages/FaqHubPakistan.tsx"));
 const InternationalMoversPakistan = lazy(() => import("./pages/InternationalMoversPakistan.tsx"));
 const CargoServicesPakistan = lazy(() => import("./pages/CargoServicesPakistan.tsx"));
 const PackagingLogisticsSolutions = lazy(() => import("./pages/PackagingLogisticsSolutions.tsx"));
+const GlassPackingServices = lazy(() => import("./pages/GlassPackingServices.tsx"));
+const IndustrialPackingServices = lazy(() => import("./pages/IndustrialPackingServices.tsx"));
 const PackersMoversPakistan = lazy(() => import("./pages/PackersMoversPakistan.tsx"));
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"));
 const BlogPage = lazy(() => import("./pages/BlogPage.tsx"));
@@ -753,8 +755,16 @@ const App = () => (
           <Route path="/logistics-services-pakistan/" element={<LogisticsServicesPakistan />} />
           <Route path="/packaging-logistics-solutions" element={<Navigate to="/packaging-logistics-solutions/" replace />} />
           <Route path="/packaging-logistics-solutions/" element={<PackagingLogisticsSolutions />} />
-          <Route path="/packers-and-movers-pakistan" element={<Navigate to="/packers-and-movers-pakistan/" replace />} />
-          <Route path="/packers-and-movers-pakistan/" element={<PackersMoversPakistan />} />
+          <Route path="/glass-packing-services" element={<Navigate to="/glass-packing-services/" replace />} />
+          <Route path="/glass-packing-services/" element={<GlassPackingServices />} />
+          <Route path="/industrial-packing-services" element={<Navigate to="/industrial-packing-services/" replace />} />
+          <Route path="/industrial-packing-services/" element={<IndustrialPackingServices />} />
+          <Route path="/packers-and-movers" element={<Navigate to="/packers-and-movers/" replace />} />
+          <Route path="/packers-and-movers/" element={<PackersMoversPakistan />} />
+          <Route path="/packers-and-movers-pakistan" element={<Navigate to="/packers-and-movers/" replace />} />
+          <Route path="/packers-and-movers-pakistan/" element={<Navigate to="/packers-and-movers/" replace />} />
+          <Route path="/movers-and-packers" element={<Navigate to="/packers-and-movers/" replace />} />
+          <Route path="/movers-and-packers/" element={<Navigate to="/packers-and-movers/" replace />} />
           <Route path="/custom-clearance-agency-in-pakistan" element={<CustomClearanceAgencyPakistan />} />
 
           <Route path="/international-movers-islamabad" element={<Navigate to="/international-movers-from-islamabad/" replace />} />
