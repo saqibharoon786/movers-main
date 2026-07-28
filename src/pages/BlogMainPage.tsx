@@ -152,9 +152,77 @@ import {
   CUSTOM_CRATING_SERVICES_GUIDE_IMAGE,
   CUSTOM_CRATING_SERVICES_GUIDE_SLUG,
 } from "@/data/customCratingServicesGuideBlog";
+import {
+  PACKERS_AND_MOVERS_COST_PAKISTAN_IMAGE,
+  PACKERS_AND_MOVERS_COST_PAKISTAN_IMAGE_CLASS_CARD,
+  PACKERS_AND_MOVERS_COST_PAKISTAN_SLUG,
+} from "@/data/packersAndMoversCostPakistanBlog";
+import {
+  PROFESSIONAL_VS_DIY_MOVING_IMAGE,
+  PROFESSIONAL_VS_DIY_MOVING_IMAGE_CLASS_CARD,
+  PROFESSIONAL_VS_DIY_MOVING_SLUG,
+} from "@/data/professionalPackersMoversVsDiyMovingBlog";
+import {
+  ULTIMATE_PACKERS_MOVERS_CHECKLIST_IMAGE,
+  ULTIMATE_PACKERS_MOVERS_CHECKLIST_IMAGE_CLASS_CARD,
+  ULTIMATE_PACKERS_MOVERS_CHECKLIST_SLUG,
+} from "@/data/ultimatePackersMoversChecklistBlog";
+import {
+  QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE,
+  QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE_CLASS_CARD,
+  QUESTIONS_BEFORE_HIRING_MOVERS_SLUG,
+} from "@/data/questionsBeforeHiringPackersMoversBlog";
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: QUESTIONS_BEFORE_HIRING_MOVERS_SLUG,
+    img: QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE,
+    title: "10 Questions to Ask Before Hiring Packers and Movers (2026)",
+    date: "July 28, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "16 min read",
+    excerpt:
+      "Don't hire movers blindly. Ask these 10 essential questions first — licensing, insurance, hidden charges, and more — to avoid scams and protect your move.",
+    content: "10 questions to ask before hiring packers and movers in Pakistan.",
+  },
+  {
+    slug: ULTIMATE_PACKERS_MOVERS_CHECKLIST_SLUG,
+    img: ULTIMATE_PACKERS_MOVERS_CHECKLIST_IMAGE,
+    title: "Ultimate Packers and Movers Checklist Before You Relocate (2026)",
+    date: "July 28, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "17 min read",
+    excerpt:
+      "The complete packers and movers checklist for Pakistan — timeline, room-by-room packing, documents, utilities, and moving day steps.",
+    content: "Ultimate packers and movers checklist before you relocate in Pakistan.",
+  },
+  {
+    slug: PROFESSIONAL_VS_DIY_MOVING_SLUG,
+    img: PROFESSIONAL_VS_DIY_MOVING_IMAGE,
+    title: "Professional Packers and Movers vs DIY Moving: Which Is Better?",
+    date: "July 28, 2026",
+    category: "Moving Guides",
+    author: "Best International Movers & Logistics",
+    readTime: "16 min read",
+    excerpt:
+      "A complete, data-backed comparison of professional movers and DIY moving in Pakistan — cost, time, risk, safety, and expert recommendations.",
+    content: "Professional packers and movers vs DIY moving comparison guide for Pakistan.",
+  },
+  {
+    slug: PACKERS_AND_MOVERS_COST_PAKISTAN_SLUG,
+    img: PACKERS_AND_MOVERS_COST_PAKISTAN_IMAGE,
+    title: "Packers and Movers Cost in Pakistan 2026 — Complete Pricing Guide",
+    date: "July 28, 2026",
+    category: "Moving Costs",
+    author: "Best International Movers & Logistics",
+    readTime: "18 min read",
+    excerpt:
+      "Real packers and movers cost in Pakistan for 2026 — house shifting, office relocation, intercity & international moving prices in PKR by city and house size.",
+    content: "Complete 2026 pricing guide for packers and movers cost across Pakistan.",
+  },
   {
     slug: CUSTOM_CRATING_SERVICES_GUIDE_SLUG,
     img: CUSTOM_CRATING_SERVICES_GUIDE_IMAGE,
@@ -878,6 +946,14 @@ const BlogMainPage = () => {
                               ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
                               : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
                               ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === PACKERS_AND_MOVERS_COST_PAKISTAN_SLUG
+                              ? PACKERS_AND_MOVERS_COST_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === PROFESSIONAL_VS_DIY_MOVING_SLUG
+                              ? PROFESSIONAL_VS_DIY_MOVING_IMAGE_CLASS_CARD
+                              : blog.slug === ULTIMATE_PACKERS_MOVERS_CHECKLIST_SLUG
+                              ? ULTIMATE_PACKERS_MOVERS_CHECKLIST_IMAGE_CLASS_CARD
+                              : blog.slug === QUESTIONS_BEFORE_HIRING_MOVERS_SLUG
+                              ? QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE_CLASS_CARD
                               : ""
                           }`}
                         />
@@ -913,6 +989,14 @@ const BlogMainPage = () => {
                               ? INTERNATIONAL_PACKING_GUIDE_PAKISTAN_IMAGE_CLASS_CARD
                               : blog.slug === SHIPPING_FURNITURE_UK_FROM_PAKISTAN_SLUG
                               ? SHIPPING_FURNITURE_UK_FROM_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === PACKERS_AND_MOVERS_COST_PAKISTAN_SLUG
+                              ? PACKERS_AND_MOVERS_COST_PAKISTAN_IMAGE_CLASS_CARD
+                              : blog.slug === PROFESSIONAL_VS_DIY_MOVING_SLUG
+                              ? PROFESSIONAL_VS_DIY_MOVING_IMAGE_CLASS_CARD
+                              : blog.slug === ULTIMATE_PACKERS_MOVERS_CHECKLIST_SLUG
+                              ? ULTIMATE_PACKERS_MOVERS_CHECKLIST_IMAGE_CLASS_CARD
+                              : blog.slug === QUESTIONS_BEFORE_HIRING_MOVERS_SLUG
+                              ? QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE_CLASS_CARD
                               : ""
                           }`}
                         />

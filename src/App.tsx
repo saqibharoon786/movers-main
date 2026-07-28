@@ -154,6 +154,18 @@ const DhaKarachiMovingGuideSectorBySectorBlog = lazy(
 const KarachiToDubaiShippingCost2026Blog = lazy(
   () => import("./pages/blog/KarachiToDubaiShippingCost2026Blog.tsx"),
 );
+const PackersAndMoversCostPakistanBlog = lazy(
+  () => import("./pages/blog/PackersAndMoversCostPakistanBlog.tsx"),
+);
+const ProfessionalPackersMoversVsDiyMovingBlog = lazy(
+  () => import("./pages/blog/ProfessionalPackersMoversVsDiyMovingBlog.tsx"),
+);
+const UltimatePackersMoversChecklistBlog = lazy(
+  () => import("./pages/blog/UltimatePackersMoversChecklistBlog.tsx"),
+);
+const QuestionsBeforeHiringPackersMoversBlog = lazy(
+  () => import("./pages/blog/QuestionsBeforeHiringPackersMoversBlog.tsx"),
+);
 const PackersMoversRawalpindiGuideBlog = lazy(() => import("./pages/blog/PackersMoversRawalpindiGuideBlog.tsx"));
 const PetRelocationFromPakistanBlog = lazy(() => import("./pages/blog/PetRelocationFromPakistanBlog.tsx"));
 const BlogInternationalRelocationRawalpindi = lazy(() => import("./pages/BlogInternationalRelocationRawalpindi.tsx"));
@@ -640,6 +652,38 @@ const App = () => (
           <Route
             path="/blog/karachi-to-dubai-shipping-cost-2026/"
             element={<KarachiToDubaiShippingCost2026Blog />}
+          />
+          <Route
+            path="/blog/packers-and-movers-cost-pakistan"
+            element={<Navigate to="/blog/packers-and-movers-cost-pakistan/" replace />}
+          />
+          <Route
+            path="/blog/packers-and-movers-cost-pakistan/"
+            element={<PackersAndMoversCostPakistanBlog />}
+          />
+          <Route
+            path="/blog/professional-packers-and-movers-vs-diy-moving"
+            element={<Navigate to="/blog/professional-packers-and-movers-vs-diy-moving/" replace />}
+          />
+          <Route
+            path="/blog/professional-packers-and-movers-vs-diy-moving/"
+            element={<ProfessionalPackersMoversVsDiyMovingBlog />}
+          />
+          <Route
+            path="/blog/ultimate-packers-and-movers-checklist-before-you-relocate"
+            element={<Navigate to="/blog/ultimate-packers-and-movers-checklist-before-you-relocate/" replace />}
+          />
+          <Route
+            path="/blog/ultimate-packers-and-movers-checklist-before-you-relocate/"
+            element={<UltimatePackersMoversChecklistBlog />}
+          />
+          <Route
+            path="/blog/questions-to-ask-before-hiring-packers-and-movers"
+            element={<Navigate to="/blog/questions-to-ask-before-hiring-packers-and-movers/" replace />}
+          />
+          <Route
+            path="/blog/questions-to-ask-before-hiring-packers-and-movers/"
+            element={<QuestionsBeforeHiringPackersMoversBlog />}
           />
           <Route
             path="/blog/international-cargo-service-islamabad-2026"
