@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import PageBreadcrumb, { type BreadcrumbItem } from "@/components/PageBreadcrumb";
 import SEO from "@/components/SEO";
 import { normalizeSeoPath } from "@/utils/seoHead";
+import AdsterraBanner from "@/components/AdsterraBanner";
 
 type Props = {
   title: string;
@@ -102,6 +103,7 @@ const BlogArticleShell = ({
           >
             {children}
           </div>
+          <AdsterraBanner />
           <div className="mt-14 glass-card rounded-2xl p-8 border border-gold/20 text-center">
             <h3 className="text-2xl font-display font-bold text-foreground mb-3">Need a shipping plan?</h3>
             <p className="text-muted-foreground mb-6">
