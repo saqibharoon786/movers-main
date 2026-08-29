@@ -45,6 +45,14 @@ import {
   CARGO_CHARGES_PAKISTAN_TO_UK_IMAGE,
 } from "@/data/cargoChargesPakistanToUKBlog";
 import {
+  PAKISTAN_TO_UK_SHIPPING_COST_2026_SLUG,
+  PAKISTAN_TO_UK_SHIPPING_COST_2026_IMAGE,
+} from "@/data/pakistanToUKShippingCost2026Blog";
+import {
+  INTERNATIONAL_MOVERS_IN_PAKISTAN_SLUG,
+  INTERNATIONAL_MOVERS_IN_PAKISTAN_IMAGE,
+} from "@/data/internationalMoversInPakistanBlog";
+import {
   BEST_FREIGHT_FORWARDERS_PAKISTAN_SLUG,
   BEST_FREIGHT_FORWARDERS_PAKISTAN_IMAGE,
 } from "@/data/bestFreightForwardersPakistanBlog";
@@ -175,6 +183,30 @@ import {
 
 // All blogs data including the new Cargo Insurance blog
 const allBlogs = [
+  {
+    slug: INTERNATIONAL_MOVERS_IN_PAKISTAN_SLUG,
+    img: INTERNATIONAL_MOVERS_IN_PAKISTAN_IMAGE,
+    title: "International Movers in Pakistan: Complete Guide to Overseas Moving",
+    date: "Aug 29, 2026",
+    category: "International Moving",
+    author: "Best International Movers & Logistics",
+    readTime: "24 min read",
+    excerpt:
+      "Looking for international movers in Pakistan? Learn how international moving and shipping works, what it costs, and how to get a reliable quote.",
+    content: "Complete guide to international movers and overseas moving from Pakistan in 2026.",
+  },
+  {
+    slug: PAKISTAN_TO_UK_SHIPPING_COST_2026_SLUG,
+    img: PAKISTAN_TO_UK_SHIPPING_COST_2026_IMAGE,
+    title: "Pakistan to UK Shipping Cost 2026: Complete Price & Shipping Guide",
+    date: "Aug 29, 2026",
+    category: "International Shipping",
+    author: "Best International Movers & Logistics",
+    readTime: "22 min read",
+    excerpt:
+      "Pakistan to UK shipping cost 2026: sea vs air freight, boxes, household goods, customs, VAT and transit times explained. Get an accurate quote today.",
+    content: "Complete Pakistan to UK shipping cost and price guide for 2026.",
+  },
   {
     slug: QUESTIONS_BEFORE_HIRING_MOVERS_SLUG,
     img: QUESTIONS_BEFORE_HIRING_MOVERS_IMAGE,
