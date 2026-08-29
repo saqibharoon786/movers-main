@@ -180,6 +180,12 @@ const CargoServiceIslamabadCompleteGuideBlog = lazy(() => import("./pages/blog/C
 const InternationalRelocationRawalpindiCompleteGuideBlog = lazy(() => import("./pages/blog/InternationalRelocationRawalpindiCompleteGuideBlog.tsx"));
 const CustomsClearanceProcessPakistanBlog = lazy(() => import("./pages/blog/CustomsClearanceProcessPakistanBlog.tsx"));
 const CargoChargesPakistanToUKBlog = lazy(() => import("./pages/blog/CargoChargesPakistanToUKBlog.tsx"));
+const PakistanToUKShippingCost2026Blog = lazy(
+  () => import("./pages/blog/PakistanToUKShippingCost2026Blog.tsx"),
+);
+const InternationalMoversInPakistanBlog = lazy(
+  () => import("./pages/blog/InternationalMoversInPakistanBlog.tsx"),
+);
 const BestFreightForwardersPakistanBlog = lazy(() => import("./pages/blog/BestFreightForwardersPakistanBlog.tsx"));
 const AirFreightVsSeaFreightPakistanBlog = lazy(() => import("./pages/blog/AirFreightVsSeaFreightPakistanBlog.tsx"));
 const AirCargoCostFromPakistanBlog = lazy(() => import("./pages/blog/AirCargoCostFromPakistanBlog.tsx"));
@@ -421,6 +427,16 @@ const App = () => (
           <Route path="/blog/customs-clearance-process-pakistan/" element={<CustomsClearanceProcessPakistanBlog />} />
           <Route path="/blog/cargo-charges-pakistan-to-uk" element={<Navigate to="/blog/cargo-charges-pakistan-to-uk/" replace />} />
           <Route path="/blog/cargo-charges-pakistan-to-uk/" element={<CargoChargesPakistanToUKBlog />} />
+          <Route
+            path="/blog/pakistan-to-uk-shipping-cost-2026"
+            element={<Navigate to="/blog/pakistan-to-uk-shipping-cost-2026/" replace />}
+          />
+          <Route path="/blog/pakistan-to-uk-shipping-cost-2026/" element={<PakistanToUKShippingCost2026Blog />} />
+          <Route
+            path="/blog/international-movers-in-pakistan"
+            element={<Navigate to="/blog/international-movers-in-pakistan/" replace />}
+          />
+          <Route path="/blog/international-movers-in-pakistan/" element={<InternationalMoversInPakistanBlog />} />
           <Route path="/blog/best-freight-forwarders-pakistan" element={<Navigate to="/blog/best-freight-forwarders-pakistan/" replace />} />
           <Route path="/blog/best-freight-forwarders-pakistan/" element={<BestFreightForwardersPakistanBlog />} />
           <Route path="/blog/international-relocation-checklist-families" element={<Navigate to="/blog/international-relocation-checklist-families/" replace />} />
